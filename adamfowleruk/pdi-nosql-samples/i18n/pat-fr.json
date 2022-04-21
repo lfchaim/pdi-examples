@@ -1,0 +1,8 @@
+{
+    "description": "Example PDI Transformations for NoSQL database integration",
+    "documentation": {
+        "readme": "i18n/README-fr.md",
+        "script": "documentation/demo-script-fr.docx",
+        "video": "http://youtube.com/adamfowleruk/pdi-nosql-samples-url-example-french"
+    }
+}

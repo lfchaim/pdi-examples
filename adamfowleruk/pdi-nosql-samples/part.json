@@ -1,0 +1,62 @@
+{
+    "identifier": "pdi-nosql-samples",
+    "title": "PDI NoSQL Samples",
+    "description": "Example PDI Transformations for NoSQL database integration",
+    "version": "1.0.0",
+    "type": "pdi",
+    "elements": ["pdi-transformation","pdi-sample-data","other"],
+    "other-elements": "PDI Data Service",
+    "pentaho-minimum-version": "7.1",
+    "pentaho-maximum-version": "none",
+
+    "data-sources": ["flatfile-csv","nosql-cassandra","nosql-marklogic","nosql-mongodb","rest-other"],
+    "other-data-sources": "MarkLogic sample uses REST for communication",
+    "deployment-environments": ["local","cbf2"],
+    "in-pentaho-demo-vm-version": "none",
+    "date-created": "2017-10-30",
+    "date-updated": "2017-10-31",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/adamfowleruk/pdi-nosql-samples.git",
+      "public": "true"
+    },
+    "tags": ["nosql","pentaho","pdi","data-integration","spoon","mongodb","marklogic","cassandra","rest"],
+    "license": "Apache-2.0",
+
+
+    "primary-owner": {
+        "name": "Adam Fowler",
+        "email": "adam.fowler@hitachivantara.com",
+        "twitter": "@adamfowleruk",
+        "homepage": "http://adamfowler.org/",
+        "github": "adamfowleruk"
+    },
+    "backup-owners": [
+    ],
+
+    "antiquated": "false",
+    "needs-new-owner": "false",
+    "new-owner-information": "",
+
+    "documentation": {
+      "homepage": "README.md",
+      "install": "README.md",
+      "errata": "https://github.com/adamfowleruk/pdi-nosql-samples/issues",
+      "readme": "README.md",
+      "script": "documentation/demo-script.docx",
+      "video": "http://youtube.com/adamfowleruk/pdi-nosql-samples-url-example"
+    },
+
+
+
+    "dependencies": {
+        "part": "^1.0.0"
+    },
+    "layout": "cbf2",
+    "languages": ["en","fr"],
+
+
+    "scripts": {
+        "postinstall": "scripts/patch-some-random-file-script-no-extension"
+    }
+}

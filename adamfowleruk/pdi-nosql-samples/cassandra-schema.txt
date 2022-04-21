@@ -1,0 +1,12 @@
+create keyspace salesdata WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+
+Restart cassandra now
+
+create table salesdata.salesdata (ordernumber bigint primary key,quantityordered bigint,priceeach bigint);
+use salesdata;
+alter table salesdata add (orderlinenumber bigint,sales double,orderdate text,status text,qtr_id bigint,month_id bigint,year_id bigint,productline text,msrp bigint,productcode text,customername text,phone text,addressline1 text,addressline2 text,city text,state text,postalcode text,country text,territory text,contactlastname text, contactfirstname text);
+alter table salesdata drop priceeach;
+alter table salesdata add priceeach double;
+
+restart cassandra now
+
