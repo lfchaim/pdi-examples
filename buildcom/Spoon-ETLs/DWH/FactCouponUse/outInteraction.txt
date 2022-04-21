@@ -1,0 +1,160 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2016/08/02 01:51:31 - Kitchen - Logging is at level : Detailed logging
+2016/08/02 01:51:31 - Kitchen - Start of run.
+2016/08/02 01:51:32 - FactCouponUseJob - Start of job execution
+2016/08/02 01:51:32 - FactCouponUseJob - exec(0, 0, START.0)
+2016/08/02 01:51:32 - START - Starting job entry
+2016/08/02 01:51:32 - FactCouponUseJob - Starting entry [Simple evaluation]
+2016/08/02 01:51:32 - FactCouponUseJob - exec(1, 0, Simple evaluation.0)
+2016/08/02 01:51:32 - Simple evaluation - Starting job entry
+2016/08/02 01:51:32 - Simple evaluation - JobEntrySimpleEval.VariableSet=Variable [startDate] was set.
+2016/08/02 01:51:32 - FactCouponUseJob - Starting entry [Set variables]
+2016/08/02 01:51:32 - FactCouponUseJob - exec(2, 0, Set variables.0)
+2016/08/02 01:51:32 - Simple evaluation - Starting job entry
+2016/08/02 01:51:32 - Simple evaluation - Set variable DWH_HOST to value [Capella]
+2016/08/02 01:51:32 - Simple evaluation - Set variable DWH_DB to value [DataWarehouse]
+2016/08/02 01:51:32 - Simple evaluation - Set variable DWH_PORT to value [1433]
+2016/08/02 01:51:32 - Simple evaluation - Set variable endDate to value []
+2016/08/02 01:51:32 - Simple evaluation - Set variable startDate to value []
+2016/08/02 01:51:32 - FactCouponUseJob - Starting entry [Insert CouponUse]
+2016/08/02 01:51:32 - FactCouponUseJob - exec(3, 0, Insert CouponUse.0)
+2016/08/02 01:51:32 - Insert CouponUse - Starting job entry
+2016/08/02 01:51:32 - Insert CouponUse - Opening transformation: [file:///C:/Spoon/DWH/FactCouponUse/FactCouponUse-PWA-Insert.ktr]
+2016/08/02 01:51:32 - Insert CouponUse - Loading transformation from XML file [file:///C:/Spoon/DWH/FactCouponUse/FactCouponUse-PWA-Insert.ktr]
+2016/08/02 01:51:32 - Insert CouponUse - Starting transformation...(file=${Internal.Job.Filename.Directory}/FactCouponUse-PWA-Insert.ktr, name=Insert CouponUse, repinfo=null)
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Transformation is pre-loaded.
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Dispatching started for transformation [FactCouponUse-PWA-Insert]
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Nr of arguments detected:0 
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - This is not a replay transformation
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - I found 8 different steps to launch.
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Allocating rowsets...
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocating rowsets for step 0 --> Table input
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -   prevcopies = 1, nextcopies=1
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Transformation allocated new rowset [Table input.0 - OrderKeyLookup.0]
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocated 1 rowsets for step 0 --> Table input  
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocating rowsets for step 1 --> OrderKeyLookup
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -   prevcopies = 1, nextcopies=1
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Transformation allocated new rowset [OrderKeyLookup.0 - Split field to rows.0]
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocated 2 rowsets for step 1 --> OrderKeyLookup  
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocating rowsets for step 2 --> Split field to rows
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -   prevcopies = 1, nextcopies=1
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Transformation allocated new rowset [Split field to rows.0 - Split Fields.0]
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocated 3 rowsets for step 2 --> Split field to rows  
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocating rowsets for step 3 --> Split Fields
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -   prevcopies = 1, nextcopies=1
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Transformation allocated new rowset [Split Fields.0 - String operations.0]
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocated 4 rowsets for step 3 --> Split Fields  
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocating rowsets for step 4 --> String operations
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -   prevcopies = 1, nextcopies=1
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Transformation allocated new rowset [String operations.0 - CouponCLU.0]
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocated 5 rowsets for step 4 --> String operations  
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocating rowsets for step 5 --> CouponCLU
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -   prevcopies = 1, nextcopies=1
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Transformation allocated new rowset [CouponCLU.0 - Abs.0]
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocated 6 rowsets for step 5 --> CouponCLU  
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocating rowsets for step 6 --> Abs
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -   prevcopies = 1, nextcopies=1
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Transformation allocated new rowset [Abs.0 - Table output.0]
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocated 7 rowsets for step 6 --> Abs  
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocating rowsets for step 7 --> Table output
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Allocated 7 rowsets for step 7 --> Table output  
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Allocating Steps & StepData...
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation is about to allocate step [Table input] of type [TableInput]
+2016/08/02 01:51:32 - Table input.0 - distribution activated
+2016/08/02 01:51:32 - Table input.0 - Starting allocation of buffers & new threads...
+2016/08/02 01:51:32 - Table input.0 - Step info: nrinput=0 nroutput=1
+2016/08/02 01:51:32 - Table input.0 - output rel. is  1:1
+2016/08/02 01:51:32 - Table input.0 - Found output rowset [Table input.0 - OrderKeyLookup.0]
+2016/08/02 01:51:32 - Table input.0 - Finished dispatching
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation has allocated a new step: [Table input].0
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation is about to allocate step [OrderKeyLookup] of type [DBLookup]
+2016/08/02 01:51:32 - OrderKeyLookup.0 - distribution activated
+2016/08/02 01:51:32 - OrderKeyLookup.0 - Starting allocation of buffers & new threads...
+2016/08/02 01:51:32 - OrderKeyLookup.0 - Step info: nrinput=1 nroutput=1
+2016/08/02 01:51:32 - OrderKeyLookup.0 - Got previous step from [OrderKeyLookup] #0 --> Table input
+2016/08/02 01:51:32 - OrderKeyLookup.0 - input rel is 1:1
+2016/08/02 01:51:32 - OrderKeyLookup.0 - Found input rowset [Table input.0 - OrderKeyLookup.0]
+2016/08/02 01:51:32 - OrderKeyLookup.0 - output rel. is  1:1
+2016/08/02 01:51:32 - OrderKeyLookup.0 - Found output rowset [OrderKeyLookup.0 - Split field to rows.0]
+2016/08/02 01:51:32 - OrderKeyLookup.0 - Finished dispatching
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation has allocated a new step: [OrderKeyLookup].0
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation is about to allocate step [Split field to rows] of type [SplitFieldToRows3]
+2016/08/02 01:51:32 - Split field to rows.0 - distribution activated
+2016/08/02 01:51:32 - Split field to rows.0 - Starting allocation of buffers & new threads...
+2016/08/02 01:51:32 - Split field to rows.0 - Step info: nrinput=1 nroutput=1
+2016/08/02 01:51:32 - Split field to rows.0 - Got previous step from [Split field to rows] #0 --> OrderKeyLookup
+2016/08/02 01:51:32 - Split field to rows.0 - input rel is 1:1
+2016/08/02 01:51:32 - Split field to rows.0 - Found input rowset [OrderKeyLookup.0 - Split field to rows.0]
+2016/08/02 01:51:32 - Split field to rows.0 - output rel. is  1:1
+2016/08/02 01:51:32 - Split field to rows.0 - Found output rowset [Split field to rows.0 - Split Fields.0]
+2016/08/02 01:51:32 - Split field to rows.0 - Finished dispatching
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation has allocated a new step: [Split field to rows].0
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation is about to allocate step [Split Fields] of type [FieldSplitter]
+2016/08/02 01:51:32 - Split Fields.0 - distribution activated
+2016/08/02 01:51:32 - Split Fields.0 - Starting allocation of buffers & new threads...
+2016/08/02 01:51:32 - Split Fields.0 - Step info: nrinput=1 nroutput=1
+2016/08/02 01:51:32 - Split Fields.0 - Got previous step from [Split Fields] #0 --> Split field to rows
+2016/08/02 01:51:32 - Split Fields.0 - input rel is 1:1
+2016/08/02 01:51:32 - Split Fields.0 - Found input rowset [Split field to rows.0 - Split Fields.0]
+2016/08/02 01:51:32 - Split Fields.0 - output rel. is  1:1
+2016/08/02 01:51:32 - Split Fields.0 - Found output rowset [Split Fields.0 - String operations.0]
+2016/08/02 01:51:32 - Split Fields.0 - Finished dispatching
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation has allocated a new step: [Split Fields].0
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation is about to allocate step [String operations] of type [StringOperations]
+2016/08/02 01:51:32 - String operations.0 - distribution activated
+2016/08/02 01:51:32 - String operations.0 - Starting allocation of buffers & new threads...
+2016/08/02 01:51:32 - String operations.0 - Step info: nrinput=1 nroutput=1
+2016/08/02 01:51:32 - String operations.0 - Got previous step from [String operations] #0 --> Split Fields
+2016/08/02 01:51:32 - String operations.0 - input rel is 1:1
+2016/08/02 01:51:32 - String operations.0 - Found input rowset [Split Fields.0 - String operations.0]
+2016/08/02 01:51:32 - String operations.0 - output rel. is  1:1
+2016/08/02 01:51:32 - String operations.0 - Found output rowset [String operations.0 - CouponCLU.0]
+2016/08/02 01:51:32 - String operations.0 - Finished dispatching
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation has allocated a new step: [String operations].0
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation is about to allocate step [CouponCLU] of type [CombinationLookup]
+2016/08/02 01:51:32 - CouponCLU.0 - distribution activated
+2016/08/02 01:51:32 - CouponCLU.0 - Starting allocation of buffers & new threads...
+2016/08/02 01:51:32 - CouponCLU.0 - Step info: nrinput=1 nroutput=1
+2016/08/02 01:51:32 - CouponCLU.0 - Got previous step from [CouponCLU] #0 --> String operations
+2016/08/02 01:51:32 - CouponCLU.0 - input rel is 1:1
+2016/08/02 01:51:32 - CouponCLU.0 - Found input rowset [String operations.0 - CouponCLU.0]
+2016/08/02 01:51:32 - CouponCLU.0 - output rel. is  1:1
+2016/08/02 01:51:32 - CouponCLU.0 - Found output rowset [CouponCLU.0 - Abs.0]
+2016/08/02 01:51:32 - CouponCLU.0 - Finished dispatching
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation has allocated a new step: [CouponCLU].0
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation is about to allocate step [Abs] of type [ScriptValueMod]
+2016/08/02 01:51:32 - Abs.0 - distribution activated
+2016/08/02 01:51:32 - Abs.0 - Starting allocation of buffers & new threads...
+2016/08/02 01:51:32 - Abs.0 - Step info: nrinput=1 nroutput=1
+2016/08/02 01:51:32 - Abs.0 - Got previous step from [Abs] #0 --> CouponCLU
+2016/08/02 01:51:32 - Abs.0 - input rel is 1:1
+2016/08/02 01:51:32 - Abs.0 - Found input rowset [CouponCLU.0 - Abs.0]
+2016/08/02 01:51:32 - Abs.0 - output rel. is  1:1
+2016/08/02 01:51:32 - Abs.0 - Found output rowset [Abs.0 - Table output.0]
+2016/08/02 01:51:32 - Abs.0 - Finished dispatching
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation has allocated a new step: [Abs].0
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2016/08/02 01:51:32 - Table output.0 - distribution activated
+2016/08/02 01:51:32 - Table output.0 - Starting allocation of buffers & new threads...
+2016/08/02 01:51:32 - Table output.0 - Step info: nrinput=1 nroutput=0
+2016/08/02 01:51:32 - Table output.0 - Got previous step from [Table output] #0 --> Abs
+2016/08/02 01:51:32 - Table output.0 - input rel is 1:1
+2016/08/02 01:51:32 - Table output.0 - Found input rowset [Abs.0 - Table output.0]
+2016/08/02 01:51:32 - Table output.0 - Finished dispatching
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert -  Transformation has allocated a new step: [Table output].0
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - This transformation can be replayed with replay date: 2016/08/02 01:51:32
+2016/08/02 01:51:32 - FactCouponUse-PWA-Insert - Initialising 8 steps...
+2016/08/02 01:51:32 - Table input.0 - Running on slave server #0/1.
+2016/08/02 01:51:32 - Split Fields.0 - Running on slave server #0/1.
+2016/08/02 01:51:32 - Split field to rows.0 - Running on slave server #0/1.
+2016/08/02 01:51:32 - String operations.0 - Running on slave server #0/1.
+2016/08/02 01:51:32 - CouponCLU.0 - Running on slave server #0/1.
+2016/08/02 01:51:32 - Abs.0 - Running on slave server #0/1.
+2016/08/02 01:51:32 - OrderKeyLookup.0 - Running on slave server #0/1.
+2016/08/02 01:51:32 - Table output.0 - Running on slave server #0/1.
+2016/08/02 01:51:32 - Warehouse - New database connection defined
+2016/08/02 01:51:32 - Warehouse - New database connection defined
+2016/08/02 01:51:32 - Warehouse - New database connection defined
+2016/08/02 01:51:32 - PWA Transactions - New database connection defined

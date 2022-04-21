@@ -1,0 +1,675 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/27 07:23:08 - Kitchen - Logging is at level : Detailed logging
+2017/03/27 07:23:08 - Kitchen - Start of run.
+2017/03/27 07:23:08 - j_Marketing_Channel_Report - Start of job execution
+2017/03/27 07:23:08 - j_Marketing_Channel_Report - exec(0, 0, START.0)
+2017/03/27 07:23:08 - START - Starting job entry
+2017/03/27 07:23:08 - j_Marketing_Channel_Report - Starting entry [Transformation]
+2017/03/27 07:23:08 - j_Marketing_Channel_Report - exec(1, 0, Transformation.0)
+2017/03/27 07:23:08 - Transformation - Starting job entry
+2017/03/27 07:23:08 - Transformation - Opening transformation: [file:///C:/Spoon/Data Warehouse Reporting/Marketing Channel Report/t_Marketing_Channel_Report.ktr]
+2017/03/27 07:23:08 - Transformation - Loading transformation from XML file [file:///C:/Spoon/Data Warehouse Reporting/Marketing Channel Report/t_Marketing_Channel_Report.ktr]
+2017/03/27 07:23:08 - Transformation - Starting transformation...(file=${Internal.Job.Filename.Directory}/t_Marketing_Channel_Report.ktr, name=Transformation, repinfo=null)
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation is pre-loaded.
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Dispatching started for transformation [t_Marketing_Channel_Report]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Nr of arguments detected:0 
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - This is not a replay transformation
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - I found 19 different steps to launch.
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Allocating rowsets...
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 0 --> Select values
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Select values.0 - Sort rows.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 1 rowsets for step 0 --> Select values  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 1 --> Sort rows
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Sort rows.0 - Group by.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 2 rowsets for step 1 --> Sort rows  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 2 --> Group by
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Group by.0 - Filter rows.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 3 rowsets for step 2 --> Group by  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 3 --> capella
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [capella.0 - Select values.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [capella.0 - Select values 2.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [capella.0 - Select values 3.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 6 rowsets for step 3 --> capella  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 4 --> Formula
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Formula.0 - Microsoft Excel Output.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 7 rowsets for step 4 --> Formula  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 5 --> Microsoft Excel Output
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 7 rowsets for step 5 --> Microsoft Excel Output  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 6 --> Filter rows
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Filter rows.0 - Formula.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 8 rowsets for step 6 --> Filter rows  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 7 --> Select values 2
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Select values 2.0 - Sort rows 2.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 9 rowsets for step 7 --> Select values 2  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 8 --> Sort rows 2
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Sort rows 2.0 - Group by 2.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 10 rowsets for step 8 --> Sort rows 2  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 9 --> Group by 2
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Group by 2.0 - Filter rows 2.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 11 rowsets for step 9 --> Group by 2  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 10 --> Formula 2
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Formula 2.0 - Microsoft Excel Output 2.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 12 rowsets for step 10 --> Formula 2  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 11 --> Microsoft Excel Output 2
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 12 rowsets for step 11 --> Microsoft Excel Output 2  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 12 --> Select values 3
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Select values 3.0 - Sort rows 3.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 13 rowsets for step 12 --> Select values 3  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 13 --> Sort rows 3
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Sort rows 3.0 - Group by 3.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 14 rowsets for step 13 --> Sort rows 3  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 14 --> Group by 3
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Group by 3.0 - Filter rows 3.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 15 rowsets for step 14 --> Group by 3  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 15 --> Formula 3
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Formula 3.0 - Microsoft Excel Output 3.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 16 rowsets for step 15 --> Formula 3  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 16 --> Microsoft Excel Output 3
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 16 rowsets for step 16 --> Microsoft Excel Output 3  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 17 --> Filter rows 2
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Filter rows 2.0 - Formula 2.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 17 rowsets for step 17 --> Filter rows 2  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocating rowsets for step 18 --> Filter rows 3
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -   prevcopies = 1, nextcopies=1
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Transformation allocated new rowset [Filter rows 3.0 - Formula 3.0]
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Allocated 18 rowsets for step 18 --> Filter rows 3  
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Allocating Steps & StepData...
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/27 07:23:08 - Select values.0 - distribution activated
+2017/03/27 07:23:08 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Select values.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Select values.0 - Got previous step from [Select values] #0 --> capella
+2017/03/27 07:23:08 - Select values.0 - input rel is 1:1
+2017/03/27 07:23:08 - Select values.0 - Found input rowset [capella.0 - Select values.0]
+2017/03/27 07:23:08 - Select values.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Select values.0 - Found output rowset [Select values.0 - Sort rows.0]
+2017/03/27 07:23:08 - Select values.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Select values].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Sort rows] of type [SortRows]
+2017/03/27 07:23:08 - Sort rows.0 - distribution activated
+2017/03/27 07:23:08 - Sort rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Sort rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Sort rows.0 - Got previous step from [Sort rows] #0 --> Select values
+2017/03/27 07:23:08 - Sort rows.0 - input rel is 1:1
+2017/03/27 07:23:08 - Sort rows.0 - Found input rowset [Select values.0 - Sort rows.0]
+2017/03/27 07:23:08 - Sort rows.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Sort rows.0 - Found output rowset [Sort rows.0 - Group by.0]
+2017/03/27 07:23:08 - Sort rows.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Sort rows].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Group by] of type [GroupBy]
+2017/03/27 07:23:08 - Group by.0 - distribution activated
+2017/03/27 07:23:08 - Group by.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Group by.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Group by.0 - Got previous step from [Group by] #0 --> Sort rows
+2017/03/27 07:23:08 - Group by.0 - input rel is 1:1
+2017/03/27 07:23:08 - Group by.0 - Found input rowset [Sort rows.0 - Group by.0]
+2017/03/27 07:23:08 - Group by.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Group by.0 - Found output rowset [Group by.0 - Filter rows.0]
+2017/03/27 07:23:08 - Group by.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Group by].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [capella] of type [TableInput]
+2017/03/27 07:23:08 - capella.0 - distribution de-activated
+2017/03/27 07:23:08 - capella.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - capella.0 - Step info: nrinput=0 nroutput=3
+2017/03/27 07:23:08 - capella.0 - output rel. is  1:1
+2017/03/27 07:23:08 - capella.0 - Found output rowset [capella.0 - Select values.0]
+2017/03/27 07:23:08 - capella.0 - output rel. is  1:1
+2017/03/27 07:23:08 - capella.0 - Found output rowset [capella.0 - Select values 2.0]
+2017/03/27 07:23:08 - capella.0 - output rel. is  1:1
+2017/03/27 07:23:08 - capella.0 - Found output rowset [capella.0 - Select values 3.0]
+2017/03/27 07:23:08 - capella.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [capella].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Formula] of type [Formula]
+2017/03/27 07:23:08 - Formula.0 - distribution activated
+2017/03/27 07:23:08 - Formula.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Formula.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Formula.0 - Got previous step from [Formula] #0 --> Filter rows
+2017/03/27 07:23:08 - Formula.0 - input rel is 1:1
+2017/03/27 07:23:08 - Formula.0 - Found input rowset [Filter rows.0 - Formula.0]
+2017/03/27 07:23:08 - Formula.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Formula.0 - Found output rowset [Formula.0 - Microsoft Excel Output.0]
+2017/03/27 07:23:08 - Formula.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Formula].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Microsoft Excel Output] of type [ExcelOutput]
+2017/03/27 07:23:08 - Microsoft Excel Output.0 - distribution activated
+2017/03/27 07:23:08 - Microsoft Excel Output.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Microsoft Excel Output.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 07:23:08 - Microsoft Excel Output.0 - Got previous step from [Microsoft Excel Output] #0 --> Formula
+2017/03/27 07:23:08 - Microsoft Excel Output.0 - input rel is 1:1
+2017/03/27 07:23:08 - Microsoft Excel Output.0 - Found input rowset [Formula.0 - Microsoft Excel Output.0]
+2017/03/27 07:23:08 - Microsoft Excel Output.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Microsoft Excel Output].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Filter rows] of type [FilterRows]
+2017/03/27 07:23:08 - Filter rows.0 - distribution activated
+2017/03/27 07:23:08 - Filter rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Filter rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Filter rows.0 - Got previous step from [Filter rows] #0 --> Group by
+2017/03/27 07:23:08 - Filter rows.0 - input rel is 1:1
+2017/03/27 07:23:08 - Filter rows.0 - Found input rowset [Group by.0 - Filter rows.0]
+2017/03/27 07:23:08 - Filter rows.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Filter rows.0 - Found output rowset [Filter rows.0 - Formula.0]
+2017/03/27 07:23:08 - Filter rows.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Filter rows].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Select values 2] of type [SelectValues]
+2017/03/27 07:23:08 - Select values 2.0 - distribution activated
+2017/03/27 07:23:08 - Select values 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Select values 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Select values 2.0 - Got previous step from [Select values 2] #0 --> capella
+2017/03/27 07:23:08 - Select values 2.0 - input rel is 1:1
+2017/03/27 07:23:08 - Select values 2.0 - Found input rowset [capella.0 - Select values 2.0]
+2017/03/27 07:23:08 - Select values 2.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Select values 2.0 - Found output rowset [Select values 2.0 - Sort rows 2.0]
+2017/03/27 07:23:08 - Select values 2.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Select values 2].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Sort rows 2] of type [SortRows]
+2017/03/27 07:23:08 - Sort rows 2.0 - distribution activated
+2017/03/27 07:23:08 - Sort rows 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Sort rows 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Sort rows 2.0 - Got previous step from [Sort rows 2] #0 --> Select values 2
+2017/03/27 07:23:08 - Sort rows 2.0 - input rel is 1:1
+2017/03/27 07:23:08 - Sort rows 2.0 - Found input rowset [Select values 2.0 - Sort rows 2.0]
+2017/03/27 07:23:08 - Sort rows 2.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Sort rows 2.0 - Found output rowset [Sort rows 2.0 - Group by 2.0]
+2017/03/27 07:23:08 - Sort rows 2.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Sort rows 2].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Group by 2] of type [GroupBy]
+2017/03/27 07:23:08 - Group by 2.0 - distribution activated
+2017/03/27 07:23:08 - Group by 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Group by 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Group by 2.0 - Got previous step from [Group by 2] #0 --> Sort rows 2
+2017/03/27 07:23:08 - Group by 2.0 - input rel is 1:1
+2017/03/27 07:23:08 - Group by 2.0 - Found input rowset [Sort rows 2.0 - Group by 2.0]
+2017/03/27 07:23:08 - Group by 2.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Group by 2.0 - Found output rowset [Group by 2.0 - Filter rows 2.0]
+2017/03/27 07:23:08 - Group by 2.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Group by 2].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Formula 2] of type [Formula]
+2017/03/27 07:23:08 - Formula 2.0 - distribution activated
+2017/03/27 07:23:08 - Formula 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Formula 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Formula 2.0 - Got previous step from [Formula 2] #0 --> Filter rows 2
+2017/03/27 07:23:08 - Formula 2.0 - input rel is 1:1
+2017/03/27 07:23:08 - Formula 2.0 - Found input rowset [Filter rows 2.0 - Formula 2.0]
+2017/03/27 07:23:08 - Formula 2.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Formula 2.0 - Found output rowset [Formula 2.0 - Microsoft Excel Output 2.0]
+2017/03/27 07:23:08 - Formula 2.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Formula 2].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Microsoft Excel Output 2] of type [ExcelOutput]
+2017/03/27 07:23:08 - Microsoft Excel Output 2.0 - distribution activated
+2017/03/27 07:23:08 - Microsoft Excel Output 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Microsoft Excel Output 2.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 07:23:08 - Microsoft Excel Output 2.0 - Got previous step from [Microsoft Excel Output 2] #0 --> Formula 2
+2017/03/27 07:23:08 - Microsoft Excel Output 2.0 - input rel is 1:1
+2017/03/27 07:23:08 - Microsoft Excel Output 2.0 - Found input rowset [Formula 2.0 - Microsoft Excel Output 2.0]
+2017/03/27 07:23:08 - Microsoft Excel Output 2.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Microsoft Excel Output 2].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Select values 3] of type [SelectValues]
+2017/03/27 07:23:08 - Select values 3.0 - distribution activated
+2017/03/27 07:23:08 - Select values 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Select values 3.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Select values 3.0 - Got previous step from [Select values 3] #0 --> capella
+2017/03/27 07:23:08 - Select values 3.0 - input rel is 1:1
+2017/03/27 07:23:08 - Select values 3.0 - Found input rowset [capella.0 - Select values 3.0]
+2017/03/27 07:23:08 - Select values 3.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Select values 3.0 - Found output rowset [Select values 3.0 - Sort rows 3.0]
+2017/03/27 07:23:08 - Select values 3.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Select values 3].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Sort rows 3] of type [SortRows]
+2017/03/27 07:23:08 - Sort rows 3.0 - distribution activated
+2017/03/27 07:23:08 - Sort rows 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Sort rows 3.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Sort rows 3.0 - Got previous step from [Sort rows 3] #0 --> Select values 3
+2017/03/27 07:23:08 - Sort rows 3.0 - input rel is 1:1
+2017/03/27 07:23:08 - Sort rows 3.0 - Found input rowset [Select values 3.0 - Sort rows 3.0]
+2017/03/27 07:23:08 - Sort rows 3.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Sort rows 3.0 - Found output rowset [Sort rows 3.0 - Group by 3.0]
+2017/03/27 07:23:08 - Sort rows 3.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Sort rows 3].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Group by 3] of type [GroupBy]
+2017/03/27 07:23:08 - Group by 3.0 - distribution activated
+2017/03/27 07:23:08 - Group by 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Group by 3.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Group by 3.0 - Got previous step from [Group by 3] #0 --> Sort rows 3
+2017/03/27 07:23:08 - Group by 3.0 - input rel is 1:1
+2017/03/27 07:23:08 - Group by 3.0 - Found input rowset [Sort rows 3.0 - Group by 3.0]
+2017/03/27 07:23:08 - Group by 3.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Group by 3.0 - Found output rowset [Group by 3.0 - Filter rows 3.0]
+2017/03/27 07:23:08 - Group by 3.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Group by 3].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Formula 3] of type [Formula]
+2017/03/27 07:23:08 - Formula 3.0 - distribution activated
+2017/03/27 07:23:08 - Formula 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Formula 3.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Formula 3.0 - Got previous step from [Formula 3] #0 --> Filter rows 3
+2017/03/27 07:23:08 - Formula 3.0 - input rel is 1:1
+2017/03/27 07:23:08 - Formula 3.0 - Found input rowset [Filter rows 3.0 - Formula 3.0]
+2017/03/27 07:23:08 - Formula 3.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Formula 3.0 - Found output rowset [Formula 3.0 - Microsoft Excel Output 3.0]
+2017/03/27 07:23:08 - Formula 3.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Formula 3].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Microsoft Excel Output 3] of type [ExcelOutput]
+2017/03/27 07:23:08 - Microsoft Excel Output 3.0 - distribution activated
+2017/03/27 07:23:08 - Microsoft Excel Output 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Microsoft Excel Output 3.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 07:23:08 - Microsoft Excel Output 3.0 - Got previous step from [Microsoft Excel Output 3] #0 --> Formula 3
+2017/03/27 07:23:08 - Microsoft Excel Output 3.0 - input rel is 1:1
+2017/03/27 07:23:08 - Microsoft Excel Output 3.0 - Found input rowset [Formula 3.0 - Microsoft Excel Output 3.0]
+2017/03/27 07:23:08 - Microsoft Excel Output 3.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Microsoft Excel Output 3].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Filter rows 2] of type [FilterRows]
+2017/03/27 07:23:08 - Filter rows 2.0 - distribution activated
+2017/03/27 07:23:08 - Filter rows 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Filter rows 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Filter rows 2.0 - Got previous step from [Filter rows 2] #0 --> Group by 2
+2017/03/27 07:23:08 - Filter rows 2.0 - input rel is 1:1
+2017/03/27 07:23:08 - Filter rows 2.0 - Found input rowset [Group by 2.0 - Filter rows 2.0]
+2017/03/27 07:23:08 - Filter rows 2.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Filter rows 2.0 - Found output rowset [Filter rows 2.0 - Formula 2.0]
+2017/03/27 07:23:08 - Filter rows 2.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Filter rows 2].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation is about to allocate step [Filter rows 3] of type [FilterRows]
+2017/03/27 07:23:08 - Filter rows 3.0 - distribution activated
+2017/03/27 07:23:08 - Filter rows 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:23:08 - Filter rows 3.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:23:08 - Filter rows 3.0 - Got previous step from [Filter rows 3] #0 --> Group by 3
+2017/03/27 07:23:08 - Filter rows 3.0 - input rel is 1:1
+2017/03/27 07:23:08 - Filter rows 3.0 - Found input rowset [Group by 3.0 - Filter rows 3.0]
+2017/03/27 07:23:08 - Filter rows 3.0 - output rel. is  1:1
+2017/03/27 07:23:08 - Filter rows 3.0 - Found output rowset [Filter rows 3.0 - Formula 3.0]
+2017/03/27 07:23:08 - Filter rows 3.0 - Finished dispatching
+2017/03/27 07:23:08 - t_Marketing_Channel_Report -  Transformation has allocated a new step: [Filter rows 3].0
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - This transformation can be replayed with replay date: 2017/03/27 07:23:08
+2017/03/27 07:23:08 - t_Marketing_Channel_Report - Initialising 19 steps...
+2017/03/27 07:23:08 - Select values.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Sort rows.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Microsoft Excel Output.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Group by 2.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Sort rows 3.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Filter rows 2.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Group by.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Filter rows.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Formula 2.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Group by 3.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Filter rows 3.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Formula.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Sort rows 2.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Select values 3.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Microsoft Excel Output 3.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - capella.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Select values 2.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - Microsoft Excel Output 2.0 - Running on slave server #0/1.
+2017/03/27 07:23:08 - capella - New database connection defined
+2017/03/27 07:23:08 - Formula 3.0 - Running on slave server #0/1.
+2017/03/27 07:23:09 - capella - Connected to database.
+2017/03/27 07:23:09 - capella - Auto commit off
+2017/03/27 07:23:09 - capella.0 - Connected to database...
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Select values.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Sort rows.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Group by.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [capella.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Formula.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Microsoft Excel Output.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Filter rows.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Select values 2.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Sort rows 2.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Group by 2.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Formula 2.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Microsoft Excel Output 2.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Select values 3.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Sort rows 3.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Group by 3.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Formula 3.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Microsoft Excel Output 3.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Filter rows 2.0] initialized flawlessly.
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Step [Filter rows 3.0] initialized flawlessly.
+2017/03/27 07:23:09 - Select values.0 - Starting to run...
+2017/03/27 07:23:09 - Sort rows.0 - Starting to run...
+2017/03/27 07:23:09 - Group by.0 - Starting to run...
+2017/03/27 07:23:09 - Formula.0 - Starting to run...
+2017/03/27 07:23:09 - capella.0 - Starting to run...
+2017/03/27 07:23:09 - Microsoft Excel Output.0 - Starting to run...
+2017/03/27 07:23:09 - Filter rows.0 - Starting to run...
+2017/03/27 07:23:09 - Select values 2.0 - Starting to run...
+2017/03/27 07:23:09 - Group by 2.0 - Starting to run...
+2017/03/27 07:23:09 - Microsoft Excel Output 2.0 - Starting to run...
+2017/03/27 07:23:09 - Sort rows 2.0 - Starting to run...
+2017/03/27 07:23:09 - Formula 2.0 - Starting to run...
+2017/03/27 07:23:09 - Select values 3.0 - Starting to run...
+2017/03/27 07:23:09 - Sort rows 3.0 - Starting to run...
+2017/03/27 07:23:09 - capella.0 - SQL query : select 
+2017/03/27 07:23:09 - capella.0 - 	FullDateUSA,
+2017/03/27 07:23:09 - capella.0 - 	isnull(VFA_Type, FMS_Type) as Type,
+2017/03/27 07:23:09 - capella.0 - 	subChannel,
+2017/03/27 07:23:09 - capella.0 - 	SiteName,
+2017/03/27 07:23:09 - capella.0 - 	CategoryName,
+2017/03/27 07:23:09 - capella.0 - 	SubCategoryName,
+2017/03/27 07:23:09 - capella.0 - 	sum(MarketingAmount) MarketingAmount,
+2017/03/27 07:23:09 - capella.0 - 	sum(LastTouch) LastTouch,
+2017/03/27 07:23:09 - capella.0 - 	sum(FirstTouch) FirstTouch
+2017/03/27 07:23:09 - capella.0 - from 
+2017/03/27 07:23:09 - capella.0 - (
+2017/03/27 07:23:09 - capella.0 - 	-- FactMarketingSpend
+2017/03/27 07:23:09 - capella.0 - 	select 
+2017/03/27 07:23:09 - capella.0 - 		DD.FullDateUSA,
+2017/03/27 07:23:09 - capella.0 - 		DC.CategoryName, 
+2017/03/27 07:23:09 - capella.0 - 		DC.SubCategoryName,
+2017/03/27 07:23:09 - capella.0 - 		DS.SiteName,
+2017/03/27 07:23:09 - capella.0 - 		DST.Type as FMS_Type,
+2017/03/27 07:23:09 - capella.0 - 		null as VFA_Type,
+2017/03/27 07:23:09 - capella.0 - 		case when DST.Type = 'Affiliate' then 'Commission Junction' 
+2017/03/27 07:23:09 - capella.0 - 		     when DST.Type = 'Fixed' then 'Fixed'
+2017/03/27 07:23:09 - capella.0 - 			 else DMC.Class end as subChannel,
+2017/03/27 07:23:09 - capella.0 - 		sum(FMS.Amount) MarketingAmount,
+2017/03/27 07:23:09 - capella.0 - 		0 as FirstTouch,
+2017/03/27 07:23:09 - capella.0 - 		0 as LastTouch
+2017/03/27 07:23:09 - capella.0 - 	from DataWarehouse.dbo.FactMarketingSpend FMS with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 	inner join DataWarehouse.dbo.DimSpendType DST with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 		on FMS.SpendTypeKey = DST.ID
+2017/03/27 07:23:09 - capella.0 - 	left join DataWarehouse.dbo.DimSite DS with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 		on FMS.SiteKey = DS.ID 
+2017/03/27 07:23:09 - capella.0 - 	inner join DataWarehouse.dbo.DimDate DD with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 		on FMS.DateKey = DD.DateKey
+2017/03/27 07:23:09 - capella.0 - 	inner join DataWarehouse.dbo.DimTime DT with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 		on FMS.TimeKey = DT.TimeKey
+2017/03/27 07:23:09 - capella.0 - 	left join DataWarehouse.dbo.DimCategory DC with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 		on FMS.CategoryKey = DC.ID
+2017/03/27 07:23:09 - capella.0 - 	left join DataWarehouse.dbo.DimMarketingCampaign DMC with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 	    on FMS.CampaignKey = DMC.ID
+2017/03/27 07:23:09 - capella.0 - 	where DD.Date between DATEADD(MONTH, DATEDIFF(MONTH, 0, DATEADD(DAY,-1,GETDATE())), 0) and convert(varchar(10), getdate()-1, 120)
+2017/03/27 07:23:09 - capella.0 - 		and (DS.SiteName <> 'Build' or DS.SiteName is null)
+2017/03/27 07:23:09 - capella.0 - 	group by 
+2017/03/27 07:23:09 - capella.0 - 		DD.FullDateUSA,
+2017/03/27 07:23:09 - capella.0 - 		DC.CategoryName,
+2017/03/27 07:23:09 - capella.0 - 		DC.SubCategoryName,
+2017/03/27 07:23:09 - capella.0 - 		DS.SiteName,
+2017/03/27 07:23:09 - capella.0 - 		DST.Type,
+2017/03/27 07:23:09 - capella.0 - 		case when DST.Type = 'Affiliate' then 'Commission Junction' 
+2017/03/27 07:23:09 - capella.0 - 		     when DST.Type = 'Fixed' then 'Fixed'
+2017/03/27 07:23:09 - capella.0 - 			 else DMC.Class end 
+2017/03/27 07:23:09 - capella.0 - 
+2017/03/27 07:23:09 - capella.0 - 	union all
+2017/03/27 07:23:09 - capella.0 - 
+2017/03/27 07:23:09 - capella.0 - 	select 
+2017/03/27 07:23:09 - capella.0 - 		DD.FullDateUSA,
+2017/03/27 07:23:09 - capella.0 - 		DC.CategoryName,
+2017/03/27 07:23:09 - capella.0 - 		DC.SubCategoryName,
+2017/03/27 07:23:09 - capella.0 - 		DS.SiteName,
+2017/03/27 07:23:09 - capella.0 - 		null as FMS_Type,
+2017/03/27 07:23:09 - capella.0 - 		DST.Type as VFA_Type,
+2017/03/27 07:23:09 - capella.0 - 		VFA.subChannel,
+2017/03/27 07:23:09 - capella.0 - 		0 as MarketingAmount,
+2017/03/27 07:23:09 - capella.0 - 		sum(VFA.FirstTouch) FirstTouch,
+2017/03/27 07:23:09 - capella.0 - 		sum(VFA.LastTouch) LastTouch
+2017/03/27 07:23:09 - capella.0 - 	from DataWarehouse.dbo.ViewFactAttributedJourneysProductSplit_Exc_Cancels VFA with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 	inner join DataWarehouse.dbo.DimDate DD with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 	  on VFA.OrderDateKey = DD.DateKey
+2017/03/27 07:23:09 - capella.0 - 	left join DataWarehouse.dbo.DimSpendType DST with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 	  on VFA.Channel = DST.Type
+2017/03/27 07:23:09 - capella.0 - 	left join DataWarehouse.dbo.DimSite DS with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 	  on VFA.SiteKey = DS.ID
+2017/03/27 07:23:09 - capella.0 - 	left join DataWarehouse.dbo.DimProduct DP with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 	  on VFA.ProductKey = DP.ID
+2017/03/27 07:23:09 - capella.0 - 	left join DataWarehouse.dbo.DimCategory DC with (NOLOCK)
+2017/03/27 07:23:09 - capella.0 - 	  on DP.CategoryKey = DC.ID
+2017/03/27 07:23:09 - capella.0 - 	where DD.Date between DATEADD(MONTH, DATEDIFF(MONTH, 0, DATEADD(DAY,-1,GETDATE())), 0) and convert(varchar(10), getdate()-1, 120)
+2017/03/27 07:23:09 - capella.0 - 	group by
+2017/03/27 07:23:09 - capella.0 - 		DD.FullDateUSA,
+2017/03/27 07:23:09 - capella.0 - 		DC.CategoryName,
+2017/03/27 07:23:09 - capella.0 - 		DC.SubCategoryName,
+2017/03/27 07:23:09 - capella.0 - 		DS.SiteName,
+2017/03/27 07:23:09 - capella.0 - 		DST.Type,
+2017/03/27 07:23:09 - capella.0 - 		VFA.subChannel
+2017/03/27 07:23:09 - capella.0 - ) A
+2017/03/27 07:23:09 - capella.0 - group by
+2017/03/27 07:23:09 - capella.0 - 	FullDateUSA,
+2017/03/27 07:23:09 - capella.0 - 	isnull(VFA_Type, FMS_Type),
+2017/03/27 07:23:09 - capella.0 - 	subChannel,
+2017/03/27 07:23:09 - capella.0 - 	SiteName,
+2017/03/27 07:23:09 - capella.0 - 	CategoryName,
+2017/03/27 07:23:09 - capella.0 - 	SubCategoryName
+2017/03/27 07:23:09 - capella.0 - order by 1, 2, 3, 4, 5, 6
+2017/03/27 07:23:09 - Group by 3.0 - Starting to run...
+2017/03/27 07:23:09 - Formula 3.0 - Starting to run...
+2017/03/27 07:23:09 - Microsoft Excel Output 3.0 - Starting to run...
+2017/03/27 07:23:09 - t_Marketing_Channel_Report - Transformation has allocated 19 threads and 18 rowsets.
+2017/03/27 07:23:09 - Filter rows 2.0 - Starting to run...
+2017/03/27 07:23:09 - Filter rows 3.0 - Starting to run...
+2017/03/27 07:43:42 - capella.0 - Finished reading query, closing connection.
+2017/03/27 07:43:42 - capella - Connection to database closed!
+2017/03/27 07:43:42 - capella.0 - Finished processing (I=15562, O=0, R=0, W=46686, U=0, E=0)
+2017/03/27 07:43:42 - Select values.0 - Finished processing (I=0, O=0, R=15562, W=15562, U=0, E=0)
+2017/03/27 07:43:42 - Select values 3.0 - Finished processing (I=0, O=0, R=15562, W=15562, U=0, E=0)
+2017/03/27 07:43:42 - Select values 2.0 - Finished processing (I=0, O=0, R=15562, W=15562, U=0, E=0)
+2017/03/27 07:43:43 - Sort rows.0 - Starting quickSort algorithm...
+2017/03/27 07:43:43 - Sort rows.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 07:43:43 - Sort rows.0 - QuickSort algorithm has finished.
+2017/03/27 07:43:43 - Sort rows.0 - Finished processing (I=0, O=0, R=15562, W=15562, U=0, E=0)
+2017/03/27 07:43:43 - Group by.0 - Finished processing (I=0, O=0, R=15562, W=928, U=0, E=0)
+2017/03/27 07:43:43 - Filter rows.0 - Finished processing (I=0, O=0, R=928, W=436, U=0, E=0)
+2017/03/27 07:43:43 - Sort rows 3.0 - Starting quickSort algorithm...
+2017/03/27 07:43:43 - Sort rows 3.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 07:43:43 - Sort rows 3.0 - QuickSort algorithm has finished.
+2017/03/27 07:43:43 - Sort rows 3.0 - Finished processing (I=0, O=0, R=15562, W=15562, U=0, E=0)
+2017/03/27 07:43:43 - Group by 3.0 - Finished processing (I=0, O=0, R=15562, W=3029, U=0, E=0)
+2017/03/27 07:43:43 - Filter rows 3.0 - Finished processing (I=0, O=0, R=3029, W=1734, U=0, E=0)
+2017/03/27 07:43:43 - Sort rows 2.0 - Starting quickSort algorithm...
+2017/03/27 07:43:43 - Sort rows 2.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 07:43:43 - Sort rows 2.0 - QuickSort algorithm has finished.
+2017/03/27 07:43:43 - Sort rows 2.0 - Finished processing (I=0, O=0, R=15562, W=15562, U=0, E=0)
+2017/03/27 07:43:44 - Group by 2.0 - Finished processing (I=0, O=0, R=15562, W=9316, U=0, E=0)
+2017/03/27 07:43:44 - Filter rows 2.0 - Finished processing (I=0, O=0, R=9316, W=6433, U=0, E=0)
+2017/03/27 07:43:44 - Formula.0 - Finished processing (I=0, O=0, R=436, W=436, U=0, E=0)
+2017/03/27 07:43:44 - Formula 3.0 - Finished processing (I=0, O=0, R=1734, W=1734, U=0, E=0)
+2017/03/27 07:43:44 - Formula 2.0 - Finished processing (I=0, O=0, R=6433, W=6433, U=0, E=0)
+2017/03/27 07:43:44 - Microsoft Excel Output.0 - Finished processing (I=0, O=436, R=436, W=436, U=0, E=0)
+2017/03/27 07:43:44 - Microsoft Excel Output 3.0 - Finished processing (I=0, O=1734, R=1734, W=1734, U=0, E=0)
+2017/03/27 07:43:44 - Microsoft Excel Output 2.0 - Finished processing (I=0, O=6433, R=6433, W=6433, U=0, E=0)
+2017/03/27 07:43:44 - j_Marketing_Channel_Report - Starting entry [Transformation 2]
+2017/03/27 07:43:44 - j_Marketing_Channel_Report - exec(2, 0, Transformation 2.0)
+2017/03/27 07:43:44 - Transformation 2 - Starting job entry
+2017/03/27 07:43:44 - Transformation 2 - Opening transformation: [file:///C:/Spoon/Data Warehouse Reporting/Marketing Channel Report/t_Rename files.ktr]
+2017/03/27 07:43:44 - Transformation 2 - Loading transformation from XML file [file:///C:/Spoon/Data Warehouse Reporting/Marketing Channel Report/t_Rename files.ktr]
+2017/03/27 07:43:44 - Transformation 2 - Starting transformation...(file=${Internal.Job.Filename.Directory}/t_Rename files.ktr, name=Transformation 2, repinfo=null)
+2017/03/27 07:43:45 - Rename files - Transformation is pre-loaded.
+2017/03/27 07:43:45 - Rename files - Dispatching started for transformation [Rename files]
+2017/03/27 07:43:45 - Rename files - Nr of arguments detected:0 
+2017/03/27 07:43:45 - Rename files - This is not a replay transformation
+2017/03/27 07:43:45 - Rename files - I found 8 different steps to launch.
+2017/03/27 07:43:45 - Rename files - Allocating rowsets...
+2017/03/27 07:43:45 - Rename files -  Allocating rowsets for step 0 --> Get File Names
+2017/03/27 07:43:45 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 07:43:45 - Rename files - Transformation allocated new rowset [Get File Names.0 - Split Fields.0]
+2017/03/27 07:43:45 - Rename files -  Allocated 1 rowsets for step 0 --> Get File Names  
+2017/03/27 07:43:45 - Rename files -  Allocating rowsets for step 1 --> Split Fields
+2017/03/27 07:43:45 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 07:43:45 - Rename files - Transformation allocated new rowset [Split Fields.0 - Add constants.0]
+2017/03/27 07:43:45 - Rename files -  Allocated 2 rowsets for step 1 --> Split Fields  
+2017/03/27 07:43:45 - Rename files -  Allocating rowsets for step 2 --> Add constants
+2017/03/27 07:43:45 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 07:43:45 - Rename files - Transformation allocated new rowset [Add constants.0 - Select values.0]
+2017/03/27 07:43:45 - Rename files -  Allocated 3 rowsets for step 2 --> Add constants  
+2017/03/27 07:43:45 - Rename files -  Allocating rowsets for step 3 --> Get Yesterday's Date
+2017/03/27 07:43:45 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 07:43:45 - Rename files - Transformation allocated new rowset [Get Yesterday's Date.0 - Merge Join.0]
+2017/03/27 07:43:45 - Rename files -  Allocated 4 rowsets for step 3 --> Get Yesterday's Date  
+2017/03/27 07:43:45 - Rename files -  Allocating rowsets for step 4 --> Merge Join
+2017/03/27 07:43:45 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 07:43:45 - Rename files - Transformation allocated new rowset [Merge Join.0 - Concat Fields.0]
+2017/03/27 07:43:45 - Rename files -  Allocated 5 rowsets for step 4 --> Merge Join  
+2017/03/27 07:43:45 - Rename files -  Allocating rowsets for step 5 --> Select values
+2017/03/27 07:43:45 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 07:43:45 - Rename files - Transformation allocated new rowset [Select values.0 - Merge Join.0]
+2017/03/27 07:43:45 - Rename files -  Allocated 6 rowsets for step 5 --> Select values  
+2017/03/27 07:43:45 - Rename files -  Allocating rowsets for step 6 --> Concat Fields
+2017/03/27 07:43:45 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 07:43:45 - Rename files - Transformation allocated new rowset [Concat Fields.0 - Process files.0]
+2017/03/27 07:43:45 - Rename files -  Allocated 7 rowsets for step 6 --> Concat Fields  
+2017/03/27 07:43:45 - Rename files -  Allocating rowsets for step 7 --> Process files
+2017/03/27 07:43:45 - Rename files -  Allocated 7 rowsets for step 7 --> Process files  
+2017/03/27 07:43:45 - Rename files - Allocating Steps & StepData...
+2017/03/27 07:43:45 - Rename files -  Transformation is about to allocate step [Get File Names] of type [GetFileNames]
+2017/03/27 07:43:45 - Get File Names.0 - distribution activated
+2017/03/27 07:43:45 - Get File Names.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:43:45 - Get File Names.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 07:43:45 - Get File Names.0 - output rel. is  1:1
+2017/03/27 07:43:45 - Get File Names.0 - Found output rowset [Get File Names.0 - Split Fields.0]
+2017/03/27 07:43:45 - Get File Names.0 - Finished dispatching
+2017/03/27 07:43:45 - Rename files -  Transformation has allocated a new step: [Get File Names].0
+2017/03/27 07:43:45 - Rename files -  Transformation is about to allocate step [Split Fields] of type [FieldSplitter]
+2017/03/27 07:43:45 - Split Fields.0 - distribution activated
+2017/03/27 07:43:45 - Split Fields.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:43:45 - Split Fields.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:43:45 - Split Fields.0 - Got previous step from [Split Fields] #0 --> Get File Names
+2017/03/27 07:43:45 - Split Fields.0 - input rel is 1:1
+2017/03/27 07:43:45 - Split Fields.0 - Found input rowset [Get File Names.0 - Split Fields.0]
+2017/03/27 07:43:45 - Split Fields.0 - output rel. is  1:1
+2017/03/27 07:43:45 - Split Fields.0 - Found output rowset [Split Fields.0 - Add constants.0]
+2017/03/27 07:43:45 - Split Fields.0 - Finished dispatching
+2017/03/27 07:43:45 - Rename files -  Transformation has allocated a new step: [Split Fields].0
+2017/03/27 07:43:45 - Rename files -  Transformation is about to allocate step [Add constants] of type [Constant]
+2017/03/27 07:43:45 - Add constants.0 - distribution activated
+2017/03/27 07:43:45 - Add constants.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:43:45 - Add constants.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:43:45 - Add constants.0 - Got previous step from [Add constants] #0 --> Split Fields
+2017/03/27 07:43:45 - Add constants.0 - input rel is 1:1
+2017/03/27 07:43:45 - Add constants.0 - Found input rowset [Split Fields.0 - Add constants.0]
+2017/03/27 07:43:45 - Add constants.0 - output rel. is  1:1
+2017/03/27 07:43:45 - Add constants.0 - Found output rowset [Add constants.0 - Select values.0]
+2017/03/27 07:43:45 - Add constants.0 - Finished dispatching
+2017/03/27 07:43:45 - Rename files -  Transformation has allocated a new step: [Add constants].0
+2017/03/27 07:43:45 - Rename files -  Transformation is about to allocate step [Get Yesterday's Date] of type [TableInput]
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - distribution activated
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - output rel. is  1:1
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - Found output rowset [Get Yesterday's Date.0 - Merge Join.0]
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - Finished dispatching
+2017/03/27 07:43:45 - Rename files -  Transformation has allocated a new step: [Get Yesterday's Date].0
+2017/03/27 07:43:45 - Rename files -  Transformation is about to allocate step [Merge Join] of type [MergeJoin]
+2017/03/27 07:43:45 - Merge Join.0 - distribution activated
+2017/03/27 07:43:45 - Merge Join.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:43:45 - Merge Join.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 07:43:45 - Merge Join.0 - Got previous step from [Merge Join] #0 --> Get Yesterday's Date
+2017/03/27 07:43:45 - Merge Join.0 - input rel is 1:1
+2017/03/27 07:43:45 - Merge Join.0 - Found input rowset [Get Yesterday's Date.0 - Merge Join.0]
+2017/03/27 07:43:45 - Merge Join.0 - Got previous step from [Merge Join] #1 --> Select values
+2017/03/27 07:43:45 - Merge Join.0 - input rel is 1:1
+2017/03/27 07:43:45 - Merge Join.0 - Found input rowset [Select values.0 - Merge Join.0]
+2017/03/27 07:43:45 - Merge Join.0 - output rel. is  1:1
+2017/03/27 07:43:45 - Merge Join.0 - Found output rowset [Merge Join.0 - Concat Fields.0]
+2017/03/27 07:43:45 - Merge Join.0 - Finished dispatching
+2017/03/27 07:43:45 - Rename files -  Transformation has allocated a new step: [Merge Join].0
+2017/03/27 07:43:45 - Rename files -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/27 07:43:45 - Select values.0 - distribution activated
+2017/03/27 07:43:45 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:43:45 - Select values.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:43:45 - Select values.0 - Got previous step from [Select values] #0 --> Add constants
+2017/03/27 07:43:45 - Select values.0 - input rel is 1:1
+2017/03/27 07:43:45 - Select values.0 - Found input rowset [Add constants.0 - Select values.0]
+2017/03/27 07:43:45 - Select values.0 - output rel. is  1:1
+2017/03/27 07:43:45 - Select values.0 - Found output rowset [Select values.0 - Merge Join.0]
+2017/03/27 07:43:45 - Select values.0 - Finished dispatching
+2017/03/27 07:43:45 - Rename files -  Transformation has allocated a new step: [Select values].0
+2017/03/27 07:43:45 - Rename files -  Transformation is about to allocate step [Concat Fields] of type [ConcatFields]
+2017/03/27 07:43:45 - Concat Fields.0 - distribution activated
+2017/03/27 07:43:45 - Concat Fields.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:43:45 - Concat Fields.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:43:45 - Concat Fields.0 - Got previous step from [Concat Fields] #0 --> Merge Join
+2017/03/27 07:43:45 - Concat Fields.0 - input rel is 1:1
+2017/03/27 07:43:45 - Concat Fields.0 - Found input rowset [Merge Join.0 - Concat Fields.0]
+2017/03/27 07:43:45 - Concat Fields.0 - output rel. is  1:1
+2017/03/27 07:43:45 - Concat Fields.0 - Found output rowset [Concat Fields.0 - Process files.0]
+2017/03/27 07:43:45 - Concat Fields.0 - Finished dispatching
+2017/03/27 07:43:45 - Rename files -  Transformation has allocated a new step: [Concat Fields].0
+2017/03/27 07:43:45 - Rename files -  Transformation is about to allocate step [Process files] of type [ProcessFiles]
+2017/03/27 07:43:45 - Process files.0 - distribution activated
+2017/03/27 07:43:45 - Process files.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:43:45 - Process files.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 07:43:45 - Process files.0 - Got previous step from [Process files] #0 --> Concat Fields
+2017/03/27 07:43:45 - Process files.0 - input rel is 1:1
+2017/03/27 07:43:45 - Process files.0 - Found input rowset [Concat Fields.0 - Process files.0]
+2017/03/27 07:43:45 - Process files.0 - Finished dispatching
+2017/03/27 07:43:45 - Rename files -  Transformation has allocated a new step: [Process files].0
+2017/03/27 07:43:45 - Rename files - This transformation can be replayed with replay date: 2017/03/27 07:43:45
+2017/03/27 07:43:45 - Rename files - Initialising 8 steps...
+2017/03/27 07:43:45 - Split Fields.0 - Running on slave server #0/1.
+2017/03/27 07:43:45 - Get File Names.0 - Running on slave server #0/1.
+2017/03/27 07:43:45 - Add constants.0 - Running on slave server #0/1.
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - Running on slave server #0/1.
+2017/03/27 07:43:45 - capella - New database connection defined
+2017/03/27 07:43:45 - Merge Join.0 - Running on slave server #0/1.
+2017/03/27 07:43:45 - Process files.0 - Running on slave server #0/1.
+2017/03/27 07:43:45 - Select values.0 - Running on slave server #0/1.
+2017/03/27 07:43:45 - Concat Fields.0 - Running on slave server #0/1.
+2017/03/27 07:43:45 - capella - Connected to database.
+2017/03/27 07:43:45 - capella - Auto commit off
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - Connected to database...
+2017/03/27 07:43:45 - Rename files - Step [Get File Names.0] initialized flawlessly.
+2017/03/27 07:43:45 - Rename files - Step [Split Fields.0] initialized flawlessly.
+2017/03/27 07:43:45 - Rename files - Step [Add constants.0] initialized flawlessly.
+2017/03/27 07:43:45 - Rename files - Step [Get Yesterday's Date.0] initialized flawlessly.
+2017/03/27 07:43:45 - Rename files - Step [Merge Join.0] initialized flawlessly.
+2017/03/27 07:43:45 - Rename files - Step [Select values.0] initialized flawlessly.
+2017/03/27 07:43:45 - Rename files - Step [Concat Fields.0] initialized flawlessly.
+2017/03/27 07:43:45 - Rename files - Step [Process files.0] initialized flawlessly.
+2017/03/27 07:43:45 - Get File Names.0 - Starting to run...
+2017/03/27 07:43:45 - Split Fields.0 - Starting to run...
+2017/03/27 07:43:45 - Add constants.0 - Starting to run...
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - Starting to run...
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - SQL query : SELECT 
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - 	'Join' as joinfield,
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - 	replace(convert(varchar(10), getdate()-1, 120), '-', '') as fulldate,
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - 	replace(convert(varchar(8), getdate()-1, 120), '-', '') as yyyymm
+2017/03/27 07:43:45 - Select values.0 - Starting to run...
+2017/03/27 07:43:45 - Rename files - Transformation has allocated 8 threads and 7 rowsets.
+2017/03/27 07:43:45 - Process files.0 - Starting to run...
+2017/03/27 07:43:45 - Concat Fields.0 - Starting to run...
+2017/03/27 07:43:45 - Merge Join.0 - Starting to run...
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - Finished reading query, closing connection.
+2017/03/27 07:43:45 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=3, U=0, E=0)
+2017/03/27 07:43:45 - capella - Connection to database closed!
+2017/03/27 07:43:45 - Get Yesterday's Date.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 07:43:45 - Split Fields.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2017/03/27 07:43:45 - Add constants.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2017/03/27 07:43:45 - Select values.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2017/03/27 07:43:45 - Merge Join.0 - Finished processing (I=0, O=0, R=4, W=3, U=0, E=0)
+2017/03/27 07:43:45 - Concat Fields.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2017/03/27 07:43:45 - Process files.0 - Source file [file:////lynx/c$/Spoon/Data Warehouse Reporting/Marketing Channel Report/Working Files/Marketing_Channel.xls] was copied to [file:////lynx/c$/Spoon/Data Warehouse Reporting/Marketing Channel Report/Marketing_Channel_201703.xls]
+2017/03/27 07:43:45 - Process files.0 - Source file [file:////lynx/c$/Spoon/Data Warehouse Reporting/Marketing Channel Report/Working Files/Marketing_Channel_Cat_Data.xls] was copied to [file:////lynx/c$/Spoon/Data Warehouse Reporting/Marketing Channel Report/Marketing_Channel_Cat_Data_201703.xls]
+2017/03/27 07:43:45 - Process files.0 - Source file [file:////lynx/c$/Spoon/Data Warehouse Reporting/Marketing Channel Report/Working Files/Marketing_Channel_Site.xls] was copied to [file:////lynx/c$/Spoon/Data Warehouse Reporting/Marketing Channel Report/Marketing_Channel_Site_201703.xls]
+2017/03/27 07:43:45 - Process files.0 - Finished processing (I=0, O=0, R=3, W=3, U=0, E=0)
+2017/03/27 07:43:45 - j_Marketing_Channel_Report - Starting entry [Delete files]
+2017/03/27 07:43:45 - j_Marketing_Channel_Report - exec(3, 0, Delete files.0)
+2017/03/27 07:43:45 - Delete files - Starting job entry
+2017/03/27 07:43:45 - Delete files - Processing argument [C:\Spoon\Data Warehouse Reporting\Marketing Channel Report\Working Files].. wildcard [.*\.xls] ?
+2017/03/27 07:43:45 - Delete files - Processing folder [C:\Spoon\Data Warehouse Reporting\Marketing Channel Report\Working Files]
+2017/03/27 07:43:45 - Delete files - Deleting file [file:///C:/Spoon/Data Warehouse Reporting/Marketing Channel Report/Working Files/Marketing_Channel.xls] ...
+2017/03/27 07:43:45 - Delete files - Deleting file [file:///C:/Spoon/Data Warehouse Reporting/Marketing Channel Report/Working Files/Marketing_Channel_Cat_Data.xls] ...
+2017/03/27 07:43:45 - Delete files - Deleting file [file:///C:/Spoon/Data Warehouse Reporting/Marketing Channel Report/Working Files/Marketing_Channel_Site.xls] ...
+2017/03/27 07:43:45 - Delete files - Total deleted files = 3
+2017/03/27 07:43:45 - j_Marketing_Channel_Report - Finished job entry [Delete files] (result=[true])
+2017/03/27 07:43:45 - j_Marketing_Channel_Report - Finished job entry [Transformation 2] (result=[true])
+2017/03/27 07:43:45 - j_Marketing_Channel_Report - Finished job entry [Transformation] (result=[true])
+2017/03/27 07:43:45 - j_Marketing_Channel_Report - Job execution finished
+2017/03/27 07:43:45 - Kitchen - Finished!
+2017/03/27 07:43:45 - Kitchen - Start=2017/03/27 07:23:08.187, Stop=2017/03/27 07:43:45.538
+2017/03/27 07:43:45 - Kitchen - Processing ended after 20 minutes and 37 seconds (1237 seconds total).

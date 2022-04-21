@@ -1,0 +1,916 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/27 07:20:54 - Kitchen - Logging is at level : Detailed logging
+2017/03/27 07:20:54 - Kitchen - Start of run.
+2017/03/27 07:20:55 - BackwardsMarketSpendPopulate_Kenshoo - Start of job execution
+2017/03/27 07:20:55 - BackwardsMarketSpendPopulate_Kenshoo - exec(0, 0, START.0)
+2017/03/27 07:20:55 - START - Starting job entry
+2017/03/27 07:20:55 - BackwardsMarketSpendPopulate_Kenshoo - Starting entry [Set Vars]
+2017/03/27 07:20:55 - BackwardsMarketSpendPopulate_Kenshoo - exec(1, 0, Set Vars.0)
+2017/03/27 07:20:55 - Set Vars - Starting job entry
+2017/03/27 07:20:55 - Set Vars - Opening transformation: [C:\Spoon\DataWarehouseETLs\SetMarketingSpendLookbackDate.ktr]
+2017/03/27 07:20:55 - Set Vars - Loading transformation from XML file [C:\Spoon\DataWarehouseETLs\SetMarketingSpendLookbackDate.ktr]
+2017/03/27 07:20:55 - Set Vars - Starting transformation...(file=C:\Spoon\DataWarehouseETLs\SetMarketingSpendLookbackDate.ktr, name=Set Vars, repinfo=null)
+2017/03/27 07:20:55 - Set Vars - Transformation is pre-loaded.
+2017/03/27 07:20:55 - Set Vars - Dispatching started for transformation [SetMarketingSpendLookbackDate]
+2017/03/27 07:20:55 - Set Vars - Nr of arguments detected:0 
+2017/03/27 07:20:55 - Set Vars - This is not a replay transformation
+2017/03/27 07:20:55 - Set Vars - I found 2 different steps to launch.
+2017/03/27 07:20:55 - Set Vars - Allocating rowsets...
+2017/03/27 07:20:55 - Set Vars -  Allocating rowsets for step 0 --> Table input
+2017/03/27 07:20:55 - Set Vars -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:55 - Set Vars - Transformation allocated new rowset [Table input.0 - Set Variables.0]
+2017/03/27 07:20:55 - Set Vars -  Allocated 1 rowsets for step 0 --> Table input  
+2017/03/27 07:20:55 - Set Vars -  Allocating rowsets for step 1 --> Set Variables
+2017/03/27 07:20:55 - Set Vars -  Allocated 1 rowsets for step 1 --> Set Variables  
+2017/03/27 07:20:55 - Set Vars - Allocating Steps & StepData...
+2017/03/27 07:20:55 - Set Vars -  Transformation is about to allocate step [Table input] of type [TableInput]
+2017/03/27 07:20:55 - Table input.0 - distribution activated
+2017/03/27 07:20:55 - Table input.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:55 - Table input.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 07:20:55 - Table input.0 - output rel. is  1:1
+2017/03/27 07:20:55 - Table input.0 - Found output rowset [Table input.0 - Set Variables.0]
+2017/03/27 07:20:55 - Table input.0 - Finished dispatching
+2017/03/27 07:20:55 - Set Vars -  Transformation has allocated a new step: [Table input].0
+2017/03/27 07:20:55 - Set Vars -  Transformation is about to allocate step [Set Variables] of type [SetVariable]
+2017/03/27 07:20:55 - Set Variables.0 - distribution activated
+2017/03/27 07:20:55 - Set Variables.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:55 - Set Variables.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 07:20:55 - Set Variables.0 - Got previous step from [Set Variables] #0 --> Table input
+2017/03/27 07:20:55 - Set Variables.0 - input rel is 1:1
+2017/03/27 07:20:55 - Set Variables.0 - Found input rowset [Table input.0 - Set Variables.0]
+2017/03/27 07:20:55 - Set Variables.0 - Finished dispatching
+2017/03/27 07:20:55 - Set Vars -  Transformation has allocated a new step: [Set Variables].0
+2017/03/27 07:20:55 - Set Vars - This transformation can be replayed with replay date: 2017/03/27 07:20:55
+2017/03/27 07:20:55 - Set Vars - Initialising 2 steps...
+2017/03/27 07:20:55 - Table input.0 - Running on slave server #0/1.
+2017/03/27 07:20:55 - Set Variables.0 - Running on slave server #0/1.
+2017/03/27 07:20:55 - Warehouse - New database connection defined
+2017/03/27 07:20:57 - Warehouse - Connected to database.
+2017/03/27 07:20:57 - Warehouse - Auto commit off
+2017/03/27 07:20:57 - Table input.0 - Connected to database...
+2017/03/27 07:20:57 - Set Vars - Step [Table input.0] initialized flawlessly.
+2017/03/27 07:20:57 - Set Vars - Step [Set Variables.0] initialized flawlessly.
+2017/03/27 07:20:57 - Table input.0 - Starting to run...
+2017/03/27 07:20:57 - Set Vars - Transformation has allocated 2 threads and 1 rowsets.
+2017/03/27 07:20:57 - Set Variables.0 - Starting to run...
+2017/03/27 07:20:57 - Table input.0 - SQL query : SELECT TOP 1
+2017/03/27 07:20:57 - Table input.0 - 	   Dateadd(day, -1, CONVERT(DATE, GETDATE())) AS startDate, 
+2017/03/27 07:20:57 - Table input.0 -        Dateadd(day, 0, CONVERT(DATE, GETDATE())) AS endDate 
+2017/03/27 07:20:57 - Table input.0 - 
+2017/03/27 07:20:57 - Table input.0 - FROM   FactMarketingSpend
+2017/03/27 07:20:57 - Table input.0 - Finished reading query, closing connection.
+2017/03/27 07:20:57 - Set Variables.0 - Setting environment variables...
+2017/03/27 07:20:57 - Set Variables.0 - Set variable startDate to value [2017/03/26 00:00:00.000]
+2017/03/27 07:20:57 - Set Variables.0 - Set variable endDate to value [2017/03/27 00:00:00.000]
+2017/03/27 07:20:57 - Set Variables.0 - Finished after 1 rows.
+2017/03/27 07:20:57 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 07:20:57 - Warehouse - Connection to database closed!
+2017/03/27 07:20:57 - Table input.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 07:20:57 - BackwardsMarketSpendPopulate_Kenshoo - Starting entry [InsertMarketSpend_Kenshoo]
+2017/03/27 07:20:57 - BackwardsMarketSpendPopulate_Kenshoo - exec(2, 0, InsertMarketSpend_Kenshoo.0)
+2017/03/27 07:20:57 - InsertMarketSpend_Kenshoo - Starting job entry
+2017/03/27 07:20:57 - InsertMarketSpend_Kenshoo - Opening transformation: [file:///C:/Spoon/DataWarehouseETLs/FactMktgSpendInsert_Kenshoo.ktr]
+2017/03/27 07:20:57 - InsertMarketSpend_Kenshoo - Loading transformation from XML file [file:///C:/Spoon/DataWarehouseETLs/FactMktgSpendInsert_Kenshoo.ktr]
+2017/03/27 07:20:57 - InsertMarketSpend_Kenshoo - Starting transformation...(file=${Internal.Job.Filename.Directory}/FactMktgSpendInsert_Kenshoo.ktr, name=InsertMarketSpend_Kenshoo, repinfo=null)
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation is pre-loaded.
+2017/03/27 07:20:57 - PPC_Import to DWH - Dispatching started for transformation [PPC_Import to DWH]
+2017/03/27 07:20:57 - PPC_Import to DWH - Nr of arguments detected:0 
+2017/03/27 07:20:57 - PPC_Import to DWH - This is not a replay transformation
+2017/03/27 07:20:57 - PPC_Import to DWH - I found 39 different steps to launch.
+2017/03/27 07:20:57 - PPC_Import to DWH - Allocating rowsets...
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 0 --> Add Amazon
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Add Amazon.0 - Select values.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 1 rowsets for step 0 --> Add Amazon  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 1 --> Select values
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Select values.0 - Sort rows.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 2 rowsets for step 1 --> Select values  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 2 --> Add Display
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Add Display.0 - Select values.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 3 rowsets for step 2 --> Add Display  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 3 --> Add PLA
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Add PLA.0 - Select values.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 4 rowsets for step 3 --> Add PLA  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 4 --> Add PPC
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Add PPC.0 - Select values.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 5 rowsets for step 4 --> Add PPC  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 5 --> CSV file input
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [CSV file input.0 - Remove 0 cost, exclude Facebook.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 6 rowsets for step 5 --> CSV file input  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 6 --> Remove 0 cost, exclude Facebook
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Remove 0 cost, exclude Facebook.0 - Split Fields.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 7 rowsets for step 6 --> Remove 0 cost, exclude Facebook  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 7 --> Get File Names
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Get File Names.0 - CSV file input.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 8 rowsets for step 7 --> Get File Names  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 8 --> Group by
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Group by.0 - Merge Join.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 9 rowsets for step 8 --> Group by  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 9 --> Merge Join
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Merge Join.0 - Select values 3.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 10 rowsets for step 9 --> Merge Join  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 10 --> Select values 3
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Select values 3.0 - If field value is null.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 11 rowsets for step 10 --> Select values 3  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 11 --> Split Fields
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Split Fields.0 - Replace in string.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 12 rowsets for step 11 --> Split Fields  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 12 --> Replace in string
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Replace in string.0 - Switch / Case.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 13 rowsets for step 12 --> Replace in string  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 13 --> Switch / Case
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Switch / Case.0 - Add Amazon.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Switch / Case.0 - Add Display.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Switch / Case.0 - Add PLA.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Switch / Case.0 - Add PPC.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 17 rowsets for step 13 --> Switch / Case  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 14 --> Sort rows
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Sort rows.0 - Group by.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 18 rowsets for step 14 --> Sort rows  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 15 --> Select values 2
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Select values 2.0 - Filter rows.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 19 rowsets for step 15 --> Select values 2  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 16 --> Filter rows
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Filter rows.0 - Add constants.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 20 rowsets for step 16 --> Filter rows  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 17 --> If field value is null
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [If field value is null.0 - Select values 2.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 21 rowsets for step 17 --> If field value is null  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 18 --> Sort rows 2
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Sort rows 2.0 - Merge Join.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 22 rowsets for step 18 --> Sort rows 2  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 19 --> Table input
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Table input.0 - Sort rows 2.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 23 rowsets for step 19 --> Table input  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 20 --> Add constants
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Add constants.0 - Replace in string 2.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 24 rowsets for step 20 --> Add constants  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 21 --> Replace in string 2
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Replace in string 2.0 - Sort rows 3.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 25 rowsets for step 21 --> Replace in string 2  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 22 --> Sort rows 3
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Sort rows 3.0 - Group by 2.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 26 rowsets for step 22 --> Sort rows 3  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 23 --> Category CLU
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Category CLU.0 - CategoryKey.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 27 rowsets for step 23 --> Category CLU  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 24 --> CategoryKey
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [CategoryKey.0 - String operations.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 28 rowsets for step 24 --> CategoryKey  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 25 --> Data Grid
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Data Grid.0 - Stream lookup.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 29 rowsets for step 25 --> Data Grid  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 26 --> Stream lookup
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Stream lookup.0 - Site CLU.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 30 rowsets for step 26 --> Stream lookup  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 27 --> Memory Group by 2
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Memory Group by 2.0 - Set SourceKey Values 2.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 31 rowsets for step 27 --> Memory Group by 2  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 28 --> Set SourceKey Values 2
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Set SourceKey Values 2.0 - Combination lookup/update.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 32 rowsets for step 28 --> Set SourceKey Values 2  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 29 --> Select values 4
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Select values 4.0 - Category CLU.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 33 rowsets for step 29 --> Select values 4  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 30 --> Site CLU
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Site CLU.0 - SiteKey.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 34 rowsets for step 30 --> Site CLU  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 31 --> SiteKey
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [SiteKey.0 - Memory Group by 2.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 35 rowsets for step 31 --> SiteKey  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 32 --> SpendType CLU
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [SpendType CLU.0 - Select values 4.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 36 rowsets for step 32 --> SpendType CLU  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 33 --> Combination lookup/update
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Combination lookup/update.0 - Rename CampaignID to CampaignKey.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 37 rowsets for step 33 --> Combination lookup/update  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 34 --> Rename CampaignID to CampaignKey
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Rename CampaignID to CampaignKey.0 - Table output.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 38 rowsets for step 34 --> Rename CampaignID to CampaignKey  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 35 --> Group by 2
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Group by 2.0 - SpendType CLU.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 39 rowsets for step 35 --> Group by 2  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 36 --> Table output
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 39 rowsets for step 36 --> Table output  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 37 --> String operations
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [String operations.0 - Stream lookup.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 40 rowsets for step 37 --> String operations  
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocating rowsets for step 38 --> Execute SQL script
+2017/03/27 07:20:57 - PPC_Import to DWH -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:57 - PPC_Import to DWH - Transformation allocated new rowset [Execute SQL script.0 - Get File Names.0]
+2017/03/27 07:20:57 - PPC_Import to DWH -  Allocated 41 rowsets for step 38 --> Execute SQL script  
+2017/03/27 07:20:57 - PPC_Import to DWH - Allocating Steps & StepData...
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation is about to allocate step [Add Amazon] of type [Constant]
+2017/03/27 07:20:57 - Add Amazon.0 - distribution de-activated
+2017/03/27 07:20:57 - Add Amazon.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:57 - Add Amazon.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:57 - Add Amazon.0 - Got previous step from [Add Amazon] #0 --> Switch / Case
+2017/03/27 07:20:57 - Add Amazon.0 - input rel is 1:1
+2017/03/27 07:20:57 - Add Amazon.0 - Found input rowset [Switch / Case.0 - Add Amazon.0]
+2017/03/27 07:20:57 - Add Amazon.0 - output rel. is  1:1
+2017/03/27 07:20:57 - Add Amazon.0 - Found output rowset [Add Amazon.0 - Select values.0]
+2017/03/27 07:20:57 - Add Amazon.0 - Finished dispatching
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation has allocated a new step: [Add Amazon].0
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/27 07:20:57 - Select values.0 - distribution activated
+2017/03/27 07:20:57 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:57 - Select values.0 - Step info: nrinput=4 nroutput=1
+2017/03/27 07:20:57 - Select values.0 - Got previous step from [Select values] #0 --> Add Amazon
+2017/03/27 07:20:57 - Select values.0 - input rel is 1:1
+2017/03/27 07:20:57 - Select values.0 - Found input rowset [Add Amazon.0 - Select values.0]
+2017/03/27 07:20:57 - Select values.0 - Got previous step from [Select values] #1 --> Add Display
+2017/03/27 07:20:57 - Select values.0 - input rel is 1:1
+2017/03/27 07:20:57 - Select values.0 - Found input rowset [Add Display.0 - Select values.0]
+2017/03/27 07:20:57 - Select values.0 - Got previous step from [Select values] #2 --> Add PLA
+2017/03/27 07:20:57 - Select values.0 - input rel is 1:1
+2017/03/27 07:20:57 - Select values.0 - Found input rowset [Add PLA.0 - Select values.0]
+2017/03/27 07:20:57 - Select values.0 - Got previous step from [Select values] #3 --> Add PPC
+2017/03/27 07:20:57 - Select values.0 - input rel is 1:1
+2017/03/27 07:20:57 - Select values.0 - Found input rowset [Add PPC.0 - Select values.0]
+2017/03/27 07:20:57 - Select values.0 - output rel. is  1:1
+2017/03/27 07:20:57 - Select values.0 - Found output rowset [Select values.0 - Sort rows.0]
+2017/03/27 07:20:57 - Select values.0 - Finished dispatching
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation has allocated a new step: [Select values].0
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation is about to allocate step [Add Display] of type [Constant]
+2017/03/27 07:20:57 - Add Display.0 - distribution de-activated
+2017/03/27 07:20:57 - Add Display.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:57 - Add Display.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:57 - Add Display.0 - Got previous step from [Add Display] #0 --> Switch / Case
+2017/03/27 07:20:57 - Add Display.0 - input rel is 1:1
+2017/03/27 07:20:57 - Add Display.0 - Found input rowset [Switch / Case.0 - Add Display.0]
+2017/03/27 07:20:57 - Add Display.0 - output rel. is  1:1
+2017/03/27 07:20:57 - Add Display.0 - Found output rowset [Add Display.0 - Select values.0]
+2017/03/27 07:20:57 - Add Display.0 - Finished dispatching
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation has allocated a new step: [Add Display].0
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation is about to allocate step [Add PLA] of type [Constant]
+2017/03/27 07:20:57 - Add PLA.0 - distribution de-activated
+2017/03/27 07:20:57 - Add PLA.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:57 - Add PLA.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:57 - Add PLA.0 - Got previous step from [Add PLA] #0 --> Switch / Case
+2017/03/27 07:20:57 - Add PLA.0 - input rel is 1:1
+2017/03/27 07:20:57 - Add PLA.0 - Found input rowset [Switch / Case.0 - Add PLA.0]
+2017/03/27 07:20:57 - Add PLA.0 - output rel. is  1:1
+2017/03/27 07:20:57 - Add PLA.0 - Found output rowset [Add PLA.0 - Select values.0]
+2017/03/27 07:20:57 - Add PLA.0 - Finished dispatching
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation has allocated a new step: [Add PLA].0
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation is about to allocate step [Add PPC] of type [Constant]
+2017/03/27 07:20:57 - Add PPC.0 - distribution de-activated
+2017/03/27 07:20:57 - Add PPC.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:57 - Add PPC.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:57 - Add PPC.0 - Got previous step from [Add PPC] #0 --> Switch / Case
+2017/03/27 07:20:57 - Add PPC.0 - input rel is 1:1
+2017/03/27 07:20:57 - Add PPC.0 - Found input rowset [Switch / Case.0 - Add PPC.0]
+2017/03/27 07:20:57 - Add PPC.0 - output rel. is  1:1
+2017/03/27 07:20:57 - Add PPC.0 - Found output rowset [Add PPC.0 - Select values.0]
+2017/03/27 07:20:57 - Add PPC.0 - Finished dispatching
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation has allocated a new step: [Add PPC].0
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation is about to allocate step [CSV file input] of type [CsvInput]
+2017/03/27 07:20:57 - CSV file input.0 - distribution activated
+2017/03/27 07:20:57 - CSV file input.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:57 - CSV file input.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:57 - CSV file input.0 - Got previous step from [CSV file input] #0 --> Get File Names
+2017/03/27 07:20:57 - CSV file input.0 - input rel is 1:1
+2017/03/27 07:20:57 - CSV file input.0 - Found input rowset [Get File Names.0 - CSV file input.0]
+2017/03/27 07:20:57 - CSV file input.0 - output rel. is  1:1
+2017/03/27 07:20:57 - CSV file input.0 - Found output rowset [CSV file input.0 - Remove 0 cost, exclude Facebook.0]
+2017/03/27 07:20:57 - CSV file input.0 - Finished dispatching
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation has allocated a new step: [CSV file input].0
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation is about to allocate step [Remove 0 cost, exclude Facebook] of type [FilterRows]
+2017/03/27 07:20:57 - Remove 0 cost, exclude Facebook.0 - distribution activated
+2017/03/27 07:20:57 - Remove 0 cost, exclude Facebook.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:57 - Remove 0 cost, exclude Facebook.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:57 - Remove 0 cost, exclude Facebook.0 - Got previous step from [Remove 0 cost, exclude Facebook] #0 --> CSV file input
+2017/03/27 07:20:57 - Remove 0 cost, exclude Facebook.0 - input rel is 1:1
+2017/03/27 07:20:57 - Remove 0 cost, exclude Facebook.0 - Found input rowset [CSV file input.0 - Remove 0 cost, exclude Facebook.0]
+2017/03/27 07:20:57 - Remove 0 cost, exclude Facebook.0 - output rel. is  1:1
+2017/03/27 07:20:57 - Remove 0 cost, exclude Facebook.0 - Found output rowset [Remove 0 cost, exclude Facebook.0 - Split Fields.0]
+2017/03/27 07:20:57 - Remove 0 cost, exclude Facebook.0 - Finished dispatching
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation has allocated a new step: [Remove 0 cost, exclude Facebook].0
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation is about to allocate step [Get File Names] of type [GetFileNames]
+2017/03/27 07:20:57 - Get File Names.0 - distribution activated
+2017/03/27 07:20:57 - Get File Names.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:57 - Get File Names.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:57 - Get File Names.0 - Got previous step from [Get File Names] #0 --> Execute SQL script
+2017/03/27 07:20:57 - Get File Names.0 - input rel is 1:1
+2017/03/27 07:20:57 - Get File Names.0 - Found input rowset [Execute SQL script.0 - Get File Names.0]
+2017/03/27 07:20:57 - Get File Names.0 - output rel. is  1:1
+2017/03/27 07:20:57 - Get File Names.0 - Found output rowset [Get File Names.0 - CSV file input.0]
+2017/03/27 07:20:57 - Get File Names.0 - Finished dispatching
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation has allocated a new step: [Get File Names].0
+2017/03/27 07:20:57 - PPC_Import to DWH -  Transformation is about to allocate step [Group by] of type [GroupBy]
+2017/03/27 07:20:58 - Group by.0 - distribution activated
+2017/03/27 07:20:58 - Group by.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Group by.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Group by.0 - Got previous step from [Group by] #0 --> Sort rows
+2017/03/27 07:20:58 - Group by.0 - input rel is 1:1
+2017/03/27 07:20:58 - Group by.0 - Found input rowset [Sort rows.0 - Group by.0]
+2017/03/27 07:20:58 - Group by.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Group by.0 - Found output rowset [Group by.0 - Merge Join.0]
+2017/03/27 07:20:58 - Group by.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Group by].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Merge Join] of type [MergeJoin]
+2017/03/27 07:20:58 - Merge Join.0 - distribution activated
+2017/03/27 07:20:58 - Merge Join.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Merge Join.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 07:20:58 - Merge Join.0 - Got previous step from [Merge Join] #0 --> Group by
+2017/03/27 07:20:58 - Merge Join.0 - input rel is 1:1
+2017/03/27 07:20:58 - Merge Join.0 - Found input rowset [Group by.0 - Merge Join.0]
+2017/03/27 07:20:58 - Merge Join.0 - Got previous step from [Merge Join] #1 --> Sort rows 2
+2017/03/27 07:20:58 - Merge Join.0 - input rel is 1:1
+2017/03/27 07:20:58 - Merge Join.0 - Found input rowset [Sort rows 2.0 - Merge Join.0]
+2017/03/27 07:20:58 - Merge Join.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Merge Join.0 - Found output rowset [Merge Join.0 - Select values 3.0]
+2017/03/27 07:20:58 - Merge Join.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Merge Join].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Select values 3] of type [SelectValues]
+2017/03/27 07:20:58 - Select values 3.0 - distribution activated
+2017/03/27 07:20:58 - Select values 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Select values 3.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Select values 3.0 - Got previous step from [Select values 3] #0 --> Merge Join
+2017/03/27 07:20:58 - Select values 3.0 - input rel is 1:1
+2017/03/27 07:20:58 - Select values 3.0 - Found input rowset [Merge Join.0 - Select values 3.0]
+2017/03/27 07:20:58 - Select values 3.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Select values 3.0 - Found output rowset [Select values 3.0 - If field value is null.0]
+2017/03/27 07:20:58 - Select values 3.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Select values 3].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Split Fields] of type [FieldSplitter]
+2017/03/27 07:20:58 - Split Fields.0 - distribution activated
+2017/03/27 07:20:58 - Split Fields.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Split Fields.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Split Fields.0 - Got previous step from [Split Fields] #0 --> Remove 0 cost, exclude Facebook
+2017/03/27 07:20:58 - Split Fields.0 - input rel is 1:1
+2017/03/27 07:20:58 - Split Fields.0 - Found input rowset [Remove 0 cost, exclude Facebook.0 - Split Fields.0]
+2017/03/27 07:20:58 - Split Fields.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Split Fields.0 - Found output rowset [Split Fields.0 - Replace in string.0]
+2017/03/27 07:20:58 - Split Fields.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Split Fields].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Replace in string] of type [ReplaceString]
+2017/03/27 07:20:58 - Replace in string.0 - distribution activated
+2017/03/27 07:20:58 - Replace in string.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Replace in string.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Replace in string.0 - Got previous step from [Replace in string] #0 --> Split Fields
+2017/03/27 07:20:58 - Replace in string.0 - input rel is 1:1
+2017/03/27 07:20:58 - Replace in string.0 - Found input rowset [Split Fields.0 - Replace in string.0]
+2017/03/27 07:20:58 - Replace in string.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Replace in string.0 - Found output rowset [Replace in string.0 - Switch / Case.0]
+2017/03/27 07:20:58 - Replace in string.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Replace in string].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Switch / Case] of type [SwitchCase]
+2017/03/27 07:20:58 - Switch / Case.0 - distribution activated
+2017/03/27 07:20:58 - Switch / Case.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Switch / Case.0 - Step info: nrinput=1 nroutput=4
+2017/03/27 07:20:58 - Switch / Case.0 - Got previous step from [Switch / Case] #0 --> Replace in string
+2017/03/27 07:20:58 - Switch / Case.0 - input rel is 1:1
+2017/03/27 07:20:58 - Switch / Case.0 - Found input rowset [Replace in string.0 - Switch / Case.0]
+2017/03/27 07:20:58 - Switch / Case.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Add Amazon.0]
+2017/03/27 07:20:58 - Switch / Case.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Add Display.0]
+2017/03/27 07:20:58 - Switch / Case.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Add PLA.0]
+2017/03/27 07:20:58 - Switch / Case.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Add PPC.0]
+2017/03/27 07:20:58 - Switch / Case.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Switch / Case].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Sort rows] of type [SortRows]
+2017/03/27 07:20:58 - Sort rows.0 - distribution activated
+2017/03/27 07:20:58 - Sort rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Sort rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Sort rows.0 - Got previous step from [Sort rows] #0 --> Select values
+2017/03/27 07:20:58 - Sort rows.0 - input rel is 1:1
+2017/03/27 07:20:58 - Sort rows.0 - Found input rowset [Select values.0 - Sort rows.0]
+2017/03/27 07:20:58 - Sort rows.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Sort rows.0 - Found output rowset [Sort rows.0 - Group by.0]
+2017/03/27 07:20:58 - Sort rows.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Sort rows].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Select values 2] of type [SelectValues]
+2017/03/27 07:20:58 - Select values 2.0 - distribution activated
+2017/03/27 07:20:58 - Select values 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Select values 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Select values 2.0 - Got previous step from [Select values 2] #0 --> If field value is null
+2017/03/27 07:20:58 - Select values 2.0 - input rel is 1:1
+2017/03/27 07:20:58 - Select values 2.0 - Found input rowset [If field value is null.0 - Select values 2.0]
+2017/03/27 07:20:58 - Select values 2.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Select values 2.0 - Found output rowset [Select values 2.0 - Filter rows.0]
+2017/03/27 07:20:58 - Select values 2.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Select values 2].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Filter rows] of type [FilterRows]
+2017/03/27 07:20:58 - Filter rows.0 - distribution activated
+2017/03/27 07:20:58 - Filter rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Filter rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Filter rows.0 - Got previous step from [Filter rows] #0 --> Select values 2
+2017/03/27 07:20:58 - Filter rows.0 - input rel is 1:1
+2017/03/27 07:20:58 - Filter rows.0 - Found input rowset [Select values 2.0 - Filter rows.0]
+2017/03/27 07:20:58 - Filter rows.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Filter rows.0 - Found output rowset [Filter rows.0 - Add constants.0]
+2017/03/27 07:20:58 - Filter rows.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Filter rows].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [If field value is null] of type [IfNull]
+2017/03/27 07:20:58 - If field value is null.0 - distribution activated
+2017/03/27 07:20:58 - If field value is null.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - If field value is null.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - If field value is null.0 - Got previous step from [If field value is null] #0 --> Select values 3
+2017/03/27 07:20:58 - If field value is null.0 - input rel is 1:1
+2017/03/27 07:20:58 - If field value is null.0 - Found input rowset [Select values 3.0 - If field value is null.0]
+2017/03/27 07:20:58 - If field value is null.0 - output rel. is  1:1
+2017/03/27 07:20:58 - If field value is null.0 - Found output rowset [If field value is null.0 - Select values 2.0]
+2017/03/27 07:20:58 - If field value is null.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [If field value is null].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Sort rows 2] of type [SortRows]
+2017/03/27 07:20:58 - Sort rows 2.0 - distribution activated
+2017/03/27 07:20:58 - Sort rows 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Sort rows 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Sort rows 2.0 - Got previous step from [Sort rows 2] #0 --> Table input
+2017/03/27 07:20:58 - Sort rows 2.0 - input rel is 1:1
+2017/03/27 07:20:58 - Sort rows 2.0 - Found input rowset [Table input.0 - Sort rows 2.0]
+2017/03/27 07:20:58 - Sort rows 2.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Sort rows 2.0 - Found output rowset [Sort rows 2.0 - Merge Join.0]
+2017/03/27 07:20:58 - Sort rows 2.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Sort rows 2].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Table input] of type [TableInput]
+2017/03/27 07:20:58 - Table input.0 - distribution activated
+2017/03/27 07:20:58 - Table input.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Table input.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 07:20:58 - Table input.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Table input.0 - Found output rowset [Table input.0 - Sort rows 2.0]
+2017/03/27 07:20:58 - Table input.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Table input].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Add constants] of type [Constant]
+2017/03/27 07:20:58 - Add constants.0 - distribution activated
+2017/03/27 07:20:58 - Add constants.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Add constants.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Add constants.0 - Got previous step from [Add constants] #0 --> Filter rows
+2017/03/27 07:20:58 - Add constants.0 - input rel is 1:1
+2017/03/27 07:20:58 - Add constants.0 - Found input rowset [Filter rows.0 - Add constants.0]
+2017/03/27 07:20:58 - Add constants.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Add constants.0 - Found output rowset [Add constants.0 - Replace in string 2.0]
+2017/03/27 07:20:58 - Add constants.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Add constants].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Replace in string 2] of type [ReplaceString]
+2017/03/27 07:20:58 - Replace in string 2.0 - distribution activated
+2017/03/27 07:20:58 - Replace in string 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Replace in string 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Replace in string 2.0 - Got previous step from [Replace in string 2] #0 --> Add constants
+2017/03/27 07:20:58 - Replace in string 2.0 - input rel is 1:1
+2017/03/27 07:20:58 - Replace in string 2.0 - Found input rowset [Add constants.0 - Replace in string 2.0]
+2017/03/27 07:20:58 - Replace in string 2.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Replace in string 2.0 - Found output rowset [Replace in string 2.0 - Sort rows 3.0]
+2017/03/27 07:20:58 - Replace in string 2.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Replace in string 2].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Sort rows 3] of type [SortRows]
+2017/03/27 07:20:58 - Sort rows 3.0 - distribution activated
+2017/03/27 07:20:58 - Sort rows 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Sort rows 3.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Sort rows 3.0 - Got previous step from [Sort rows 3] #0 --> Replace in string 2
+2017/03/27 07:20:58 - Sort rows 3.0 - input rel is 1:1
+2017/03/27 07:20:58 - Sort rows 3.0 - Found input rowset [Replace in string 2.0 - Sort rows 3.0]
+2017/03/27 07:20:58 - Sort rows 3.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Sort rows 3.0 - Found output rowset [Sort rows 3.0 - Group by 2.0]
+2017/03/27 07:20:58 - Sort rows 3.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Sort rows 3].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Category CLU] of type [CombinationLookup]
+2017/03/27 07:20:58 - Category CLU.0 - distribution activated
+2017/03/27 07:20:58 - Category CLU.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Category CLU.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Category CLU.0 - Got previous step from [Category CLU] #0 --> Select values 4
+2017/03/27 07:20:58 - Category CLU.0 - input rel is 1:1
+2017/03/27 07:20:58 - Category CLU.0 - Found input rowset [Select values 4.0 - Category CLU.0]
+2017/03/27 07:20:58 - Category CLU.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Category CLU.0 - Found output rowset [Category CLU.0 - CategoryKey.0]
+2017/03/27 07:20:58 - Category CLU.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Category CLU].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [CategoryKey] of type [SelectValues]
+2017/03/27 07:20:58 - CategoryKey.0 - distribution activated
+2017/03/27 07:20:58 - CategoryKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - CategoryKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - CategoryKey.0 - Got previous step from [CategoryKey] #0 --> Category CLU
+2017/03/27 07:20:58 - CategoryKey.0 - input rel is 1:1
+2017/03/27 07:20:58 - CategoryKey.0 - Found input rowset [Category CLU.0 - CategoryKey.0]
+2017/03/27 07:20:58 - CategoryKey.0 - output rel. is  1:1
+2017/03/27 07:20:58 - CategoryKey.0 - Found output rowset [CategoryKey.0 - String operations.0]
+2017/03/27 07:20:58 - CategoryKey.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [CategoryKey].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Data Grid] of type [DataGrid]
+2017/03/27 07:20:58 - Data Grid.0 - distribution de-activated
+2017/03/27 07:20:58 - Data Grid.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Data Grid.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 07:20:58 - Data Grid.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Data Grid.0 - Found output rowset [Data Grid.0 - Stream lookup.0]
+2017/03/27 07:20:58 - Data Grid.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Data Grid].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Stream lookup] of type [StreamLookup]
+2017/03/27 07:20:58 - Stream lookup.0 - distribution activated
+2017/03/27 07:20:58 - Stream lookup.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Stream lookup.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 07:20:58 - Stream lookup.0 - Got previous step from [Stream lookup] #0 --> Data Grid
+2017/03/27 07:20:58 - Stream lookup.0 - input rel is 1:1
+2017/03/27 07:20:58 - Stream lookup.0 - Found input rowset [Data Grid.0 - Stream lookup.0]
+2017/03/27 07:20:58 - Stream lookup.0 - Got previous step from [Stream lookup] #1 --> String operations
+2017/03/27 07:20:58 - Stream lookup.0 - input rel is 1:1
+2017/03/27 07:20:58 - Stream lookup.0 - Found input rowset [String operations.0 - Stream lookup.0]
+2017/03/27 07:20:58 - Stream lookup.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Stream lookup.0 - Found output rowset [Stream lookup.0 - Site CLU.0]
+2017/03/27 07:20:58 - Stream lookup.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Stream lookup].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Memory Group by 2] of type [MemoryGroupBy]
+2017/03/27 07:20:58 - Memory Group by 2.0 - distribution de-activated
+2017/03/27 07:20:58 - Memory Group by 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Memory Group by 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Memory Group by 2.0 - Got previous step from [Memory Group by 2] #0 --> SiteKey
+2017/03/27 07:20:58 - Memory Group by 2.0 - input rel is 1:1
+2017/03/27 07:20:58 - Memory Group by 2.0 - Found input rowset [SiteKey.0 - Memory Group by 2.0]
+2017/03/27 07:20:58 - Memory Group by 2.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Memory Group by 2.0 - Found output rowset [Memory Group by 2.0 - Set SourceKey Values 2.0]
+2017/03/27 07:20:58 - Memory Group by 2.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Memory Group by 2].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Set SourceKey Values 2] of type [ScriptValueMod]
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - distribution de-activated
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - Got previous step from [Set SourceKey Values 2] #0 --> Memory Group by 2
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - input rel is 1:1
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - Found input rowset [Memory Group by 2.0 - Set SourceKey Values 2.0]
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - Found output rowset [Set SourceKey Values 2.0 - Combination lookup/update.0]
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Set SourceKey Values 2].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Select values 4] of type [SelectValues]
+2017/03/27 07:20:58 - Select values 4.0 - distribution activated
+2017/03/27 07:20:58 - Select values 4.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Select values 4.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Select values 4.0 - Got previous step from [Select values 4] #0 --> SpendType CLU
+2017/03/27 07:20:58 - Select values 4.0 - input rel is 1:1
+2017/03/27 07:20:58 - Select values 4.0 - Found input rowset [SpendType CLU.0 - Select values 4.0]
+2017/03/27 07:20:58 - Select values 4.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Select values 4.0 - Found output rowset [Select values 4.0 - Category CLU.0]
+2017/03/27 07:20:58 - Select values 4.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Select values 4].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Site CLU] of type [CombinationLookup]
+2017/03/27 07:20:58 - Site CLU.0 - distribution activated
+2017/03/27 07:20:58 - Site CLU.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Site CLU.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Site CLU.0 - Got previous step from [Site CLU] #0 --> Stream lookup
+2017/03/27 07:20:58 - Site CLU.0 - input rel is 1:1
+2017/03/27 07:20:58 - Site CLU.0 - Found input rowset [Stream lookup.0 - Site CLU.0]
+2017/03/27 07:20:58 - Site CLU.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Site CLU.0 - Found output rowset [Site CLU.0 - SiteKey.0]
+2017/03/27 07:20:58 - Site CLU.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Site CLU].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [SiteKey] of type [SelectValues]
+2017/03/27 07:20:58 - SiteKey.0 - distribution activated
+2017/03/27 07:20:58 - SiteKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - SiteKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - SiteKey.0 - Got previous step from [SiteKey] #0 --> Site CLU
+2017/03/27 07:20:58 - SiteKey.0 - input rel is 1:1
+2017/03/27 07:20:58 - SiteKey.0 - Found input rowset [Site CLU.0 - SiteKey.0]
+2017/03/27 07:20:58 - SiteKey.0 - output rel. is  1:1
+2017/03/27 07:20:58 - SiteKey.0 - Found output rowset [SiteKey.0 - Memory Group by 2.0]
+2017/03/27 07:20:58 - SiteKey.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [SiteKey].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [SpendType CLU] of type [CombinationLookup]
+2017/03/27 07:20:58 - SpendType CLU.0 - distribution activated
+2017/03/27 07:20:58 - SpendType CLU.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - SpendType CLU.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - SpendType CLU.0 - Got previous step from [SpendType CLU] #0 --> Group by 2
+2017/03/27 07:20:58 - SpendType CLU.0 - input rel is 1:1
+2017/03/27 07:20:58 - SpendType CLU.0 - Found input rowset [Group by 2.0 - SpendType CLU.0]
+2017/03/27 07:20:58 - SpendType CLU.0 - output rel. is  1:1
+2017/03/27 07:20:58 - SpendType CLU.0 - Found output rowset [SpendType CLU.0 - Select values 4.0]
+2017/03/27 07:20:58 - SpendType CLU.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [SpendType CLU].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Combination lookup/update] of type [CombinationLookup]
+2017/03/27 07:20:58 - Combination lookup/update.0 - distribution activated
+2017/03/27 07:20:58 - Combination lookup/update.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Combination lookup/update.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Combination lookup/update.0 - Got previous step from [Combination lookup/update] #0 --> Set SourceKey Values 2
+2017/03/27 07:20:58 - Combination lookup/update.0 - input rel is 1:1
+2017/03/27 07:20:58 - Combination lookup/update.0 - Found input rowset [Set SourceKey Values 2.0 - Combination lookup/update.0]
+2017/03/27 07:20:58 - Combination lookup/update.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Combination lookup/update.0 - Found output rowset [Combination lookup/update.0 - Rename CampaignID to CampaignKey.0]
+2017/03/27 07:20:58 - Combination lookup/update.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Combination lookup/update].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Rename CampaignID to CampaignKey] of type [SelectValues]
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - distribution activated
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - Got previous step from [Rename CampaignID to CampaignKey] #0 --> Combination lookup/update
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - input rel is 1:1
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - Found input rowset [Combination lookup/update.0 - Rename CampaignID to CampaignKey.0]
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - Found output rowset [Rename CampaignID to CampaignKey.0 - Table output.0]
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Rename CampaignID to CampaignKey].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Group by 2] of type [GroupBy]
+2017/03/27 07:20:58 - Group by 2.0 - distribution activated
+2017/03/27 07:20:58 - Group by 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Group by 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - Group by 2.0 - Got previous step from [Group by 2] #0 --> Sort rows 3
+2017/03/27 07:20:58 - Group by 2.0 - input rel is 1:1
+2017/03/27 07:20:58 - Group by 2.0 - Found input rowset [Sort rows 3.0 - Group by 2.0]
+2017/03/27 07:20:58 - Group by 2.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Group by 2.0 - Found output rowset [Group by 2.0 - SpendType CLU.0]
+2017/03/27 07:20:58 - Group by 2.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Group by 2].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2017/03/27 07:20:58 - Table output.0 - distribution activated
+2017/03/27 07:20:58 - Table output.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Table output.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 07:20:58 - Table output.0 - Got previous step from [Table output] #0 --> Rename CampaignID to CampaignKey
+2017/03/27 07:20:58 - Table output.0 - input rel is 1:1
+2017/03/27 07:20:58 - Table output.0 - Found input rowset [Rename CampaignID to CampaignKey.0 - Table output.0]
+2017/03/27 07:20:58 - Table output.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Table output].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [String operations] of type [StringOperations]
+2017/03/27 07:20:58 - String operations.0 - distribution activated
+2017/03/27 07:20:58 - String operations.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - String operations.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:58 - String operations.0 - Got previous step from [String operations] #0 --> CategoryKey
+2017/03/27 07:20:58 - String operations.0 - input rel is 1:1
+2017/03/27 07:20:58 - String operations.0 - Found input rowset [CategoryKey.0 - String operations.0]
+2017/03/27 07:20:58 - String operations.0 - output rel. is  1:1
+2017/03/27 07:20:58 - String operations.0 - Found output rowset [String operations.0 - Stream lookup.0]
+2017/03/27 07:20:58 - String operations.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [String operations].0
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation is about to allocate step [Execute SQL script] of type [ExecSQL]
+2017/03/27 07:20:58 - Execute SQL script.0 - distribution activated
+2017/03/27 07:20:58 - Execute SQL script.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:58 - Execute SQL script.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 07:20:58 - Execute SQL script.0 - output rel. is  1:1
+2017/03/27 07:20:58 - Execute SQL script.0 - Found output rowset [Execute SQL script.0 - Get File Names.0]
+2017/03/27 07:20:58 - Execute SQL script.0 - Finished dispatching
+2017/03/27 07:20:58 - PPC_Import to DWH -  Transformation has allocated a new step: [Execute SQL script].0
+2017/03/27 07:20:58 - PPC_Import to DWH - This transformation can be replayed with replay date: 2017/03/27 07:20:58
+2017/03/27 07:20:58 - PPC_Import to DWH - Initialising 39 steps...
+2017/03/27 07:20:58 - Select values.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Add Amazon.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Add PLA.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Add Display.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Add PPC.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - CSV file input.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Remove 0 cost, exclude Facebook.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Get File Names.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Group by.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Merge Join.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Select values 3.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Replace in string.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Split Fields.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Sort rows.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Switch / Case.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Filter rows.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - If field value is null.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Sort rows 2.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Select values 2.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Table input.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Add constants.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - CategoryKey.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Category CLU.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Replace in string 2.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Sort rows 3.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Data Grid.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - DWH - New database connection defined
+2017/03/27 07:20:58 - Stream lookup.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Set SourceKey Values 2.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Select values 4.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Memory Group by 2.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Site CLU.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - SpendType CLU.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Rename CampaignID to CampaignKey.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Combination lookup/update.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Table output.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Execute SQL script.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - String operations.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - SiteKey.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - Group by 2.0 - Running on slave server #0/1.
+2017/03/27 07:20:58 - capella - New database connection defined
+2017/03/27 07:20:58 - DWH - New database connection defined
+2017/03/27 07:20:58 - DWH - New database connection defined
+2017/03/27 07:20:58 - DWH - New database connection defined
+2017/03/27 07:20:58 - DWH - New database connection defined
+2017/03/27 07:20:58 - DWH - New database connection defined
+2017/03/27 07:20:58 - DWH - Connected to database.
+2017/03/27 07:20:58 - DWH - Connected to database.
+2017/03/27 07:20:58 - Table output.0 - Connected to database [DWH] (commit=1000)
+2017/03/27 07:20:58 - DWH - Auto commit off
+2017/03/27 07:20:58 - DWH - Connected to database.
+2017/03/27 07:20:58 - SpendType CLU.0 - Connected to database...
+2017/03/27 07:20:58 - DWH - Auto commit off
+2017/03/27 07:20:58 - DWH - Connected to database.
+2017/03/27 07:20:58 - Combination lookup/update.0 - Connected to database...
+2017/03/27 07:20:58 - DWH - Auto commit off
+2017/03/27 07:20:58 - Execute SQL script.0 - Connected to database...
+2017/03/27 07:20:58 - DWH - Connected to database.
+2017/03/27 07:20:58 - Site CLU.0 - Connected to database...
+2017/03/27 07:20:58 - DWH - Auto commit off
+2017/03/27 07:20:58 - DWH - launch DDL statement: 
+2017/03/27 07:20:58 - DWH - delete from factmarketingspend 
+2017/03/27 07:20:58 - DWH - where spendtypekey in (2, 3, 4)    and cast(cast(datekey as char) as date) > dateadd(day,-7,'2017/03/26 00:00:00.000') and cast(cast(datekey as char) as date) < '2017/03/27 00:00:00.000'
+2017/03/27 07:20:58 - capella - Connected to database.
+2017/03/27 07:20:58 - capella - Auto commit off
+2017/03/27 07:20:58 - DWH - Connected to database.
+2017/03/27 07:20:58 - Category CLU.0 - Connected to database...
+2017/03/27 07:20:58 - Table input.0 - Connected to database...
+2017/03/27 07:20:58 - DWH - Auto commit off
+2017/03/27 07:20:59 - DWH - 1 statement executed
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Add Amazon.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Select values.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Add Display.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Add PLA.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Add PPC.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [CSV file input.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Remove 0 cost, exclude Facebook.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Get File Names.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Group by.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Merge Join.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Select values 3.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Split Fields.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Replace in string.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Switch / Case.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Sort rows.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Select values 2.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Filter rows.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [If field value is null.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Sort rows 2.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Table input.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Add constants.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Replace in string 2.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Sort rows 3.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Category CLU.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [CategoryKey.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Data Grid.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Stream lookup.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Memory Group by 2.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Set SourceKey Values 2.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Select values 4.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Site CLU.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [SiteKey.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [SpendType CLU.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Combination lookup/update.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Rename CampaignID to CampaignKey.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Group by 2.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Table output.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [String operations.0] initialized flawlessly.
+2017/03/27 07:20:59 - PPC_Import to DWH - Step [Execute SQL script.0] initialized flawlessly.
+2017/03/27 07:20:59 - Add Amazon.0 - Starting to run...
+2017/03/27 07:20:59 - Select values.0 - Starting to run...
+2017/03/27 07:20:59 - Add Display.0 - Starting to run...
+2017/03/27 07:20:59 - Add PLA.0 - Starting to run...
+2017/03/27 07:20:59 - Add PPC.0 - Starting to run...
+2017/03/27 07:20:59 - CSV file input.0 - Starting to run...
+2017/03/27 07:20:59 - Remove 0 cost, exclude Facebook.0 - Starting to run...
+2017/03/27 07:20:59 - Get File Names.0 - Starting to run...
+2017/03/27 07:20:59 - Group by.0 - Starting to run...
+2017/03/27 07:20:59 - Merge Join.0 - Starting to run...
+2017/03/27 07:20:59 - Select values 3.0 - Starting to run...
+2017/03/27 07:20:59 - Split Fields.0 - Starting to run...
+2017/03/27 07:20:59 - Replace in string.0 - Starting to run...
+2017/03/27 07:20:59 - Sort rows.0 - Starting to run...
+2017/03/27 07:20:59 - Switch / Case.0 - Starting to run...
+2017/03/27 07:20:59 - Select values 2.0 - Starting to run...
+2017/03/27 07:20:59 - If field value is null.0 - Starting to run...
+2017/03/27 07:20:59 - Sort rows 2.0 - Starting to run...
+2017/03/27 07:20:59 - Filter rows.0 - Starting to run...
+2017/03/27 07:20:59 - Table input.0 - Starting to run...
+2017/03/27 07:20:59 - Table input.0 - SQL query : select distinct
+2017/03/27 07:20:59 - Table input.0 - 	CAT.PRODUCT_CATEGORY as EcomCat,
+2017/03/27 07:20:59 - Table input.0 - 	CAT.MAJOR_CATEGORY_CODE,
+2017/03/27 07:20:59 - Table input.0 - 	MCLC.SHORT_NM,
+2017/03/27 07:20:59 - Table input.0 - 	CAT.CATEGORY as SubCategory
+2017/03/27 07:20:59 - Table input.0 - from Ecomedate.dbo.CATEGORIES CAT
+2017/03/27 07:20:59 - Table input.0 - left join Ecomedate.dbo.REF_MAJ_CAT_LGCY_CD MCLC
+2017/03/27 07:20:59 - Table input.0 -   on CAT.MAJOR_CATEGORY_CODE = MCLC.MAJ_CAT_LGCY_CD
+2017/03/27 07:20:59 - Add constants.0 - Starting to run...
+2017/03/27 07:20:59 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 07:20:59 - Sort rows 3.0 - Starting to run...
+2017/03/27 07:20:59 - Replace in string 2.0 - Starting to run...
+2017/03/27 07:20:59 - CategoryKey.0 - Starting to run...
+2017/03/27 07:20:59 - Category CLU.0 - Starting to run...
+2017/03/27 07:20:59 - Stream lookup.0 - Starting to run...
+2017/03/27 07:20:59 - Data Grid.0 - Starting to run...
+2017/03/27 07:20:59 - Memory Group by 2.0 - Starting to run...
+2017/03/27 07:20:59 - Set SourceKey Values 2.0 - Starting to run...
+2017/03/27 07:20:59 - Select values 4.0 - Starting to run...
+2017/03/27 07:20:59 - Site CLU.0 - Starting to run...
+2017/03/27 07:20:59 - SiteKey.0 - Starting to run...
+2017/03/27 07:20:59 - SpendType CLU.0 - Starting to run...
+2017/03/27 07:20:59 - Stream lookup.0 - Reading from stream [Data Grid]
+2017/03/27 07:20:59 - Rename CampaignID to CampaignKey.0 - Starting to run...
+2017/03/27 07:20:59 - Combination lookup/update.0 - Starting to run...
+2017/03/27 07:20:59 - Data Grid.0 - Finished processing (I=0, O=0, R=0, W=9, U=0, E=0)
+2017/03/27 07:20:59 - PPC_Import to DWH - Transformation has allocated 39 threads and 41 rowsets.
+2017/03/27 07:20:59 - String operations.0 - Starting to run...
+2017/03/27 07:20:59 - Group by 2.0 - Starting to run...
+2017/03/27 07:20:59 - Table output.0 - Starting to run...
+2017/03/27 07:20:59 - CSV file input.0 - Reading from 1 files.
+2017/03/27 07:20:59 - Execute SQL script.0 - Starting to run...
+2017/03/27 07:20:59 - Execute SQL script.0 - Finished reading query, closing connection.
+2017/03/27 07:20:59 - DWH - Connection to database closed!
+2017/03/27 07:20:59 - Execute SQL script.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 07:20:59 - CSV file input.0 - Header row skipped in file 'C:\Spoon\Kenshoo\processing\KenshooLast7days_2017-03-27 .csv'
+2017/03/27 07:20:59 - Table input.0 - Finished reading query, closing connection.
+2017/03/27 07:20:59 - capella - Connection to database closed!
+2017/03/27 07:20:59 - Table input.0 - Finished processing (I=136, O=0, R=0, W=136, U=0, E=0)
+2017/03/27 07:20:59 - Sort rows 2.0 - Starting quickSort algorithm...
+2017/03/27 07:20:59 - Sort rows 2.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 07:20:59 - Sort rows 2.0 - QuickSort algorithm has finished.
+2017/03/27 07:20:59 - Sort rows 2.0 - Finished processing (I=0, O=0, R=136, W=136, U=0, E=0)
+2017/03/27 07:21:00 - CSV file input.0 - Finished processing (I=11316, O=0, R=1, W=11315, U=0, E=0)
+2017/03/27 07:21:00 - Remove 0 cost, exclude Facebook.0 - Finished processing (I=0, O=0, R=11315, W=10743, U=0, E=0)
+2017/03/27 07:21:00 - Split Fields.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:21:00 - Replace in string.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:21:00 - Switch / Case.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:21:00 - Add Amazon.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 07:21:00 - Add Display.0 - Finished processing (I=0, O=0, R=92, W=92, U=0, E=0)
+2017/03/27 07:21:00 - Add PLA.0 - Finished processing (I=0, O=0, R=1212, W=1212, U=0, E=0)
+2017/03/27 07:21:00 - Add PPC.0 - Finished processing (I=0, O=0, R=9439, W=9439, U=0, E=0)
+2017/03/27 07:21:00 - Select values.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:21:03 - Sort rows.0 - Starting quickSort algorithm...
+2017/03/27 07:21:03 - Sort rows.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 07:21:03 - Sort rows.0 - QuickSort algorithm has finished.
+2017/03/27 07:21:03 - Sort rows.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:21:04 - Group by.0 - Finished processing (I=0, O=0, R=10743, W=6336, U=0, E=0)
+2017/03/27 07:21:04 - Merge Join.0 - Finished processing (I=0, O=0, R=6472, W=6336, U=0, E=0)
+2017/03/27 07:21:04 - Select values 3.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:04 - If field value is null.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:04 - Select values 2.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:04 - Filter rows.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:04 - Add constants.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:04 - Replace in string 2.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:05 - Sort rows 3.0 - Starting quickSort algorithm...
+2017/03/27 07:21:05 - Sort rows 3.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 07:21:05 - Sort rows 3.0 - QuickSort algorithm has finished.
+2017/03/27 07:21:05 - Sort rows 3.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:05 - Group by 2.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:06 - Stream lookup.0 - Field [Site_Name] has nr [10]
+2017/03/27 07:21:06 - DWH - Connection to database closed!
+2017/03/27 07:21:06 - SpendType CLU.0 - Finished processing (I=3, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:06 - Select values 4.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:06 - DWH - Connection to database closed!
+2017/03/27 07:21:06 - Category CLU.0 - Finished processing (I=68, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:06 - CategoryKey.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:06 - String operations.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:06 - Stream lookup.0 - Stopped processing with empty row after 6345 rows.
+2017/03/27 07:21:06 - Stream lookup.0 - Finished processing (I=0, O=0, R=6345, W=6336, U=0, E=0)
+2017/03/27 07:21:06 - DWH - Connection to database closed!
+2017/03/27 07:21:06 - Site CLU.0 - Finished processing (I=7, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:06 - SiteKey.0 - Finished processing (I=0, O=0, R=6336, W=6336, U=0, E=0)
+2017/03/27 07:21:06 - Set SourceKey Values 2.0 - Value #1 -  [CategoryKey] is used in the script.
+2017/03/27 07:21:06 - Set SourceKey Values 2.0 - This script is using 1 values from the input stream(s)
+2017/03/27 07:21:06 - Memory Group by 2.0 - Finished processing (I=0, O=0, R=6336, W=2525, U=0, E=0)
+2017/03/27 07:21:06 - Set SourceKey Values 2.0 - Optimization level set to 9.
+2017/03/27 07:21:06 - Set SourceKey Values 2.0 - No starting Script found!
+2017/03/27 07:21:06 - Set SourceKey Values 2.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 07:21:06 - Set SourceKey Values 2.0 - No end Script found!
+2017/03/27 07:21:06 - Set SourceKey Values 2.0 - Finished processing (I=0, O=0, R=2525, W=2525, U=0, E=0)
+2017/03/27 07:21:07 - Table output.0 - Prepared statement : INSERT INTO dbo.FactMarketingSpend (DateKey, SiteKey, SpendTypeKey, CampaignKey, SourceKey, TimeKey, CategoryKey, Amount) VALUES ( ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?)
+2017/03/27 07:21:07 - DWH - Connection to database closed!
+2017/03/27 07:21:07 - Combination lookup/update.0 - Finished processing (I=210, O=0, R=2525, W=2525, U=0, E=0)
+2017/03/27 07:21:07 - Rename CampaignID to CampaignKey.0 - Finished processing (I=0, O=0, R=2525, W=2525, U=0, E=0)
+2017/03/27 07:21:10 - DWH - Connection to database closed!
+2017/03/27 07:21:10 - Table output.0 - Finished processing (I=0, O=2525, R=2525, W=2525, U=0, E=0)
+2017/03/27 07:21:10 - BackwardsMarketSpendPopulate_Kenshoo - Finished job entry [InsertMarketSpend_Kenshoo] (result=[true])
+2017/03/27 07:21:10 - BackwardsMarketSpendPopulate_Kenshoo - Finished job entry [Set Vars] (result=[true])
+2017/03/27 07:21:10 - BackwardsMarketSpendPopulate_Kenshoo - Job execution finished
+2017/03/27 07:21:10 - Kitchen - Finished!
+2017/03/27 07:21:10 - Kitchen - Start=2017/03/27 07:20:54.471, Stop=2017/03/27 07:21:10.905
+2017/03/27 07:21:10 - Kitchen - Processing ended after 16 seconds.

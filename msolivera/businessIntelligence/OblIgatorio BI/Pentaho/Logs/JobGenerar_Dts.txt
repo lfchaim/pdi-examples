@@ -1,0 +1,83 @@
+2021/12/01 17:44:26 - JobGenerar_Dts - Using run configuration [Pentaho local]
+2021/12/01 17:44:26 - JobGenerar_Dts - exec(2, 0, Start.0)
+2021/12/01 17:44:26 - Start - Starting job entry
+2021/12/01 17:44:26 - JobGenerar_Dts - Starting entry [TGenerarDT_Campeonato]
+2021/12/01 17:44:26 - JobGenerar_Dts - exec(3, 0, TGenerarDT_Campeonato.0)
+2021/12/01 17:44:26 - TGenerarDT_Campeonato - Starting job entry
+2021/12/01 17:44:26 - TGenerarDT_Campeonato - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarDT_Campeonato.ktr]
+2021/12/01 17:44:26 - TGenerarDT_Campeonato - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarDT_Campeonato.ktr, name=TGenerarDT_Campeonato, repinfo=null)
+2021/12/01 17:44:26 - TGenerarDT_Campeonato - Using run configuration [Pentaho local]
+2021/12/01 17:44:26 - TGenerarDT_Campeonato - Running transformation using the Kettle execution engine
+2021/12/01 17:44:28 - JobGenerar_Dts - Starting entry [Success]
+2021/12/01 17:44:28 - JobGenerar_Dts - exec(4, 0, Success.0)
+2021/12/01 17:44:28 - Success - Starting job entry
+2021/12/01 17:44:28 - JobGenerar_Dts - Finished job entry [Success] (result=[true])
+2021/12/01 17:44:28 - JobGenerar_Dts - Finished job entry [TGenerarDT_Campeonato] (result=[true])
+2021/12/01 17:44:28 - JobGenerar_Dts - Starting entry [TGenerarDT_Pais]
+2021/12/01 17:44:28 - JobGenerar_Dts - exec(3, 0, TGenerarDT_Pais.0)
+2021/12/01 17:44:28 - TGenerarDT_Pais - Starting job entry
+2021/12/01 17:44:28 - TGenerarDT_Pais - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarDT_Pais.ktr]
+2021/12/01 17:44:28 - TGenerarDT_Pais - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarDT_Pais.ktr, name=TGenerarDT_Pais, repinfo=null)
+2021/12/01 17:44:28 - TGenerarDT_Pais - Using run configuration [Pentaho local]
+2021/12/01 17:44:28 - TGenerarDT_Pais - Running transformation using the Kettle execution engine
+2021/12/01 17:44:30 - JobGenerar_Dts - Starting entry [TGenerarDT_Ciudad]
+2021/12/01 17:44:30 - JobGenerar_Dts - exec(4, 0, TGenerarDT_Ciudad.0)
+2021/12/01 17:44:30 - TGenerarDT_Ciudad - Starting job entry
+2021/12/01 17:44:30 - TGenerarDT_Ciudad - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarDT_Ciudad.ktr]
+2021/12/01 17:44:30 - TGenerarDT_Ciudad - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarDT_Ciudad.ktr, name=TGenerarDT_Ciudad, repinfo=null)
+2021/12/01 17:44:30 - TGenerarDT_Ciudad - Using run configuration [Pentaho local]
+2021/12/01 17:44:30 - TGenerarDT_Ciudad - Running transformation using the Kettle execution engine
+2021/12/01 17:44:34 - JobGenerar_Dts - Starting entry [TGenerarDT_Circuito]
+2021/12/01 17:44:34 - JobGenerar_Dts - exec(5, 0, TGenerarDT_Circuito.0)
+2021/12/01 17:44:34 - TGenerarDT_Circuito - Starting job entry
+2021/12/01 17:44:34 - TGenerarDT_Circuito - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarDT_Circuito.ktr]
+2021/12/01 17:44:34 - TGenerarDT_Circuito - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarDT_Circuito.ktr, name=TGenerarDT_Circuito, repinfo=null)
+2021/12/01 17:44:34 - TGenerarDT_Circuito - Using run configuration [Pentaho local]
+2021/12/01 17:44:34 - TGenerarDT_Circuito - Running transformation using the Kettle execution engine
+2021/12/01 17:44:36 - JobGenerar_Dts - Starting entry [Success]
+2021/12/01 17:44:36 - JobGenerar_Dts - exec(6, 0, Success.0)
+2021/12/01 17:44:36 - Success - Starting job entry
+2021/12/01 17:44:36 - JobGenerar_Dts - Finished job entry [Success] (result=[true])
+2021/12/01 17:44:36 - JobGenerar_Dts - Finished job entry [TGenerarDT_Circuito] (result=[true])
+2021/12/01 17:44:36 - JobGenerar_Dts - Finished job entry [TGenerarDT_Ciudad] (result=[true])
+2021/12/01 17:44:36 - JobGenerar_Dts - Finished job entry [TGenerarDT_Pais] (result=[true])
+2021/12/01 17:44:36 - JobGenerar_Dts - Starting entry [TGenerarDT_Carrera]
+2021/12/01 17:44:36 - JobGenerar_Dts - exec(3, 0, TGenerarDT_Carrera.0)
+2021/12/01 17:44:36 - TGenerarDT_Carrera - Starting job entry
+2021/12/01 17:44:36 - TGenerarDT_Carrera - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarDT_Carrera.ktr]
+2021/12/01 17:44:36 - TGenerarDT_Carrera - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarDT_Carrera.ktr, name=TGenerarDT_Carrera, repinfo=null)
+2021/12/01 17:44:36 - TGenerarDT_Carrera - Using run configuration [Pentaho local]
+2021/12/01 17:44:36 - TGenerarDT_Carrera - Running transformation using the Kettle execution engine
+2021/12/01 17:44:40 - JobGenerar_Dts - Starting entry [Success]
+2021/12/01 17:44:40 - JobGenerar_Dts - exec(4, 0, Success.0)
+2021/12/01 17:44:40 - Success - Starting job entry
+2021/12/01 17:44:40 - JobGenerar_Dts - Finished job entry [Success] (result=[true])
+2021/12/01 17:44:40 - JobGenerar_Dts - Finished job entry [TGenerarDT_Carrera] (result=[true])
+2021/12/01 17:44:40 - JobGenerar_Dts - Starting entry [TGenerarDT_Nacionalidad]
+2021/12/01 17:44:40 - JobGenerar_Dts - exec(3, 0, TGenerarDT_Nacionalidad.0)
+2021/12/01 17:44:40 - TGenerarDT_Nacionalidad - Starting job entry
+2021/12/01 17:44:40 - TGenerarDT_Nacionalidad - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarDT_Nacionalidad.ktr]
+2021/12/01 17:44:40 - TGenerarDT_Nacionalidad - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarDT_Nacionalidad.ktr, name=TGenerarDT_Nacionalidad, repinfo=null)
+2021/12/01 17:44:40 - TGenerarDT_Nacionalidad - Using run configuration [Pentaho local]
+2021/12/01 17:44:40 - TGenerarDT_Nacionalidad - Running transformation using the Kettle execution engine
+2021/12/01 17:44:42 - JobGenerar_Dts - Starting entry [TGenerarDT_Constructor]
+2021/12/01 17:44:42 - JobGenerar_Dts - exec(4, 0, TGenerarDT_Constructor.0)
+2021/12/01 17:44:42 - TGenerarDT_Constructor - Starting job entry
+2021/12/01 17:44:42 - TGenerarDT_Constructor - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarDT_Constructor.ktr]
+2021/12/01 17:44:42 - TGenerarDT_Constructor - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarDT_Constructor.ktr, name=TGenerarDT_Constructor, repinfo=null)
+2021/12/01 17:44:42 - TGenerarDT_Constructor - Using run configuration [Pentaho local]
+2021/12/01 17:44:42 - TGenerarDT_Constructor - Running transformation using the Kettle execution engine
+2021/12/01 17:44:45 - JobGenerar_Dts - Starting entry [TGenerarDT_Piloto]
+2021/12/01 17:44:45 - JobGenerar_Dts - exec(5, 0, TGenerarDT_Piloto.0)
+2021/12/01 17:44:45 - TGenerarDT_Piloto - Starting job entry
+2021/12/01 17:44:45 - TGenerarDT_Piloto - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarDT_Piloto.ktr]
+2021/12/01 17:44:45 - TGenerarDT_Piloto - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarDT_Piloto.ktr, name=TGenerarDT_Piloto, repinfo=null)
+2021/12/01 17:44:45 - TGenerarDT_Piloto - Using run configuration [Pentaho local]
+2021/12/01 17:44:45 - TGenerarDT_Piloto - Running transformation using the Kettle execution engine
+2021/12/01 17:44:48 - JobGenerar_Dts - Starting entry [Success]
+2021/12/01 17:44:48 - JobGenerar_Dts - exec(6, 0, Success.0)
+2021/12/01 17:44:48 - Success - Starting job entry
+2021/12/01 17:44:48 - JobGenerar_Dts - Finished job entry [Success] (result=[true])
+2021/12/01 17:44:48 - JobGenerar_Dts - Finished job entry [TGenerarDT_Piloto] (result=[true])
+2021/12/01 17:44:48 - JobGenerar_Dts - Finished job entry [TGenerarDT_Constructor] (result=[true])
+2021/12/01 17:44:48 - JobGenerar_Dts - Finished job entry [TGenerarDT_Nacionalidad] (result=[true])

@@ -1,0 +1,476 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2016/03/28 16:14:42 - Kitchen - Logging is at level : Detailed logging
+2016/03/28 16:14:42 - Kitchen - Start of run.
+2016/03/28 16:14:43 - WebBusinessOrder - Start of job execution
+2016/03/28 16:14:43 - WebBusinessOrder - exec(0, 0, START.0)
+2016/03/28 16:14:43 - START - Starting job entry
+2016/03/28 16:14:43 - WebBusinessOrder - Starting entry [Transformation]
+2016/03/28 16:14:43 - WebBusinessOrder - exec(1, 0, Transformation.0)
+2016/03/28 16:14:43 - Transformation - Starting job entry
+2016/03/28 16:14:43 - Transformation - Opening transformation: [file:///C:/Spoon/WebBusinessOrdersEmail/WebBusinessOrders-CreateExcel.ktr]
+2016/03/28 16:14:43 - Transformation - Loading transformation from XML file [file:///C:/Spoon/WebBusinessOrdersEmail/WebBusinessOrders-CreateExcel.ktr]
+2016/03/28 16:14:44 - Transformation - Starting transformation...(file=${Internal.Job.Filename.Directory}/WebBusinessOrders-CreateExcel.ktr, name=Transformation, repinfo=null)
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation is pre-loaded.
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Dispatching started for transformation [WebBusinessOrders-CreateExcel]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Nr of arguments detected:0 
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - This is not a replay transformation
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - I found 18 different steps to launch.
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Allocating rowsets...
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 0 --> Fetch All Rows for Yesterday
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Fetch All Rows for Yesterday.0 - Get Previous Order Count.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 1 rowsets for step 0 --> Fetch All Rows for Yesterday  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 1 --> Get Previous Order Count
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Get Previous Order Count.0 - Company Name not Empty.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Get Previous Order Count.0 - Multiple Itmes in Order.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Get Previous Order Count.0 - Orders over 1000.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Get Previous Order Count.0 - if Ship is to a PO Box.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Get Previous Order Count.0 - Bought 3 or more Times.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 6 rowsets for step 1 --> Get Previous Order Count  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 2 --> Company Name not Empty
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Company Name not Empty.0 - Merge Rows (diff).0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 7 rowsets for step 2 --> Company Name not Empty  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 3 --> Multiple Itmes in Order
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Multiple Itmes in Order.0 - Merge Rows (diff).0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Multiple Itmes in Order.0 - Merge Rows (diff) 2.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 9 rowsets for step 3 --> Multiple Itmes in Order  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 4 --> Orders over 1000
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Orders over 1000.0 - Merge Rows (diff) 4.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 10 rowsets for step 4 --> Orders over 1000  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 5 --> if Ship is to a PO Box
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [if Ship is to a PO Box.0 - Merge Rows (diff) 5.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 11 rowsets for step 5 --> if Ship is to a PO Box  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 6 --> Bought 3 or more Times
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Bought 3 or more Times.0 - Merge Rows (diff) 3.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 12 rowsets for step 6 --> Bought 3 or more Times  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 7 --> Merge Rows (diff)
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Merge Rows (diff).0 - Select values.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 13 rowsets for step 7 --> Merge Rows (diff)  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 8 --> Select values
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Select values.0 - Merge Rows (diff) 2.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 14 rowsets for step 8 --> Select values  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 9 --> Merge Rows (diff) 2
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Merge Rows (diff) 2.0 - Select values 2.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 15 rowsets for step 9 --> Merge Rows (diff) 2  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 10 --> Select values 2
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Select values 2.0 - Merge Rows (diff) 3.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 16 rowsets for step 10 --> Select values 2  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 11 --> Merge Rows (diff) 5
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Merge Rows (diff) 5.0 - Select values 5.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 17 rowsets for step 11 --> Merge Rows (diff) 5  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 12 --> Select values 5
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Select values 5.0 - Microsoft Excel Output.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 18 rowsets for step 12 --> Select values 5  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 13 --> Merge Rows (diff) 3
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Merge Rows (diff) 3.0 - Select values 3.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 19 rowsets for step 13 --> Merge Rows (diff) 3  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 14 --> Select values 4
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Select values 4.0 - Merge Rows (diff) 5.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 20 rowsets for step 14 --> Select values 4  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 15 --> Select values 3
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Select values 3.0 - Merge Rows (diff) 4.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 21 rowsets for step 15 --> Select values 3  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 16 --> Merge Rows (diff) 4
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -   prevcopies = 1, nextcopies=1
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Transformation allocated new rowset [Merge Rows (diff) 4.0 - Select values 4.0]
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 22 rowsets for step 16 --> Merge Rows (diff) 4  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocating rowsets for step 17 --> Microsoft Excel Output
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Allocated 22 rowsets for step 17 --> Microsoft Excel Output  
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Allocating Steps & StepData...
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Fetch All Rows for Yesterday] of type [TableInput]
+2016/03/28 16:14:45 - Fetch All Rows for Yesterday.0 - distribution activated
+2016/03/28 16:14:45 - Fetch All Rows for Yesterday.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Fetch All Rows for Yesterday.0 - Step info: nrinput=0 nroutput=1
+2016/03/28 16:14:45 - Fetch All Rows for Yesterday.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Fetch All Rows for Yesterday.0 - Found output rowset [Fetch All Rows for Yesterday.0 - Get Previous Order Count.0]
+2016/03/28 16:14:45 - Fetch All Rows for Yesterday.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Fetch All Rows for Yesterday].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Get Previous Order Count] of type [DBJoin]
+2016/03/28 16:14:45 - Get Previous Order Count.0 - distribution de-activated
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Step info: nrinput=1 nroutput=5
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Got previous step from [Get Previous Order Count] #0 --> Fetch All Rows for Yesterday
+2016/03/28 16:14:45 - Get Previous Order Count.0 - input rel is 1:1
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Found input rowset [Fetch All Rows for Yesterday.0 - Get Previous Order Count.0]
+2016/03/28 16:14:45 - Get Previous Order Count.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Found output rowset [Get Previous Order Count.0 - Company Name not Empty.0]
+2016/03/28 16:14:45 - Get Previous Order Count.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Found output rowset [Get Previous Order Count.0 - Multiple Itmes in Order.0]
+2016/03/28 16:14:45 - Get Previous Order Count.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Found output rowset [Get Previous Order Count.0 - Orders over 1000.0]
+2016/03/28 16:14:45 - Get Previous Order Count.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Found output rowset [Get Previous Order Count.0 - if Ship is to a PO Box.0]
+2016/03/28 16:14:45 - Get Previous Order Count.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Found output rowset [Get Previous Order Count.0 - Bought 3 or more Times.0]
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Get Previous Order Count].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Company Name not Empty] of type [FilterRows]
+2016/03/28 16:14:45 - Company Name not Empty.0 - distribution activated
+2016/03/28 16:14:45 - Company Name not Empty.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Company Name not Empty.0 - Step info: nrinput=1 nroutput=1
+2016/03/28 16:14:45 - Company Name not Empty.0 - Got previous step from [Company Name not Empty] #0 --> Get Previous Order Count
+2016/03/28 16:14:45 - Company Name not Empty.0 - input rel is 1:1
+2016/03/28 16:14:45 - Company Name not Empty.0 - Found input rowset [Get Previous Order Count.0 - Company Name not Empty.0]
+2016/03/28 16:14:45 - Company Name not Empty.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Company Name not Empty.0 - Found output rowset [Company Name not Empty.0 - Merge Rows (diff).0]
+2016/03/28 16:14:45 - Company Name not Empty.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Company Name not Empty].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Multiple Itmes in Order] of type [FilterRows]
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - distribution activated
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - Step info: nrinput=1 nroutput=2
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - Got previous step from [Multiple Itmes in Order] #0 --> Get Previous Order Count
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - input rel is 1:1
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - Found input rowset [Get Previous Order Count.0 - Multiple Itmes in Order.0]
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - Found output rowset [Multiple Itmes in Order.0 - Merge Rows (diff).0]
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - Found output rowset [Multiple Itmes in Order.0 - Merge Rows (diff) 2.0]
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Multiple Itmes in Order].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Orders over 1000] of type [FilterRows]
+2016/03/28 16:14:45 - Orders over 1000.0 - distribution activated
+2016/03/28 16:14:45 - Orders over 1000.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Orders over 1000.0 - Step info: nrinput=1 nroutput=1
+2016/03/28 16:14:45 - Orders over 1000.0 - Got previous step from [Orders over 1000] #0 --> Get Previous Order Count
+2016/03/28 16:14:45 - Orders over 1000.0 - input rel is 1:1
+2016/03/28 16:14:45 - Orders over 1000.0 - Found input rowset [Get Previous Order Count.0 - Orders over 1000.0]
+2016/03/28 16:14:45 - Orders over 1000.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Orders over 1000.0 - Found output rowset [Orders over 1000.0 - Merge Rows (diff) 4.0]
+2016/03/28 16:14:45 - Orders over 1000.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Orders over 1000].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [if Ship is to a PO Box] of type [FilterRows]
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - distribution activated
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - Step info: nrinput=1 nroutput=1
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - Got previous step from [if Ship is to a PO Box] #0 --> Get Previous Order Count
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - input rel is 1:1
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - Found input rowset [Get Previous Order Count.0 - if Ship is to a PO Box.0]
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - output rel. is  1:1
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - Found output rowset [if Ship is to a PO Box.0 - Merge Rows (diff) 5.0]
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [if Ship is to a PO Box].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Bought 3 or more Times] of type [FilterRows]
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - distribution activated
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - Step info: nrinput=1 nroutput=1
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - Got previous step from [Bought 3 or more Times] #0 --> Get Previous Order Count
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - input rel is 1:1
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - Found input rowset [Get Previous Order Count.0 - Bought 3 or more Times.0]
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - Found output rowset [Bought 3 or more Times.0 - Merge Rows (diff) 3.0]
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Bought 3 or more Times].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Merge Rows (diff)] of type [MergeRows]
+2016/03/28 16:14:45 - Merge Rows (diff).0 - distribution activated
+2016/03/28 16:14:45 - Merge Rows (diff).0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Merge Rows (diff).0 - Step info: nrinput=2 nroutput=1
+2016/03/28 16:14:45 - Merge Rows (diff).0 - Got previous step from [Merge Rows (diff)] #0 --> Company Name not Empty
+2016/03/28 16:14:45 - Merge Rows (diff).0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff).0 - Found input rowset [Company Name not Empty.0 - Merge Rows (diff).0]
+2016/03/28 16:14:45 - Merge Rows (diff).0 - Got previous step from [Merge Rows (diff)] #1 --> Multiple Itmes in Order
+2016/03/28 16:14:45 - Merge Rows (diff).0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff).0 - Found input rowset [Multiple Itmes in Order.0 - Merge Rows (diff).0]
+2016/03/28 16:14:45 - Merge Rows (diff).0 - output rel. is  1:1
+2016/03/28 16:14:45 - Merge Rows (diff).0 - Found output rowset [Merge Rows (diff).0 - Select values.0]
+2016/03/28 16:14:45 - Merge Rows (diff).0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Merge Rows (diff)].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2016/03/28 16:14:45 - Select values.0 - distribution activated
+2016/03/28 16:14:45 - Select values.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Select values.0 - Step info: nrinput=1 nroutput=1
+2016/03/28 16:14:45 - Select values.0 - Got previous step from [Select values] #0 --> Merge Rows (diff)
+2016/03/28 16:14:45 - Select values.0 - input rel is 1:1
+2016/03/28 16:14:45 - Select values.0 - Found input rowset [Merge Rows (diff).0 - Select values.0]
+2016/03/28 16:14:45 - Select values.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Select values.0 - Found output rowset [Select values.0 - Merge Rows (diff) 2.0]
+2016/03/28 16:14:45 - Select values.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Select values].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Merge Rows (diff) 2] of type [MergeRows]
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - distribution activated
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - Step info: nrinput=2 nroutput=1
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - Got previous step from [Merge Rows (diff) 2] #0 --> Select values
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - Found input rowset [Select values.0 - Merge Rows (diff) 2.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - Got previous step from [Merge Rows (diff) 2] #1 --> Multiple Itmes in Order
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - Found input rowset [Multiple Itmes in Order.0 - Merge Rows (diff) 2.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - Found output rowset [Merge Rows (diff) 2.0 - Select values 2.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Merge Rows (diff) 2].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Select values 2] of type [SelectValues]
+2016/03/28 16:14:45 - Select values 2.0 - distribution activated
+2016/03/28 16:14:45 - Select values 2.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Select values 2.0 - Step info: nrinput=1 nroutput=1
+2016/03/28 16:14:45 - Select values 2.0 - Got previous step from [Select values 2] #0 --> Merge Rows (diff) 2
+2016/03/28 16:14:45 - Select values 2.0 - input rel is 1:1
+2016/03/28 16:14:45 - Select values 2.0 - Found input rowset [Merge Rows (diff) 2.0 - Select values 2.0]
+2016/03/28 16:14:45 - Select values 2.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Select values 2.0 - Found output rowset [Select values 2.0 - Merge Rows (diff) 3.0]
+2016/03/28 16:14:45 - Select values 2.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Select values 2].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Merge Rows (diff) 5] of type [MergeRows]
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - distribution activated
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - Step info: nrinput=2 nroutput=1
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - Got previous step from [Merge Rows (diff) 5] #0 --> Select values 4
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - Found input rowset [Select values 4.0 - Merge Rows (diff) 5.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - Got previous step from [Merge Rows (diff) 5] #1 --> if Ship is to a PO Box
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - Found input rowset [if Ship is to a PO Box.0 - Merge Rows (diff) 5.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - Found output rowset [Merge Rows (diff) 5.0 - Select values 5.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Merge Rows (diff) 5].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Select values 5] of type [SelectValues]
+2016/03/28 16:14:45 - Select values 5.0 - distribution de-activated
+2016/03/28 16:14:45 - Select values 5.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Select values 5.0 - Step info: nrinput=1 nroutput=1
+2016/03/28 16:14:45 - Select values 5.0 - Got previous step from [Select values 5] #0 --> Merge Rows (diff) 5
+2016/03/28 16:14:45 - Select values 5.0 - input rel is 1:1
+2016/03/28 16:14:45 - Select values 5.0 - Found input rowset [Merge Rows (diff) 5.0 - Select values 5.0]
+2016/03/28 16:14:45 - Select values 5.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Select values 5.0 - Found output rowset [Select values 5.0 - Microsoft Excel Output.0]
+2016/03/28 16:14:45 - Select values 5.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Select values 5].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Merge Rows (diff) 3] of type [MergeRows]
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - distribution activated
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - Step info: nrinput=2 nroutput=1
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - Got previous step from [Merge Rows (diff) 3] #0 --> Select values 2
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - Found input rowset [Select values 2.0 - Merge Rows (diff) 3.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - Got previous step from [Merge Rows (diff) 3] #1 --> Bought 3 or more Times
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - Found input rowset [Bought 3 or more Times.0 - Merge Rows (diff) 3.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - Found output rowset [Merge Rows (diff) 3.0 - Select values 3.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Merge Rows (diff) 3].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Select values 4] of type [SelectValues]
+2016/03/28 16:14:45 - Select values 4.0 - distribution activated
+2016/03/28 16:14:45 - Select values 4.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Select values 4.0 - Step info: nrinput=1 nroutput=1
+2016/03/28 16:14:45 - Select values 4.0 - Got previous step from [Select values 4] #0 --> Merge Rows (diff) 4
+2016/03/28 16:14:45 - Select values 4.0 - input rel is 1:1
+2016/03/28 16:14:45 - Select values 4.0 - Found input rowset [Merge Rows (diff) 4.0 - Select values 4.0]
+2016/03/28 16:14:45 - Select values 4.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Select values 4.0 - Found output rowset [Select values 4.0 - Merge Rows (diff) 5.0]
+2016/03/28 16:14:45 - Select values 4.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Select values 4].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Select values 3] of type [SelectValues]
+2016/03/28 16:14:45 - Select values 3.0 - distribution activated
+2016/03/28 16:14:45 - Select values 3.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Select values 3.0 - Step info: nrinput=1 nroutput=1
+2016/03/28 16:14:45 - Select values 3.0 - Got previous step from [Select values 3] #0 --> Merge Rows (diff) 3
+2016/03/28 16:14:45 - Select values 3.0 - input rel is 1:1
+2016/03/28 16:14:45 - Select values 3.0 - Found input rowset [Merge Rows (diff) 3.0 - Select values 3.0]
+2016/03/28 16:14:45 - Select values 3.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Select values 3.0 - Found output rowset [Select values 3.0 - Merge Rows (diff) 4.0]
+2016/03/28 16:14:45 - Select values 3.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Select values 3].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Merge Rows (diff) 4] of type [MergeRows]
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - distribution activated
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - Step info: nrinput=2 nroutput=1
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - Got previous step from [Merge Rows (diff) 4] #0 --> Select values 3
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - Found input rowset [Select values 3.0 - Merge Rows (diff) 4.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - Got previous step from [Merge Rows (diff) 4] #1 --> Orders over 1000
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - input rel is 1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - Found input rowset [Orders over 1000.0 - Merge Rows (diff) 4.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - output rel. is  1:1
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - Found output rowset [Merge Rows (diff) 4.0 - Select values 4.0]
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Merge Rows (diff) 4].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation is about to allocate step [Microsoft Excel Output] of type [ExcelOutput]
+2016/03/28 16:14:45 - Microsoft Excel Output.0 - distribution activated
+2016/03/28 16:14:45 - Microsoft Excel Output.0 - Starting allocation of buffers & new threads...
+2016/03/28 16:14:45 - Microsoft Excel Output.0 - Step info: nrinput=1 nroutput=0
+2016/03/28 16:14:45 - Microsoft Excel Output.0 - Got previous step from [Microsoft Excel Output] #0 --> Select values 5
+2016/03/28 16:14:45 - Microsoft Excel Output.0 - input rel is 1:1
+2016/03/28 16:14:45 - Microsoft Excel Output.0 - Found input rowset [Select values 5.0 - Microsoft Excel Output.0]
+2016/03/28 16:14:45 - Microsoft Excel Output.0 - Finished dispatching
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel -  Transformation has allocated a new step: [Microsoft Excel Output].0
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - This transformation can be replayed with replay date: 2016/03/28 16:14:45
+2016/03/28 16:14:45 - WebBusinessOrders-CreateExcel - Initialising 18 steps...
+2016/03/28 16:14:45 - Get Previous Order Count.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Fetch All Rows for Yesterday.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Company Name not Empty.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Multiple Itmes in Order.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Orders over 1000.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - if Ship is to a PO Box.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Bought 3 or more Times.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Select values.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Merge Rows (diff).0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Merge Rows (diff) 2.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Select values 2.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Merge Rows (diff) 5.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Select values 5.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Select values 3.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Select values 4.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Merge Rows (diff) 3.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Microsoft Excel Output.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Merge Rows (diff) 4.0 - Running on slave server #0/1.
+2016/03/28 16:14:45 - Ecom - New database connection defined
+2016/03/28 16:14:45 - Ecom - New database connection defined
+2016/03/28 16:14:45 - Microsoft Excel Output.0 - The folder [file:///C:/Spoon/WebBusinessOrdersEmail] already exists.
+2016/03/28 16:14:46 - Ecom - Connected to database.
+2016/03/28 16:14:46 - Ecom - Connected to database.
+2016/03/28 16:14:46 - Ecom - Auto commit off
+2016/03/28 16:14:46 - Get Previous Order Count.0 - Connected to database...
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - Connected to database...
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Fetch All Rows for Yesterday.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Get Previous Order Count.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Company Name not Empty.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Multiple Itmes in Order.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Orders over 1000.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [if Ship is to a PO Box.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Bought 3 or more Times.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Merge Rows (diff).0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Select values.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Merge Rows (diff) 2.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Select values 2.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Merge Rows (diff) 5.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Select values 5.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Merge Rows (diff) 3.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Select values 4.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Select values 3.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Merge Rows (diff) 4.0] initialized flawlessly.
+2016/03/28 16:14:46 - WebBusinessOrders-CreateExcel - Step [Microsoft Excel Output.0] initialized flawlessly.
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - Starting to run...
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - SQL query : SELECT
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	head.SALES_ORD_ENTRY_DT				     AS OrderDate, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	head.SALES_ORD_NR 					     AS OrderNumber,
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	head.CUST_EDP_ID                         AS billCustEDP, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	billCust.FNAME                           AS billCustFirstName, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	billCust.LNAME                           AS billCustLastName, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	billCust.CO_NM                           AS billCustCompanyName, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	lines.SALES_ORD_SHIP_TO_NR 		   	     AS ShipToNumber,
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	lines.SALES_ORD_SHIP_NR				     AS ShipmentNumber, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	lines.ITM_QTY						     AS ItemQuantity, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	lines.EXT_PRC_AMT			 		     AS PurchaseAmount, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	itm.ITEM_NO							     AS ItemSKU, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	itm.DESCRIPTION  					     AS ItemDescription, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ISNULL(billCust.FNAME, shipCust.FNAME)   AS shipFname, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ISNULL(billCust.LNAME, shipCust.LNAME)	 AS shipLname, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ISNULL(billCust.CO_NM, shipCust.CO_NM)   AS shipCompany,
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ISNULL(billCust.STREET, shipCust.STREET) AS shipStreet, 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	xref.SALES_SEARCH_VALUE                  AS PONum,
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	email.EMAIL_ADDR_CD					     AS billCustEmail,
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	SUBSTRING(LTRIM(RTRIM(phone.DAY_PHONE)), 1, 3) + '-' + 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 -     SUBSTRING(LTRIM(RTRIM(phone.DAY_PHONE)), 4, 3) + '-' + 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 -     SUBSTRING(LTRIM(RTRIM(phone.DAY_PHONE)), 7, 4) AS billCustPhone,
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	CASE
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 		WHEN otherHead.SALES_ORD_NR IS NOT NULL THEN 1
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 		ELSE 0
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	END AS orderedBefore
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - FROM   SV_MACORD_ORDER_HEADER AS head 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - INNER JOIN SV_MACORD_SALES_ORD_LINES AS lines 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ON head.SALES_ORD_NR = lines.SALES_ORD_NR 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - LEFT JOIN SV_MACORD_SALES_ORD_X_SHIP_TO AS shipTo 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ON head.SALES_ORD_NR = shipTo.SALES_ORD_NR 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	AND lines.SALES_ORD_SHIP_NR = shipTo.SALES_ORD_SHIP_TO_NR 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - INNER JOIN SV_IT_1000_ITEM_MAST AS itm 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ON itm.EDP_NO_ID = lines.EDP_NO_ID 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - LEFT JOIN SV_MACORD_SALES_ORD_XREF_OTH AS xref 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ON head.SALES_ORD_NR = xref.SALES_ORD_NR 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	AND xref.SEARCH_TYPE = 'DP' 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - INNER JOIN SV_MACORD_CUSTOMERS AS billCust 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ON billCust.CUST_EDP_ID = head.CUST_EDP_ID 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - LEFT JOIN SV_MACORD_CUSTOMERS AS shipCust 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ON shipCust.CUST_EDP_ID = shipTo.CUST_EDP_ID 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - LEFT JOIN SV_OR_801_CUST_EMAIL AS email
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ON billCust.CUST_EDP_ID = email.CUST_EDP
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - LEFT JOIN SV_MACORD_CUSTOMER_PHONE AS phone
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	ON billCust.CUST_EDP_ID = phone.CUST_EDP
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - LEFT JOIN SV_MACORD_ORDER_HEADER AS otherHead
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	 ON head.CUST_EDP_ID = otherHead.CUST_EDP_ID
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 	AND head.SALES_ORD_NR <> otherHead.SALES_ORD_NR
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - WHERE head.SALES_ORD_ENTRY_DT < CAST(GETDATE() AS DATE)
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 -   AND head.SALES_ORD_ENTRY_DT > CAST(DATEADD(d,-1,GETDATE()) AS DATE)
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 - 
+2016/03/28 16:14:46 - Fetch All Rows for Yesterday.0 -   ORDER BY head.SALES_ORD_NR DESC
+2016/03/28 16:14:46 - Company Name not Empty.0 - Starting to run...
+2016/03/28 16:14:46 - Orders over 1000.0 - Starting to run...
+2016/03/28 16:14:46 - Get Previous Order Count.0 - Starting to run...
+2016/03/28 16:14:46 - if Ship is to a PO Box.0 - Starting to run...
+2016/03/28 16:14:46 - Bought 3 or more Times.0 - Starting to run...
+2016/03/28 16:14:47 - Merge Rows (diff) 2.0 - Starting to run...
+2016/03/28 16:14:47 - Select values.0 - Starting to run...
+2016/03/28 16:14:47 - Multiple Itmes in Order.0 - Starting to run...
+2016/03/28 16:14:47 - Merge Rows (diff).0 - Starting to run...
+2016/03/28 16:14:47 - Select values 2.0 - Starting to run...
+2016/03/28 16:14:47 - Merge Rows (diff) 5.0 - Starting to run...
+2016/03/28 16:14:47 - Select values 5.0 - Starting to run...
+2016/03/28 16:14:47 - Merge Rows (diff) 3.0 - Starting to run...
+2016/03/28 16:14:47 - Select values 4.0 - Starting to run...
+2016/03/28 16:14:47 - Select values 3.0 - Starting to run...
+2016/03/28 16:14:47 - Merge Rows (diff) 4.0 - Starting to run...
+2016/03/28 16:14:47 - WebBusinessOrders-CreateExcel - Transformation has allocated 18 threads and 22 rowsets.
+2016/03/28 16:14:47 - Microsoft Excel Output.0 - Starting to run...
+2016/03/28 16:14:47 - Get Previous Order Count.0 - Checking row: [2016-03-27 23:46:00.000000000], [Z0484855], [1761211], [Jeff            ], [Jacob           ], [], [00], [01], [1], [335], [KF PAC1201W         ], [Koldfront Ultracool 12000 BTU Portable Air Conditi], [Jeff            ], [Jacob           ], [], [247 STANHOPE CIR              ], [null], [ypvxnh02ptc23ct@marketplace.amazon.com], [202-246-7736], [0]
+2016/03/28 16:14:48 - Fetch All Rows for Yesterday.0 - Finished reading query, closing connection.
+2016/03/28 16:14:48 - Ecom - Connection to database closed!
+2016/03/28 16:14:48 - Fetch All Rows for Yesterday.0 - Finished processing (I=1524, O=0, R=0, W=1524, U=0, E=0)
+2016/03/28 16:14:50 - Ecom - Connection to database closed!
+2016/03/28 16:14:50 - Get Previous Order Count.0 - Finished processing (I=2695, O=0, R=1524, W=7620, U=0, E=0)
+2016/03/28 16:14:50 - Company Name not Empty.0 - Finished processing (I=0, O=0, R=1524, W=531, U=0, E=0)
+2016/03/28 16:14:50 - Multiple Itmes in Order.0 - Finished processing (I=0, O=0, R=1524, W=25, U=0, E=0)
+2016/03/28 16:14:50 - Orders over 1000.0 - Finished processing (I=0, O=0, R=1524, W=23, U=0, E=0)
+2016/03/28 16:14:50 - if Ship is to a PO Box.0 - Finished processing (I=0, O=0, R=1524, W=1, U=0, E=0)
+2016/03/28 16:14:50 - Bought 3 or more Times.0 - Finished processing (I=0, O=0, R=1524, W=1138, U=0, E=0)
+2016/03/28 16:14:50 - Merge Rows (diff).0 - Finished processing (I=0, O=0, R=531, W=531, U=0, E=0)
+2016/03/28 16:14:50 - Select values.0 - Finished processing (I=0, O=0, R=531, W=531, U=0, E=0)
+2016/03/28 16:14:51 - Merge Rows (diff) 2.0 - Finished processing (I=0, O=0, R=556, W=556, U=0, E=0)
+2016/03/28 16:14:51 - Select values 2.0 - Finished processing (I=0, O=0, R=556, W=556, U=0, E=0)
+2016/03/28 16:14:51 - Merge Rows (diff) 3.0 - Finished processing (I=0, O=0, R=1694, W=1694, U=0, E=0)
+2016/03/28 16:14:51 - Select values 3.0 - Finished processing (I=0, O=0, R=1694, W=1694, U=0, E=0)
+2016/03/28 16:14:51 - Merge Rows (diff) 4.0 - Finished processing (I=0, O=0, R=1717, W=1717, U=0, E=0)
+2016/03/28 16:14:51 - Select values 4.0 - Finished processing (I=0, O=0, R=1717, W=1717, U=0, E=0)
+2016/03/28 16:14:51 - Merge Rows (diff) 5.0 - Finished processing (I=0, O=0, R=1718, W=1718, U=0, E=0)
+2016/03/28 16:14:51 - Select values 5.0 - Finished processing (I=0, O=0, R=1718, W=1718, U=0, E=0)
+2016/03/28 16:14:51 - Microsoft Excel Output.0 - Finished processing (I=0, O=1718, R=1718, W=1718, U=0, E=0)
+2016/03/28 16:14:51 - WebBusinessOrder - Finished job entry [Transformation] (result=[true])
+2016/03/28 16:14:51 - WebBusinessOrder - Job execution finished
+2016/03/28 16:14:51 - Kitchen - Finished!
+2016/03/28 16:14:51 - Kitchen - Start=2016/03/28 16:14:42.477, Stop=2016/03/28 16:14:51.960
+2016/03/28 16:14:51 - Kitchen - Processing ended after 9 seconds.

@@ -1,0 +1,412 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2016/05/10 08:38:39 - Kitchen - Logging is at level : Detailed logging
+2016/05/10 08:38:39 - Kitchen - Start of run.
+2016/05/10 08:38:40 - j_Article_Views_Best_Case - Start of job execution
+2016/05/10 08:38:40 - j_Article_Views_Best_Case - exec(0, 0, START.0)
+2016/05/10 08:38:40 - START - Starting job entry
+2016/05/10 08:38:40 - j_Article_Views_Best_Case - Starting entry [Transformation]
+2016/05/10 08:38:40 - j_Article_Views_Best_Case - exec(1, 0, Transformation.0)
+2016/05/10 08:38:40 - Transformation - Starting job entry
+2016/05/10 08:38:40 - Transformation - Opening transformation: [C:\Spoon\Data Warehouse Reporting\Article Views Best Case\t_Article_Views_Best_Case.ktr]
+2016/05/10 08:38:40 - Transformation - Loading transformation from XML file [C:\Spoon\Data Warehouse Reporting\Article Views Best Case\t_Article_Views_Best_Case.ktr]
+2016/05/10 08:38:40 - Transformation - Starting transformation...(file=C:\Spoon\Data Warehouse Reporting\Article Views Best Case\t_Article_Views_Best_Case.ktr, name=Transformation, repinfo=null)
+2016/05/10 08:38:40 - Transformation - Transformation is pre-loaded.
+2016/05/10 08:38:40 - Transformation - Dispatching started for transformation [t_Article_Views_Best_Case]
+2016/05/10 08:38:40 - Transformation - Nr of arguments detected:0 
+2016/05/10 08:38:40 - Transformation - This is not a replay transformation
+2016/05/10 08:38:40 - Transformation - I found 9 different steps to launch.
+2016/05/10 08:38:40 - Transformation - Allocating rowsets...
+2016/05/10 08:38:40 - Transformation -  Allocating rowsets for step 0 --> Select values
+2016/05/10 08:38:40 - Transformation -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:40 - Transformation - Transformation allocated new rowset [Select values.0 - Sort rows.0]
+2016/05/10 08:38:40 - Transformation -  Allocated 1 rowsets for step 0 --> Select values  
+2016/05/10 08:38:40 - Transformation -  Allocating rowsets for step 1 --> Sort rows
+2016/05/10 08:38:40 - Transformation -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:40 - Transformation - Transformation allocated new rowset [Sort rows.0 - Group by.0]
+2016/05/10 08:38:40 - Transformation -  Allocated 2 rowsets for step 1 --> Sort rows  
+2016/05/10 08:38:40 - Transformation -  Allocating rowsets for step 2 --> Select values 2
+2016/05/10 08:38:40 - Transformation -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:40 - Transformation - Transformation allocated new rowset [Select values 2.0 - Sort rows 2.0]
+2016/05/10 08:38:40 - Transformation -  Allocated 3 rowsets for step 2 --> Select values 2  
+2016/05/10 08:38:40 - Transformation -  Allocating rowsets for step 3 --> Sort rows 2
+2016/05/10 08:38:40 - Transformation -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:40 - Transformation - Transformation allocated new rowset [Sort rows 2.0 - Group by 2.0]
+2016/05/10 08:38:40 - Transformation -  Allocated 4 rowsets for step 3 --> Sort rows 2  
+2016/05/10 08:38:40 - Transformation -  Allocating rowsets for step 4 --> Group by
+2016/05/10 08:38:40 - Transformation -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:40 - Transformation - Transformation allocated new rowset [Group by.0 - Microsoft Excel Output.0]
+2016/05/10 08:38:40 - Transformation -  Allocated 5 rowsets for step 4 --> Group by  
+2016/05/10 08:38:40 - Transformation -  Allocating rowsets for step 5 --> Group by 2
+2016/05/10 08:38:40 - Transformation -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:40 - Transformation - Transformation allocated new rowset [Group by 2.0 - Microsoft Excel Output 2.0]
+2016/05/10 08:38:40 - Transformation -  Allocated 6 rowsets for step 5 --> Group by 2  
+2016/05/10 08:38:40 - Transformation -  Allocating rowsets for step 6 --> capella
+2016/05/10 08:38:40 - Transformation -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:40 - Transformation - Transformation allocated new rowset [capella.0 - Select values 2.0]
+2016/05/10 08:38:40 - Transformation -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:40 - Transformation - Transformation allocated new rowset [capella.0 - Select values.0]
+2016/05/10 08:38:40 - Transformation -  Allocated 8 rowsets for step 6 --> capella  
+2016/05/10 08:38:40 - Transformation -  Allocating rowsets for step 7 --> Microsoft Excel Output 2
+2016/05/10 08:38:40 - Transformation -  Allocated 8 rowsets for step 7 --> Microsoft Excel Output 2  
+2016/05/10 08:38:40 - Transformation -  Allocating rowsets for step 8 --> Microsoft Excel Output
+2016/05/10 08:38:40 - Transformation -  Allocated 8 rowsets for step 8 --> Microsoft Excel Output  
+2016/05/10 08:38:40 - Transformation - Allocating Steps & StepData...
+2016/05/10 08:38:40 - Transformation -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2016/05/10 08:38:40 - Select values.0 - distribution activated
+2016/05/10 08:38:40 - Select values.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:40 - Select values.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:40 - Select values.0 - Got previous step from [Select values] #0 --> capella
+2016/05/10 08:38:40 - Select values.0 - input rel is 1:1
+2016/05/10 08:38:40 - Select values.0 - Found input rowset [capella.0 - Select values.0]
+2016/05/10 08:38:40 - Select values.0 - output rel. is  1:1
+2016/05/10 08:38:40 - Select values.0 - Found output rowset [Select values.0 - Sort rows.0]
+2016/05/10 08:38:40 - Select values.0 - Finished dispatching
+2016/05/10 08:38:40 - Transformation -  Transformation has allocated a new step: [Select values].0
+2016/05/10 08:38:40 - Transformation -  Transformation is about to allocate step [Sort rows] of type [SortRows]
+2016/05/10 08:38:40 - Sort rows.0 - distribution activated
+2016/05/10 08:38:40 - Sort rows.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:40 - Sort rows.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:40 - Sort rows.0 - Got previous step from [Sort rows] #0 --> Select values
+2016/05/10 08:38:40 - Sort rows.0 - input rel is 1:1
+2016/05/10 08:38:40 - Sort rows.0 - Found input rowset [Select values.0 - Sort rows.0]
+2016/05/10 08:38:40 - Sort rows.0 - output rel. is  1:1
+2016/05/10 08:38:40 - Sort rows.0 - Found output rowset [Sort rows.0 - Group by.0]
+2016/05/10 08:38:40 - Sort rows.0 - Finished dispatching
+2016/05/10 08:38:40 - Transformation -  Transformation has allocated a new step: [Sort rows].0
+2016/05/10 08:38:40 - Transformation -  Transformation is about to allocate step [Select values 2] of type [SelectValues]
+2016/05/10 08:38:40 - Select values 2.0 - distribution activated
+2016/05/10 08:38:40 - Select values 2.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:40 - Select values 2.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:40 - Select values 2.0 - Got previous step from [Select values 2] #0 --> capella
+2016/05/10 08:38:40 - Select values 2.0 - input rel is 1:1
+2016/05/10 08:38:40 - Select values 2.0 - Found input rowset [capella.0 - Select values 2.0]
+2016/05/10 08:38:40 - Select values 2.0 - output rel. is  1:1
+2016/05/10 08:38:40 - Select values 2.0 - Found output rowset [Select values 2.0 - Sort rows 2.0]
+2016/05/10 08:38:40 - Select values 2.0 - Finished dispatching
+2016/05/10 08:38:40 - Transformation -  Transformation has allocated a new step: [Select values 2].0
+2016/05/10 08:38:40 - Transformation -  Transformation is about to allocate step [Sort rows 2] of type [SortRows]
+2016/05/10 08:38:40 - Sort rows 2.0 - distribution activated
+2016/05/10 08:38:40 - Sort rows 2.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:40 - Sort rows 2.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:40 - Sort rows 2.0 - Got previous step from [Sort rows 2] #0 --> Select values 2
+2016/05/10 08:38:40 - Sort rows 2.0 - input rel is 1:1
+2016/05/10 08:38:40 - Sort rows 2.0 - Found input rowset [Select values 2.0 - Sort rows 2.0]
+2016/05/10 08:38:40 - Sort rows 2.0 - output rel. is  1:1
+2016/05/10 08:38:40 - Sort rows 2.0 - Found output rowset [Sort rows 2.0 - Group by 2.0]
+2016/05/10 08:38:40 - Sort rows 2.0 - Finished dispatching
+2016/05/10 08:38:40 - Transformation -  Transformation has allocated a new step: [Sort rows 2].0
+2016/05/10 08:38:40 - Transformation -  Transformation is about to allocate step [Group by] of type [GroupBy]
+2016/05/10 08:38:40 - Group by.0 - distribution activated
+2016/05/10 08:38:40 - Group by.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:40 - Group by.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:40 - Group by.0 - Got previous step from [Group by] #0 --> Sort rows
+2016/05/10 08:38:40 - Group by.0 - input rel is 1:1
+2016/05/10 08:38:40 - Group by.0 - Found input rowset [Sort rows.0 - Group by.0]
+2016/05/10 08:38:40 - Group by.0 - output rel. is  1:1
+2016/05/10 08:38:40 - Group by.0 - Found output rowset [Group by.0 - Microsoft Excel Output.0]
+2016/05/10 08:38:40 - Group by.0 - Finished dispatching
+2016/05/10 08:38:40 - Transformation -  Transformation has allocated a new step: [Group by].0
+2016/05/10 08:38:40 - Transformation -  Transformation is about to allocate step [Group by 2] of type [GroupBy]
+2016/05/10 08:38:40 - Group by 2.0 - distribution activated
+2016/05/10 08:38:40 - Group by 2.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:40 - Group by 2.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:40 - Group by 2.0 - Got previous step from [Group by 2] #0 --> Sort rows 2
+2016/05/10 08:38:40 - Group by 2.0 - input rel is 1:1
+2016/05/10 08:38:40 - Group by 2.0 - Found input rowset [Sort rows 2.0 - Group by 2.0]
+2016/05/10 08:38:40 - Group by 2.0 - output rel. is  1:1
+2016/05/10 08:38:40 - Group by 2.0 - Found output rowset [Group by 2.0 - Microsoft Excel Output 2.0]
+2016/05/10 08:38:40 - Group by 2.0 - Finished dispatching
+2016/05/10 08:38:40 - Transformation -  Transformation has allocated a new step: [Group by 2].0
+2016/05/10 08:38:40 - Transformation -  Transformation is about to allocate step [capella] of type [TableInput]
+2016/05/10 08:38:40 - capella.0 - distribution de-activated
+2016/05/10 08:38:40 - capella.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:40 - capella.0 - Step info: nrinput=0 nroutput=2
+2016/05/10 08:38:40 - capella.0 - output rel. is  1:1
+2016/05/10 08:38:40 - capella.0 - Found output rowset [capella.0 - Select values 2.0]
+2016/05/10 08:38:40 - capella.0 - output rel. is  1:1
+2016/05/10 08:38:40 - capella.0 - Found output rowset [capella.0 - Select values.0]
+2016/05/10 08:38:40 - capella.0 - Finished dispatching
+2016/05/10 08:38:40 - Transformation -  Transformation has allocated a new step: [capella].0
+2016/05/10 08:38:40 - Transformation -  Transformation is about to allocate step [Microsoft Excel Output 2] of type [ExcelOutput]
+2016/05/10 08:38:41 - Microsoft Excel Output 2.0 - distribution activated
+2016/05/10 08:38:41 - Microsoft Excel Output 2.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:41 - Microsoft Excel Output 2.0 - Step info: nrinput=1 nroutput=0
+2016/05/10 08:38:41 - Microsoft Excel Output 2.0 - Got previous step from [Microsoft Excel Output 2] #0 --> Group by 2
+2016/05/10 08:38:41 - Microsoft Excel Output 2.0 - input rel is 1:1
+2016/05/10 08:38:41 - Microsoft Excel Output 2.0 - Found input rowset [Group by 2.0 - Microsoft Excel Output 2.0]
+2016/05/10 08:38:41 - Microsoft Excel Output 2.0 - Finished dispatching
+2016/05/10 08:38:41 - Transformation -  Transformation has allocated a new step: [Microsoft Excel Output 2].0
+2016/05/10 08:38:41 - Transformation -  Transformation is about to allocate step [Microsoft Excel Output] of type [ExcelOutput]
+2016/05/10 08:38:41 - Microsoft Excel Output.0 - distribution activated
+2016/05/10 08:38:41 - Microsoft Excel Output.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:41 - Microsoft Excel Output.0 - Step info: nrinput=1 nroutput=0
+2016/05/10 08:38:41 - Microsoft Excel Output.0 - Got previous step from [Microsoft Excel Output] #0 --> Group by
+2016/05/10 08:38:41 - Microsoft Excel Output.0 - input rel is 1:1
+2016/05/10 08:38:41 - Microsoft Excel Output.0 - Found input rowset [Group by.0 - Microsoft Excel Output.0]
+2016/05/10 08:38:41 - Microsoft Excel Output.0 - Finished dispatching
+2016/05/10 08:38:41 - Transformation -  Transformation has allocated a new step: [Microsoft Excel Output].0
+2016/05/10 08:38:41 - Transformation - This transformation can be replayed with replay date: 2016/05/10 08:38:41
+2016/05/10 08:38:41 - Transformation - Initialising 9 steps...
+2016/05/10 08:38:41 - Sort rows.0 - Running on slave server #0/1.
+2016/05/10 08:38:41 - Select values.0 - Running on slave server #0/1.
+2016/05/10 08:38:41 - Select values 2.0 - Running on slave server #0/1.
+2016/05/10 08:38:41 - Sort rows 2.0 - Running on slave server #0/1.
+2016/05/10 08:38:41 - Group by 2.0 - Running on slave server #0/1.
+2016/05/10 08:38:41 - Group by.0 - Running on slave server #0/1.
+2016/05/10 08:38:41 - capella.0 - Running on slave server #0/1.
+2016/05/10 08:38:41 - Microsoft Excel Output 2.0 - Running on slave server #0/1.
+2016/05/10 08:38:41 - Microsoft Excel Output.0 - Running on slave server #0/1.
+2016/05/10 08:38:41 - capella - New database connection defined
+2016/05/10 08:38:42 - capella - Connected to database.
+2016/05/10 08:38:42 - capella - Auto commit off
+2016/05/10 08:38:42 - capella.0 - Connected to database...
+2016/05/10 08:38:42 - Transformation - Step [Select values.0] initialized flawlessly.
+2016/05/10 08:38:42 - Transformation - Step [Sort rows.0] initialized flawlessly.
+2016/05/10 08:38:42 - Transformation - Step [Select values 2.0] initialized flawlessly.
+2016/05/10 08:38:42 - Transformation - Step [Sort rows 2.0] initialized flawlessly.
+2016/05/10 08:38:42 - Transformation - Step [Group by.0] initialized flawlessly.
+2016/05/10 08:38:42 - Transformation - Step [Group by 2.0] initialized flawlessly.
+2016/05/10 08:38:42 - Transformation - Step [capella.0] initialized flawlessly.
+2016/05/10 08:38:42 - Transformation - Step [Microsoft Excel Output 2.0] initialized flawlessly.
+2016/05/10 08:38:42 - Transformation - Step [Microsoft Excel Output.0] initialized flawlessly.
+2016/05/10 08:38:42 - Select values.0 - Starting to run...
+2016/05/10 08:38:42 - Sort rows.0 - Starting to run...
+2016/05/10 08:38:42 - Select values 2.0 - Starting to run...
+2016/05/10 08:38:42 - Sort rows 2.0 - Starting to run...
+2016/05/10 08:38:42 - Group by.0 - Starting to run...
+2016/05/10 08:38:42 - Group by 2.0 - Starting to run...
+2016/05/10 08:38:42 - capella.0 - Starting to run...
+2016/05/10 08:38:42 - Microsoft Excel Output 2.0 - Starting to run...
+2016/05/10 08:38:42 - Transformation - Transformation has allocated 9 threads and 8 rowsets.
+2016/05/10 08:38:42 - capella.0 - SQL query : SELECT	
+2016/05/10 08:38:42 - capella.0 - 	DD.FullDateUSA,
+2016/05/10 08:38:42 - capella.0 - 	DS.SiteName,
+2016/05/10 08:38:42 - capella.0 - 	DA.ArticleName,
+2016/05/10 08:38:42 - capella.0 - 	DAM.AttributionMethod,
+2016/05/10 08:38:42 - capella.0 -     sum(FAA.AttributionAmount) AttributionAmount
+2016/05/10 08:38:42 - capella.0 - FROM [DataWarehouse].[dbo].[PWA_FactArticleAttribution] FAA
+2016/05/10 08:38:42 - capella.0 - left join DataWarehouse.dbo.DimDate DD
+2016/05/10 08:38:42 - capella.0 -   on FAA.DateKey = DD.DateKey
+2016/05/10 08:38:42 - capella.0 - left join DataWarehouse.dbo.DimSite DS
+2016/05/10 08:38:42 - capella.0 -   on FAA.SiteKey = DS.ID
+2016/05/10 08:38:42 - capella.0 - left join DataWarehouse.dbo.DimArticle DA
+2016/05/10 08:38:42 - capella.0 -   on FAA.ArticleKey = DA.ID
+2016/05/10 08:38:42 - capella.0 - left join DataWarehouse.dbo.PWA_DimAttributionMethod DAM
+2016/05/10 08:38:42 - capella.0 -   on FAA.AttributionMethodKey = DAM.ID
+2016/05/10 08:38:42 - capella.0 - where FullDateUSA >= CONVERT(varchar(10) ,dateadd(d,-(day(getdate()-1)),getdate()),101) and 
+2016/05/10 08:38:42 - capella.0 - 	FullDateUSA <= convert(varchar(10), getdate()-1, 101)
+2016/05/10 08:38:42 - capella.0 - group by
+2016/05/10 08:38:42 - capella.0 - 	DD.FullDateUSA,
+2016/05/10 08:38:42 - capella.0 - 	DS.SiteName,
+2016/05/10 08:38:42 - capella.0 - 	DA.ArticleName,
+2016/05/10 08:38:42 - capella.0 - 	DAM.AttributionMethod
+2016/05/10 08:38:42 - Microsoft Excel Output.0 - Starting to run...
+2016/05/10 08:38:43 - capella.0 - Finished reading query, closing connection.
+2016/05/10 08:38:43 - Select values.0 - Finished processing (I=0, O=0, R=508, W=508, U=0, E=0)
+2016/05/10 08:38:43 - Select values 2.0 - Finished processing (I=0, O=0, R=508, W=508, U=0, E=0)
+2016/05/10 08:38:43 - capella - Connection to database closed!
+2016/05/10 08:38:43 - capella.0 - Finished processing (I=508, O=0, R=0, W=1016, U=0, E=0)
+2016/05/10 08:38:43 - Sort rows 2.0 - Starting quickSort algorithm...
+2016/05/10 08:38:43 - Sort rows.0 - Starting quickSort algorithm...
+2016/05/10 08:38:43 - Sort rows.0 - The number of binary string to data type conversions done in this sort block is 0
+2016/05/10 08:38:43 - Sort rows.0 - QuickSort algorithm has finished.
+2016/05/10 08:38:43 - Sort rows.0 - Finished processing (I=0, O=0, R=508, W=508, U=0, E=0)
+2016/05/10 08:38:43 - Sort rows 2.0 - The number of binary string to data type conversions done in this sort block is 0
+2016/05/10 08:38:43 - Sort rows 2.0 - QuickSort algorithm has finished.
+2016/05/10 08:38:43 - Sort rows 2.0 - Finished processing (I=0, O=0, R=508, W=508, U=0, E=0)
+2016/05/10 08:38:43 - Group by 2.0 - Finished processing (I=0, O=0, R=508, W=54, U=0, E=0)
+2016/05/10 08:38:43 - Group by.0 - Finished processing (I=0, O=0, R=508, W=508, U=0, E=0)
+2016/05/10 08:38:43 - Microsoft Excel Output 2.0 - Finished processing (I=0, O=54, R=54, W=54, U=0, E=0)
+2016/05/10 08:38:43 - Microsoft Excel Output.0 - Finished processing (I=0, O=508, R=508, W=508, U=0, E=0)
+2016/05/10 08:38:43 - j_Article_Views_Best_Case - Starting entry [Transformation 2]
+2016/05/10 08:38:43 - j_Article_Views_Best_Case - exec(2, 0, Transformation 2.0)
+2016/05/10 08:38:43 - Transformation 2 - Starting job entry
+2016/05/10 08:38:43 - Transformation 2 - Opening transformation: [C:\Spoon\Data Warehouse Reporting\Article Views Best Case\t_Rename files.ktr]
+2016/05/10 08:38:43 - Transformation 2 - Loading transformation from XML file [C:\Spoon\Data Warehouse Reporting\Article Views Best Case\t_Rename files.ktr]
+2016/05/10 08:38:43 - Transformation 2 - Starting transformation...(file=C:\Spoon\Data Warehouse Reporting\Article Views Best Case\t_Rename files.ktr, name=Transformation 2, repinfo=null)
+2016/05/10 08:38:43 - Transformation 2 - Transformation is pre-loaded.
+2016/05/10 08:38:43 - Transformation 2 - Dispatching started for transformation [Rename files]
+2016/05/10 08:38:43 - Transformation 2 - Nr of arguments detected:0 
+2016/05/10 08:38:43 - Transformation 2 - This is not a replay transformation
+2016/05/10 08:38:43 - Transformation 2 - I found 8 different steps to launch.
+2016/05/10 08:38:43 - Transformation 2 - Allocating rowsets...
+2016/05/10 08:38:43 - Transformation 2 -  Allocating rowsets for step 0 --> Get File Names
+2016/05/10 08:38:43 - Transformation 2 -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:43 - Transformation 2 - Transformation allocated new rowset [Get File Names.0 - Split Fields.0]
+2016/05/10 08:38:43 - Transformation 2 -  Allocated 1 rowsets for step 0 --> Get File Names  
+2016/05/10 08:38:43 - Transformation 2 -  Allocating rowsets for step 1 --> Split Fields
+2016/05/10 08:38:43 - Transformation 2 -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:43 - Transformation 2 - Transformation allocated new rowset [Split Fields.0 - Add constants.0]
+2016/05/10 08:38:43 - Transformation 2 -  Allocated 2 rowsets for step 1 --> Split Fields  
+2016/05/10 08:38:43 - Transformation 2 -  Allocating rowsets for step 2 --> Add constants
+2016/05/10 08:38:43 - Transformation 2 -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:43 - Transformation 2 - Transformation allocated new rowset [Add constants.0 - Select values.0]
+2016/05/10 08:38:43 - Transformation 2 -  Allocated 3 rowsets for step 2 --> Add constants  
+2016/05/10 08:38:43 - Transformation 2 -  Allocating rowsets for step 3 --> Select values
+2016/05/10 08:38:43 - Transformation 2 -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:43 - Transformation 2 - Transformation allocated new rowset [Select values.0 - Merge Join.0]
+2016/05/10 08:38:43 - Transformation 2 -  Allocated 4 rowsets for step 3 --> Select values  
+2016/05/10 08:38:43 - Transformation 2 -  Allocating rowsets for step 4 --> Get Yesterday's Date
+2016/05/10 08:38:43 - Transformation 2 -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:43 - Transformation 2 - Transformation allocated new rowset [Get Yesterday's Date.0 - Merge Join.0]
+2016/05/10 08:38:43 - Transformation 2 -  Allocated 5 rowsets for step 4 --> Get Yesterday's Date  
+2016/05/10 08:38:43 - Transformation 2 -  Allocating rowsets for step 5 --> Merge Join
+2016/05/10 08:38:43 - Transformation 2 -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:43 - Transformation 2 - Transformation allocated new rowset [Merge Join.0 - Concat Fields.0]
+2016/05/10 08:38:43 - Transformation 2 -  Allocated 6 rowsets for step 5 --> Merge Join  
+2016/05/10 08:38:43 - Transformation 2 -  Allocating rowsets for step 6 --> Concat Fields
+2016/05/10 08:38:43 - Transformation 2 -   prevcopies = 1, nextcopies=1
+2016/05/10 08:38:43 - Transformation 2 - Transformation allocated new rowset [Concat Fields.0 - Process files.0]
+2016/05/10 08:38:43 - Transformation 2 -  Allocated 7 rowsets for step 6 --> Concat Fields  
+2016/05/10 08:38:43 - Transformation 2 -  Allocating rowsets for step 7 --> Process files
+2016/05/10 08:38:43 - Transformation 2 -  Allocated 7 rowsets for step 7 --> Process files  
+2016/05/10 08:38:43 - Transformation 2 - Allocating Steps & StepData...
+2016/05/10 08:38:43 - Transformation 2 -  Transformation is about to allocate step [Get File Names] of type [GetFileNames]
+2016/05/10 08:38:43 - Get File Names.0 - distribution activated
+2016/05/10 08:38:43 - Get File Names.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:43 - Get File Names.0 - Step info: nrinput=0 nroutput=1
+2016/05/10 08:38:43 - Get File Names.0 - output rel. is  1:1
+2016/05/10 08:38:43 - Get File Names.0 - Found output rowset [Get File Names.0 - Split Fields.0]
+2016/05/10 08:38:43 - Get File Names.0 - Finished dispatching
+2016/05/10 08:38:43 - Transformation 2 -  Transformation has allocated a new step: [Get File Names].0
+2016/05/10 08:38:43 - Transformation 2 -  Transformation is about to allocate step [Split Fields] of type [FieldSplitter]
+2016/05/10 08:38:43 - Split Fields.0 - distribution activated
+2016/05/10 08:38:43 - Split Fields.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:43 - Split Fields.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:43 - Split Fields.0 - Got previous step from [Split Fields] #0 --> Get File Names
+2016/05/10 08:38:43 - Split Fields.0 - input rel is 1:1
+2016/05/10 08:38:43 - Split Fields.0 - Found input rowset [Get File Names.0 - Split Fields.0]
+2016/05/10 08:38:43 - Split Fields.0 - output rel. is  1:1
+2016/05/10 08:38:43 - Split Fields.0 - Found output rowset [Split Fields.0 - Add constants.0]
+2016/05/10 08:38:43 - Split Fields.0 - Finished dispatching
+2016/05/10 08:38:43 - Transformation 2 -  Transformation has allocated a new step: [Split Fields].0
+2016/05/10 08:38:43 - Transformation 2 -  Transformation is about to allocate step [Add constants] of type [Constant]
+2016/05/10 08:38:43 - Add constants.0 - distribution activated
+2016/05/10 08:38:43 - Add constants.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:43 - Add constants.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:43 - Add constants.0 - Got previous step from [Add constants] #0 --> Split Fields
+2016/05/10 08:38:43 - Add constants.0 - input rel is 1:1
+2016/05/10 08:38:43 - Add constants.0 - Found input rowset [Split Fields.0 - Add constants.0]
+2016/05/10 08:38:43 - Add constants.0 - output rel. is  1:1
+2016/05/10 08:38:43 - Add constants.0 - Found output rowset [Add constants.0 - Select values.0]
+2016/05/10 08:38:43 - Add constants.0 - Finished dispatching
+2016/05/10 08:38:43 - Transformation 2 -  Transformation has allocated a new step: [Add constants].0
+2016/05/10 08:38:43 - Transformation 2 -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2016/05/10 08:38:43 - Select values.0 - distribution activated
+2016/05/10 08:38:43 - Select values.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:43 - Select values.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:43 - Select values.0 - Got previous step from [Select values] #0 --> Add constants
+2016/05/10 08:38:43 - Select values.0 - input rel is 1:1
+2016/05/10 08:38:43 - Select values.0 - Found input rowset [Add constants.0 - Select values.0]
+2016/05/10 08:38:43 - Select values.0 - output rel. is  1:1
+2016/05/10 08:38:43 - Select values.0 - Found output rowset [Select values.0 - Merge Join.0]
+2016/05/10 08:38:43 - Select values.0 - Finished dispatching
+2016/05/10 08:38:43 - Transformation 2 -  Transformation has allocated a new step: [Select values].0
+2016/05/10 08:38:43 - Transformation 2 -  Transformation is about to allocate step [Get Yesterday's Date] of type [TableInput]
+2016/05/10 08:38:43 - Get Yesterday's Date.0 - distribution activated
+2016/05/10 08:38:43 - Get Yesterday's Date.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:43 - Get Yesterday's Date.0 - Step info: nrinput=0 nroutput=1
+2016/05/10 08:38:43 - Get Yesterday's Date.0 - output rel. is  1:1
+2016/05/10 08:38:43 - Get Yesterday's Date.0 - Found output rowset [Get Yesterday's Date.0 - Merge Join.0]
+2016/05/10 08:38:43 - Get Yesterday's Date.0 - Finished dispatching
+2016/05/10 08:38:43 - Transformation 2 -  Transformation has allocated a new step: [Get Yesterday's Date].0
+2016/05/10 08:38:43 - Transformation 2 -  Transformation is about to allocate step [Merge Join] of type [MergeJoin]
+2016/05/10 08:38:43 - Merge Join.0 - distribution activated
+2016/05/10 08:38:43 - Merge Join.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:43 - Merge Join.0 - Step info: nrinput=2 nroutput=1
+2016/05/10 08:38:43 - Merge Join.0 - Got previous step from [Merge Join] #0 --> Get Yesterday's Date
+2016/05/10 08:38:43 - Merge Join.0 - input rel is 1:1
+2016/05/10 08:38:43 - Merge Join.0 - Found input rowset [Get Yesterday's Date.0 - Merge Join.0]
+2016/05/10 08:38:43 - Merge Join.0 - Got previous step from [Merge Join] #1 --> Select values
+2016/05/10 08:38:43 - Merge Join.0 - input rel is 1:1
+2016/05/10 08:38:43 - Merge Join.0 - Found input rowset [Select values.0 - Merge Join.0]
+2016/05/10 08:38:43 - Merge Join.0 - output rel. is  1:1
+2016/05/10 08:38:43 - Merge Join.0 - Found output rowset [Merge Join.0 - Concat Fields.0]
+2016/05/10 08:38:43 - Merge Join.0 - Finished dispatching
+2016/05/10 08:38:43 - Transformation 2 -  Transformation has allocated a new step: [Merge Join].0
+2016/05/10 08:38:43 - Transformation 2 -  Transformation is about to allocate step [Concat Fields] of type [ConcatFields]
+2016/05/10 08:38:43 - Concat Fields.0 - distribution activated
+2016/05/10 08:38:43 - Concat Fields.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:43 - Concat Fields.0 - Step info: nrinput=1 nroutput=1
+2016/05/10 08:38:43 - Concat Fields.0 - Got previous step from [Concat Fields] #0 --> Merge Join
+2016/05/10 08:38:43 - Concat Fields.0 - input rel is 1:1
+2016/05/10 08:38:43 - Concat Fields.0 - Found input rowset [Merge Join.0 - Concat Fields.0]
+2016/05/10 08:38:43 - Concat Fields.0 - output rel. is  1:1
+2016/05/10 08:38:43 - Concat Fields.0 - Found output rowset [Concat Fields.0 - Process files.0]
+2016/05/10 08:38:43 - Concat Fields.0 - Finished dispatching
+2016/05/10 08:38:43 - Transformation 2 -  Transformation has allocated a new step: [Concat Fields].0
+2016/05/10 08:38:43 - Transformation 2 -  Transformation is about to allocate step [Process files] of type [ProcessFiles]
+2016/05/10 08:38:43 - Process files.0 - distribution activated
+2016/05/10 08:38:43 - Process files.0 - Starting allocation of buffers & new threads...
+2016/05/10 08:38:43 - Process files.0 - Step info: nrinput=1 nroutput=0
+2016/05/10 08:38:43 - Process files.0 - Got previous step from [Process files] #0 --> Concat Fields
+2016/05/10 08:38:43 - Process files.0 - input rel is 1:1
+2016/05/10 08:38:43 - Process files.0 - Found input rowset [Concat Fields.0 - Process files.0]
+2016/05/10 08:38:43 - Process files.0 - Finished dispatching
+2016/05/10 08:38:43 - Transformation 2 -  Transformation has allocated a new step: [Process files].0
+2016/05/10 08:38:43 - Transformation 2 - This transformation can be replayed with replay date: 2016/05/10 08:38:43
+2016/05/10 08:38:43 - Transformation 2 - Initialising 8 steps...
+2016/05/10 08:38:43 - Get File Names.0 - Running on slave server #0/1.
+2016/05/10 08:38:43 - Split Fields.0 - Running on slave server #0/1.
+2016/05/10 08:38:43 - Add constants.0 - Running on slave server #0/1.
+2016/05/10 08:38:43 - Get Yesterday's Date.0 - Running on slave server #0/1.
+2016/05/10 08:38:43 - Merge Join.0 - Running on slave server #0/1.
+2016/05/10 08:38:43 - Concat Fields.0 - Running on slave server #0/1.
+2016/05/10 08:38:43 - Select values.0 - Running on slave server #0/1.
+2016/05/10 08:38:43 - Process files.0 - Running on slave server #0/1.
+2016/05/10 08:38:43 - capella - New database connection defined
+2016/05/10 08:38:43 - capella - Connected to database.
+2016/05/10 08:38:43 - capella - Auto commit off
+2016/05/10 08:38:43 - Get Yesterday's Date.0 - Connected to database...
+2016/05/10 08:38:43 - Transformation 2 - Step [Get File Names.0] initialized flawlessly.
+2016/05/10 08:38:43 - Transformation 2 - Step [Split Fields.0] initialized flawlessly.
+2016/05/10 08:38:43 - Transformation 2 - Step [Add constants.0] initialized flawlessly.
+2016/05/10 08:38:43 - Transformation 2 - Step [Select values.0] initialized flawlessly.
+2016/05/10 08:38:43 - Transformation 2 - Step [Get Yesterday's Date.0] initialized flawlessly.
+2016/05/10 08:38:43 - Transformation 2 - Step [Merge Join.0] initialized flawlessly.
+2016/05/10 08:38:43 - Transformation 2 - Step [Concat Fields.0] initialized flawlessly.
+2016/05/10 08:38:43 - Transformation 2 - Step [Process files.0] initialized flawlessly.
+2016/05/10 08:38:44 - Get File Names.0 - Starting to run...
+2016/05/10 08:38:44 - Split Fields.0 - Starting to run...
+2016/05/10 08:38:44 - Add constants.0 - Starting to run...
+2016/05/10 08:38:44 - Get Yesterday's Date.0 - Starting to run...
+2016/05/10 08:38:44 - Get Yesterday's Date.0 - SQL query : SELECT 
+2016/05/10 08:38:44 - Get Yesterday's Date.0 - 	'Join' as joinfield,
+2016/05/10 08:38:44 - Get Yesterday's Date.0 - 	replace(convert(varchar(10), getdate()-1, 120), '-', '') as fulldate,
+2016/05/10 08:38:44 - Get Yesterday's Date.0 - 	replace(convert(varchar(8), getdate()-1, 120), '-', '') as yyyymm
+2016/05/10 08:38:44 - Merge Join.0 - Starting to run...
+2016/05/10 08:38:44 - Select values.0 - Starting to run...
+2016/05/10 08:38:44 - Concat Fields.0 - Starting to run...
+2016/05/10 08:38:44 - Process files.0 - Starting to run...
+2016/05/10 08:38:44 - Transformation 2 - Transformation has allocated 8 threads and 7 rowsets.
+2016/05/10 08:38:44 - Get Yesterday's Date.0 - Finished reading query, closing connection.
+2016/05/10 08:38:44 - capella - Connection to database closed!
+2016/05/10 08:38:44 - Get Yesterday's Date.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2016/05/10 08:38:44 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=2, U=0, E=0)
+2016/05/10 08:38:44 - Split Fields.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2016/05/10 08:38:44 - Add constants.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2016/05/10 08:38:44 - Select values.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2016/05/10 08:38:44 - Merge Join.0 - Finished processing (I=0, O=0, R=3, W=2, U=0, E=0)
+2016/05/10 08:38:44 - Concat Fields.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2016/05/10 08:38:44 - Process files.0 - Target file [file:////lynx/c$/Spoon/Data Warehouse Reporting/Article Views Best Case/Article_Best_Case_201605.xls] exists.
+2016/05/10 08:38:44 - Process files.0 - Source file [file:////lynx/c$/Spoon/Data Warehouse Reporting/Article Views Best Case/Working Files/Article_Best_Case.xls] was copied to [file:////lynx/c$/Spoon/Data Warehouse Reporting/Article Views Best Case/Article_Best_Case_201605.xls]
+2016/05/10 08:38:44 - Process files.0 - Target file [file:////lynx/c$/Spoon/Data Warehouse Reporting/Article Views Best Case/Article_By_Site_Best_Case_201605.xls] exists.
+2016/05/10 08:38:44 - Process files.0 - Source file [file:////lynx/c$/Spoon/Data Warehouse Reporting/Article Views Best Case/Working Files/Article_By_Site_Best_Case.xls] was copied to [file:////lynx/c$/Spoon/Data Warehouse Reporting/Article Views Best Case/Article_By_Site_Best_Case_201605.xls]
+2016/05/10 08:38:44 - Process files.0 - Finished processing (I=0, O=0, R=2, W=2, U=0, E=0)
+2016/05/10 08:38:44 - j_Article_Views_Best_Case - Starting entry [Delete files]
+2016/05/10 08:38:44 - j_Article_Views_Best_Case - exec(3, 0, Delete files.0)
+2016/05/10 08:38:44 - Delete files - Starting job entry
+2016/05/10 08:38:44 - Delete files - Processing argument [C:\Spoon\Data Warehouse Reporting\Article Views Best Case\Working Files].. wildcard [null] ?
+2016/05/10 08:38:44 - Delete files - Processing folder [C:\Spoon\Data Warehouse Reporting\Article Views Best Case\Working Files]
+2016/05/10 08:38:44 - Delete files - Deleting file [file:///C:/Spoon/Data Warehouse Reporting/Article Views Best Case/Working Files/Article_Best_Case.xls] ...
+2016/05/10 08:38:44 - Delete files - Deleting file [file:///C:/Spoon/Data Warehouse Reporting/Article Views Best Case/Working Files/Article_By_Site_Best_Case.xls] ...
+2016/05/10 08:38:44 - Delete files - Total deleted files = 2
+2016/05/10 08:38:44 - j_Article_Views_Best_Case - Finished job entry [Delete files] (result=[true])
+2016/05/10 08:38:44 - j_Article_Views_Best_Case - Finished job entry [Transformation 2] (result=[true])
+2016/05/10 08:38:44 - j_Article_Views_Best_Case - Finished job entry [Transformation] (result=[true])
+2016/05/10 08:38:44 - j_Article_Views_Best_Case - Job execution finished
+2016/05/10 08:38:44 - Kitchen - Finished!
+2016/05/10 08:38:44 - Kitchen - Start=2016/05/10 08:38:39.294, Stop=2016/05/10 08:38:44.625
+2016/05/10 08:38:44 - Kitchen - Processing ended after 5 seconds.

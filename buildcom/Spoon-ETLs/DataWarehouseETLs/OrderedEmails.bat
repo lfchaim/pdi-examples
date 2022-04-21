@@ -1,0 +1,1 @@
+call C:\data-integration\pan.bat "/level:Detailed" "/file:./OrderedEmails.ktr"

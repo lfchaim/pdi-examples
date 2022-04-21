@@ -1,0 +1,2130 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/27 03:03:57 - Kitchen - Logging is at level : Detailed logging
+2017/03/27 03:03:57 - Kitchen - Start of run.
+2017/03/27 03:03:58 - BackwardsVisitPopulate - Start of job execution
+2017/03/27 03:03:58 - BackwardsVisitPopulate - exec(0, 0, START.0)
+2017/03/27 03:03:58 - START - Starting job entry
+2017/03/27 03:03:58 - BackwardsVisitPopulate - Starting entry [SetVars]
+2017/03/27 03:03:58 - BackwardsVisitPopulate - exec(1, 0, SetVars.0)
+2017/03/27 03:03:58 - SetVars - Starting job entry
+2017/03/27 03:03:58 - SetVars - Opening transformation: [file:///C:/Spoon/DataWarehouseETLs/SetVisitLookbackDate.ktr]
+2017/03/27 03:03:58 - SetVars - Loading transformation from XML file [file:///C:/Spoon/DataWarehouseETLs/SetVisitLookbackDate.ktr]
+2017/03/27 03:03:58 - SetVars - Starting transformation...(file=${Internal.Job.Filename.Directory}/SetVisitLookbackDate.ktr, name=SetVars, repinfo=null)
+2017/03/27 03:03:58 - SetVisitLookbackDate - Transformation is pre-loaded.
+2017/03/27 03:03:58 - SetVisitLookbackDate - Dispatching started for transformation [SetVisitLookbackDate]
+2017/03/27 03:03:58 - SetVisitLookbackDate - Nr of arguments detected:0 
+2017/03/27 03:03:58 - SetVisitLookbackDate - This is not a replay transformation
+2017/03/27 03:03:58 - SetVisitLookbackDate - I found 2 different steps to launch.
+2017/03/27 03:03:58 - SetVisitLookbackDate - Allocating rowsets...
+2017/03/27 03:03:58 - SetVisitLookbackDate -  Allocating rowsets for step 0 --> Table input
+2017/03/27 03:03:58 - SetVisitLookbackDate -   prevcopies = 1, nextcopies=1
+2017/03/27 03:03:58 - SetVisitLookbackDate - Transformation allocated new rowset [Table input.0 - Set Variables.0]
+2017/03/27 03:03:58 - SetVisitLookbackDate -  Allocated 1 rowsets for step 0 --> Table input  
+2017/03/27 03:03:58 - SetVisitLookbackDate -  Allocating rowsets for step 1 --> Set Variables
+2017/03/27 03:03:58 - SetVisitLookbackDate -  Allocated 1 rowsets for step 1 --> Set Variables  
+2017/03/27 03:03:58 - SetVisitLookbackDate - Allocating Steps & StepData...
+2017/03/27 03:03:58 - SetVisitLookbackDate -  Transformation is about to allocate step [Table input] of type [TableInput]
+2017/03/27 03:03:58 - Table input.0 - distribution activated
+2017/03/27 03:03:58 - Table input.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:03:58 - Table input.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:03:58 - Table input.0 - output rel. is  1:1
+2017/03/27 03:03:58 - Table input.0 - Found output rowset [Table input.0 - Set Variables.0]
+2017/03/27 03:03:58 - Table input.0 - Finished dispatching
+2017/03/27 03:03:58 - SetVisitLookbackDate -  Transformation has allocated a new step: [Table input].0
+2017/03/27 03:03:58 - SetVisitLookbackDate -  Transformation is about to allocate step [Set Variables] of type [SetVariable]
+2017/03/27 03:03:58 - Set Variables.0 - distribution activated
+2017/03/27 03:03:58 - Set Variables.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:03:58 - Set Variables.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 03:03:58 - Set Variables.0 - Got previous step from [Set Variables] #0 --> Table input
+2017/03/27 03:03:58 - Set Variables.0 - input rel is 1:1
+2017/03/27 03:03:58 - Set Variables.0 - Found input rowset [Table input.0 - Set Variables.0]
+2017/03/27 03:03:58 - Set Variables.0 - Finished dispatching
+2017/03/27 03:03:58 - SetVisitLookbackDate -  Transformation has allocated a new step: [Set Variables].0
+2017/03/27 03:03:58 - SetVisitLookbackDate - This transformation can be replayed with replay date: 2017/03/27 03:03:58
+2017/03/27 03:03:58 - SetVisitLookbackDate - Initialising 2 steps...
+2017/03/27 03:03:58 - Table input.0 - Running on slave server #0/1.
+2017/03/27 03:03:58 - Set Variables.0 - Running on slave server #0/1.
+2017/03/27 03:03:58 - Warehouse - New database connection defined
+2017/03/27 03:03:59 - Warehouse - Connected to database.
+2017/03/27 03:03:59 - Warehouse - Auto commit off
+2017/03/27 03:03:59 - Table input.0 - Connected to database...
+2017/03/27 03:03:59 - SetVisitLookbackDate - Step [Table input.0] initialized flawlessly.
+2017/03/27 03:03:59 - SetVisitLookbackDate - Step [Set Variables.0] initialized flawlessly.
+2017/03/27 03:04:00 - Table input.0 - Starting to run...
+2017/03/27 03:04:00 - SetVisitLookbackDate - Transformation has allocated 2 threads and 1 rowsets.
+2017/03/27 03:04:00 - Set Variables.0 - Starting to run...
+2017/03/27 03:04:00 - Table input.0 - SQL query : SELECT 
+2017/03/27 03:04:00 - Table input.0 - dateadd(day,-1,convert(date,GETDATE())) as startDate
+2017/03/27 03:04:00 - Table input.0 - ,dateadd(day,0,convert(date,GETDATE())) as endDate
+2017/03/27 03:04:00 - Table input.0 -  from FactVisit
+2017/03/27 03:04:00 - Table input.0 - Finished reading query, closing connection.
+2017/03/27 03:04:00 - Set Variables.0 - Setting environment variables...
+2017/03/27 03:04:00 - Set Variables.0 - Set variable startDate to value [2017/03/26 00:00:00.000]
+2017/03/27 03:04:00 - Set Variables.0 - Set variable endDate to value [2017/03/27 00:00:00.000]
+2017/03/27 03:04:00 - Set Variables.0 - Finished after 1 rows.
+2017/03/27 03:04:00 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 03:04:00 - Warehouse - Connection to database closed!
+2017/03/27 03:04:00 - Table input.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 03:04:00 - BackwardsVisitPopulate - Starting entry [PopulateDimensions]
+2017/03/27 03:04:00 - BackwardsVisitPopulate - exec(2, 0, PopulateDimensions.0)
+2017/03/27 03:04:00 - PopulateDimensions - Starting job entry
+2017/03/27 03:04:00 - PopulateDimensions - Opening transformation: [file:///C:/Spoon/DataWarehouseETLs/DimCust-VisitInsert.ktr]
+2017/03/27 03:04:00 - PopulateDimensions - Loading transformation from XML file [file:///C:/Spoon/DataWarehouseETLs/DimCust-VisitInsert.ktr]
+2017/03/27 03:04:00 - PopulateDimensions - Starting transformation...(file=${Internal.Job.Filename.Directory}/DimCust-VisitInsert.ktr, name=PopulateDimensions, repinfo=null)
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation is pre-loaded.
+2017/03/27 03:04:00 - DimCust-VisitInsert - Dispatching started for transformation [DimCust-VisitInsert]
+2017/03/27 03:04:00 - DimCust-VisitInsert - Nr of arguments detected:0 
+2017/03/27 03:04:00 - DimCust-VisitInsert - This is not a replay transformation
+2017/03/27 03:04:00 - DimCust-VisitInsert - I found 11 different steps to launch.
+2017/03/27 03:04:00 - DimCust-VisitInsert - Allocating rowsets...
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 0 --> Select Referer
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [Select Referer.0 - ParseRefererURL.0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 1 rowsets for step 0 --> Select Referer  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 1 --> ParseRefererURL
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [ParseRefererURL.0 - Select values Referer.0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 2 rowsets for step 1 --> ParseRefererURL  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 2 --> Select values Referer
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [Select values Referer.0 - Unique rows (HashSet) 2.0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 3 rowsets for step 2 --> Select values Referer  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 3 --> Select Omniture
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [Select Omniture.0 - Select values 2.0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 4 rowsets for step 3 --> Select Omniture  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 4 --> Select values 2
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [Select values 2.0 - Unique rows (HashSet).0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 5 rowsets for step 4 --> Select values 2  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 5 --> Table input
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [Table input.0 - Select Referer.0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [Table input.0 - OmnitureTruncate.0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 7 rowsets for step 5 --> Table input  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 6 --> OmnitureTruncate
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [OmnitureTruncate.0 - Select Omniture.0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 8 rowsets for step 6 --> OmnitureTruncate  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 7 --> Unique rows (HashSet)
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [Unique rows (HashSet).0 - UpdateDimOmniture.0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 9 rowsets for step 7 --> Unique rows (HashSet)  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 8 --> UpdateDimOmniture
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 9 rowsets for step 8 --> UpdateDimOmniture  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 9 --> Unique rows (HashSet) 2
+2017/03/27 03:04:00 - DimCust-VisitInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:04:00 - DimCust-VisitInsert - Transformation allocated new rowset [Unique rows (HashSet) 2.0 - UpdateDimReferer.0]
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 10 rowsets for step 9 --> Unique rows (HashSet) 2  
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocating rowsets for step 10 --> UpdateDimReferer
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Allocated 10 rowsets for step 10 --> UpdateDimReferer  
+2017/03/27 03:04:00 - DimCust-VisitInsert - Allocating Steps & StepData...
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [Select Referer] of type [SelectValues]
+2017/03/27 03:04:00 - Select Referer.0 - distribution activated
+2017/03/27 03:04:00 - Select Referer.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - Select Referer.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:04:00 - Select Referer.0 - Got previous step from [Select Referer] #0 --> Table input
+2017/03/27 03:04:00 - Select Referer.0 - input rel is 1:1
+2017/03/27 03:04:00 - Select Referer.0 - Found input rowset [Table input.0 - Select Referer.0]
+2017/03/27 03:04:00 - Select Referer.0 - output rel. is  1:1
+2017/03/27 03:04:00 - Select Referer.0 - Found output rowset [Select Referer.0 - ParseRefererURL.0]
+2017/03/27 03:04:00 - Select Referer.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [Select Referer].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [ParseRefererURL] of type [ScriptValueMod]
+2017/03/27 03:04:00 - ParseRefererURL.0 - distribution activated
+2017/03/27 03:04:00 - ParseRefererURL.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - ParseRefererURL.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:04:00 - ParseRefererURL.0 - Got previous step from [ParseRefererURL] #0 --> Select Referer
+2017/03/27 03:04:00 - ParseRefererURL.0 - input rel is 1:1
+2017/03/27 03:04:00 - ParseRefererURL.0 - Found input rowset [Select Referer.0 - ParseRefererURL.0]
+2017/03/27 03:04:00 - ParseRefererURL.0 - output rel. is  1:1
+2017/03/27 03:04:00 - ParseRefererURL.0 - Found output rowset [ParseRefererURL.0 - Select values Referer.0]
+2017/03/27 03:04:00 - ParseRefererURL.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [ParseRefererURL].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [Select values Referer] of type [SelectValues]
+2017/03/27 03:04:00 - Select values Referer.0 - distribution activated
+2017/03/27 03:04:00 - Select values Referer.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - Select values Referer.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:04:00 - Select values Referer.0 - Got previous step from [Select values Referer] #0 --> ParseRefererURL
+2017/03/27 03:04:00 - Select values Referer.0 - input rel is 1:1
+2017/03/27 03:04:00 - Select values Referer.0 - Found input rowset [ParseRefererURL.0 - Select values Referer.0]
+2017/03/27 03:04:00 - Select values Referer.0 - output rel. is  1:1
+2017/03/27 03:04:00 - Select values Referer.0 - Found output rowset [Select values Referer.0 - Unique rows (HashSet) 2.0]
+2017/03/27 03:04:00 - Select values Referer.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [Select values Referer].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [Select Omniture] of type [SelectValues]
+2017/03/27 03:04:00 - Select Omniture.0 - distribution activated
+2017/03/27 03:04:00 - Select Omniture.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - Select Omniture.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:04:00 - Select Omniture.0 - Got previous step from [Select Omniture] #0 --> OmnitureTruncate
+2017/03/27 03:04:00 - Select Omniture.0 - input rel is 1:1
+2017/03/27 03:04:00 - Select Omniture.0 - Found input rowset [OmnitureTruncate.0 - Select Omniture.0]
+2017/03/27 03:04:00 - Select Omniture.0 - output rel. is  1:1
+2017/03/27 03:04:00 - Select Omniture.0 - Found output rowset [Select Omniture.0 - Select values 2.0]
+2017/03/27 03:04:00 - Select Omniture.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [Select Omniture].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [Select values 2] of type [SelectValues]
+2017/03/27 03:04:00 - Select values 2.0 - distribution activated
+2017/03/27 03:04:00 - Select values 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - Select values 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:04:00 - Select values 2.0 - Got previous step from [Select values 2] #0 --> Select Omniture
+2017/03/27 03:04:00 - Select values 2.0 - input rel is 1:1
+2017/03/27 03:04:00 - Select values 2.0 - Found input rowset [Select Omniture.0 - Select values 2.0]
+2017/03/27 03:04:00 - Select values 2.0 - output rel. is  1:1
+2017/03/27 03:04:00 - Select values 2.0 - Found output rowset [Select values 2.0 - Unique rows (HashSet).0]
+2017/03/27 03:04:00 - Select values 2.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [Select values 2].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [Table input] of type [TableInput]
+2017/03/27 03:04:00 - Table input.0 - distribution de-activated
+2017/03/27 03:04:00 - Table input.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - Table input.0 - Step info: nrinput=0 nroutput=2
+2017/03/27 03:04:00 - Table input.0 - output rel. is  1:1
+2017/03/27 03:04:00 - Table input.0 - Found output rowset [Table input.0 - Select Referer.0]
+2017/03/27 03:04:00 - Table input.0 - output rel. is  1:1
+2017/03/27 03:04:00 - Table input.0 - Found output rowset [Table input.0 - OmnitureTruncate.0]
+2017/03/27 03:04:00 - Table input.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [Table input].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [OmnitureTruncate] of type [ScriptValueMod]
+2017/03/27 03:04:00 - OmnitureTruncate.0 - distribution activated
+2017/03/27 03:04:00 - OmnitureTruncate.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - OmnitureTruncate.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:04:00 - OmnitureTruncate.0 - Got previous step from [OmnitureTruncate] #0 --> Table input
+2017/03/27 03:04:00 - OmnitureTruncate.0 - input rel is 1:1
+2017/03/27 03:04:00 - OmnitureTruncate.0 - Found input rowset [Table input.0 - OmnitureTruncate.0]
+2017/03/27 03:04:00 - OmnitureTruncate.0 - output rel. is  1:1
+2017/03/27 03:04:00 - OmnitureTruncate.0 - Found output rowset [OmnitureTruncate.0 - Select Omniture.0]
+2017/03/27 03:04:00 - OmnitureTruncate.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [OmnitureTruncate].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [Unique rows (HashSet)] of type [UniqueRowsByHashSet]
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - distribution activated
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - Got previous step from [Unique rows (HashSet)] #0 --> Select values 2
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - input rel is 1:1
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - Found input rowset [Select values 2.0 - Unique rows (HashSet).0]
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - output rel. is  1:1
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - Found output rowset [Unique rows (HashSet).0 - UpdateDimOmniture.0]
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [Unique rows (HashSet)].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [UpdateDimOmniture] of type [TableOutput]
+2017/03/27 03:04:00 - UpdateDimOmniture.0 - distribution activated
+2017/03/27 03:04:00 - UpdateDimOmniture.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - UpdateDimOmniture.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 03:04:00 - UpdateDimOmniture.0 - Got previous step from [UpdateDimOmniture] #0 --> Unique rows (HashSet)
+2017/03/27 03:04:00 - UpdateDimOmniture.0 - input rel is 1:1
+2017/03/27 03:04:00 - UpdateDimOmniture.0 - Found input rowset [Unique rows (HashSet).0 - UpdateDimOmniture.0]
+2017/03/27 03:04:00 - UpdateDimOmniture.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [UpdateDimOmniture].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [Unique rows (HashSet) 2] of type [UniqueRowsByHashSet]
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - distribution activated
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - Got previous step from [Unique rows (HashSet) 2] #0 --> Select values Referer
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - input rel is 1:1
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - Found input rowset [Select values Referer.0 - Unique rows (HashSet) 2.0]
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - output rel. is  1:1
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - Found output rowset [Unique rows (HashSet) 2.0 - UpdateDimReferer.0]
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [Unique rows (HashSet) 2].0
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation is about to allocate step [UpdateDimReferer] of type [TableOutput]
+2017/03/27 03:04:00 - UpdateDimReferer.0 - distribution activated
+2017/03/27 03:04:00 - UpdateDimReferer.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:04:00 - UpdateDimReferer.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 03:04:00 - UpdateDimReferer.0 - Got previous step from [UpdateDimReferer] #0 --> Unique rows (HashSet) 2
+2017/03/27 03:04:00 - UpdateDimReferer.0 - input rel is 1:1
+2017/03/27 03:04:00 - UpdateDimReferer.0 - Found input rowset [Unique rows (HashSet) 2.0 - UpdateDimReferer.0]
+2017/03/27 03:04:00 - UpdateDimReferer.0 - Finished dispatching
+2017/03/27 03:04:00 - DimCust-VisitInsert -  Transformation has allocated a new step: [UpdateDimReferer].0
+2017/03/27 03:04:00 - DimCust-VisitInsert - This transformation can be replayed with replay date: 2017/03/27 03:04:00
+2017/03/27 03:04:00 - DimCust-VisitInsert - Initialising 11 steps...
+2017/03/27 03:04:00 - Select Referer.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - Select values Referer.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - Select Omniture.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - ParseRefererURL.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - UpdateDimReferer.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - Table input.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - UpdateDimOmniture.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - Unique rows (HashSet).0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - OmnitureTruncate.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - Warehouse - New database connection defined
+2017/03/27 03:04:00 - Select values 2.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - Unique rows (HashSet) 2.0 - Running on slave server #0/1.
+2017/03/27 03:04:00 - Warehouse - New database connection defined
+2017/03/27 03:04:00 - PWA Transactions - New database connection defined
+2017/03/27 03:04:00 - Warehouse - Connected to database.
+2017/03/27 03:04:00 - UpdateDimReferer.0 - Connected to database [Warehouse] (commit=100000)
+2017/03/27 03:04:00 - Warehouse - Connected to database.
+2017/03/27 03:04:00 - UpdateDimOmniture.0 - Connected to database [Warehouse] (commit=100000)
+2017/03/27 03:04:00 - Warehouse - Auto commit off
+2017/03/27 03:04:00 - Warehouse - Auto commit off
+2017/03/27 03:04:01 - PWA Transactions - Connected to database.
+2017/03/27 03:04:01 - PWA Transactions - Auto commit off
+2017/03/27 03:04:01 - Table input.0 - Connected to database...
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [Select Referer.0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [ParseRefererURL.0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [Select values Referer.0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [Select Omniture.0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [Select values 2.0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [Table input.0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [OmnitureTruncate.0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [Unique rows (HashSet).0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [UpdateDimOmniture.0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [Unique rows (HashSet) 2.0] initialized flawlessly.
+2017/03/27 03:04:01 - DimCust-VisitInsert - Step [UpdateDimReferer.0] initialized flawlessly.
+2017/03/27 03:04:01 - Select Referer.0 - Starting to run...
+2017/03/27 03:04:01 - ParseRefererURL.0 - Starting to run...
+2017/03/27 03:04:01 - Select values Referer.0 - Starting to run...
+2017/03/27 03:04:01 - Select Omniture.0 - Starting to run...
+2017/03/27 03:04:01 - Select values 2.0 - Starting to run...
+2017/03/27 03:04:01 - Table input.0 - Starting to run...
+2017/03/27 03:04:01 - Table input.0 - SQL query : SELECT OmnitureTrackingCode, refererUrl FROM visits WITH (NOLOCK) WHERE timeStamp > '2017/03/26 00:00:00.000' and timeStamp < '2017/03/27 00:00:00.000'
+2017/03/27 03:04:01 - OmnitureTruncate.0 - Starting to run...
+2017/03/27 03:04:01 - UpdateDimOmniture.0 - Starting to run...
+2017/03/27 03:04:01 - Unique rows (HashSet).0 - Starting to run...
+2017/03/27 03:04:01 - DimCust-VisitInsert - Transformation has allocated 11 threads and 10 rowsets.
+2017/03/27 03:04:01 - UpdateDimReferer.0 - Starting to run...
+2017/03/27 03:04:01 - Unique rows (HashSet) 2.0 - Starting to run...
+2017/03/27 03:04:03 - OmnitureTruncate.0 - Value #0 -  [OmnitureTrackingCode] is used in the script.
+2017/03/27 03:04:03 - OmnitureTruncate.0 - This script is using 1 values from the input stream(s)
+2017/03/27 03:04:03 - ParseRefererURL.0 - Value #0 -  [refererUrl] is used in the script.
+2017/03/27 03:04:03 - ParseRefererURL.0 - This script is using 1 values from the input stream(s)
+2017/03/27 03:04:03 - OmnitureTruncate.0 - Optimization level set to 9.
+2017/03/27 03:04:03 - ParseRefererURL.0 - Optimization level set to 9.
+2017/03/27 03:04:03 - ParseRefererURL.0 - No starting Script found!
+2017/03/27 03:04:03 - OmnitureTruncate.0 - No starting Script found!
+2017/03/27 03:04:03 - OmnitureTruncate.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 03:04:03 - UpdateDimOmniture.0 - Prepared statement : INSERT INTO dbo.DimOmnitureCode (TrackingCode) VALUES ( ?)
+2017/03/27 03:04:03 - ParseRefererURL.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 03:04:03 - UpdateDimReferer.0 - Prepared statement : INSERT INTO DimReferer (RefererHost, RefererUrl) VALUES ( ?,  ?)
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Air_Quality>Portable_Air_Conditioners-14000_BTU_Portable_Air_Conditioners>AP14001HS]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://www.google.com/], [google.com]
+2017/03/27 03:04:04 - UpdateDimReferer.0 - 
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [null]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://search.yahoo.com/], [search.yahoo.com]
+2017/03/27 03:04:04 - UpdateDimReferer.0 - 
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:04 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://www.google.com.vn/], [google.com.vn]
+2017/03/27 03:04:04 - UpdateDimReferer.0 - 
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [google>Wine Coolers (Expanded)]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://www.bing.com/], [bing.com]
+2017/03/27 03:04:04 - UpdateDimReferer.0 - 
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [GoogleBase>Commercial_Ice_Machines>Self_Contained_Ice_Machines>QM-30A]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [null], [null]
+2017/03/27 03:04:04 - UpdateDimReferer.0 - 
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Brands>Turbo_Air>TIDC>91W]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [google>Wine]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [android-app://com.google.android.googlequicksearchbox], [com.google.android.googlequicksearchbox]
+2017/03/27 03:04:04 - UpdateDimReferer.0 - 
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [20160602_KEG_sour-beer_email%20(1)_email]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Appliances>Laundry-Combo_Washer_Dryers>WM3997HWA]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [http://www.pinterest.com/pin/523473156674682332], [pinterest.com]
+2017/03/27 03:04:04 - UpdateDimReferer.0 - 
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Wine_Refrigerators>Built-In-Wine-Coolers>VT-155SBW]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Wine_and_Beverage>Beverage_Coolers-Free_Standing>BWC90SS]
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:04 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [http://www.google.com/], [google.com]
+2017/03/27 03:04:04 - UpdateDimReferer.0 - 
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:04 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Home_Air_Quality>Portable_Air_Conditioners-14000_BTU_Portable_Air_Conditioners>AP14003W]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [google>Ice Maker (Exact)]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://www.google.ca/], [google.ca]
+2017/03/27 03:04:05 - UpdateDimReferer.0 - 
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [pinterest]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Kitchen_Electrics>Ranges_Cooktops-Wall_Ovens>CMV24]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Wine_and_Beverage>Beverage_Coolers-Free_Standing>BWC70SS]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [google>Combo]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Kitchen_Electrics>Ranges_Cooktops-Combo_Kitchen_Units>APSS39]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Air_Conditioning>Portable_Air_Conditioners>AP14003W]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Appliances>Laundry-Combo_Washer_Dryers>WM3488HW]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - Table input.0 - linenr 50000
+2017/03/27 03:04:05 - OmnitureTruncate.0 - linenr 50000
+2017/03/27 03:04:05 - Select values 2.0 - linenr 50000
+2017/03/27 03:04:05 - Unique rows (HashSet).0 - Linenr 50000
+2017/03/27 03:04:05 - Select Referer.0 - linenr 50000
+2017/03/27 03:04:05 - Select Omniture.0 - linenr 50000
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - WARNING: Couldn't insert row into table: [PLA>Air_Conditioning>Window_Air_Conditioners>12001_Up>LW1516ER]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - FINAL WARNING (no more then 20 displayed): Couldn't insert row into table: [Facebook>Home_Appliances>Laundry-Combo_Washer_Dryers>ATEE9AGP173TW01]
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - 
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimOmniture.0 - Cannot insert duplicate key row in object 'dbo.DimOmnitureCode' with unique index 'NonClusteredIndex-20160119-144715'.
+2017/03/27 03:04:05 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [http://m.facebook.com], [m.facebook.com]
+2017/03/27 03:04:05 - UpdateDimReferer.0 - 
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:05 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://www.google.com.au/], [google.com.au]
+2017/03/27 03:04:05 - UpdateDimReferer.0 - 
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:05 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://www.google.co.uk/], [google.co.uk]
+2017/03/27 03:04:05 - UpdateDimReferer.0 - 
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:05 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://learn.winecoolerdirect.com/beverage-refrigerator-buying/], [learn.winecoolerdirect.com]
+2017/03/27 03:04:05 - UpdateDimReferer.0 - 
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:05 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [http://www.google.co.in/], [google.co.in]
+2017/03/27 03:04:05 - UpdateDimReferer.0 - 
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:05 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [googleadservices.com], [googleadservices.com]
+2017/03/27 03:04:05 - UpdateDimReferer.0 - 
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:05 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:06 - Table input.0 - Finished reading query, closing connection.
+2017/03/27 03:04:06 - OmnitureTruncate.0 - No end Script found!
+2017/03/27 03:04:06 - Select Referer.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:04:06 - OmnitureTruncate.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:04:06 - Select Omniture.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:04:06 - Select values 2.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:04:06 - Unique rows (HashSet).0 - Finished processing (I=0, O=0, R=76411, W=1920, U=0, E=74491)
+2017/03/27 03:04:06 - PWA Transactions - Connection to database closed!
+2017/03/27 03:04:06 - Table input.0 - Finished processing (I=76411, O=0, R=0, W=152822, U=0, E=0)
+2017/03/27 03:04:06 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://learn.allergyandair.com/essential-oils-for-allergies/], [learn.allergyandair.com]
+2017/03/27 03:04:06 - UpdateDimReferer.0 - 
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:06 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://www.google.co.in/], [google.co.in]
+2017/03/27 03:04:06 - UpdateDimReferer.0 - 
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:06 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://duckduckgo.com/], [duckduckgo.com]
+2017/03/27 03:04:06 - UpdateDimReferer.0 - 
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:06 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [https://www.google.co.th/], [google.co.th]
+2017/03/27 03:04:06 - UpdateDimReferer.0 - 
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:06 - UpdateDimReferer.0 - WARNING: Couldn't insert row into table: [http://m.facebook.com/], [m.facebook.com]
+2017/03/27 03:04:06 - UpdateDimReferer.0 - 
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:06 - UpdateDimReferer.0 - FINAL WARNING (no more then 20 displayed): Couldn't insert row into table: [google.com], [google.com]
+2017/03/27 03:04:06 - UpdateDimReferer.0 - 
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Error inserting/updating row
+2017/03/27 03:04:06 - UpdateDimReferer.0 - Cannot insert duplicate key row in object 'dbo.DimReferer' with unique index 'NonClusteredIndex-DimRef-RefUrl'.
+2017/03/27 03:04:06 - ParseRefererURL.0 - linenr 50000
+2017/03/27 03:04:06 - Unique rows (HashSet) 2.0 - Linenr 50000
+2017/03/27 03:04:06 - Select values Referer.0 - linenr 50000
+2017/03/27 03:04:07 - ParseRefererURL.0 - No end Script found!
+2017/03/27 03:04:07 - ParseRefererURL.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:04:07 - Select values Referer.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:04:07 - Unique rows (HashSet) 2.0 - Finished processing (I=0, O=0, R=76411, W=3019, U=0, E=73392)
+2017/03/27 03:04:22 - Warehouse - Connection to database closed!
+2017/03/27 03:04:22 - UpdateDimOmniture.0 - Finished processing (I=0, O=1920, R=1920, W=1920, U=0, E=0)
+2017/03/27 03:05:53 - Warehouse - Connection to database closed!
+2017/03/27 03:05:53 - UpdateDimReferer.0 - Finished processing (I=0, O=3019, R=3019, W=3019, U=0, E=0)
+2017/03/27 03:05:53 - BackwardsVisitPopulate - Starting entry [InsertFacts]
+2017/03/27 03:05:53 - BackwardsVisitPopulate - exec(3, 0, InsertFacts.0)
+2017/03/27 03:05:53 - InsertFacts - Starting job entry
+2017/03/27 03:05:53 - InsertFacts - Opening transformation: [file:///C:/Spoon/DataWarehouseETLs/FactVisit-Insert.ktr]
+2017/03/27 03:05:53 - InsertFacts - Loading transformation from XML file [file:///C:/Spoon/DataWarehouseETLs/FactVisit-Insert.ktr]
+2017/03/27 03:05:53 - InsertFacts - Starting transformation...(file=${Internal.Job.Filename.Directory}/FactVisit-Insert.ktr, name=InsertFacts, repinfo=null)
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation is pre-loaded.
+2017/03/27 03:05:53 - FactVisit-Insert - Dispatching started for transformation [FactVisit-Insert]
+2017/03/27 03:05:53 - FactVisit-Insert - Nr of arguments detected:0 
+2017/03/27 03:05:53 - FactVisit-Insert - This is not a replay transformation
+2017/03/27 03:05:53 - FactVisit-Insert - I found 35 different steps to launch.
+2017/03/27 03:05:53 - FactVisit-Insert - Allocating rowsets...
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 0 --> GetPrefix
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [GetPrefix.0 - DecodeUrl.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 1 rowsets for step 0 --> GetPrefix  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 1 --> DecodeUrl
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [DecodeUrl.0 - Learn Set.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 2 rowsets for step 1 --> DecodeUrl  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 2 --> Learn Set
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Learn Set.0 - non-null GoogleMedium.0]
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Learn Set.0 - Non-null GoogleCampaign.0]
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Learn Set.0 - Non-null GoogleSource.0]
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Learn Set.0 - Non-null GoogleTerm.0]
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Learn Set.0 -  .0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 7 rowsets for step 2 --> Learn Set  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 3 --> GetDimSite
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [GetDimSite.0 - Stream lookup 2 2.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 8 rowsets for step 3 --> GetDimSite  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 4 --> Stream lookup 2 2
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Stream lookup 2 2.0 - Stream lookup 2 3.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 9 rowsets for step 4 --> Stream lookup 2 2  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 5 --> Stream lookup 2 3
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Stream lookup 2 3.0 - Sort rows.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 10 rowsets for step 5 --> Stream lookup 2 3  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 6 --> GetDimOmniture
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [GetDimOmniture.0 - Stream lookup 2 3.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 11 rowsets for step 6 --> GetDimOmniture  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 7 --> GetDimBreakpint
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [GetDimBreakpint.0 - Stream lookup 2 5.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 12 rowsets for step 7 --> GetDimBreakpint  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 8 --> Stream lookup 2 5
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Stream lookup 2 5.0 - Has Lead?.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 13 rowsets for step 8 --> Stream lookup 2 5  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 9 --> GetVisits
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [GetVisits.0 - GetPrefix.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 14 rowsets for step 9 --> GetVisits  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 10 --> non-null GoogleMedium
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [non-null GoogleMedium.0 - Get GoogleMediumKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 15 rowsets for step 10 --> non-null GoogleMedium  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 11 --> Non-null GoogleCampaign
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Non-null GoogleCampaign.0 - Get GoogleCampaignKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 16 rowsets for step 11 --> Non-null GoogleCampaign  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 12 --> Non-null GoogleSource
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Non-null GoogleSource.0 - Get GoogleSourceKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 17 rowsets for step 12 --> Non-null GoogleSource  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 13 --> Non-null GoogleTerm
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Non-null GoogleTerm.0 - Get GoogleTermKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 18 rowsets for step 13 --> Non-null GoogleTerm  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 14 --> Get GoogleMediumKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Get GoogleMediumKey.0 - Take Visit/MediumKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 19 rowsets for step 14 --> Get GoogleMediumKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 15 --> Get GoogleCampaignKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Get GoogleCampaignKey.0 - Take Visit/CampaignKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 20 rowsets for step 15 --> Get GoogleCampaignKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 16 --> Get GoogleTermKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Get GoogleTermKey.0 - Take Visit/TermKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 21 rowsets for step 16 --> Get GoogleTermKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 17 --> Get GoogleSourceKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Get GoogleSourceKey.0 - Take Visit/SourceKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 22 rowsets for step 17 --> Get GoogleSourceKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 18 --> Take Visit/MediumKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Take Visit/MediumKey.0 - Merge MediumKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 23 rowsets for step 18 --> Take Visit/MediumKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 19 --> Take Visit/CampaignKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Take Visit/CampaignKey.0 - Merge CampaignKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 24 rowsets for step 19 --> Take Visit/CampaignKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 20 --> Take Visit/TermKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Take Visit/TermKey.0 - Merge TemKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 25 rowsets for step 20 --> Take Visit/TermKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 21 --> Take Visit/SourceKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Take Visit/SourceKey.0 - Merge SourceKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 26 rowsets for step 21 --> Take Visit/SourceKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 22 --> Merge MediumKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Merge MediumKey.0 - Merge CampaignKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 27 rowsets for step 22 --> Merge MediumKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 23 --> Merge CampaignKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Merge CampaignKey.0 - Merge TemKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 28 rowsets for step 23 --> Merge CampaignKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 24 --> Merge TemKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Merge TemKey.0 - Merge SourceKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 29 rowsets for step 24 --> Merge TemKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 25 --> Merge SourceKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Merge SourceKey.0 - Stream lookup 2 2.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 30 rowsets for step 25 --> Merge SourceKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 26 -->  
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [ .0 - Merge MediumKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 31 rowsets for step 26 -->    
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 27 --> Has Lead?
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Has Lead?.0 - Lookup Update LeadKeys.0]
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Has Lead?.0 - Add Null LeadKey.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 33 rowsets for step 27 --> Has Lead?  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 28 --> Lookup Update LeadKeys
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Lookup Update LeadKeys.0 - Merge Rows (diff).0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 34 rowsets for step 28 --> Lookup Update LeadKeys  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 29 --> Add Null LeadKey
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Add Null LeadKey.0 - Merge Rows (diff).0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 35 rowsets for step 29 --> Add Null LeadKey  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 30 --> Merge Rows (diff)
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Merge Rows (diff).0 - Table output.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 36 rowsets for step 30 --> Merge Rows (diff)  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 31 --> Table output
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 36 rowsets for step 31 --> Table output  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 32 --> Sort rows
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Sort rows.0 - Merge Join.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 37 rowsets for step 32 --> Sort rows  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 33 --> Merge Join
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [Merge Join.0 - Stream lookup 2 5.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 38 rowsets for step 33 --> Merge Join  
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocating rowsets for step 34 --> GetDimReferer
+2017/03/27 03:05:53 - FactVisit-Insert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:05:53 - FactVisit-Insert - Transformation allocated new rowset [GetDimReferer.0 - Merge Join.0]
+2017/03/27 03:05:53 - FactVisit-Insert -  Allocated 39 rowsets for step 34 --> GetDimReferer  
+2017/03/27 03:05:53 - FactVisit-Insert - Allocating Steps & StepData...
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [GetPrefix] of type [StringCut]
+2017/03/27 03:05:53 - GetPrefix.0 - distribution activated
+2017/03/27 03:05:53 - GetPrefix.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - GetPrefix.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - GetPrefix.0 - Got previous step from [GetPrefix] #0 --> GetVisits
+2017/03/27 03:05:53 - GetPrefix.0 - input rel is 1:1
+2017/03/27 03:05:53 - GetPrefix.0 - Found input rowset [GetVisits.0 - GetPrefix.0]
+2017/03/27 03:05:53 - GetPrefix.0 - output rel. is  1:1
+2017/03/27 03:05:53 - GetPrefix.0 - Found output rowset [GetPrefix.0 - DecodeUrl.0]
+2017/03/27 03:05:53 - GetPrefix.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [GetPrefix].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [DecodeUrl] of type [ScriptValueMod]
+2017/03/27 03:05:53 - DecodeUrl.0 - distribution activated
+2017/03/27 03:05:53 - DecodeUrl.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - DecodeUrl.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - DecodeUrl.0 - Got previous step from [DecodeUrl] #0 --> GetPrefix
+2017/03/27 03:05:53 - DecodeUrl.0 - input rel is 1:1
+2017/03/27 03:05:53 - DecodeUrl.0 - Found input rowset [GetPrefix.0 - DecodeUrl.0]
+2017/03/27 03:05:53 - DecodeUrl.0 - output rel. is  1:1
+2017/03/27 03:05:53 - DecodeUrl.0 - Found output rowset [DecodeUrl.0 - Learn Set.0]
+2017/03/27 03:05:53 - DecodeUrl.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [DecodeUrl].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Learn Set] of type [ScriptValueMod]
+2017/03/27 03:05:53 - Learn Set.0 - distribution de-activated
+2017/03/27 03:05:53 - Learn Set.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Learn Set.0 - Step info: nrinput=1 nroutput=5
+2017/03/27 03:05:53 - Learn Set.0 - Got previous step from [Learn Set] #0 --> DecodeUrl
+2017/03/27 03:05:53 - Learn Set.0 - input rel is 1:1
+2017/03/27 03:05:53 - Learn Set.0 - Found input rowset [DecodeUrl.0 - Learn Set.0]
+2017/03/27 03:05:53 - Learn Set.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Learn Set.0 - Found output rowset [Learn Set.0 - non-null GoogleMedium.0]
+2017/03/27 03:05:53 - Learn Set.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Learn Set.0 - Found output rowset [Learn Set.0 - Non-null GoogleCampaign.0]
+2017/03/27 03:05:53 - Learn Set.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Learn Set.0 - Found output rowset [Learn Set.0 - Non-null GoogleSource.0]
+2017/03/27 03:05:53 - Learn Set.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Learn Set.0 - Found output rowset [Learn Set.0 - Non-null GoogleTerm.0]
+2017/03/27 03:05:53 - Learn Set.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Learn Set.0 - Found output rowset [Learn Set.0 -  .0]
+2017/03/27 03:05:53 - Learn Set.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Learn Set].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [GetDimSite] of type [TableInput]
+2017/03/27 03:05:53 - GetDimSite.0 - distribution de-activated
+2017/03/27 03:05:53 - GetDimSite.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - GetDimSite.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:05:53 - GetDimSite.0 - output rel. is  1:1
+2017/03/27 03:05:53 - GetDimSite.0 - Found output rowset [GetDimSite.0 - Stream lookup 2 2.0]
+2017/03/27 03:05:53 - GetDimSite.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [GetDimSite].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Stream lookup 2 2] of type [StreamLookup]
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - distribution activated
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - Got previous step from [Stream lookup 2 2] #0 --> GetDimSite
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - input rel is 1:1
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - Found input rowset [GetDimSite.0 - Stream lookup 2 2.0]
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - Got previous step from [Stream lookup 2 2] #1 --> Merge SourceKey
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - input rel is 1:1
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - Found input rowset [Merge SourceKey.0 - Stream lookup 2 2.0]
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - Found output rowset [Stream lookup 2 2.0 - Stream lookup 2 3.0]
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Stream lookup 2 2].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Stream lookup 2 3] of type [StreamLookup]
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - distribution activated
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - Got previous step from [Stream lookup 2 3] #0 --> Stream lookup 2 2
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - input rel is 1:1
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - Found input rowset [Stream lookup 2 2.0 - Stream lookup 2 3.0]
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - Got previous step from [Stream lookup 2 3] #1 --> GetDimOmniture
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - input rel is 1:1
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - Found input rowset [GetDimOmniture.0 - Stream lookup 2 3.0]
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - Found output rowset [Stream lookup 2 3.0 - Sort rows.0]
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Stream lookup 2 3].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [GetDimOmniture] of type [TableInput]
+2017/03/27 03:05:53 - GetDimOmniture.0 - distribution de-activated
+2017/03/27 03:05:53 - GetDimOmniture.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - GetDimOmniture.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:05:53 - GetDimOmniture.0 - output rel. is  1:1
+2017/03/27 03:05:53 - GetDimOmniture.0 - Found output rowset [GetDimOmniture.0 - Stream lookup 2 3.0]
+2017/03/27 03:05:53 - GetDimOmniture.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [GetDimOmniture].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [GetDimBreakpint] of type [TableInput]
+2017/03/27 03:05:53 - GetDimBreakpint.0 - distribution de-activated
+2017/03/27 03:05:53 - GetDimBreakpint.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - GetDimBreakpint.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:05:53 - GetDimBreakpint.0 - output rel. is  1:1
+2017/03/27 03:05:53 - GetDimBreakpint.0 - Found output rowset [GetDimBreakpint.0 - Stream lookup 2 5.0]
+2017/03/27 03:05:53 - GetDimBreakpint.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [GetDimBreakpint].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Stream lookup 2 5] of type [StreamLookup]
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - distribution de-activated
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - Got previous step from [Stream lookup 2 5] #0 --> GetDimBreakpint
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - input rel is 1:1
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - Found input rowset [GetDimBreakpint.0 - Stream lookup 2 5.0]
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - Got previous step from [Stream lookup 2 5] #1 --> Merge Join
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - input rel is 1:1
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - Found input rowset [Merge Join.0 - Stream lookup 2 5.0]
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - Found output rowset [Stream lookup 2 5.0 - Has Lead?.0]
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Stream lookup 2 5].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [GetVisits] of type [TableInput]
+2017/03/27 03:05:53 - GetVisits.0 - distribution de-activated
+2017/03/27 03:05:53 - GetVisits.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - GetVisits.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:05:53 - GetVisits.0 - output rel. is  1:1
+2017/03/27 03:05:53 - GetVisits.0 - Found output rowset [GetVisits.0 - GetPrefix.0]
+2017/03/27 03:05:53 - GetVisits.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [GetVisits].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [non-null GoogleMedium] of type [FilterRows]
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - distribution activated
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - Got previous step from [non-null GoogleMedium] #0 --> Learn Set
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - input rel is 1:1
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - Found input rowset [Learn Set.0 - non-null GoogleMedium.0]
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - output rel. is  1:1
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - Found output rowset [non-null GoogleMedium.0 - Get GoogleMediumKey.0]
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [non-null GoogleMedium].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Non-null GoogleCampaign] of type [FilterRows]
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - distribution activated
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - Got previous step from [Non-null GoogleCampaign] #0 --> Learn Set
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - input rel is 1:1
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - Found input rowset [Learn Set.0 - Non-null GoogleCampaign.0]
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - Found output rowset [Non-null GoogleCampaign.0 - Get GoogleCampaignKey.0]
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Non-null GoogleCampaign].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Non-null GoogleSource] of type [FilterRows]
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - distribution activated
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - Got previous step from [Non-null GoogleSource] #0 --> Learn Set
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - input rel is 1:1
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - Found input rowset [Learn Set.0 - Non-null GoogleSource.0]
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - Found output rowset [Non-null GoogleSource.0 - Get GoogleSourceKey.0]
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Non-null GoogleSource].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Non-null GoogleTerm] of type [FilterRows]
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - distribution activated
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - Got previous step from [Non-null GoogleTerm] #0 --> Learn Set
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - input rel is 1:1
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - Found input rowset [Learn Set.0 - Non-null GoogleTerm.0]
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - Found output rowset [Non-null GoogleTerm.0 - Get GoogleTermKey.0]
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Non-null GoogleTerm].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Get GoogleMediumKey] of type [CombinationLookup]
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - distribution activated
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - Got previous step from [Get GoogleMediumKey] #0 --> non-null GoogleMedium
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - Found input rowset [non-null GoogleMedium.0 - Get GoogleMediumKey.0]
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - Found output rowset [Get GoogleMediumKey.0 - Take Visit/MediumKey.0]
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Get GoogleMediumKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Get GoogleCampaignKey] of type [CombinationLookup]
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - distribution activated
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - Got previous step from [Get GoogleCampaignKey] #0 --> Non-null GoogleCampaign
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - Found input rowset [Non-null GoogleCampaign.0 - Get GoogleCampaignKey.0]
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - Found output rowset [Get GoogleCampaignKey.0 - Take Visit/CampaignKey.0]
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Get GoogleCampaignKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Get GoogleTermKey] of type [CombinationLookup]
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - distribution activated
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - Got previous step from [Get GoogleTermKey] #0 --> Non-null GoogleTerm
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - Found input rowset [Non-null GoogleTerm.0 - Get GoogleTermKey.0]
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - Found output rowset [Get GoogleTermKey.0 - Take Visit/TermKey.0]
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Get GoogleTermKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Get GoogleSourceKey] of type [CombinationLookup]
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - distribution activated
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - Got previous step from [Get GoogleSourceKey] #0 --> Non-null GoogleSource
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - Found input rowset [Non-null GoogleSource.0 - Get GoogleSourceKey.0]
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - Found output rowset [Get GoogleSourceKey.0 - Take Visit/SourceKey.0]
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Get GoogleSourceKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Take Visit/MediumKey] of type [SelectValues]
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - distribution activated
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - Got previous step from [Take Visit/MediumKey] #0 --> Get GoogleMediumKey
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - Found input rowset [Get GoogleMediumKey.0 - Take Visit/MediumKey.0]
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - Found output rowset [Take Visit/MediumKey.0 - Merge MediumKey.0]
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Take Visit/MediumKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Take Visit/CampaignKey] of type [SelectValues]
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - distribution activated
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - Got previous step from [Take Visit/CampaignKey] #0 --> Get GoogleCampaignKey
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - Found input rowset [Get GoogleCampaignKey.0 - Take Visit/CampaignKey.0]
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - Found output rowset [Take Visit/CampaignKey.0 - Merge CampaignKey.0]
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Take Visit/CampaignKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Take Visit/TermKey] of type [SelectValues]
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - distribution activated
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - Got previous step from [Take Visit/TermKey] #0 --> Get GoogleTermKey
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - Found input rowset [Get GoogleTermKey.0 - Take Visit/TermKey.0]
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - Found output rowset [Take Visit/TermKey.0 - Merge TemKey.0]
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Take Visit/TermKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Take Visit/SourceKey] of type [SelectValues]
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - distribution activated
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - Got previous step from [Take Visit/SourceKey] #0 --> Get GoogleSourceKey
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - Found input rowset [Get GoogleSourceKey.0 - Take Visit/SourceKey.0]
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - Found output rowset [Take Visit/SourceKey.0 - Merge SourceKey.0]
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Take Visit/SourceKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Merge MediumKey] of type [MergeJoin]
+2017/03/27 03:05:53 - Merge MediumKey.0 - distribution activated
+2017/03/27 03:05:53 - Merge MediumKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Merge MediumKey.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:05:53 - Merge MediumKey.0 - Got previous step from [Merge MediumKey] #0 --> Take Visit/MediumKey
+2017/03/27 03:05:53 - Merge MediumKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge MediumKey.0 - Found input rowset [Take Visit/MediumKey.0 - Merge MediumKey.0]
+2017/03/27 03:05:53 - Merge MediumKey.0 - Got previous step from [Merge MediumKey] #1 -->  
+2017/03/27 03:05:53 - Merge MediumKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge MediumKey.0 - Found input rowset [ .0 - Merge MediumKey.0]
+2017/03/27 03:05:53 - Merge MediumKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Merge MediumKey.0 - Found output rowset [Merge MediumKey.0 - Merge CampaignKey.0]
+2017/03/27 03:05:53 - Merge MediumKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Merge MediumKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Merge CampaignKey] of type [MergeJoin]
+2017/03/27 03:05:53 - Merge CampaignKey.0 - distribution activated
+2017/03/27 03:05:53 - Merge CampaignKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Merge CampaignKey.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:05:53 - Merge CampaignKey.0 - Got previous step from [Merge CampaignKey] #0 --> Merge MediumKey
+2017/03/27 03:05:53 - Merge CampaignKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge CampaignKey.0 - Found input rowset [Merge MediumKey.0 - Merge CampaignKey.0]
+2017/03/27 03:05:53 - Merge CampaignKey.0 - Got previous step from [Merge CampaignKey] #1 --> Take Visit/CampaignKey
+2017/03/27 03:05:53 - Merge CampaignKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge CampaignKey.0 - Found input rowset [Take Visit/CampaignKey.0 - Merge CampaignKey.0]
+2017/03/27 03:05:53 - Merge CampaignKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Merge CampaignKey.0 - Found output rowset [Merge CampaignKey.0 - Merge TemKey.0]
+2017/03/27 03:05:53 - Merge CampaignKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Merge CampaignKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Merge TemKey] of type [MergeJoin]
+2017/03/27 03:05:53 - Merge TemKey.0 - distribution activated
+2017/03/27 03:05:53 - Merge TemKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Merge TemKey.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:05:53 - Merge TemKey.0 - Got previous step from [Merge TemKey] #0 --> Take Visit/TermKey
+2017/03/27 03:05:53 - Merge TemKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge TemKey.0 - Found input rowset [Take Visit/TermKey.0 - Merge TemKey.0]
+2017/03/27 03:05:53 - Merge TemKey.0 - Got previous step from [Merge TemKey] #1 --> Merge CampaignKey
+2017/03/27 03:05:53 - Merge TemKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge TemKey.0 - Found input rowset [Merge CampaignKey.0 - Merge TemKey.0]
+2017/03/27 03:05:53 - Merge TemKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Merge TemKey.0 - Found output rowset [Merge TemKey.0 - Merge SourceKey.0]
+2017/03/27 03:05:53 - Merge TemKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Merge TemKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Merge SourceKey] of type [MergeJoin]
+2017/03/27 03:05:53 - Merge SourceKey.0 - distribution activated
+2017/03/27 03:05:53 - Merge SourceKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Merge SourceKey.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:05:53 - Merge SourceKey.0 - Got previous step from [Merge SourceKey] #0 --> Merge TemKey
+2017/03/27 03:05:53 - Merge SourceKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge SourceKey.0 - Found input rowset [Merge TemKey.0 - Merge SourceKey.0]
+2017/03/27 03:05:53 - Merge SourceKey.0 - Got previous step from [Merge SourceKey] #1 --> Take Visit/SourceKey
+2017/03/27 03:05:53 - Merge SourceKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge SourceKey.0 - Found input rowset [Take Visit/SourceKey.0 - Merge SourceKey.0]
+2017/03/27 03:05:53 - Merge SourceKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Merge SourceKey.0 - Found output rowset [Merge SourceKey.0 - Stream lookup 2 2.0]
+2017/03/27 03:05:53 - Merge SourceKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Merge SourceKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [ ] of type [Dummy]
+2017/03/27 03:05:53 -  .0 - distribution activated
+2017/03/27 03:05:53 -  .0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 -  .0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 -  .0 - Got previous step from [ ] #0 --> Learn Set
+2017/03/27 03:05:53 -  .0 - input rel is 1:1
+2017/03/27 03:05:53 -  .0 - Found input rowset [Learn Set.0 -  .0]
+2017/03/27 03:05:53 -  .0 - output rel. is  1:1
+2017/03/27 03:05:53 -  .0 - Found output rowset [ .0 - Merge MediumKey.0]
+2017/03/27 03:05:53 -  .0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [ ].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Has Lead?] of type [FilterRows]
+2017/03/27 03:05:53 - Has Lead?.0 - distribution activated
+2017/03/27 03:05:53 - Has Lead?.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Has Lead?.0 - Step info: nrinput=1 nroutput=2
+2017/03/27 03:05:53 - Has Lead?.0 - Got previous step from [Has Lead?] #0 --> Stream lookup 2 5
+2017/03/27 03:05:53 - Has Lead?.0 - input rel is 1:1
+2017/03/27 03:05:53 - Has Lead?.0 - Found input rowset [Stream lookup 2 5.0 - Has Lead?.0]
+2017/03/27 03:05:53 - Has Lead?.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Has Lead?.0 - Found output rowset [Has Lead?.0 - Lookup Update LeadKeys.0]
+2017/03/27 03:05:53 - Has Lead?.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Has Lead?.0 - Found output rowset [Has Lead?.0 - Add Null LeadKey.0]
+2017/03/27 03:05:53 - Has Lead?.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Has Lead?].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Lookup Update LeadKeys] of type [CombinationLookup]
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - distribution activated
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - Got previous step from [Lookup Update LeadKeys] #0 --> Has Lead?
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - input rel is 1:1
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - Found input rowset [Has Lead?.0 - Lookup Update LeadKeys.0]
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - Found output rowset [Lookup Update LeadKeys.0 - Merge Rows (diff).0]
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Lookup Update LeadKeys].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Add Null LeadKey] of type [Constant]
+2017/03/27 03:05:53 - Add Null LeadKey.0 - distribution activated
+2017/03/27 03:05:53 - Add Null LeadKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Add Null LeadKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Add Null LeadKey.0 - Got previous step from [Add Null LeadKey] #0 --> Has Lead?
+2017/03/27 03:05:53 - Add Null LeadKey.0 - input rel is 1:1
+2017/03/27 03:05:53 - Add Null LeadKey.0 - Found input rowset [Has Lead?.0 - Add Null LeadKey.0]
+2017/03/27 03:05:53 - Add Null LeadKey.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Add Null LeadKey.0 - Found output rowset [Add Null LeadKey.0 - Merge Rows (diff).0]
+2017/03/27 03:05:53 - Add Null LeadKey.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Add Null LeadKey].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Merge Rows (diff)] of type [MergeRows]
+2017/03/27 03:05:53 - Merge Rows (diff).0 - distribution activated
+2017/03/27 03:05:53 - Merge Rows (diff).0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Merge Rows (diff).0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:05:53 - Merge Rows (diff).0 - Got previous step from [Merge Rows (diff)] #0 --> Lookup Update LeadKeys
+2017/03/27 03:05:53 - Merge Rows (diff).0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge Rows (diff).0 - Found input rowset [Lookup Update LeadKeys.0 - Merge Rows (diff).0]
+2017/03/27 03:05:53 - Merge Rows (diff).0 - Got previous step from [Merge Rows (diff)] #1 --> Add Null LeadKey
+2017/03/27 03:05:53 - Merge Rows (diff).0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge Rows (diff).0 - Found input rowset [Add Null LeadKey.0 - Merge Rows (diff).0]
+2017/03/27 03:05:53 - Merge Rows (diff).0 - output rel. is  1:1
+2017/03/27 03:05:53 - Merge Rows (diff).0 - Found output rowset [Merge Rows (diff).0 - Table output.0]
+2017/03/27 03:05:53 - Merge Rows (diff).0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Merge Rows (diff)].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2017/03/27 03:05:53 - Table output.0 - distribution activated
+2017/03/27 03:05:53 - Table output.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Table output.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 03:05:53 - Table output.0 - Got previous step from [Table output] #0 --> Merge Rows (diff)
+2017/03/27 03:05:53 - Table output.0 - input rel is 1:1
+2017/03/27 03:05:53 - Table output.0 - Found input rowset [Merge Rows (diff).0 - Table output.0]
+2017/03/27 03:05:53 - Table output.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Table output].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Sort rows] of type [SortRows]
+2017/03/27 03:05:53 - Sort rows.0 - distribution activated
+2017/03/27 03:05:53 - Sort rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Sort rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:05:53 - Sort rows.0 - Got previous step from [Sort rows] #0 --> Stream lookup 2 3
+2017/03/27 03:05:53 - Sort rows.0 - input rel is 1:1
+2017/03/27 03:05:53 - Sort rows.0 - Found input rowset [Stream lookup 2 3.0 - Sort rows.0]
+2017/03/27 03:05:53 - Sort rows.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Sort rows.0 - Found output rowset [Sort rows.0 - Merge Join.0]
+2017/03/27 03:05:53 - Sort rows.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Sort rows].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [Merge Join] of type [MergeJoin]
+2017/03/27 03:05:53 - Merge Join.0 - distribution activated
+2017/03/27 03:05:53 - Merge Join.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - Merge Join.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:05:53 - Merge Join.0 - Got previous step from [Merge Join] #0 --> GetDimReferer
+2017/03/27 03:05:53 - Merge Join.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge Join.0 - Found input rowset [GetDimReferer.0 - Merge Join.0]
+2017/03/27 03:05:53 - Merge Join.0 - Got previous step from [Merge Join] #1 --> Sort rows
+2017/03/27 03:05:53 - Merge Join.0 - input rel is 1:1
+2017/03/27 03:05:53 - Merge Join.0 - Found input rowset [Sort rows.0 - Merge Join.0]
+2017/03/27 03:05:53 - Merge Join.0 - output rel. is  1:1
+2017/03/27 03:05:53 - Merge Join.0 - Found output rowset [Merge Join.0 - Stream lookup 2 5.0]
+2017/03/27 03:05:53 - Merge Join.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [Merge Join].0
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation is about to allocate step [GetDimReferer] of type [TableInput]
+2017/03/27 03:05:53 - GetDimReferer.0 - distribution de-activated
+2017/03/27 03:05:53 - GetDimReferer.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:05:53 - GetDimReferer.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:05:53 - GetDimReferer.0 - output rel. is  1:1
+2017/03/27 03:05:53 - GetDimReferer.0 - Found output rowset [GetDimReferer.0 - Merge Join.0]
+2017/03/27 03:05:53 - GetDimReferer.0 - Finished dispatching
+2017/03/27 03:05:53 - FactVisit-Insert -  Transformation has allocated a new step: [GetDimReferer].0
+2017/03/27 03:05:53 - FactVisit-Insert - This transformation can be replayed with replay date: 2017/03/27 03:05:53
+2017/03/27 03:05:53 - FactVisit-Insert - Initialising 35 steps...
+2017/03/27 03:05:53 - GetPrefix.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - DecodeUrl.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Learn Set.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - GetDimSite.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Stream lookup 2 3.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - GetDimOmniture.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Stream lookup 2 2.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - GetDimBreakpint.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Stream lookup 2 5.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - GetVisits.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - non-null GoogleMedium.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Non-null GoogleTerm.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Non-null GoogleSource.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Get GoogleCampaignKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Get GoogleMediumKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Get GoogleTermKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Get GoogleSourceKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Take Visit/MediumKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Non-null GoogleCampaign.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Take Visit/CampaignKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Merge MediumKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Take Visit/TermKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Take Visit/SourceKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Merge CampaignKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Merge TemKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Merge SourceKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 -  .0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Warehouse - New database connection defined
+2017/03/27 03:05:53 - Warehouse - New database connection defined
+2017/03/27 03:05:53 - Has Lead?.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Add Null LeadKey.0 - Running on slave server #0/1.
+2017/03/27 03:05:53 - Lookup Update LeadKeys.0 - Running on slave server #0/1.
+2017/03/27 03:05:54 - Merge Rows (diff).0 - Running on slave server #0/1.
+2017/03/27 03:05:54 - Warehouse - New database connection defined
+2017/03/27 03:05:54 - GetDimReferer.0 - Running on slave server #0/1.
+2017/03/27 03:05:54 - Warehouse - New database connection defined
+2017/03/27 03:05:54 - Warehouse - New database connection defined
+2017/03/27 03:05:54 - Warehouse - New database connection defined
+2017/03/27 03:05:54 - Merge Join.0 - Running on slave server #0/1.
+2017/03/27 03:05:54 - Table output.0 - Running on slave server #0/1.
+2017/03/27 03:05:54 - Sort rows.0 - Running on slave server #0/1.
+2017/03/27 03:05:54 - PWA Transactions - New database connection defined
+2017/03/27 03:05:54 - Warehouse - New database connection defined
+2017/03/27 03:05:54 - Warehouse - New database connection defined
+2017/03/27 03:05:54 - Warehouse - New database connection defined
+2017/03/27 03:05:54 - Warehouse - New database connection defined
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Get GoogleTermKey.0 - Connected to database...
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Lookup Update LeadKeys.0 - Connected to database...
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - GetDimOmniture.0 - Connected to database...
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Get GoogleMediumKey.0 - Connected to database...
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - GetDimBreakpint.0 - Connected to database...
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Table output.0 - Connected to database [Warehouse] (commit=1000)
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - GetDimSite.0 - Connected to database...
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Get GoogleSourceKey.0 - Connected to database...
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Get GoogleCampaignKey.0 - Connected to database...
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - Warehouse - Connected to database.
+2017/03/27 03:05:54 - Warehouse - Auto commit off
+2017/03/27 03:05:54 - GetDimReferer.0 - Connected to database...
+2017/03/27 03:05:54 - PWA Transactions - Connected to database.
+2017/03/27 03:05:54 - PWA Transactions - Auto commit off
+2017/03/27 03:05:54 - GetVisits.0 - Connected to database...
+2017/03/27 03:05:54 - FactVisit-Insert - Step [GetPrefix.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [DecodeUrl.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Learn Set.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [GetDimSite.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Stream lookup 2 2.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Stream lookup 2 3.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [GetDimOmniture.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [GetDimBreakpint.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Stream lookup 2 5.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [GetVisits.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [non-null GoogleMedium.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Non-null GoogleCampaign.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Non-null GoogleSource.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Non-null GoogleTerm.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Get GoogleMediumKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Get GoogleCampaignKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Get GoogleTermKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Get GoogleSourceKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Take Visit/MediumKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Take Visit/CampaignKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Take Visit/TermKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Take Visit/SourceKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Merge MediumKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Merge CampaignKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Merge TemKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Merge SourceKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [ .0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Has Lead?.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Lookup Update LeadKeys.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Add Null LeadKey.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Merge Rows (diff).0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Table output.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Sort rows.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [Merge Join.0] initialized flawlessly.
+2017/03/27 03:05:54 - FactVisit-Insert - Step [GetDimReferer.0] initialized flawlessly.
+2017/03/27 03:05:54 - GetPrefix.0 - Starting to run...
+2017/03/27 03:05:54 - DecodeUrl.0 - Starting to run...
+2017/03/27 03:05:54 - Learn Set.0 - Starting to run...
+2017/03/27 03:05:54 - GetDimSite.0 - Starting to run...
+2017/03/27 03:05:54 - GetDimSite.0 - SQL query : SELECT * FROM dimSite where IsWeb = 1
+2017/03/27 03:05:54 - Stream lookup 2 3.0 - Starting to run...
+2017/03/27 03:05:54 - Stream lookup 2 3.0 - Reading from stream [GetDimOmniture]
+2017/03/27 03:05:54 - GetDimBreakpint.0 - Starting to run...
+2017/03/27 03:05:54 - GetDimBreakpint.0 - SQL query : SELECT * FROM dimBreakpoint
+2017/03/27 03:05:54 - GetDimOmniture.0 - Starting to run...
+2017/03/27 03:05:54 - GetDimOmniture.0 - SQL query : SELECT * FROM dimOmnitureCode WITH (NOLOCK)
+2017/03/27 03:05:54 - GetVisits.0 - Starting to run...
+2017/03/27 03:05:54 - GetVisits.0 - SQL query : SELECT *,
+2017/03/27 03:05:54 - GetVisits.0 - datediff(second,dateadd(day,DATEDIFF(day,0,timestamp),0),timestamp) as TimeKey,
+2017/03/27 03:05:54 - GetVisits.0 - convert(varchar(24),timestamp,112) as DateKey,
+2017/03/27 03:05:54 - GetVisits.0 - ID as TransactID
+2017/03/27 03:05:54 - GetVisits.0 - FROM visits WITH(NOLOCK)
+2017/03/27 03:05:54 - GetVisits.0 - where timeStamp > '2017/03/26 00:00:00.000' and timeStamp < '2017/03/27 00:00:00.000'
+2017/03/27 03:05:54 - Stream lookup 2 5.0 - Starting to run...
+2017/03/27 03:05:54 - Stream lookup 2 5.0 - Reading from stream [GetDimBreakpint]
+2017/03/27 03:05:54 - Stream lookup 2 2.0 - Starting to run...
+2017/03/27 03:05:54 - Stream lookup 2 2.0 - Reading from stream [GetDimSite]
+2017/03/27 03:05:54 - Non-null GoogleCampaign.0 - Starting to run...
+2017/03/27 03:05:54 - Non-null GoogleSource.0 - Starting to run...
+2017/03/27 03:05:54 - Non-null GoogleTerm.0 - Starting to run...
+2017/03/27 03:05:54 - Get GoogleMediumKey.0 - Starting to run...
+2017/03/27 03:05:54 - Get GoogleCampaignKey.0 - Starting to run...
+2017/03/27 03:05:54 - Get GoogleTermKey.0 - Starting to run...
+2017/03/27 03:05:54 - non-null GoogleMedium.0 - Starting to run...
+2017/03/27 03:05:54 - Get GoogleSourceKey.0 - Starting to run...
+2017/03/27 03:05:54 - Take Visit/CampaignKey.0 - Starting to run...
+2017/03/27 03:05:54 - Take Visit/TermKey.0 - Starting to run...
+2017/03/27 03:05:54 - Take Visit/SourceKey.0 - Starting to run...
+2017/03/27 03:05:54 - Take Visit/MediumKey.0 - Starting to run...
+2017/03/27 03:05:54 - Merge MediumKey.0 - Starting to run...
+2017/03/27 03:05:54 - Merge CampaignKey.0 - Starting to run...
+2017/03/27 03:05:54 - Merge TemKey.0 - Starting to run...
+2017/03/27 03:05:54 - Lookup Update LeadKeys.0 - Starting to run...
+2017/03/27 03:05:54 - Add Null LeadKey.0 - Starting to run...
+2017/03/27 03:05:54 - Merge SourceKey.0 - Starting to run...
+2017/03/27 03:05:54 - Table output.0 - Starting to run...
+2017/03/27 03:05:54 - Merge Rows (diff).0 - Starting to run...
+2017/03/27 03:05:54 - Sort rows.0 - Starting to run...
+2017/03/27 03:05:54 - Merge Join.0 - Starting to run...
+2017/03/27 03:05:54 - FactVisit-Insert - Transformation has allocated 35 threads and 39 rowsets.
+2017/03/27 03:05:54 - Has Lead?.0 - Starting to run...
+2017/03/27 03:05:54 -  .0 - Starting to run...
+2017/03/27 03:05:54 - GetDimReferer.0 - Starting to run...
+2017/03/27 03:05:54 - GetDimReferer.0 - SQL query : SELECT refererUrl, ID, ID AS refererKey FROM dimReferer WITH (NOLOCK) ORDER BY refererUrl ASC
+2017/03/27 03:05:54 - GetDimSite.0 - Finished reading query, closing connection.
+2017/03/27 03:05:54 - Warehouse - Connection to database closed!
+2017/03/27 03:05:54 - GetDimSite.0 - Finished processing (I=20, O=0, R=0, W=20, U=0, E=0)
+2017/03/27 03:05:54 - GetDimBreakpint.0 - Finished reading query, closing connection.
+2017/03/27 03:05:54 - Warehouse - Connection to database closed!
+2017/03/27 03:05:54 - GetDimBreakpint.0 - Finished processing (I=5, O=0, R=0, W=5, U=0, E=0)
+2017/03/27 03:05:54 - DecodeUrl.0 - Value #12 -  [refererUrl] is used in the script.
+2017/03/27 03:05:54 - DecodeUrl.0 - This script is using 1 values from the input stream(s)
+2017/03/27 03:05:54 - DecodeUrl.0 - Optimization level set to 9.
+2017/03/27 03:05:54 - DecodeUrl.0 - No starting Script found!
+2017/03/27 03:05:54 - DecodeUrl.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 03:05:55 - Learn Set.0 - Value #0 -  [ID] is used in the script.
+2017/03/27 03:05:55 - Learn Set.0 - Value #10 -  [siteID] is used in the script.
+2017/03/27 03:05:55 - Learn Set.0 - This script is using 2 values from the input stream(s)
+2017/03/27 03:05:55 - Learn Set.0 - Optimization level set to 9.
+2017/03/27 03:05:55 - Learn Set.0 - No starting Script found!
+2017/03/27 03:05:55 - Learn Set.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 03:05:55 - GetDimReferer.0 - linenr 50000
+2017/03/27 03:05:55 - Stream lookup 2 2.0 - Field [Learn] has nr [22]
+2017/03/27 03:05:55 - Stream lookup 2 2.0 - Field [Prefix] has nr [21]
+2017/03/27 03:05:55 - GetDimOmniture.0 - linenr 50000
+2017/03/27 03:05:55 - GetDimOmniture.0 - Finished reading query, closing connection.
+2017/03/27 03:05:55 - GetDimReferer.0 - linenr 100000
+2017/03/27 03:05:55 - Warehouse - Connection to database closed!
+2017/03/27 03:05:55 - GetDimOmniture.0 - Finished processing (I=61176, O=0, R=0, W=61176, U=0, E=0)
+2017/03/27 03:05:56 - GetDimReferer.0 - linenr 150000
+2017/03/27 03:05:56 - Stream lookup 2 3.0 - Field [omnitureTrackingCode] has nr [2]
+2017/03/27 03:05:57 - GetDimReferer.0 - linenr 200000
+2017/03/27 03:05:57 - GetDimReferer.0 - linenr 250000
+2017/03/27 03:06:00 - GetVisits.0 - linenr 50000
+2017/03/27 03:06:00 - GetPrefix.0 - linenr 50000
+2017/03/27 03:06:00 - DecodeUrl.0 - linenr 50000
+2017/03/27 03:06:01 - Learn Set.0 - linenr 50000
+2017/03/27 03:06:01 - Non-null GoogleTerm.0 - linenr 50000
+2017/03/27 03:06:01 - Non-null GoogleCampaign.0 - linenr 50000
+2017/03/27 03:06:01 - non-null GoogleMedium.0 - linenr 50000
+2017/03/27 03:06:01 - Non-null GoogleSource.0 - linenr 50000
+2017/03/27 03:06:01 -  .0 - Linenr 50000
+2017/03/27 03:06:01 - Get GoogleTermKey.0 - SQL with return keys: INSERT INTO dbo.DimGoogleTerm( TermName) VALUES (? )
+2017/03/27 03:06:02 - GetVisits.0 - Finished reading query, closing connection.
+2017/03/27 03:06:02 - GetPrefix.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:06:02 - PWA Transactions - Connection to database closed!
+2017/03/27 03:06:02 - GetVisits.0 - Finished processing (I=76411, O=0, R=0, W=76411, U=0, E=0)
+2017/03/27 03:06:02 - DecodeUrl.0 - No end Script found!
+2017/03/27 03:06:02 - DecodeUrl.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:06:02 - Learn Set.0 - No end Script found!
+2017/03/27 03:06:02 - Learn Set.0 - Finished processing (I=0, O=0, R=76411, W=382055, U=0, E=0)
+2017/03/27 03:06:02 - non-null GoogleMedium.0 - Finished processing (I=0, O=0, R=76411, W=11092, U=0, E=0)
+2017/03/27 03:06:02 - Non-null GoogleSource.0 - Finished processing (I=0, O=0, R=76411, W=10893, U=0, E=0)
+2017/03/27 03:06:02 - Non-null GoogleTerm.0 - Finished processing (I=0, O=0, R=76411, W=8926, U=0, E=0)
+2017/03/27 03:06:02 - Non-null GoogleCampaign.0 - Finished processing (I=0, O=0, R=76411, W=10494, U=0, E=0)
+2017/03/27 03:06:02 -  .0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:06:02 - Warehouse - Connection to database closed!
+2017/03/27 03:06:02 - Get GoogleMediumKey.0 - Finished processing (I=6, O=0, R=11092, W=11092, U=0, E=0)
+2017/03/27 03:06:02 - Take Visit/MediumKey.0 - Finished processing (I=0, O=0, R=11092, W=11092, U=0, E=0)
+2017/03/27 03:06:02 - Warehouse - Connection to database closed!
+2017/03/27 03:06:02 - Get GoogleSourceKey.0 - Finished processing (I=59, O=0, R=10893, W=10893, U=0, E=0)
+2017/03/27 03:06:02 - Take Visit/SourceKey.0 - Finished processing (I=0, O=0, R=10893, W=10893, U=0, E=0)
+2017/03/27 03:06:02 - Merge MediumKey.0 - linenr 50000
+2017/03/27 03:06:02 - Warehouse - Connection to database closed!
+2017/03/27 03:06:02 - Get GoogleCampaignKey.0 - Finished processing (I=183, O=0, R=10494, W=10494, U=0, E=0)
+2017/03/27 03:06:02 - Take Visit/CampaignKey.0 - Finished processing (I=0, O=0, R=10494, W=10494, U=0, E=0)
+2017/03/27 03:06:02 - Merge CampaignKey.0 - linenr 50000
+2017/03/27 03:06:03 - Merge MediumKey.0 - Finished processing (I=0, O=0, R=87503, W=76411, U=0, E=0)
+2017/03/27 03:06:03 - Merge CampaignKey.0 - Finished processing (I=0, O=0, R=86905, W=76411, U=0, E=0)
+2017/03/27 03:06:04 - Warehouse - Connection to database closed!
+2017/03/27 03:06:04 - Get GoogleTermKey.0 - Finished processing (I=1523, O=2, R=8926, W=8926, U=0, E=0)
+2017/03/27 03:06:04 - Merge TemKey.0 - linenr 50000
+2017/03/27 03:06:04 - Take Visit/TermKey.0 - Finished processing (I=0, O=0, R=8926, W=8926, U=0, E=0)
+2017/03/27 03:06:04 - Merge SourceKey.0 - linenr 50000
+2017/03/27 03:06:04 - Stream lookup 2 2.0 - linenr 50000
+2017/03/27 03:06:04 - Stream lookup 2 3.0 - linenr 100000
+2017/03/27 03:06:05 - Merge TemKey.0 - Finished processing (I=0, O=0, R=85337, W=76411, U=0, E=0)
+2017/03/27 03:06:05 - Merge SourceKey.0 - Finished processing (I=0, O=0, R=87304, W=76411, U=0, E=0)
+2017/03/27 03:06:05 - Stream lookup 2 2.0 - Stopped processing with empty row after 76431 rows.
+2017/03/27 03:06:05 - Stream lookup 2 2.0 - Finished processing (I=0, O=0, R=76431, W=76411, U=0, E=0)
+2017/03/27 03:06:05 - Stream lookup 2 3.0 - Stopped processing with empty row after 137587 rows.
+2017/03/27 03:06:05 - Stream lookup 2 3.0 - Finished processing (I=0, O=0, R=137587, W=76411, U=0, E=0)
+2017/03/27 03:06:32 - Sort rows.0 - Linenr 50000
+2017/03/27 03:06:47 - Sort rows.0 - Starting quickSort algorithm...
+2017/03/27 03:06:48 - Sort rows.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 03:06:48 - Sort rows.0 - QuickSort algorithm has finished.
+2017/03/27 03:06:48 - Stream lookup 2 5.0 - Field [breakpoint] has nr [15]
+2017/03/27 03:06:48 - Sort rows.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:06:48 - Merge Join.0 - linenr 50000
+2017/03/27 03:06:48 - Merge Join.0 - linenr 100000
+2017/03/27 03:06:48 - Merge Join.0 - linenr 150000
+2017/03/27 03:06:48 - Merge Join.0 - linenr 200000
+2017/03/27 03:06:48 - Merge Join.0 - linenr 250000
+2017/03/27 03:06:48 - Merge Join.0 - linenr 300000
+2017/03/27 03:06:48 - GetDimReferer.0 - linenr 300000
+2017/03/27 03:06:48 - Merge Join.0 - linenr 350000
+2017/03/27 03:06:48 - GetDimReferer.0 - linenr 350000
+2017/03/27 03:06:48 - Merge Join.0 - linenr 400000
+2017/03/27 03:06:48 - GetDimReferer.0 - linenr 400000
+2017/03/27 03:06:49 - Merge Join.0 - linenr 450000
+2017/03/27 03:06:49 - GetDimReferer.0 - linenr 450000
+2017/03/27 03:06:49 - Merge Join.0 - linenr 500000
+2017/03/27 03:06:49 - GetDimReferer.0 - linenr 500000
+2017/03/27 03:06:49 - Merge Join.0 - linenr 550000
+2017/03/27 03:06:50 - GetDimReferer.0 - linenr 550000
+2017/03/27 03:06:50 - Merge Join.0 - linenr 600000
+2017/03/27 03:06:50 - GetDimReferer.0 - linenr 600000
+2017/03/27 03:06:50 - Merge Join.0 - linenr 650000
+2017/03/27 03:06:50 - GetDimReferer.0 - linenr 650000
+2017/03/27 03:06:51 - Merge Join.0 - linenr 700000
+2017/03/27 03:06:51 - GetDimReferer.0 - linenr 700000
+2017/03/27 03:06:51 - Merge Join.0 - linenr 750000
+2017/03/27 03:06:51 - GetDimReferer.0 - linenr 750000
+2017/03/27 03:06:52 - Merge Join.0 - linenr 800000
+2017/03/27 03:06:52 - GetDimReferer.0 - linenr 800000
+2017/03/27 03:06:52 - Merge Join.0 - linenr 850000
+2017/03/27 03:06:52 - GetDimReferer.0 - linenr 850000
+2017/03/27 03:06:52 - Merge Join.0 - linenr 900000
+2017/03/27 03:06:52 - GetDimReferer.0 - linenr 900000
+2017/03/27 03:06:53 - Merge Join.0 - linenr 950000
+2017/03/27 03:06:53 - GetDimReferer.0 - linenr 950000
+2017/03/27 03:06:53 - Merge Join.0 - linenr 1000000
+2017/03/27 03:06:53 - GetDimReferer.0 - linenr 1000000
+2017/03/27 03:06:54 - Merge Join.0 - linenr 1050000
+2017/03/27 03:06:54 - GetDimReferer.0 - linenr 1050000
+2017/03/27 03:06:54 - Merge Join.0 - linenr 1100000
+2017/03/27 03:06:54 - GetDimReferer.0 - linenr 1100000
+2017/03/27 03:06:55 - Merge Join.0 - linenr 1150000
+2017/03/27 03:06:55 - GetDimReferer.0 - linenr 1150000
+2017/03/27 03:06:55 - Merge Join.0 - linenr 1200000
+2017/03/27 03:06:55 - GetDimReferer.0 - linenr 1200000
+2017/03/27 03:06:56 - Merge Join.0 - linenr 1250000
+2017/03/27 03:06:56 - GetDimReferer.0 - linenr 1250000
+2017/03/27 03:06:57 - GetDimReferer.0 - linenr 1300000
+2017/03/27 03:06:57 - Merge Join.0 - linenr 1350000
+2017/03/27 03:06:57 - GetDimReferer.0 - linenr 1350000
+2017/03/27 03:06:57 - GetDimReferer.0 - linenr 1400000
+2017/03/27 03:06:58 - GetDimReferer.0 - linenr 1450000
+2017/03/27 03:06:58 - GetDimReferer.0 - Finished reading query, closing connection.
+2017/03/27 03:06:58 - Warehouse - Connection to database closed!
+2017/03/27 03:06:58 - GetDimReferer.0 - Finished processing (I=1473595, O=0, R=0, W=1473595, U=0, E=0)
+2017/03/27 03:06:58 - Stream lookup 2 5.0 - linenr 50000
+2017/03/27 03:06:58 - Has Lead?.0 - linenr 50000
+2017/03/27 03:06:58 - Merge Join.0 - linenr 1450000
+2017/03/27 03:06:58 - Merge Join.0 - linenr 1500000
+2017/03/27 03:06:58 - Add Null LeadKey.0 - LineNr : 50000
+2017/03/27 03:06:58 - Table output.0 - Prepared statement : INSERT INTO dbo.FactVisit (BreakpointKey, DateKey, OmnitureKey, RefererKey, SiteKey, TimeKey, TransactID, CustomerCode, IPAddress, GoogleCampaignKey, GoogleMediumKey, GoogleSourceKey, GoogleTermKey, LeadKey) VALUES ( ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?)
+2017/03/27 03:06:58 - Merge Join.0 - Finished processing (I=0, O=0, R=1550006, W=76411, U=0, E=0)
+2017/03/27 03:06:58 - Stream lookup 2 5.0 - Stopped processing with empty row after 76416 rows.
+2017/03/27 03:06:58 - Stream lookup 2 5.0 - Finished processing (I=0, O=0, R=76416, W=76411, U=0, E=0)
+2017/03/27 03:06:58 - Has Lead?.0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:06:58 - Warehouse - Connection to database closed!
+2017/03/27 03:06:58 - Lookup Update LeadKeys.0 - Finished processing (I=5, O=0, R=20, W=20, U=0, E=0)
+2017/03/27 03:06:58 - Add Null LeadKey.0 - Finished processing (I=0, O=0, R=76391, W=76391, U=0, E=0)
+2017/03/27 03:06:59 - Merge Rows (diff).0 - linenr 50000
+2017/03/27 03:06:59 - Merge Rows (diff).0 - Finished processing (I=0, O=0, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:09:50 - Table output.0 - linenr 50000
+2017/03/27 03:11:29 - Warehouse - Connection to database closed!
+2017/03/27 03:11:29 - Table output.0 - Finished processing (I=0, O=76411, R=76411, W=76411, U=0, E=0)
+2017/03/27 03:11:29 - BackwardsVisitPopulate - Starting entry [ProductViews]
+2017/03/27 03:11:29 - BackwardsVisitPopulate - exec(4, 0, ProductViews.0)
+2017/03/27 03:11:29 - ProductViews - Starting job entry
+2017/03/27 03:11:29 - ProductViews - Opening transformation: [file:///C:/Spoon/DataWarehouseETLs/FactProductViewInsert.ktr]
+2017/03/27 03:11:29 - ProductViews - Loading transformation from XML file [file:///C:/Spoon/DataWarehouseETLs/FactProductViewInsert.ktr]
+2017/03/27 03:11:29 - ProductViews - Starting transformation...(file=${Internal.Job.Filename.Directory}/FactProductViewInsert.ktr, name=ProductViews, repinfo=null)
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation is pre-loaded.
+2017/03/27 03:11:29 - FactProductViewInsert - Dispatching started for transformation [FactProductViewInsert]
+2017/03/27 03:11:29 - FactProductViewInsert - Nr of arguments detected:0 
+2017/03/27 03:11:29 - FactProductViewInsert - This is not a replay transformation
+2017/03/27 03:11:29 - FactProductViewInsert - I found 14 different steps to launch.
+2017/03/27 03:11:29 - FactProductViewInsert - Allocating rowsets...
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 0 --> ProductViews
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [ProductViews.0 - GetPrefix.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 1 rowsets for step 0 --> ProductViews  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 1 --> GetPrefix
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [GetPrefix.0 - Site CLU.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 2 rowsets for step 1 --> GetPrefix  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 2 --> Site CLU
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [Site CLU.0 - SiteKey.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 3 rowsets for step 2 --> Site CLU  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 3 --> SiteKey
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [SiteKey.0 - ParseRefererURL.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 4 rowsets for step 3 --> SiteKey  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 4 --> Filter rows
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [Filter rows.0 - Table output.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 5 rowsets for step 4 --> Filter rows  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 5 --> Table output
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 5 rowsets for step 5 --> Table output  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 6 --> If field value is null
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [If field value is null.0 - Select values 3.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 6 rowsets for step 6 --> If field value is null  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 7 --> Select values 3
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [Select values 3.0 - Stream lookup 2.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 7 rowsets for step 7 --> Select values 3  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 8 --> Stream lookup 2
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [Stream lookup 2.0 - Select values 3 2.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 8 rowsets for step 8 --> Stream lookup 2  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 9 --> Select values 3 2
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [Select values 3 2.0 - RefUrlLookup.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 9 rowsets for step 9 --> Select values 3 2  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 10 --> Get Products
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [Get Products.0 - Stream lookup 2.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 10 rowsets for step 10 --> Get Products  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 11 --> ParseRefererURL
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [ParseRefererURL.0 - If field value is null.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 11 rowsets for step 11 --> ParseRefererURL  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 12 --> RefUrlLookup
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [RefUrlLookup.0 - Filter rows.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 12 rowsets for step 12 --> RefUrlLookup  
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocating rowsets for step 13 --> Get Referer
+2017/03/27 03:11:29 - FactProductViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation allocated new rowset [Get Referer.0 - RefUrlLookup.0]
+2017/03/27 03:11:29 - FactProductViewInsert -  Allocated 13 rowsets for step 13 --> Get Referer  
+2017/03/27 03:11:29 - FactProductViewInsert - Allocating Steps & StepData...
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [ProductViews] of type [TableInput]
+2017/03/27 03:11:29 - ProductViews.0 - distribution activated
+2017/03/27 03:11:29 - ProductViews.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - ProductViews.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:11:29 - ProductViews.0 - output rel. is  1:1
+2017/03/27 03:11:29 - ProductViews.0 - Found output rowset [ProductViews.0 - GetPrefix.0]
+2017/03/27 03:11:29 - ProductViews.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [ProductViews].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [GetPrefix] of type [StringCut]
+2017/03/27 03:11:29 - GetPrefix.0 - distribution activated
+2017/03/27 03:11:29 - GetPrefix.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - GetPrefix.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:11:29 - GetPrefix.0 - Got previous step from [GetPrefix] #0 --> ProductViews
+2017/03/27 03:11:29 - GetPrefix.0 - input rel is 1:1
+2017/03/27 03:11:29 - GetPrefix.0 - Found input rowset [ProductViews.0 - GetPrefix.0]
+2017/03/27 03:11:29 - GetPrefix.0 - output rel. is  1:1
+2017/03/27 03:11:29 - GetPrefix.0 - Found output rowset [GetPrefix.0 - Site CLU.0]
+2017/03/27 03:11:29 - GetPrefix.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [GetPrefix].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [Site CLU] of type [CombinationLookup]
+2017/03/27 03:11:29 - Site CLU.0 - distribution activated
+2017/03/27 03:11:29 - Site CLU.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - Site CLU.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:11:29 - Site CLU.0 - Got previous step from [Site CLU] #0 --> GetPrefix
+2017/03/27 03:11:29 - Site CLU.0 - input rel is 1:1
+2017/03/27 03:11:29 - Site CLU.0 - Found input rowset [GetPrefix.0 - Site CLU.0]
+2017/03/27 03:11:29 - Site CLU.0 - output rel. is  1:1
+2017/03/27 03:11:29 - Site CLU.0 - Found output rowset [Site CLU.0 - SiteKey.0]
+2017/03/27 03:11:29 - Site CLU.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [Site CLU].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [SiteKey] of type [SelectValues]
+2017/03/27 03:11:29 - SiteKey.0 - distribution activated
+2017/03/27 03:11:29 - SiteKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - SiteKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:11:29 - SiteKey.0 - Got previous step from [SiteKey] #0 --> Site CLU
+2017/03/27 03:11:29 - SiteKey.0 - input rel is 1:1
+2017/03/27 03:11:29 - SiteKey.0 - Found input rowset [Site CLU.0 - SiteKey.0]
+2017/03/27 03:11:29 - SiteKey.0 - output rel. is  1:1
+2017/03/27 03:11:29 - SiteKey.0 - Found output rowset [SiteKey.0 - ParseRefererURL.0]
+2017/03/27 03:11:29 - SiteKey.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [SiteKey].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [Filter rows] of type [FilterRows]
+2017/03/27 03:11:29 - Filter rows.0 - distribution activated
+2017/03/27 03:11:29 - Filter rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - Filter rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:11:29 - Filter rows.0 - Got previous step from [Filter rows] #0 --> RefUrlLookup
+2017/03/27 03:11:29 - Filter rows.0 - input rel is 1:1
+2017/03/27 03:11:29 - Filter rows.0 - Found input rowset [RefUrlLookup.0 - Filter rows.0]
+2017/03/27 03:11:29 - Filter rows.0 - output rel. is  1:1
+2017/03/27 03:11:29 - Filter rows.0 - Found output rowset [Filter rows.0 - Table output.0]
+2017/03/27 03:11:29 - Filter rows.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [Filter rows].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2017/03/27 03:11:29 - Table output.0 - distribution activated
+2017/03/27 03:11:29 - Table output.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - Table output.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 03:11:29 - Table output.0 - Got previous step from [Table output] #0 --> Filter rows
+2017/03/27 03:11:29 - Table output.0 - input rel is 1:1
+2017/03/27 03:11:29 - Table output.0 - Found input rowset [Filter rows.0 - Table output.0]
+2017/03/27 03:11:29 - Table output.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [Table output].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [If field value is null] of type [IfNull]
+2017/03/27 03:11:29 - If field value is null.0 - distribution activated
+2017/03/27 03:11:29 - If field value is null.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - If field value is null.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:11:29 - If field value is null.0 - Got previous step from [If field value is null] #0 --> ParseRefererURL
+2017/03/27 03:11:29 - If field value is null.0 - input rel is 1:1
+2017/03/27 03:11:29 - If field value is null.0 - Found input rowset [ParseRefererURL.0 - If field value is null.0]
+2017/03/27 03:11:29 - If field value is null.0 - output rel. is  1:1
+2017/03/27 03:11:29 - If field value is null.0 - Found output rowset [If field value is null.0 - Select values 3.0]
+2017/03/27 03:11:29 - If field value is null.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [If field value is null].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [Select values 3] of type [SelectValues]
+2017/03/27 03:11:29 - Select values 3.0 - distribution activated
+2017/03/27 03:11:29 - Select values 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - Select values 3.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:11:29 - Select values 3.0 - Got previous step from [Select values 3] #0 --> If field value is null
+2017/03/27 03:11:29 - Select values 3.0 - input rel is 1:1
+2017/03/27 03:11:29 - Select values 3.0 - Found input rowset [If field value is null.0 - Select values 3.0]
+2017/03/27 03:11:29 - Select values 3.0 - output rel. is  1:1
+2017/03/27 03:11:29 - Select values 3.0 - Found output rowset [Select values 3.0 - Stream lookup 2.0]
+2017/03/27 03:11:29 - Select values 3.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [Select values 3].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [Stream lookup 2] of type [StreamLookup]
+2017/03/27 03:11:29 - Stream lookup 2.0 - distribution activated
+2017/03/27 03:11:29 - Stream lookup 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - Stream lookup 2.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:11:29 - Stream lookup 2.0 - Got previous step from [Stream lookup 2] #0 --> Select values 3
+2017/03/27 03:11:29 - Stream lookup 2.0 - input rel is 1:1
+2017/03/27 03:11:29 - Stream lookup 2.0 - Found input rowset [Select values 3.0 - Stream lookup 2.0]
+2017/03/27 03:11:29 - Stream lookup 2.0 - Got previous step from [Stream lookup 2] #1 --> Get Products
+2017/03/27 03:11:29 - Stream lookup 2.0 - input rel is 1:1
+2017/03/27 03:11:29 - Stream lookup 2.0 - Found input rowset [Get Products.0 - Stream lookup 2.0]
+2017/03/27 03:11:29 - Stream lookup 2.0 - output rel. is  1:1
+2017/03/27 03:11:29 - Stream lookup 2.0 - Found output rowset [Stream lookup 2.0 - Select values 3 2.0]
+2017/03/27 03:11:29 - Stream lookup 2.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [Stream lookup 2].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [Select values 3 2] of type [SelectValues]
+2017/03/27 03:11:29 - Select values 3 2.0 - distribution activated
+2017/03/27 03:11:29 - Select values 3 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - Select values 3 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:11:29 - Select values 3 2.0 - Got previous step from [Select values 3 2] #0 --> Stream lookup 2
+2017/03/27 03:11:29 - Select values 3 2.0 - input rel is 1:1
+2017/03/27 03:11:29 - Select values 3 2.0 - Found input rowset [Stream lookup 2.0 - Select values 3 2.0]
+2017/03/27 03:11:29 - Select values 3 2.0 - output rel. is  1:1
+2017/03/27 03:11:29 - Select values 3 2.0 - Found output rowset [Select values 3 2.0 - RefUrlLookup.0]
+2017/03/27 03:11:29 - Select values 3 2.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [Select values 3 2].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [Get Products] of type [TableInput]
+2017/03/27 03:11:29 - Get Products.0 - distribution de-activated
+2017/03/27 03:11:29 - Get Products.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - Get Products.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:11:29 - Get Products.0 - output rel. is  1:1
+2017/03/27 03:11:29 - Get Products.0 - Found output rowset [Get Products.0 - Stream lookup 2.0]
+2017/03/27 03:11:29 - Get Products.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [Get Products].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [ParseRefererURL] of type [ScriptValueMod]
+2017/03/27 03:11:29 - ParseRefererURL.0 - distribution activated
+2017/03/27 03:11:29 - ParseRefererURL.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - ParseRefererURL.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:11:29 - ParseRefererURL.0 - Got previous step from [ParseRefererURL] #0 --> SiteKey
+2017/03/27 03:11:29 - ParseRefererURL.0 - input rel is 1:1
+2017/03/27 03:11:29 - ParseRefererURL.0 - Found input rowset [SiteKey.0 - ParseRefererURL.0]
+2017/03/27 03:11:29 - ParseRefererURL.0 - output rel. is  1:1
+2017/03/27 03:11:29 - ParseRefererURL.0 - Found output rowset [ParseRefererURL.0 - If field value is null.0]
+2017/03/27 03:11:29 - ParseRefererURL.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [ParseRefererURL].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [RefUrlLookup] of type [StreamLookup]
+2017/03/27 03:11:29 - RefUrlLookup.0 - distribution activated
+2017/03/27 03:11:29 - RefUrlLookup.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - RefUrlLookup.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:11:29 - RefUrlLookup.0 - Got previous step from [RefUrlLookup] #0 --> Select values 3 2
+2017/03/27 03:11:29 - RefUrlLookup.0 - input rel is 1:1
+2017/03/27 03:11:29 - RefUrlLookup.0 - Found input rowset [Select values 3 2.0 - RefUrlLookup.0]
+2017/03/27 03:11:29 - RefUrlLookup.0 - Got previous step from [RefUrlLookup] #1 --> Get Referer
+2017/03/27 03:11:29 - RefUrlLookup.0 - input rel is 1:1
+2017/03/27 03:11:29 - RefUrlLookup.0 - Found input rowset [Get Referer.0 - RefUrlLookup.0]
+2017/03/27 03:11:29 - RefUrlLookup.0 - output rel. is  1:1
+2017/03/27 03:11:29 - RefUrlLookup.0 - Found output rowset [RefUrlLookup.0 - Filter rows.0]
+2017/03/27 03:11:29 - RefUrlLookup.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [RefUrlLookup].0
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation is about to allocate step [Get Referer] of type [TableInput]
+2017/03/27 03:11:29 - Get Referer.0 - distribution activated
+2017/03/27 03:11:29 - Get Referer.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:11:29 - Get Referer.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:11:29 - Get Referer.0 - output rel. is  1:1
+2017/03/27 03:11:29 - Get Referer.0 - Found output rowset [Get Referer.0 - RefUrlLookup.0]
+2017/03/27 03:11:29 - Get Referer.0 - Finished dispatching
+2017/03/27 03:11:29 - FactProductViewInsert -  Transformation has allocated a new step: [Get Referer].0
+2017/03/27 03:11:29 - FactProductViewInsert - This transformation can be replayed with replay date: 2017/03/27 03:11:29
+2017/03/27 03:11:29 - FactProductViewInsert - Initialising 14 steps...
+2017/03/27 03:11:29 - ProductViews.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - GetPrefix.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - Site CLU.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - SiteKey.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - PWA Transactions - New database connection defined
+2017/03/27 03:11:29 - Table output.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - Filter rows.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - Select values 3.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - DataWarehouse - New database connection defined
+2017/03/27 03:11:29 - Stream lookup 2.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - DataWarehouse - New database connection defined
+2017/03/27 03:11:29 - Select values 3 2.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - Get Products.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - If field value is null.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - ParseRefererURL.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - Get Referer.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - RefUrlLookup.0 - Running on slave server #0/1.
+2017/03/27 03:11:29 - DataWarehouse - New database connection defined
+2017/03/27 03:11:29 - DataWarehouse - New database connection defined
+2017/03/27 03:11:29 - DataWarehouse - Connected to database.
+2017/03/27 03:11:29 - Site CLU.0 - Connected to database...
+2017/03/27 03:11:29 - DataWarehouse - Auto commit off
+2017/03/27 03:11:29 - DataWarehouse - Connected to database.
+2017/03/27 03:11:29 - DataWarehouse - Auto commit off
+2017/03/27 03:11:29 - Get Referer.0 - Connected to database...
+2017/03/27 03:11:29 - DataWarehouse - Connected to database.
+2017/03/27 03:11:29 - Table output.0 - Connected to database [DataWarehouse] (commit=1000)
+2017/03/27 03:11:29 - DataWarehouse - Connected to database.
+2017/03/27 03:11:29 - DataWarehouse - Auto commit off
+2017/03/27 03:11:29 - DataWarehouse - Auto commit off
+2017/03/27 03:11:29 - Get Products.0 - Connected to database...
+2017/03/27 03:11:29 - PWA Transactions - Connected to database.
+2017/03/27 03:11:29 - PWA Transactions - Auto commit off
+2017/03/27 03:11:29 - ProductViews.0 - Connected to database...
+2017/03/27 03:11:29 - FactProductViewInsert - Step [ProductViews.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [GetPrefix.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [Site CLU.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [SiteKey.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [Filter rows.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [Table output.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [If field value is null.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [Select values 3.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [Stream lookup 2.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [Select values 3 2.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [Get Products.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [ParseRefererURL.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [RefUrlLookup.0] initialized flawlessly.
+2017/03/27 03:11:29 - FactProductViewInsert - Step [Get Referer.0] initialized flawlessly.
+2017/03/27 03:11:29 - ProductViews.0 - Starting to run...
+2017/03/27 03:11:29 - GetPrefix.0 - Starting to run...
+2017/03/27 03:11:29 - Site CLU.0 - Starting to run...
+2017/03/27 03:11:29 - ProductViews.0 - SQL query : SELECT 
+2017/03/27 03:11:29 - ProductViews.0 - datediff(second,dateadd(day,DATEDIFF(day,0,timestamp),0),timestamp) as TimeKey,
+2017/03/27 03:11:29 - ProductViews.0 - convert(varchar(24),timestamp,112) as DateKey,
+2017/03/27 03:11:29 - ProductViews.0 - customerCode,
+2017/03/27 03:11:29 - ProductViews.0 - ipAddress,
+2017/03/27 03:11:29 - ProductViews.0 - productID,
+2017/03/27 03:11:29 - ProductViews.0 - 0 as Learn,
+2017/03/27 03:11:29 - ProductViews.0 - 1 as IsWeb,
+2017/03/27 03:11:29 - ProductViews.0 - refererUrl,
+2017/03/27 03:11:29 - ProductViews.0 - CASE WHEN refererUrl LIKE '%PLA%' THEN 1 ELSE 0 END AS IsPLA
+2017/03/27 03:11:29 - ProductViews.0 - from(
+2017/03/27 03:11:29 - ProductViews.0 - SELECT productViews.*
+2017/03/27 03:11:29 - ProductViews.0 -   FROM [dbo].[ProductViews]
+2017/03/27 03:11:29 - ProductViews.0 - --and visits.timeStamp < productviews.timeStamp
+2017/03/27 03:11:29 - ProductViews.0 - where productviews.timeStamp > '2017/03/26 00:00:00.000' and productViews.timeStamp < '2017/03/27 00:00:00.000'
+2017/03/27 03:11:29 - ProductViews.0 - ) as inside
+2017/03/27 03:11:29 - SiteKey.0 - Starting to run...
+2017/03/27 03:11:29 - Filter rows.0 - Starting to run...
+2017/03/27 03:11:29 - If field value is null.0 - Starting to run...
+2017/03/27 03:11:29 - Select values 3.0 - Starting to run...
+2017/03/27 03:11:29 - Table output.0 - Starting to run...
+2017/03/27 03:11:29 - Stream lookup 2.0 - Starting to run...
+2017/03/27 03:11:29 - Stream lookup 2.0 - Reading from stream [Get Products]
+2017/03/27 03:11:29 - Select values 3 2.0 - Starting to run...
+2017/03/27 03:11:29 - Get Products.0 - Starting to run...
+2017/03/27 03:11:29 - Get Products.0 - SQL query : SELECT *, ID as ProductKey from DimProduct order by SKU asc
+2017/03/27 03:11:29 - ParseRefererURL.0 - Starting to run...
+2017/03/27 03:11:29 - FactProductViewInsert - Transformation has allocated 14 threads and 13 rowsets.
+2017/03/27 03:11:29 - RefUrlLookup.0 - Starting to run...
+2017/03/27 03:11:29 - Get Referer.0 - Starting to run...
+2017/03/27 03:11:29 - RefUrlLookup.0 - Reading from stream [Get Referer]
+2017/03/27 03:11:29 - Get Referer.0 - SQL query : SELECT *, ID as RefererKey FROM DimReferer
+2017/03/27 03:11:29 - ParseRefererURL.0 - Value #10 -  [refererUrl] is used in the script.
+2017/03/27 03:11:29 - ParseRefererURL.0 - This script is using 1 values from the input stream(s)
+2017/03/27 03:11:29 - ParseRefererURL.0 - Optimization level set to 9.
+2017/03/27 03:11:29 - ParseRefererURL.0 - No starting Script found!
+2017/03/27 03:11:29 - ParseRefererURL.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 03:11:29 - Get Referer.0 - linenr 50000
+2017/03/27 03:11:30 - Get Referer.0 - linenr 100000
+2017/03/27 03:11:30 - Get Referer.0 - linenr 150000
+2017/03/27 03:11:30 - Get Referer.0 - linenr 200000
+2017/03/27 03:11:31 - Get Referer.0 - linenr 250000
+2017/03/27 03:11:32 - ProductViews.0 - Finished reading query, closing connection.
+2017/03/27 03:11:32 - GetPrefix.0 - Finished processing (I=0, O=0, R=22928, W=22928, U=0, E=0)
+2017/03/27 03:11:32 - DataWarehouse - Connection to database closed!
+2017/03/27 03:11:32 - Site CLU.0 - Finished processing (I=8, O=0, R=22928, W=22928, U=0, E=0)
+2017/03/27 03:11:32 - SiteKey.0 - Finished processing (I=0, O=0, R=22928, W=22928, U=0, E=0)
+2017/03/27 03:11:32 - PWA Transactions - Connection to database closed!
+2017/03/27 03:11:32 - ProductViews.0 - Finished processing (I=22928, O=0, R=0, W=22928, U=0, E=0)
+2017/03/27 03:11:32 - ParseRefererURL.0 - No end Script found!
+2017/03/27 03:11:32 - ParseRefererURL.0 - Finished processing (I=0, O=0, R=22928, W=22928, U=0, E=0)
+2017/03/27 03:11:32 - If field value is null.0 - Finished processing (I=0, O=0, R=22928, W=22928, U=0, E=0)
+2017/03/27 03:11:32 - Select values 3.0 - Finished processing (I=0, O=0, R=22928, W=22928, U=0, E=0)
+2017/03/27 03:11:32 - Get Referer.0 - linenr 300000
+2017/03/27 03:11:33 - Get Referer.0 - linenr 350000
+2017/03/27 03:11:35 - Get Referer.0 - linenr 400000
+2017/03/27 03:11:39 - Get Referer.0 - linenr 450000
+2017/03/27 03:11:40 - Get Products.0 - linenr 50000
+2017/03/27 03:11:41 - Get Products.0 - Finished reading query, closing connection.
+2017/03/27 03:11:41 - DataWarehouse - Connection to database closed!
+2017/03/27 03:11:41 - Get Products.0 - Finished processing (I=50998, O=0, R=0, W=50998, U=0, E=0)
+2017/03/27 03:11:41 - Stream lookup 2.0 - Field [productID] has nr [3]
+2017/03/27 03:11:41 - Stream lookup 2.0 - Stopped processing with empty row after 73926 rows.
+2017/03/27 03:11:41 - Stream lookup 2.0 - Finished processing (I=0, O=0, R=73926, W=22928, U=0, E=0)
+2017/03/27 03:11:41 - Select values 3 2.0 - Finished processing (I=0, O=0, R=22928, W=22928, U=0, E=0)
+2017/03/27 03:11:42 - Get Referer.0 - linenr 500000
+2017/03/27 03:11:43 - Get Referer.0 - linenr 550000
+2017/03/27 03:11:44 - Get Referer.0 - linenr 600000
+2017/03/27 03:11:47 - Get Referer.0 - linenr 650000
+2017/03/27 03:11:49 - Get Referer.0 - linenr 700000
+2017/03/27 03:11:52 - Get Referer.0 - linenr 750000
+2017/03/27 03:11:56 - Get Referer.0 - linenr 800000
+2017/03/27 03:12:02 - Get Referer.0 - linenr 850000
+2017/03/27 03:12:10 - Get Referer.0 - linenr 900000
+2017/03/27 03:12:13 - Get Referer.0 - linenr 950000
+2017/03/27 03:12:14 - Get Referer.0 - linenr 1000000
+2017/03/27 03:12:16 - Get Referer.0 - linenr 1050000
+2017/03/27 03:12:19 - Get Referer.0 - linenr 1100000
+2017/03/27 03:12:23 - Get Referer.0 - linenr 1150000
+2017/03/27 03:12:25 - Get Referer.0 - linenr 1200000
+2017/03/27 03:12:29 - Get Referer.0 - linenr 1250000
+2017/03/27 03:12:33 - Get Referer.0 - linenr 1300000
+2017/03/27 03:12:40 - Get Referer.0 - linenr 1350000
+2017/03/27 03:12:49 - Get Referer.0 - linenr 1400000
+2017/03/27 03:12:58 - Get Referer.0 - linenr 1450000
+2017/03/27 03:13:04 - Get Referer.0 - Finished reading query, closing connection.
+2017/03/27 03:13:04 - DataWarehouse - Connection to database closed!
+2017/03/27 03:13:04 - Get Referer.0 - Finished processing (I=1473595, O=0, R=0, W=1473595, U=0, E=0)
+2017/03/27 03:13:24 - RefUrlLookup.0 - Field [RefererUrl] has nr [7]
+2017/03/27 03:13:24 - Table output.0 - Prepared statement : INSERT INTO FactProductView (DateKey, SiteKey, TimeKey, ProductKey, IsPLA, CustomerCode, IPAddress, RefererKey) VALUES ( ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?)
+2017/03/27 03:13:24 - RefUrlLookup.0 - Stopped processing with empty row after 1496523 rows.
+2017/03/27 03:13:24 - RefUrlLookup.0 - Finished processing (I=0, O=0, R=1496523, W=22928, U=0, E=0)
+2017/03/27 03:13:24 - Filter rows.0 - Finished processing (I=0, O=0, R=22928, W=21376, U=0, E=0)
+2017/03/27 03:13:26 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [5], [4496], [278], [1], [W00000RK2E5], [108.41.190.246], [winecoolerdirect.com], [545109]
+2017/03/27 03:13:26 - Table output.0 - 
+2017/03/27 03:13:26 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:26 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:28 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [7], [20214], [374738], [0], [G00000RK4ZS], [108.20.124.206], [https://www.google.com/], [544915]
+2017/03/27 03:13:28 - Table output.0 - 
+2017/03/27 03:13:28 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:28 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:29 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [1], [23276], [3393], [0], [M00000RK5HR], [64.150.214.244], [https://www.compactappliance.com/washer-dryer-combo/], [9838314]
+2017/03/27 03:13:29 - Table output.0 - 
+2017/03/27 03:13:29 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:29 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:33 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [11], [34928], [372032], [0], [I00000RK9F8], [72.65.56.137], [https://www.google.com/], [544915]
+2017/03/27 03:13:33 - Table output.0 - 
+2017/03/27 03:13:33 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:33 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:34 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [1], [37327], [259795], [0], [M00000RKAM6], [24.49.59.169], [https://www.google.com/], [544915]
+2017/03/27 03:13:34 - Table output.0 - 
+2017/03/27 03:13:34 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:34 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:38 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [1], [42236], [1400], [0], [M00000RKD6B], [24.193.225.200], [null], [545086]
+2017/03/27 03:13:38 - Table output.0 - 
+2017/03/27 03:13:38 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:38 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:41 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [15], [47030], [374865], [0], [L00000RKFSM], [73.32.68.152], [null], [545086]
+2017/03/27 03:13:41 - Table output.0 - 
+2017/03/27 03:13:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:46 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [3], [56846], [1530], [0], [K00000RKLNI], [94.193.200.148], [http://www.coolshityoucanbuy.com/], [7222813]
+2017/03/27 03:13:46 - Table output.0 - 
+2017/03/27 03:13:46 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:46 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:46 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [15], [57777], [2898], [0], [L00000RKM94], [107.178.35.236], [null], [545086]
+2017/03/27 03:13:46 - Table output.0 - 
+2017/03/27 03:13:46 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:46 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:51 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [7], [67905], [1152], [0], [G00000RKSGC], [50.203.70.194], [https://www.allergyandair.com/], [648209]
+2017/03/27 03:13:51 - Table output.0 - 
+2017/03/27 03:13:51 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:51 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:51 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [3], [67907], [1557], [0], [K00000RKSGE], [50.203.70.194], [https://www.kegerator.com/edgestar/], [9916674]
+2017/03/27 03:13:51 - Table output.0 - 
+2017/03/27 03:13:51 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:51 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:51 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [3], [67907], [1557], [0], [K00000RKSGE], [50.203.70.194], [https://www.kegerator.com/edgestar/], [9916674]
+2017/03/27 03:13:51 - Table output.0 - 
+2017/03/27 03:13:51 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:51 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:54 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [1], [73293], [369913], [0], [M00000RKVQS], [172.56.21.234], [null], [545086]
+2017/03/27 03:13:54 - Table output.0 - 
+2017/03/27 03:13:54 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:54 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:54 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [7], [74639], [41141], [0], [G00000RKWOT], [174.199.23.145], [https://www.google.com/], [544915]
+2017/03/27 03:13:54 - Table output.0 - 
+2017/03/27 03:13:54 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:54 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:56 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [11], [76867], [2488], [0], [I00000RKXZ9], [208.163.178.86], [null], [545086]
+2017/03/27 03:13:56 - Table output.0 - 
+2017/03/27 03:13:56 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:56 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:58 - Table output.0 - WARNING: Couldn't insert row into table: [20170326], [1], [86130], [370592], [0], [M00000RL25Q], [125.162.46.117], [google.co.id], [547710]
+2017/03/27 03:13:58 - Table output.0 - 
+2017/03/27 03:13:58 - Table output.0 - Error inserting/updating row
+2017/03/27 03:13:58 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactProductView' with unique index 'FactProdView-UniqueConst'.
+2017/03/27 03:13:59 - DataWarehouse - Connection to database closed!
+2017/03/27 03:13:59 - Table output.0 - Finished processing (I=0, O=21376, R=21376, W=21376, U=0, E=0)
+2017/03/27 03:13:59 - BackwardsVisitPopulate - Starting entry [VideoViews]
+2017/03/27 03:13:59 - BackwardsVisitPopulate - exec(5, 0, VideoViews.0)
+2017/03/27 03:13:59 - VideoViews - Starting job entry
+2017/03/27 03:13:59 - VideoViews - Opening transformation: [file:///C:/Spoon/DataWarehouseETLs/FactVideoViewInsert.ktr]
+2017/03/27 03:13:59 - VideoViews - Loading transformation from XML file [file:///C:/Spoon/DataWarehouseETLs/FactVideoViewInsert.ktr]
+2017/03/27 03:13:59 - VideoViews - Starting transformation...(file=${Internal.Job.Filename.Directory}/FactVideoViewInsert.ktr, name=VideoViews, repinfo=null)
+2017/03/27 03:13:59 - FactVideoViewInsert - Transformation is pre-loaded.
+2017/03/27 03:13:59 - FactVideoViewInsert - Dispatching started for transformation [FactVideoViewInsert]
+2017/03/27 03:13:59 - FactVideoViewInsert - Nr of arguments detected:0 
+2017/03/27 03:13:59 - FactVideoViewInsert - This is not a replay transformation
+2017/03/27 03:13:59 - FactVideoViewInsert - I found 9 different steps to launch.
+2017/03/27 03:13:59 - FactVideoViewInsert - Allocating rowsets...
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocating rowsets for step 0 --> VideoWatches
+2017/03/27 03:13:59 - FactVideoViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:13:59 - FactVideoViewInsert - Transformation allocated new rowset [VideoWatches.0 - Video CLU.0]
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocated 1 rowsets for step 0 --> VideoWatches  
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocating rowsets for step 1 --> Video CLU
+2017/03/27 03:13:59 - FactVideoViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:13:59 - FactVideoViewInsert - Transformation allocated new rowset [Video CLU.0 - Select values.0]
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocated 2 rowsets for step 1 --> Video CLU  
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocating rowsets for step 2 --> Modified Java Script Value
+2017/03/27 03:13:59 - FactVideoViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:13:59 - FactVideoViewInsert - Transformation allocated new rowset [Modified Java Script Value.0 - GetPrefix.0]
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocated 3 rowsets for step 2 --> Modified Java Script Value  
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocating rowsets for step 3 --> GetPrefix
+2017/03/27 03:13:59 - FactVideoViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:13:59 - FactVideoViewInsert - Transformation allocated new rowset [GetPrefix.0 - Learn Set.0]
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocated 4 rowsets for step 3 --> GetPrefix  
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocating rowsets for step 4 --> Learn Set
+2017/03/27 03:13:59 - FactVideoViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:13:59 - FactVideoViewInsert - Transformation allocated new rowset [Learn Set.0 - Site CLU.0]
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocated 5 rowsets for step 4 --> Learn Set  
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocating rowsets for step 5 --> Site CLU
+2017/03/27 03:13:59 - FactVideoViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:13:59 - FactVideoViewInsert - Transformation allocated new rowset [Site CLU.0 - Select values 2.0]
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocated 6 rowsets for step 5 --> Site CLU  
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocating rowsets for step 6 --> Select values
+2017/03/27 03:13:59 - FactVideoViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:13:59 - FactVideoViewInsert - Transformation allocated new rowset [Select values.0 - Modified Java Script Value.0]
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocated 7 rowsets for step 6 --> Select values  
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocating rowsets for step 7 --> Select values 2
+2017/03/27 03:13:59 - FactVideoViewInsert -   prevcopies = 1, nextcopies=1
+2017/03/27 03:13:59 - FactVideoViewInsert - Transformation allocated new rowset [Select values 2.0 - Table output.0]
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocated 8 rowsets for step 7 --> Select values 2  
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocating rowsets for step 8 --> Table output
+2017/03/27 03:13:59 - FactVideoViewInsert -  Allocated 8 rowsets for step 8 --> Table output  
+2017/03/27 03:13:59 - FactVideoViewInsert - Allocating Steps & StepData...
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation is about to allocate step [VideoWatches] of type [TableInput]
+2017/03/27 03:13:59 - VideoWatches.0 - distribution activated
+2017/03/27 03:13:59 - VideoWatches.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:13:59 - VideoWatches.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:13:59 - VideoWatches.0 - output rel. is  1:1
+2017/03/27 03:13:59 - VideoWatches.0 - Found output rowset [VideoWatches.0 - Video CLU.0]
+2017/03/27 03:13:59 - VideoWatches.0 - Finished dispatching
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation has allocated a new step: [VideoWatches].0
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation is about to allocate step [Video CLU] of type [CombinationLookup]
+2017/03/27 03:13:59 - Video CLU.0 - distribution activated
+2017/03/27 03:13:59 - Video CLU.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:13:59 - Video CLU.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:13:59 - Video CLU.0 - Got previous step from [Video CLU] #0 --> VideoWatches
+2017/03/27 03:13:59 - Video CLU.0 - input rel is 1:1
+2017/03/27 03:13:59 - Video CLU.0 - Found input rowset [VideoWatches.0 - Video CLU.0]
+2017/03/27 03:13:59 - Video CLU.0 - output rel. is  1:1
+2017/03/27 03:13:59 - Video CLU.0 - Found output rowset [Video CLU.0 - Select values.0]
+2017/03/27 03:13:59 - Video CLU.0 - Finished dispatching
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation has allocated a new step: [Video CLU].0
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation is about to allocate step [Modified Java Script Value] of type [ScriptValueMod]
+2017/03/27 03:13:59 - Modified Java Script Value.0 - distribution activated
+2017/03/27 03:13:59 - Modified Java Script Value.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:13:59 - Modified Java Script Value.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:13:59 - Modified Java Script Value.0 - Got previous step from [Modified Java Script Value] #0 --> Select values
+2017/03/27 03:13:59 - Modified Java Script Value.0 - input rel is 1:1
+2017/03/27 03:13:59 - Modified Java Script Value.0 - Found input rowset [Select values.0 - Modified Java Script Value.0]
+2017/03/27 03:13:59 - Modified Java Script Value.0 - output rel. is  1:1
+2017/03/27 03:13:59 - Modified Java Script Value.0 - Found output rowset [Modified Java Script Value.0 - GetPrefix.0]
+2017/03/27 03:13:59 - Modified Java Script Value.0 - Finished dispatching
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation has allocated a new step: [Modified Java Script Value].0
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation is about to allocate step [GetPrefix] of type [StringCut]
+2017/03/27 03:13:59 - GetPrefix.0 - distribution activated
+2017/03/27 03:13:59 - GetPrefix.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:13:59 - GetPrefix.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:13:59 - GetPrefix.0 - Got previous step from [GetPrefix] #0 --> Modified Java Script Value
+2017/03/27 03:13:59 - GetPrefix.0 - input rel is 1:1
+2017/03/27 03:13:59 - GetPrefix.0 - Found input rowset [Modified Java Script Value.0 - GetPrefix.0]
+2017/03/27 03:13:59 - GetPrefix.0 - output rel. is  1:1
+2017/03/27 03:13:59 - GetPrefix.0 - Found output rowset [GetPrefix.0 - Learn Set.0]
+2017/03/27 03:13:59 - GetPrefix.0 - Finished dispatching
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation has allocated a new step: [GetPrefix].0
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation is about to allocate step [Learn Set] of type [ScriptValueMod]
+2017/03/27 03:13:59 - Learn Set.0 - distribution de-activated
+2017/03/27 03:13:59 - Learn Set.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:13:59 - Learn Set.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:13:59 - Learn Set.0 - Got previous step from [Learn Set] #0 --> GetPrefix
+2017/03/27 03:13:59 - Learn Set.0 - input rel is 1:1
+2017/03/27 03:13:59 - Learn Set.0 - Found input rowset [GetPrefix.0 - Learn Set.0]
+2017/03/27 03:13:59 - Learn Set.0 - output rel. is  1:1
+2017/03/27 03:13:59 - Learn Set.0 - Found output rowset [Learn Set.0 - Site CLU.0]
+2017/03/27 03:13:59 - Learn Set.0 - Finished dispatching
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation has allocated a new step: [Learn Set].0
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation is about to allocate step [Site CLU] of type [CombinationLookup]
+2017/03/27 03:13:59 - Site CLU.0 - distribution activated
+2017/03/27 03:13:59 - Site CLU.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:13:59 - Site CLU.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:13:59 - Site CLU.0 - Got previous step from [Site CLU] #0 --> Learn Set
+2017/03/27 03:13:59 - Site CLU.0 - input rel is 1:1
+2017/03/27 03:13:59 - Site CLU.0 - Found input rowset [Learn Set.0 - Site CLU.0]
+2017/03/27 03:13:59 - Site CLU.0 - output rel. is  1:1
+2017/03/27 03:13:59 - Site CLU.0 - Found output rowset [Site CLU.0 - Select values 2.0]
+2017/03/27 03:13:59 - Site CLU.0 - Finished dispatching
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation has allocated a new step: [Site CLU].0
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/27 03:13:59 - Select values.0 - distribution activated
+2017/03/27 03:13:59 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:13:59 - Select values.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:13:59 - Select values.0 - Got previous step from [Select values] #0 --> Video CLU
+2017/03/27 03:13:59 - Select values.0 - input rel is 1:1
+2017/03/27 03:13:59 - Select values.0 - Found input rowset [Video CLU.0 - Select values.0]
+2017/03/27 03:13:59 - Select values.0 - output rel. is  1:1
+2017/03/27 03:13:59 - Select values.0 - Found output rowset [Select values.0 - Modified Java Script Value.0]
+2017/03/27 03:13:59 - Select values.0 - Finished dispatching
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation has allocated a new step: [Select values].0
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation is about to allocate step [Select values 2] of type [SelectValues]
+2017/03/27 03:13:59 - Select values 2.0 - distribution activated
+2017/03/27 03:13:59 - Select values 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:13:59 - Select values 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:13:59 - Select values 2.0 - Got previous step from [Select values 2] #0 --> Site CLU
+2017/03/27 03:13:59 - Select values 2.0 - input rel is 1:1
+2017/03/27 03:13:59 - Select values 2.0 - Found input rowset [Site CLU.0 - Select values 2.0]
+2017/03/27 03:13:59 - Select values 2.0 - output rel. is  1:1
+2017/03/27 03:13:59 - Select values 2.0 - Found output rowset [Select values 2.0 - Table output.0]
+2017/03/27 03:13:59 - Select values 2.0 - Finished dispatching
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation has allocated a new step: [Select values 2].0
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2017/03/27 03:13:59 - Table output.0 - distribution activated
+2017/03/27 03:13:59 - Table output.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:13:59 - Table output.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 03:13:59 - Table output.0 - Got previous step from [Table output] #0 --> Select values 2
+2017/03/27 03:13:59 - Table output.0 - input rel is 1:1
+2017/03/27 03:13:59 - Table output.0 - Found input rowset [Select values 2.0 - Table output.0]
+2017/03/27 03:13:59 - Table output.0 - Finished dispatching
+2017/03/27 03:13:59 - FactVideoViewInsert -  Transformation has allocated a new step: [Table output].0
+2017/03/27 03:13:59 - FactVideoViewInsert - This transformation can be replayed with replay date: 2017/03/27 03:13:59
+2017/03/27 03:13:59 - FactVideoViewInsert - Initialising 9 steps...
+2017/03/27 03:13:59 - VideoWatches.0 - Running on slave server #0/1.
+2017/03/27 03:13:59 - Video CLU.0 - Running on slave server #0/1.
+2017/03/27 03:13:59 - Modified Java Script Value.0 - Running on slave server #0/1.
+2017/03/27 03:13:59 - Warehouse - New database connection defined
+2017/03/27 03:13:59 - GetPrefix.0 - Running on slave server #0/1.
+2017/03/27 03:13:59 - PWA Transactions - New database connection defined
+2017/03/27 03:13:59 - Learn Set.0 - Running on slave server #0/1.
+2017/03/27 03:13:59 - Site CLU.0 - Running on slave server #0/1.
+2017/03/27 03:13:59 - Select values.0 - Running on slave server #0/1.
+2017/03/27 03:13:59 - Select values 2.0 - Running on slave server #0/1.
+2017/03/27 03:13:59 - Warehouse - New database connection defined
+2017/03/27 03:13:59 - Table output.0 - Running on slave server #0/1.
+2017/03/27 03:13:59 - Warehouse - New database connection defined
+2017/03/27 03:13:59 - PWA Transactions - Creating database connection pool for 'PWA Transactions'...
+2017/03/27 03:13:59 - Warehouse - Connected to database.
+2017/03/27 03:13:59 - Video CLU.0 - Connected to database...
+2017/03/27 03:13:59 - Warehouse - Auto commit off
+2017/03/27 03:13:59 - Warehouse - Connected to database.
+2017/03/27 03:13:59 - Table output.0 - Connected to database [Warehouse] (commit=1000)
+2017/03/27 03:13:59 - Warehouse - Auto commit off
+2017/03/27 03:13:59 - Warehouse - Connected to database.
+2017/03/27 03:13:59 - Site CLU.0 - Connected to database...
+2017/03/27 03:13:59 - Warehouse - Auto commit off
+2017/03/27 03:14:02 - PWA Transactions - Successfully created database connection pool for 'PWA Transactions'
+2017/03/27 03:14:02 - PWA Transactions - Auto commit off
+2017/03/27 03:14:02 - VideoWatches.0 - Connected to database...
+2017/03/27 03:14:02 - FactVideoViewInsert - Step [VideoWatches.0] initialized flawlessly.
+2017/03/27 03:14:02 - FactVideoViewInsert - Step [Video CLU.0] initialized flawlessly.
+2017/03/27 03:14:02 - FactVideoViewInsert - Step [Modified Java Script Value.0] initialized flawlessly.
+2017/03/27 03:14:02 - FactVideoViewInsert - Step [GetPrefix.0] initialized flawlessly.
+2017/03/27 03:14:02 - FactVideoViewInsert - Step [Learn Set.0] initialized flawlessly.
+2017/03/27 03:14:02 - FactVideoViewInsert - Step [Site CLU.0] initialized flawlessly.
+2017/03/27 03:14:02 - FactVideoViewInsert - Step [Select values.0] initialized flawlessly.
+2017/03/27 03:14:02 - FactVideoViewInsert - Step [Select values 2.0] initialized flawlessly.
+2017/03/27 03:14:02 - FactVideoViewInsert - Step [Table output.0] initialized flawlessly.
+2017/03/27 03:14:02 - VideoWatches.0 - Starting to run...
+2017/03/27 03:14:02 - VideoWatches.0 - SQL query : select 
+2017/03/27 03:14:02 - VideoWatches.0 - datediff(second,dateadd(day,DATEDIFF(day,0,timeStamp),0),timeStamp) as TimeKey,
+2017/03/27 03:14:02 - VideoWatches.0 - convert(varchar(24),timeStamp,112) as DateKey,
+2017/03/27 03:14:02 - VideoWatches.0 - customerCode,
+2017/03/27 03:14:02 - VideoWatches.0 - videoName,
+2017/03/27 03:14:02 - VideoWatches.0 - siteID,
+2017/03/27 03:14:02 - VideoWatches.0 - ISNULL(V.percentageWatched,0) as watchPercent from
+2017/03/27 03:14:02 - VideoWatches.0 - 
+2017/03/27 03:14:02 - VideoWatches.0 - (select * 
+2017/03/27 03:14:02 - VideoWatches.0 - from 
+2017/03/27 03:14:02 - VideoWatches.0 - videoTimeViews 
+2017/03/27 03:14:02 - VideoWatches.0 - where videoTimeViews.timeStamp > '2017/03/26 00:00:00.000' and videoTimeViews.timeStamp < dateadd(hour,1,'2017/03/27 00:00:00.000')
+2017/03/27 03:14:02 - VideoWatches.0 - ) AS V
+2017/03/27 03:14:02 - Video CLU.0 - Starting to run...
+2017/03/27 03:14:02 - Modified Java Script Value.0 - Starting to run...
+2017/03/27 03:14:02 - GetPrefix.0 - Starting to run...
+2017/03/27 03:14:02 - Learn Set.0 - Starting to run...
+2017/03/27 03:14:02 - Site CLU.0 - Starting to run...
+2017/03/27 03:14:02 - Select values.0 - Starting to run...
+2017/03/27 03:14:02 - Select values 2.0 - Starting to run...
+2017/03/27 03:14:02 - FactVideoViewInsert - Transformation has allocated 9 threads and 8 rowsets.
+2017/03/27 03:14:02 - Table output.0 - Starting to run...
+2017/03/27 03:14:41 - Modified Java Script Value.0 - Value #5 -  [watchPercent] is used in the script.
+2017/03/27 03:14:41 - Modified Java Script Value.0 - This script is using 1 values from the input stream(s)
+2017/03/27 03:14:41 - Modified Java Script Value.0 - Optimization level set to 9.
+2017/03/27 03:14:41 - Modified Java Script Value.0 - No starting Script found!
+2017/03/27 03:14:41 - Modified Java Script Value.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 03:14:41 - Learn Set.0 - Value #4 -  [siteID] is used in the script.
+2017/03/27 03:14:41 - Learn Set.0 - This script is using 1 values from the input stream(s)
+2017/03/27 03:14:41 - Learn Set.0 - Optimization level set to 9.
+2017/03/27 03:14:41 - Learn Set.0 - No starting Script found!
+2017/03/27 03:14:41 - Learn Set.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 03:14:41 - Table output.0 - Prepared statement : INSERT INTO FactVideoView (DateKey, TimeKey, SiteKey, VideoKey, PercentViewed, CustomerCode) VALUES ( ?,  ?,  ?,  ?,  ?,  ?)
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [1], [20170326], [0], [1], [M], [0], [59], [M00000RK19I], [Appliance], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [5], [20170326], [0], [1], [W], [52], [327], [W00000RK0GH], [WCD], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [1], [20170326], [0], [1], [M], [63], [332], [M00000RK0XM], [Appliance], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [5], [20170326], [0], [0.8], [W], [111], [611], [W00000RK1AO], [WCD], [0.8]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [5], [20170326], [0], [0.8], [W], [113], [611], [W00000RK1AO], [WCD], [0.8]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [7], [20170326], [0], [0.5], [G], [125], [55], [G00000RK13L], [APP], [0.5]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [7], [20170326], [0], [0.5], [G], [129], [55], [G00000RK13L], [APP], [0.5]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [7], [20170326], [0], [0.5], [G], [131], [55], [G00000RK13L], [APP], [0.5]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [7], [20170326], [0], [0.5], [G], [133], [55], [G00000RK13L], [APP], [0.5]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [7], [20170326], [0], [0.5], [G], [133], [55], [G00000RK13L], [APP], [0.5]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [7], [20170326], [0], [0.5], [G], [134], [55], [G00000RK13L], [APP], [0.5]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [7], [20170326], [0], [0.5], [G], [136], [55], [G00000RK13L], [APP], [0.5]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [7], [20170326], [0], [0.5], [G], [140], [55], [G00000RK13L], [APP], [0.5]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [1], [20170326], [0], [1], [M], [156], [59], [M00000RK19I], [Appliance], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [1], [20170326], [0], [1], [M], [263], [59], [M00000RK19I], [Appliance], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [3], [20170326], [0], [1], [K], [378], [184], [K00000RK1DI], [Kegerator], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [3], [20170326], [0], [1], [K], [386], [184], [K00000RK1DI], [Kegerator], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [3], [20170326], [0], [1], [K], [398], [184], [K00000RK1DI], [Kegerator], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [15], [20170326], [0], [1], [L], [402], [53], [L00000RK1E4], [LD], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - WARNING: Couldn't insert row into table: [15], [20170326], [0], [1], [L], [405], [53], [L00000RK1E4], [LD], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:41 - Table output.0 - FINAL WARNING (no more then 20 displayed): Couldn't insert row into table: [3], [20170326], [0], [1], [K], [407], [184], [K00000RK1DI], [Kegerator], [1]
+2017/03/27 03:14:41 - Table output.0 - 
+2017/03/27 03:14:41 - Table output.0 - Error inserting/updating row
+2017/03/27 03:14:41 - Table output.0 - Cannot insert duplicate key row in object 'dbo.FactVideoView' with unique index 'FactVideoView-UniqueDateTimeCustCodeVideo'.
+2017/03/27 03:14:42 - VideoWatches.0 - Finished reading query, closing connection.
+2017/03/27 03:14:42 - Warehouse - Connection to database closed!
+2017/03/27 03:14:42 - Video CLU.0 - Finished processing (I=390, O=0, R=29877, W=29877, U=0, E=0)
+2017/03/27 03:14:42 - Select values.0 - Finished processing (I=0, O=0, R=29877, W=29877, U=0, E=0)
+2017/03/27 03:14:42 - Modified Java Script Value.0 - No end Script found!
+2017/03/27 03:14:42 - Modified Java Script Value.0 - Finished processing (I=0, O=0, R=29877, W=29877, U=0, E=0)
+2017/03/27 03:14:42 - GetPrefix.0 - Finished processing (I=0, O=0, R=29877, W=29877, U=0, E=0)
+2017/03/27 03:14:42 - PWA Transactions - Connection to database closed!
+2017/03/27 03:14:42 - VideoWatches.0 - Finished processing (I=29877, O=0, R=0, W=29877, U=0, E=0)
+2017/03/27 03:14:42 - Learn Set.0 - No end Script found!
+2017/03/27 03:14:42 - Learn Set.0 - Finished processing (I=0, O=0, R=29877, W=29877, U=0, E=0)
+2017/03/27 03:14:42 - Warehouse - Connection to database closed!
+2017/03/27 03:14:42 - Site CLU.0 - Finished processing (I=8, O=0, R=29877, W=29877, U=0, E=0)
+2017/03/27 03:14:42 - Select values 2.0 - Finished processing (I=0, O=0, R=29877, W=29877, U=0, E=0)
+2017/03/27 03:15:13 - Warehouse - Connection to database closed!
+2017/03/27 03:15:13 - Table output.0 - Finished processing (I=0, O=29877, R=29877, W=29877, U=0, E=0)
+2017/03/27 03:15:13 - BackwardsVisitPopulate - Finished job entry [VideoViews] (result=[true])
+2017/03/27 03:15:13 - BackwardsVisitPopulate - Finished job entry [ProductViews] (result=[true])
+2017/03/27 03:15:13 - BackwardsVisitPopulate - Finished job entry [InsertFacts] (result=[true])
+2017/03/27 03:15:13 - BackwardsVisitPopulate - Finished job entry [PopulateDimensions] (result=[true])
+2017/03/27 03:15:13 - BackwardsVisitPopulate - Finished job entry [SetVars] (result=[true])
+2017/03/27 03:15:13 - BackwardsVisitPopulate - Job execution finished
+2017/03/27 03:15:13 - Kitchen - Finished!
+2017/03/27 03:15:13 - Kitchen - Start=2017/03/27 03:03:57.321, Stop=2017/03/27 03:15:13.544
+2017/03/27 03:15:13 - Kitchen - Processing ended after 11 minutes and 16 seconds (676 seconds total).

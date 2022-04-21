@@ -1,0 +1,1 @@
+c:\data-integration\kitchen.bat /file:"C:\Spoon\Data Warehouse Reporting\CM with Forecast MTD\j_CM_with_Forecast_MTD.kjb" /level:Detailed >CM_With_Forecast.txt

@@ -1,0 +1,1 @@
+C:\data-integration\kitchen.bat  /file:"ActivateProductsFromTable.kjb" /level:Detailed

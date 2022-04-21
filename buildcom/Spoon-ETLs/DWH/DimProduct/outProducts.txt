@@ -1,0 +1,714 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/02 11:42:33 - Kitchen - Logging is at level : Detailed logging
+2017/03/02 11:42:33 - Kitchen - Start of run.
+2017/03/02 11:42:34 - DimProductDemandwareJob - Start of job execution
+2017/03/02 11:42:34 - DimProductDemandwareJob - exec(0, 0, START.0)
+2017/03/02 11:42:34 - START - Starting job entry
+2017/03/02 11:42:34 - DimProductDemandwareJob - Starting entry [Pull In DemandWare ProductInfo]
+2017/03/02 11:42:34 - DimProductDemandwareJob - exec(1, 0, Pull In DemandWare ProductInfo.0)
+2017/03/02 11:42:34 - Pull In DemandWare ProductInfo - Starting job entry
+2017/03/02 11:42:34 - Pull In DemandWare ProductInfo - Opening transformation: [file:///C:/Spoon/DWH/DimProduct/DimProduct-Demandware-Update.ktr]
+2017/03/02 11:42:34 - Pull In DemandWare ProductInfo - Loading transformation from XML file [file:///C:/Spoon/DWH/DimProduct/DimProduct-Demandware-Update.ktr]
+2017/03/02 11:42:36 - Pull In DemandWare ProductInfo - Starting transformation...(file=${Internal.Job.Filename.Directory}/DimProduct-Demandware-Update.ktr, name=Pull In DemandWare ProductInfo, repinfo=null)
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation is pre-loaded.
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Dispatching started for transformation [DimProduct-Demandware-Update]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Nr of arguments detected:0 
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - This is not a replay transformation
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - I found 10 different steps to launch.
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Allocating rowsets...
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocating rowsets for step 0 --> Get data from XML
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation allocated new rowset [Get data from XML.0 - Filter rows.0]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocated 1 rowsets for step 0 --> Get data from XML  
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocating rowsets for step 1 --> Filter rows
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation allocated new rowset [Filter rows.0 - Filter rows 2.0]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocated 2 rowsets for step 1 --> Filter rows  
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocating rowsets for step 2 --> Filter rows 2
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation allocated new rowset [Filter rows 2.0 - Brand CLU.0]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation allocated new rowset [Filter rows 2.0 - Add constants.0]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocated 4 rowsets for step 2 --> Filter rows 2  
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocating rowsets for step 3 --> Brand CLU
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation allocated new rowset [Brand CLU.0 - Append streams.0]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocated 5 rowsets for step 3 --> Brand CLU  
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocating rowsets for step 4 --> Add constants
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation allocated new rowset [Add constants.0 - Append streams.0]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocated 6 rowsets for step 4 --> Add constants  
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocating rowsets for step 5 --> Append streams
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation allocated new rowset [Append streams.0 - If field value is null.0]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocated 7 rowsets for step 5 --> Append streams  
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocating rowsets for step 6 --> If field value is null
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation allocated new rowset [If field value is null.0 - Stream lookup.0]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocated 8 rowsets for step 6 --> If field value is null  
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocating rowsets for step 7 --> Stream lookup
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Transformation allocated new rowset [Stream lookup.0 - Update.0]
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocated 9 rowsets for step 7 --> Stream lookup  
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocating rowsets for step 8 --> Update
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Allocated 9 rowsets for step 8 --> Update  
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Allocating Steps & StepData...
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [Get data from XML] of type [getXMLData]
+2017/03/02 11:42:36 - Get data from XML.0 - distribution activated
+2017/03/02 11:42:36 - Get data from XML.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - Get data from XML.0 - Step info: nrinput=0 nroutput=1
+2017/03/02 11:42:36 - Get data from XML.0 - output rel. is  1:1
+2017/03/02 11:42:36 - Get data from XML.0 - Found output rowset [Get data from XML.0 - Filter rows.0]
+2017/03/02 11:42:36 - Get data from XML.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [Get data from XML].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [Filter rows] of type [FilterRows]
+2017/03/02 11:42:36 - Filter rows.0 - distribution activated
+2017/03/02 11:42:36 - Filter rows.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - Filter rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 11:42:36 - Filter rows.0 - Got previous step from [Filter rows] #0 --> Get data from XML
+2017/03/02 11:42:36 - Filter rows.0 - input rel is 1:1
+2017/03/02 11:42:36 - Filter rows.0 - Found input rowset [Get data from XML.0 - Filter rows.0]
+2017/03/02 11:42:36 - Filter rows.0 - output rel. is  1:1
+2017/03/02 11:42:36 - Filter rows.0 - Found output rowset [Filter rows.0 - Filter rows 2.0]
+2017/03/02 11:42:36 - Filter rows.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [Filter rows].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [Filter rows 2] of type [FilterRows]
+2017/03/02 11:42:36 - Filter rows 2.0 - distribution activated
+2017/03/02 11:42:36 - Filter rows 2.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - Filter rows 2.0 - Step info: nrinput=1 nroutput=2
+2017/03/02 11:42:36 - Filter rows 2.0 - Got previous step from [Filter rows 2] #0 --> Filter rows
+2017/03/02 11:42:36 - Filter rows 2.0 - input rel is 1:1
+2017/03/02 11:42:36 - Filter rows 2.0 - Found input rowset [Filter rows.0 - Filter rows 2.0]
+2017/03/02 11:42:36 - Filter rows 2.0 - output rel. is  1:1
+2017/03/02 11:42:36 - Filter rows 2.0 - Found output rowset [Filter rows 2.0 - Brand CLU.0]
+2017/03/02 11:42:36 - Filter rows 2.0 - output rel. is  1:1
+2017/03/02 11:42:36 - Filter rows 2.0 - Found output rowset [Filter rows 2.0 - Add constants.0]
+2017/03/02 11:42:36 - Filter rows 2.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [Filter rows 2].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [Brand CLU] of type [CombinationLookup]
+2017/03/02 11:42:36 - Brand CLU.0 - distribution activated
+2017/03/02 11:42:36 - Brand CLU.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - Brand CLU.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 11:42:36 - Brand CLU.0 - Got previous step from [Brand CLU] #0 --> Filter rows 2
+2017/03/02 11:42:36 - Brand CLU.0 - input rel is 1:1
+2017/03/02 11:42:36 - Brand CLU.0 - Found input rowset [Filter rows 2.0 - Brand CLU.0]
+2017/03/02 11:42:36 - Brand CLU.0 - output rel. is  1:1
+2017/03/02 11:42:36 - Brand CLU.0 - Found output rowset [Brand CLU.0 - Append streams.0]
+2017/03/02 11:42:36 - Brand CLU.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [Brand CLU].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [Add constants] of type [Constant]
+2017/03/02 11:42:36 - Add constants.0 - distribution activated
+2017/03/02 11:42:36 - Add constants.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - Add constants.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 11:42:36 - Add constants.0 - Got previous step from [Add constants] #0 --> Filter rows 2
+2017/03/02 11:42:36 - Add constants.0 - input rel is 1:1
+2017/03/02 11:42:36 - Add constants.0 - Found input rowset [Filter rows 2.0 - Add constants.0]
+2017/03/02 11:42:36 - Add constants.0 - output rel. is  1:1
+2017/03/02 11:42:36 - Add constants.0 - Found output rowset [Add constants.0 - Append streams.0]
+2017/03/02 11:42:36 - Add constants.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [Add constants].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [Append streams] of type [Append]
+2017/03/02 11:42:36 - Append streams.0 - distribution activated
+2017/03/02 11:42:36 - Append streams.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - Append streams.0 - Step info: nrinput=2 nroutput=1
+2017/03/02 11:42:36 - Append streams.0 - Got previous step from [Append streams] #0 --> Brand CLU
+2017/03/02 11:42:36 - Append streams.0 - input rel is 1:1
+2017/03/02 11:42:36 - Append streams.0 - Found input rowset [Brand CLU.0 - Append streams.0]
+2017/03/02 11:42:36 - Append streams.0 - Got previous step from [Append streams] #1 --> Add constants
+2017/03/02 11:42:36 - Append streams.0 - input rel is 1:1
+2017/03/02 11:42:36 - Append streams.0 - Found input rowset [Add constants.0 - Append streams.0]
+2017/03/02 11:42:36 - Append streams.0 - output rel. is  1:1
+2017/03/02 11:42:36 - Append streams.0 - Found output rowset [Append streams.0 - If field value is null.0]
+2017/03/02 11:42:36 - Append streams.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [Append streams].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [If field value is null] of type [IfNull]
+2017/03/02 11:42:36 - If field value is null.0 - distribution activated
+2017/03/02 11:42:36 - If field value is null.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - If field value is null.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 11:42:36 - If field value is null.0 - Got previous step from [If field value is null] #0 --> Append streams
+2017/03/02 11:42:36 - If field value is null.0 - input rel is 1:1
+2017/03/02 11:42:36 - If field value is null.0 - Found input rowset [Append streams.0 - If field value is null.0]
+2017/03/02 11:42:36 - If field value is null.0 - output rel. is  1:1
+2017/03/02 11:42:36 - If field value is null.0 - Found output rowset [If field value is null.0 - Stream lookup.0]
+2017/03/02 11:42:36 - If field value is null.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [If field value is null].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [Stream lookup] of type [StreamLookup]
+2017/03/02 11:42:36 - Stream lookup.0 - distribution activated
+2017/03/02 11:42:36 - Stream lookup.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - Stream lookup.0 - Step info: nrinput=2 nroutput=1
+2017/03/02 11:42:36 - Stream lookup.0 - Got previous step from [Stream lookup] #0 --> If field value is null
+2017/03/02 11:42:36 - Stream lookup.0 - input rel is 1:1
+2017/03/02 11:42:36 - Stream lookup.0 - Found input rowset [If field value is null.0 - Stream lookup.0]
+2017/03/02 11:42:36 - Stream lookup.0 - Got previous step from [Stream lookup] #1 --> ExtractImageUrls
+2017/03/02 11:42:36 - Stream lookup.0 - input rel is 1:1
+2017/03/02 11:42:36 - Stream lookup.0 - output rel. is  1:1
+2017/03/02 11:42:36 - Stream lookup.0 - Found output rowset [Stream lookup.0 - Update.0]
+2017/03/02 11:42:36 - Stream lookup.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [Stream lookup].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [Update] of type [Update]
+2017/03/02 11:42:36 - Update.0 - distribution activated
+2017/03/02 11:42:36 - Update.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - Update.0 - Step info: nrinput=1 nroutput=0
+2017/03/02 11:42:36 - Update.0 - Got previous step from [Update] #0 --> Stream lookup
+2017/03/02 11:42:36 - Update.0 - input rel is 1:1
+2017/03/02 11:42:36 - Update.0 - Found input rowset [Stream lookup.0 - Update.0]
+2017/03/02 11:42:36 - Update.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [Update].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation is about to allocate step [ExtractImageUrls] of type [Mapping]
+2017/03/02 11:42:36 - ExtractImageUrls.0 - distribution activated
+2017/03/02 11:42:36 - ExtractImageUrls.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:36 - ExtractImageUrls.0 - Step info: nrinput=0 nroutput=1
+2017/03/02 11:42:36 - ExtractImageUrls.0 - output rel. is  1:1
+2017/03/02 11:42:36 - ExtractImageUrls.0 - Finished dispatching
+2017/03/02 11:42:36 - DimProduct-Demandware-Update -  Transformation has allocated a new step: [ExtractImageUrls].0
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - This transformation can be replayed with replay date: 2017/03/02 11:42:36
+2017/03/02 11:42:36 - DimProduct-Demandware-Update - Initialising 10 steps...
+2017/03/02 11:42:36 - Get data from XML.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - Filter rows.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - Filter rows 2.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - Brand CLU.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - Get data from XML.0 - Looping Xpath is : /*[name()='catalog']/*[name()='product']
+2017/03/02 11:42:36 - Add constants.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - Append streams.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - If field value is null.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - Update.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - Stream lookup.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - ExtractImageUrls.0 - Running on slave server #0/1.
+2017/03/02 11:42:36 - Warehouse - New database connection defined
+2017/03/02 11:42:36 - Warehouse - New database connection defined
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Transformation is pre-loaded.
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Dispatching started for transformation [Extract-XML-ProductImages]
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Nr of arguments detected:0 
+2017/03/02 11:42:37 - Extract-XML-ProductImages - This is not a replay transformation
+2017/03/02 11:42:37 - Extract-XML-ProductImages - I found 5 different steps to launch.
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Allocating rowsets...
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocating rowsets for step 0 --> Get data from XML
+2017/03/02 11:42:37 - Extract-XML-ProductImages -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Transformation allocated new rowset [Get data from XML.0 - extension.0]
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocated 1 rowsets for step 0 --> Get data from XML  
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocating rowsets for step 1 --> extension
+2017/03/02 11:42:37 - Extract-XML-ProductImages -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Transformation allocated new rowset [extension.0 - Concat Fields.0]
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocated 2 rowsets for step 1 --> extension  
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocating rowsets for step 2 --> Concat Fields
+2017/03/02 11:42:37 - Extract-XML-ProductImages -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Transformation allocated new rowset [Concat Fields.0 - Select values.0]
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocated 3 rowsets for step 2 --> Concat Fields  
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocating rowsets for step 3 --> Select values
+2017/03/02 11:42:37 - Extract-XML-ProductImages -   prevcopies = 1, nextcopies=1
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Transformation allocated new rowset [Select values.0 - Mapping output specification.0]
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocated 4 rowsets for step 3 --> Select values  
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocating rowsets for step 4 --> Mapping output specification
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Allocated 4 rowsets for step 4 --> Mapping output specification  
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Allocating Steps & StepData...
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation is about to allocate step [Get data from XML] of type [getXMLData]
+2017/03/02 11:42:37 - Get data from XML.0 - distribution activated
+2017/03/02 11:42:37 - Get data from XML.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:37 - Get data from XML.0 - Step info: nrinput=0 nroutput=1
+2017/03/02 11:42:37 - Get data from XML.0 - output rel. is  1:1
+2017/03/02 11:42:37 - Get data from XML.0 - Found output rowset [Get data from XML.0 - extension.0]
+2017/03/02 11:42:37 - Get data from XML.0 - Finished dispatching
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation has allocated a new step: [Get data from XML].0
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation is about to allocate step [extension] of type [Constant]
+2017/03/02 11:42:37 - extension.0 - distribution activated
+2017/03/02 11:42:37 - extension.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:37 - extension.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 11:42:37 - extension.0 - Got previous step from [extension] #0 --> Get data from XML
+2017/03/02 11:42:37 - extension.0 - input rel is 1:1
+2017/03/02 11:42:37 - extension.0 - Found input rowset [Get data from XML.0 - extension.0]
+2017/03/02 11:42:37 - extension.0 - output rel. is  1:1
+2017/03/02 11:42:37 - extension.0 - Found output rowset [extension.0 - Concat Fields.0]
+2017/03/02 11:42:37 - extension.0 - Finished dispatching
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation has allocated a new step: [extension].0
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation is about to allocate step [Concat Fields] of type [ConcatFields]
+2017/03/02 11:42:37 - Concat Fields.0 - distribution activated
+2017/03/02 11:42:37 - Concat Fields.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:37 - Concat Fields.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 11:42:37 - Concat Fields.0 - Got previous step from [Concat Fields] #0 --> extension
+2017/03/02 11:42:37 - Concat Fields.0 - input rel is 1:1
+2017/03/02 11:42:37 - Concat Fields.0 - Found input rowset [extension.0 - Concat Fields.0]
+2017/03/02 11:42:37 - Concat Fields.0 - output rel. is  1:1
+2017/03/02 11:42:37 - Concat Fields.0 - Found output rowset [Concat Fields.0 - Select values.0]
+2017/03/02 11:42:37 - Concat Fields.0 - Finished dispatching
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation has allocated a new step: [Concat Fields].0
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/02 11:42:37 - Select values.0 - distribution activated
+2017/03/02 11:42:37 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:37 - Select values.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 11:42:37 - Select values.0 - Got previous step from [Select values] #0 --> Concat Fields
+2017/03/02 11:42:37 - Select values.0 - input rel is 1:1
+2017/03/02 11:42:37 - Select values.0 - Found input rowset [Concat Fields.0 - Select values.0]
+2017/03/02 11:42:37 - Select values.0 - output rel. is  1:1
+2017/03/02 11:42:37 - Select values.0 - Found output rowset [Select values.0 - Mapping output specification.0]
+2017/03/02 11:42:37 - Select values.0 - Finished dispatching
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation has allocated a new step: [Select values].0
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation is about to allocate step [Mapping output specification] of type [MappingOutput]
+2017/03/02 11:42:37 - Mapping output specification.0 - distribution activated
+2017/03/02 11:42:37 - Mapping output specification.0 - Starting allocation of buffers & new threads...
+2017/03/02 11:42:37 - Mapping output specification.0 - Step info: nrinput=1 nroutput=0
+2017/03/02 11:42:37 - Mapping output specification.0 - Got previous step from [Mapping output specification] #0 --> Select values
+2017/03/02 11:42:37 - Mapping output specification.0 - input rel is 1:1
+2017/03/02 11:42:37 - Mapping output specification.0 - Found input rowset [Select values.0 - Mapping output specification.0]
+2017/03/02 11:42:37 - Mapping output specification.0 - Finished dispatching
+2017/03/02 11:42:37 - Extract-XML-ProductImages -  Transformation has allocated a new step: [Mapping output specification].0
+2017/03/02 11:42:37 - Extract-XML-ProductImages - This transformation can be replayed with replay date: 2017/03/02 11:42:37
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Initialising 5 steps...
+2017/03/02 11:42:37 - Get data from XML.0 - Running on slave server #0/1.
+2017/03/02 11:42:37 - extension.0 - Running on slave server #0/1.
+2017/03/02 11:42:37 - Get data from XML.0 - Looping Xpath is : /*[name()='catalog']/*[name()='product']
+2017/03/02 11:42:37 - Concat Fields.0 - Running on slave server #0/1.
+2017/03/02 11:42:37 - Mapping output specification.0 - Running on slave server #0/1.
+2017/03/02 11:42:37 - Select values.0 - Running on slave server #0/1.
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Step [Get data from XML.0] initialized flawlessly.
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Step [extension.0] initialized flawlessly.
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Step [Concat Fields.0] initialized flawlessly.
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Step [Select values.0] initialized flawlessly.
+2017/03/02 11:42:37 - Extract-XML-ProductImages - Step [Mapping output specification.0] initialized flawlessly.
+2017/03/02 11:42:38 - Warehouse - Connected to database.
+2017/03/02 11:42:38 - Update.0 - Connected to database...
+2017/03/02 11:42:38 - Warehouse - Auto commit off
+2017/03/02 11:42:40 - Warehouse - Connected to database.
+2017/03/02 11:42:40 - Brand CLU.0 - Connected to database...
+2017/03/02 11:42:40 - Warehouse - Auto commit off
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [Get data from XML.0] initialized flawlessly.
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [Filter rows.0] initialized flawlessly.
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [Filter rows 2.0] initialized flawlessly.
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [Brand CLU.0] initialized flawlessly.
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [Add constants.0] initialized flawlessly.
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [Append streams.0] initialized flawlessly.
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [If field value is null.0] initialized flawlessly.
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [Stream lookup.0] initialized flawlessly.
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [Update.0] initialized flawlessly.
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Step [ExtractImageUrls.0] initialized flawlessly.
+2017/03/02 11:42:40 - Get data from XML.0 - Starting to run...
+2017/03/02 11:42:40 - Filter rows.0 - Starting to run...
+2017/03/02 11:42:40 - Filter rows 2.0 - Starting to run...
+2017/03/02 11:42:40 - Brand CLU.0 - Starting to run...
+2017/03/02 11:42:40 - Add constants.0 - Starting to run...
+2017/03/02 11:42:40 - Append streams.0 - Starting to run...
+2017/03/02 11:42:40 - DimProduct-Demandware-Update - Transformation has allocated 10 threads and 9 rowsets.
+2017/03/02 11:42:40 - If field value is null.0 - Starting to run...
+2017/03/02 11:42:40 - ExtractImageUrls.0 - Starting to run...
+2017/03/02 11:42:40 - Update.0 - Starting to run...
+2017/03/02 11:42:40 - Stream lookup.0 - Starting to run...
+2017/03/02 11:42:40 - Get data from XML.0 - Starting to run...
+2017/03/02 11:42:40 - Stream lookup.0 - Reading from stream [ExtractImageUrls]
+2017/03/02 11:42:40 - extension.0 - Starting to run...
+2017/03/02 11:42:40 - Concat Fields.0 - Starting to run...
+2017/03/02 11:42:40 - Extract-XML-ProductImages - Transformation has allocated 5 threads and 4 rowsets.
+2017/03/02 11:42:40 - Select values.0 - Starting to run...
+2017/03/02 11:42:40 - Mapping output specification.0 - Starting to run...
+2017/03/02 11:42:40 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/MasterProductExport.xml
+2017/03/02 11:42:40 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 11:42:40 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/G_Catalog.xml
+2017/03/02 11:42:40 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 11:42:41 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/G_Catalog.xml
+2017/03/02 11:42:41 - Get data from XML.0 - We found [0] occurrences for file [G_Catalog.xml]
+2017/03/02 11:42:41 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/K_Catalog.xml
+2017/03/02 11:42:41 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 11:42:42 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/K_Catalog.xml
+2017/03/02 11:42:42 - Get data from XML.0 - We found [0] occurrences for file [K_Catalog.xml]
+2017/03/02 11:42:42 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/L_Catalog.xml
+2017/03/02 11:42:42 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 11:42:43 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/L_Catalog.xml
+2017/03/02 11:42:43 - Get data from XML.0 - We found [0] occurrences for file [L_Catalog.xml]
+2017/03/02 11:42:43 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/M_Catalog.xml
+2017/03/02 11:42:43 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 11:42:47 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/M_Catalog.xml
+2017/03/02 11:42:47 - Get data from XML.0 - We found [0] occurrences for file [M_Catalog.xml]
+2017/03/02 11:42:47 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/MasterProductExport.xml
+2017/03/02 11:42:47 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 11:45:55 - Brand CLU.0 - SQL with return keys: INSERT INTO DimBrand( Brand) VALUES (? )
+2017/03/02 11:46:41 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/MasterProductExport.xml
+2017/03/02 11:46:41 - Get data from XML.0 - We found [0] occurrences for file [MasterProductExport.xml]
+2017/03/02 11:46:41 - Get data from XML.0 - Finished processing files.
+2017/03/02 11:46:41 - Get data from XML.0 - Finished processing (I=43766, O=0, R=0, W=43766, U=0, E=0)
+2017/03/02 11:46:41 - extension.0 - Finished processing (I=0, O=0, R=43766, W=43766, U=0, E=0)
+2017/03/02 11:46:41 - Concat Fields.0 - Finished processing (I=0, O=0, R=43766, W=43766, U=0, E=0)
+2017/03/02 11:46:41 - Select values.0 - Finished processing (I=0, O=0, R=43766, W=43766, U=0, E=0)
+2017/03/02 11:46:41 - Mapping output specification.0 - Finished processing (I=0, O=0, R=43766, W=43766, U=0, E=0)
+2017/03/02 11:46:41 - ExtractImageUrls.0 - Finished processing (I=0, O=0, R=0, W=43766, U=0, E=0)
+2017/03/02 11:46:41 - Stream lookup.0 - Field [SKU] has nr [6]
+2017/03/02 11:46:41 - Update.0 - Checking row: [American BioTech Supply 23 Cu. Ft. Stainless Steel Medical Refrigerator], [American BioTech Supply 23 Cu. Ft. Stainless Steel Medical Refrigerator], [true], [Y], [Y], [American BioTech Supply], [ABT-23SS-GP], [American-BioTech-Supply-23-Cu-Ft-Stainless-Steel-Medical-Refrigerator], [], [N], [Y], [<div style="width:50%; float:left;">
+2017/03/02 11:46:41 - Update.0 -             <ul>
+2017/03/02 11:46:41 - Update.0 -             <li>Model: ABT-23SS-GP</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Brand: American BioTech Supply</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Stainless steel exterior</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Temperature range: 0°C to 10°C,</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Temperature alarms</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Keyed door lock</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Casters</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Optional remote alarm contact</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Warranty: 2 years</li>
+2017/03/02 11:46:41 - Update.0 -             </ul>
+2017/03/02 11:46:41 - Update.0 - </div>
+2017/03/02 11:46:41 - Update.0 - <div style="width:50%; float:left;">
+2017/03/02 11:46:41 - Update.0 - 			<ul>
+2017/03/02 11:46:41 - Update.0 -             <li>American BioTech Supply 23 Cu. Ft. Stainless Steel Medical Refrigerator</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Digital temperature display</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Microprocessor temperature controller</li>
+2017/03/02 11:46:41 - Update.0 - 	    <li>3/8" probe access port</li>
+2017/03/02 11:46:41 - Update.0 -             <li>ABS material door liner</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Three (3) adjustable shelves</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Input voltage: 120 V/60 Hz</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Weight: 350 lbs</li>
+2017/03/02 11:46:41 - Update.0 -             <li>Dimensions: 85" H x 26.75" W x 33.25" D</li>
+2017/03/02 11:46:41 - Update.0 -             </ul>
+2017/03/02 11:46:41 - Update.0 - </div>
+2017/03/02 11:46:41 - Update.0 - <div style="clear:both;"></div>], [1], [null]
+2017/03/02 11:46:41 - Update.0 - Setting update preparedStatement to [UPDATE DimProduct
+2017/03/02 11:46:41 - Update.0 - SET Orderable = ?
+2017/03/02 11:46:41 - Update.0 - ,   Searchable = ?
+2017/03/02 11:46:41 - Update.0 - ,   Discontinued = ?
+2017/03/02 11:46:41 - Update.0 - ,   BrandKey = ?
+2017/03/02 11:46:41 - Update.0 - ,   PageUrl = ?
+2017/03/02 11:46:41 - Update.0 - ,   BazaarVoiceRating = ?
+2017/03/02 11:46:41 - Update.0 - ,   SpecificationsString = ?
+2017/03/02 11:46:41 - Update.0 - ,   Description = ?
+2017/03/02 11:46:41 - Update.0 - ,   ImageUrl = ?
+2017/03/02 11:46:41 - Update.0 - WHERE  ( ( DWSKU = ?  ) ) ]
+2017/03/02 11:46:41 - Stream lookup.0 - linenr 50000
+2017/03/02 11:48:02 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/MasterProductExport.xml
+2017/03/02 11:48:02 - Get data from XML.0 - We found [0] occurrences for file [MasterProductExport.xml]
+2017/03/02 11:48:02 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/W_Catalog.xml
+2017/03/02 11:48:02 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 11:48:02 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/W_Catalog.xml
+2017/03/02 11:48:02 - Get data from XML.0 - We found [0] occurrences for file [W_Catalog.xml]
+2017/03/02 11:48:02 - Get data from XML.0 - Finished processing files.
+2017/03/02 11:48:02 - Get data from XML.0 - Finished processing (I=44154, O=0, R=0, W=44154, U=0, E=0)
+2017/03/02 11:48:02 - Filter rows.0 - Finished processing (I=0, O=0, R=44154, W=42214, U=0, E=0)
+2017/03/02 11:48:02 - Filter rows 2.0 - Finished processing (I=0, O=0, R=42214, W=42214, U=0, E=0)
+2017/03/02 11:48:02 - Add constants.0 - Finished processing (I=0, O=0, R=3810, W=3810, U=0, E=0)
+2017/03/02 11:48:02 - Warehouse - Connection to database closed!
+2017/03/02 11:48:02 - Brand CLU.0 - Finished processing (I=674, O=1, R=38404, W=38404, U=0, E=0)
+2017/03/02 11:51:56 - Append streams.0 - Finished processing (I=0, O=0, R=42214, W=42214, U=0, E=0)
+2017/03/02 11:55:25 - If field value is null.0 - Finished processing (I=0, O=0, R=42214, W=42214, U=0, E=0)
+2017/03/02 11:57:44 - Stream lookup.0 - Stopped processing with empty row after 85980 rows.
+2017/03/02 11:57:44 - Stream lookup.0 - Finished processing (I=0, O=0, R=85980, W=42214, U=0, E=0)
+2017/03/02 12:00:02 - Warehouse - Connection to database closed!
+2017/03/02 12:00:02 - Update.0 - Finished processing (I=42214, O=0, R=42214, W=42214, U=42214, E=0)
+2017/03/02 12:00:02 - DimProductDemandwareJob - Starting entry [Parent Product Assignments]
+2017/03/02 12:00:02 - DimProductDemandwareJob - exec(2, 0, Parent Product Assignments.0)
+2017/03/02 12:00:02 - Parent Product Assignments - Starting job entry
+2017/03/02 12:00:02 - Parent Product Assignments - Opening transformation: [file:///C:/Spoon/DWH/DimProduct/DimProduct-Demandware-ParentProductUpdate.ktr]
+2017/03/02 12:00:02 - Parent Product Assignments - Loading transformation from XML file [file:///C:/Spoon/DWH/DimProduct/DimProduct-Demandware-ParentProductUpdate.ktr]
+2017/03/02 12:00:02 - Parent Product Assignments - Starting transformation...(file=${Internal.Job.Filename.Directory}/DimProduct-Demandware-ParentProductUpdate.ktr, name=Parent Product Assignments, repinfo=null)
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Transformation is pre-loaded.
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Dispatching started for transformation [DimProduct-Demandware-ParentProductUpdate]
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Nr of arguments detected:0 
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - This is not a replay transformation
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - I found 3 different steps to launch.
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Allocating rowsets...
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Allocating rowsets for step 0 --> Get VariantSKU Mappings
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -   prevcopies = 1, nextcopies=1
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Transformation allocated new rowset [Get VariantSKU Mappings.0 - Database lookup.0]
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Allocated 1 rowsets for step 0 --> Get VariantSKU Mappings  
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Allocating rowsets for step 1 --> Database lookup
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -   prevcopies = 1, nextcopies=1
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Transformation allocated new rowset [Database lookup.0 - Update.0]
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Allocated 2 rowsets for step 1 --> Database lookup  
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Allocating rowsets for step 2 --> Update
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Allocated 2 rowsets for step 2 --> Update  
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Allocating Steps & StepData...
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Transformation is about to allocate step [Get VariantSKU Mappings] of type [getXMLData]
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - distribution activated
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - Step info: nrinput=0 nroutput=1
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - output rel. is  1:1
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - Found output rowset [Get VariantSKU Mappings.0 - Database lookup.0]
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - Finished dispatching
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Transformation has allocated a new step: [Get VariantSKU Mappings].0
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Transformation is about to allocate step [Database lookup] of type [DBLookup]
+2017/03/02 12:00:02 - Database lookup.0 - distribution activated
+2017/03/02 12:00:02 - Database lookup.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:00:02 - Database lookup.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 12:00:02 - Database lookup.0 - Got previous step from [Database lookup] #0 --> Get VariantSKU Mappings
+2017/03/02 12:00:02 - Database lookup.0 - input rel is 1:1
+2017/03/02 12:00:02 - Database lookup.0 - Found input rowset [Get VariantSKU Mappings.0 - Database lookup.0]
+2017/03/02 12:00:02 - Database lookup.0 - output rel. is  1:1
+2017/03/02 12:00:02 - Database lookup.0 - Found output rowset [Database lookup.0 - Update.0]
+2017/03/02 12:00:02 - Database lookup.0 - Finished dispatching
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Transformation has allocated a new step: [Database lookup].0
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Transformation is about to allocate step [Update] of type [Update]
+2017/03/02 12:00:02 - Update.0 - distribution activated
+2017/03/02 12:00:02 - Update.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:00:02 - Update.0 - Step info: nrinput=1 nroutput=0
+2017/03/02 12:00:02 - Update.0 - Got previous step from [Update] #0 --> Database lookup
+2017/03/02 12:00:02 - Update.0 - input rel is 1:1
+2017/03/02 12:00:02 - Update.0 - Found input rowset [Database lookup.0 - Update.0]
+2017/03/02 12:00:02 - Update.0 - Finished dispatching
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate -  Transformation has allocated a new step: [Update].0
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - This transformation can be replayed with replay date: 2017/03/02 12:00:02
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Initialising 3 steps...
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - Running on slave server #0/1.
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - Looping Xpath is : /*[name()='catalog']/*[name()='product']/*[name()='variations']/*[name()='variants']/*[name()='variant']
+2017/03/02 12:00:02 - Update.0 - Running on slave server #0/1.
+2017/03/02 12:00:02 - Database lookup.0 - Running on slave server #0/1.
+2017/03/02 12:00:02 - Warehouse - New database connection defined
+2017/03/02 12:00:02 - Warehouse - New database connection defined
+2017/03/02 12:00:02 - Warehouse - Connected to database.
+2017/03/02 12:00:02 - Update.0 - Connected to database...
+2017/03/02 12:00:02 - Warehouse - Auto commit off
+2017/03/02 12:00:02 - Warehouse - Connected to database.
+2017/03/02 12:00:02 - Warehouse - Auto commit off
+2017/03/02 12:00:02 - Database lookup.0 - Connected to database...
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Step [Get VariantSKU Mappings.0] initialized flawlessly.
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Step [Database lookup.0] initialized flawlessly.
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Step [Update.0] initialized flawlessly.
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - Starting to run...
+2017/03/02 12:00:02 - DimProduct-Demandware-ParentProductUpdate - Transformation has allocated 3 threads and 2 rowsets.
+2017/03/02 12:00:02 - Database lookup.0 - Starting to run...
+2017/03/02 12:00:02 - Update.0 - Starting to run...
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/G_Catalog.xml
+2017/03/02 12:00:02 - Get VariantSKU Mappings.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:00:03 - Get VariantSKU Mappings.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/G_Catalog.xml
+2017/03/02 12:00:03 - Get VariantSKU Mappings.0 - We found [0] occurrences for file [G_Catalog.xml]
+2017/03/02 12:00:03 - Get VariantSKU Mappings.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/K_Catalog.xml
+2017/03/02 12:00:03 - Get VariantSKU Mappings.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:00:03 - Get VariantSKU Mappings.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/K_Catalog.xml
+2017/03/02 12:00:03 - Get VariantSKU Mappings.0 - We found [0] occurrences for file [K_Catalog.xml]
+2017/03/02 12:00:03 - Get VariantSKU Mappings.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/L_Catalog.xml
+2017/03/02 12:00:03 - Get VariantSKU Mappings.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:00:04 - Get VariantSKU Mappings.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/L_Catalog.xml
+2017/03/02 12:00:04 - Get VariantSKU Mappings.0 - We found [0] occurrences for file [L_Catalog.xml]
+2017/03/02 12:00:04 - Get VariantSKU Mappings.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/M_Catalog.xml
+2017/03/02 12:00:04 - Get VariantSKU Mappings.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:00:05 - Warehouse - Setting preparedStatement to [SELECT ID AS ParentKey FROM DimProduct WHERE DWSKU = ? ]
+2017/03/02 12:00:05 - Database lookup.0 - Checking row: [ABB2222FE], [ABB2222FEW]
+2017/03/02 12:00:05 - Update.0 - Checking row: [AMC5143AA], [AMC5143AAW], [372816]
+2017/03/02 12:00:05 - Update.0 - Setting update preparedStatement to [UPDATE DimProduct
+2017/03/02 12:00:05 - Update.0 - SET ParentKey = ?
+2017/03/02 12:00:05 - Update.0 - WHERE  ( ( DWSKU = ?  ) ) ]
+2017/03/02 12:00:07 - Get VariantSKU Mappings.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/M_Catalog.xml
+2017/03/02 12:00:07 - Get VariantSKU Mappings.0 - We found [0] occurrences for file [M_Catalog.xml]
+2017/03/02 12:00:07 - Get VariantSKU Mappings.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/MasterProductExport.xml
+2017/03/02 12:00:07 - Get VariantSKU Mappings.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:03:48 - Get VariantSKU Mappings.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/MasterProductExport.xml
+2017/03/02 12:03:48 - Get VariantSKU Mappings.0 - We found [0] occurrences for file [MasterProductExport.xml]
+2017/03/02 12:03:48 - Get VariantSKU Mappings.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/W_Catalog.xml
+2017/03/02 12:03:48 - Get VariantSKU Mappings.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:03:48 - Get VariantSKU Mappings.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/W_Catalog.xml
+2017/03/02 12:03:48 - Get VariantSKU Mappings.0 - We found [0] occurrences for file [W_Catalog.xml]
+2017/03/02 12:03:48 - Get VariantSKU Mappings.0 - Finished processing files.
+2017/03/02 12:03:48 - Get VariantSKU Mappings.0 - Finished processing (I=10485, O=0, R=0, W=10485, U=0, E=0)
+2017/03/02 12:03:48 - Warehouse - Connection to database closed!
+2017/03/02 12:03:48 - Database lookup.0 - Finished processing (I=50847, O=0, R=10485, W=45, U=0, E=0)
+2017/03/02 12:03:49 - Warehouse - Connection to database closed!
+2017/03/02 12:03:49 - Update.0 - Finished processing (I=45, O=0, R=45, W=45, U=45, E=0)
+2017/03/02 12:03:49 - DimProductDemandwareJob - Starting entry [Demandware Category Assignments]
+2017/03/02 12:03:49 - DimProductDemandwareJob - exec(3, 0, Demandware Category Assignments.0)
+2017/03/02 12:03:49 - Demandware Category Assignments - Starting job entry
+2017/03/02 12:03:49 - Demandware Category Assignments - Opening transformation: [file:///C:/Spoon/DWH/DimProduct/BridgeDemandwareCategoriesToProducts-Demandware-Upsert.ktr]
+2017/03/02 12:03:49 - Demandware Category Assignments - Loading transformation from XML file [file:///C:/Spoon/DWH/DimProduct/BridgeDemandwareCategoriesToProducts-Demandware-Upsert.ktr]
+2017/03/02 12:03:49 - Demandware Category Assignments - Starting transformation...(file=${Internal.Job.Filename.Directory}/BridgeDemandwareCategoriesToProducts-Demandware-Upsert.ktr, name=Demandware Category Assignments, repinfo=null)
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Transformation is pre-loaded.
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Dispatching started for transformation [BridgeDemandwareCategoriesToProducts-Demandware-Upsert]
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Nr of arguments detected:0 
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - This is not a replay transformation
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - I found 7 different steps to launch.
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Allocating rowsets...
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocating rowsets for step 0 --> DWCategory CLU
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -   prevcopies = 1, nextcopies=1
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Transformation allocated new rowset [DWCategory CLU.0 - Table output.0]
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocated 1 rowsets for step 0 --> DWCategory CLU  
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocating rowsets for step 1 --> Table output
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocated 1 rowsets for step 1 --> Table output  
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocating rowsets for step 2 --> Get data from XML
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -   prevcopies = 1, nextcopies=1
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Transformation allocated new rowset [Get data from XML.0 - Strings cut.0]
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocated 2 rowsets for step 2 --> Get data from XML  
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocating rowsets for step 3 --> Strings cut
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -   prevcopies = 1, nextcopies=1
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Transformation allocated new rowset [Strings cut.0 - ProductKey Lookup.0]
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocated 3 rowsets for step 3 --> Strings cut  
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocating rowsets for step 4 --> ProductKey Lookup
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -   prevcopies = 1, nextcopies=1
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Transformation allocated new rowset [ProductKey Lookup.0 - Attach Sitekey.0]
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocated 4 rowsets for step 4 --> ProductKey Lookup  
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocating rowsets for step 5 --> Attach Sitekey
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -   prevcopies = 1, nextcopies=1
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Transformation allocated new rowset [Attach Sitekey.0 - DWCategory CLU.0]
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocated 5 rowsets for step 5 --> Attach Sitekey  
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocating rowsets for step 6 --> SiteKey Lookup
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -   prevcopies = 1, nextcopies=1
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Transformation allocated new rowset [SiteKey Lookup.0 - Attach Sitekey.0]
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Allocated 6 rowsets for step 6 --> SiteKey Lookup  
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Allocating Steps & StepData...
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation is about to allocate step [DWCategory CLU] of type [CombinationLookup]
+2017/03/02 12:03:49 - DWCategory CLU.0 - distribution activated
+2017/03/02 12:03:49 - DWCategory CLU.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:03:49 - DWCategory CLU.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 12:03:49 - DWCategory CLU.0 - Got previous step from [DWCategory CLU] #0 --> Attach Sitekey
+2017/03/02 12:03:49 - DWCategory CLU.0 - input rel is 1:1
+2017/03/02 12:03:49 - DWCategory CLU.0 - Found input rowset [Attach Sitekey.0 - DWCategory CLU.0]
+2017/03/02 12:03:49 - DWCategory CLU.0 - output rel. is  1:1
+2017/03/02 12:03:49 - DWCategory CLU.0 - Found output rowset [DWCategory CLU.0 - Table output.0]
+2017/03/02 12:03:49 - DWCategory CLU.0 - Finished dispatching
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation has allocated a new step: [DWCategory CLU].0
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2017/03/02 12:03:49 - Table output.0 - distribution activated
+2017/03/02 12:03:49 - Table output.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:03:49 - Table output.0 - Step info: nrinput=1 nroutput=0
+2017/03/02 12:03:49 - Table output.0 - Got previous step from [Table output] #0 --> DWCategory CLU
+2017/03/02 12:03:49 - Table output.0 - input rel is 1:1
+2017/03/02 12:03:49 - Table output.0 - Found input rowset [DWCategory CLU.0 - Table output.0]
+2017/03/02 12:03:49 - Table output.0 - Finished dispatching
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation has allocated a new step: [Table output].0
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation is about to allocate step [Get data from XML] of type [getXMLData]
+2017/03/02 12:03:49 - Get data from XML.0 - distribution activated
+2017/03/02 12:03:49 - Get data from XML.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:03:49 - Get data from XML.0 - Step info: nrinput=0 nroutput=1
+2017/03/02 12:03:49 - Get data from XML.0 - output rel. is  1:1
+2017/03/02 12:03:49 - Get data from XML.0 - Found output rowset [Get data from XML.0 - Strings cut.0]
+2017/03/02 12:03:49 - Get data from XML.0 - Finished dispatching
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation has allocated a new step: [Get data from XML].0
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation is about to allocate step [Strings cut] of type [StringCut]
+2017/03/02 12:03:49 - Strings cut.0 - distribution activated
+2017/03/02 12:03:49 - Strings cut.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:03:49 - Strings cut.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 12:03:49 - Strings cut.0 - Got previous step from [Strings cut] #0 --> Get data from XML
+2017/03/02 12:03:49 - Strings cut.0 - input rel is 1:1
+2017/03/02 12:03:49 - Strings cut.0 - Found input rowset [Get data from XML.0 - Strings cut.0]
+2017/03/02 12:03:49 - Strings cut.0 - output rel. is  1:1
+2017/03/02 12:03:49 - Strings cut.0 - Found output rowset [Strings cut.0 - ProductKey Lookup.0]
+2017/03/02 12:03:49 - Strings cut.0 - Finished dispatching
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation has allocated a new step: [Strings cut].0
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation is about to allocate step [ProductKey Lookup] of type [DBLookup]
+2017/03/02 12:03:49 - ProductKey Lookup.0 - distribution activated
+2017/03/02 12:03:49 - ProductKey Lookup.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:03:49 - ProductKey Lookup.0 - Step info: nrinput=1 nroutput=1
+2017/03/02 12:03:49 - ProductKey Lookup.0 - Got previous step from [ProductKey Lookup] #0 --> Strings cut
+2017/03/02 12:03:49 - ProductKey Lookup.0 - input rel is 1:1
+2017/03/02 12:03:49 - ProductKey Lookup.0 - Found input rowset [Strings cut.0 - ProductKey Lookup.0]
+2017/03/02 12:03:49 - ProductKey Lookup.0 - output rel. is  1:1
+2017/03/02 12:03:49 - ProductKey Lookup.0 - Found output rowset [ProductKey Lookup.0 - Attach Sitekey.0]
+2017/03/02 12:03:49 - ProductKey Lookup.0 - Finished dispatching
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation has allocated a new step: [ProductKey Lookup].0
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation is about to allocate step [Attach Sitekey] of type [StreamLookup]
+2017/03/02 12:03:49 - Attach Sitekey.0 - distribution activated
+2017/03/02 12:03:49 - Attach Sitekey.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:03:49 - Attach Sitekey.0 - Step info: nrinput=2 nroutput=1
+2017/03/02 12:03:49 - Attach Sitekey.0 - Got previous step from [Attach Sitekey] #0 --> ProductKey Lookup
+2017/03/02 12:03:49 - Attach Sitekey.0 - input rel is 1:1
+2017/03/02 12:03:49 - Attach Sitekey.0 - Found input rowset [ProductKey Lookup.0 - Attach Sitekey.0]
+2017/03/02 12:03:49 - Attach Sitekey.0 - Got previous step from [Attach Sitekey] #1 --> SiteKey Lookup
+2017/03/02 12:03:49 - Attach Sitekey.0 - input rel is 1:1
+2017/03/02 12:03:49 - Attach Sitekey.0 - Found input rowset [SiteKey Lookup.0 - Attach Sitekey.0]
+2017/03/02 12:03:49 - Attach Sitekey.0 - output rel. is  1:1
+2017/03/02 12:03:49 - Attach Sitekey.0 - Found output rowset [Attach Sitekey.0 - DWCategory CLU.0]
+2017/03/02 12:03:49 - Attach Sitekey.0 - Finished dispatching
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation has allocated a new step: [Attach Sitekey].0
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation is about to allocate step [SiteKey Lookup] of type [TableInput]
+2017/03/02 12:03:49 - SiteKey Lookup.0 - distribution de-activated
+2017/03/02 12:03:49 - SiteKey Lookup.0 - Starting allocation of buffers & new threads...
+2017/03/02 12:03:49 - SiteKey Lookup.0 - Step info: nrinput=0 nroutput=1
+2017/03/02 12:03:49 - SiteKey Lookup.0 - output rel. is  1:1
+2017/03/02 12:03:49 - SiteKey Lookup.0 - Found output rowset [SiteKey Lookup.0 - Attach Sitekey.0]
+2017/03/02 12:03:49 - SiteKey Lookup.0 - Finished dispatching
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert -  Transformation has allocated a new step: [SiteKey Lookup].0
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - This transformation can be replayed with replay date: 2017/03/02 12:03:49
+2017/03/02 12:03:49 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Initialising 7 steps...
+2017/03/02 12:03:49 - DWCategory CLU.0 - Running on slave server #0/1.
+2017/03/02 12:03:49 - Table output.0 - Running on slave server #0/1.
+2017/03/02 12:03:49 - Strings cut.0 - Running on slave server #0/1.
+2017/03/02 12:03:49 - Warehouse - New database connection defined
+2017/03/02 12:03:49 - Warehouse - New database connection defined
+2017/03/02 12:03:49 - Attach Sitekey.0 - Running on slave server #0/1.
+2017/03/02 12:03:49 - SiteKey Lookup.0 - Running on slave server #0/1.
+2017/03/02 12:03:49 - Get data from XML.0 - Running on slave server #0/1.
+2017/03/02 12:03:49 - ProductKey Lookup.0 - Running on slave server #0/1.
+2017/03/02 12:03:49 - Get data from XML.0 - Looping Xpath is : /*[name()='catalog']/*[name()='category-assignment']
+2017/03/02 12:03:49 - Warehouse - New database connection defined
+2017/03/02 12:03:49 - Warehouse - New database connection defined
+2017/03/02 12:03:49 - Warehouse - Connected to database.
+2017/03/02 12:03:49 - Warehouse - Connected to database.
+2017/03/02 12:03:49 - Warehouse - Connected to database.
+2017/03/02 12:03:49 - DWCategory CLU.0 - Connected to database...
+2017/03/02 12:03:49 - Warehouse - Connected to database.
+2017/03/02 12:03:49 - Table output.0 - Connected to database [Warehouse] (commit=1000)
+2017/03/02 12:03:49 - Warehouse - Auto commit off
+2017/03/02 12:03:49 - Warehouse - Auto commit off
+2017/03/02 12:03:49 - ProductKey Lookup.0 - Connected to database...
+2017/03/02 12:03:49 - SiteKey Lookup.0 - Connected to database...
+2017/03/02 12:03:49 - Warehouse - Auto commit off
+2017/03/02 12:03:49 - Warehouse - Auto commit off
+2017/03/02 12:03:50 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Step [DWCategory CLU.0] initialized flawlessly.
+2017/03/02 12:03:50 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Step [Table output.0] initialized flawlessly.
+2017/03/02 12:03:50 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Step [Get data from XML.0] initialized flawlessly.
+2017/03/02 12:03:50 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Step [Strings cut.0] initialized flawlessly.
+2017/03/02 12:03:50 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Step [ProductKey Lookup.0] initialized flawlessly.
+2017/03/02 12:03:50 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Step [Attach Sitekey.0] initialized flawlessly.
+2017/03/02 12:03:50 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Step [SiteKey Lookup.0] initialized flawlessly.
+2017/03/02 12:03:50 - DWCategory CLU.0 - Starting to run...
+2017/03/02 12:03:50 - Table output.0 - Starting to run...
+2017/03/02 12:03:50 - Get data from XML.0 - Starting to run...
+2017/03/02 12:03:50 - Strings cut.0 - Starting to run...
+2017/03/02 12:03:50 - ProductKey Lookup.0 - Starting to run...
+2017/03/02 12:03:50 - BridgeDemandwareCategoriesToProducts-Demandware-Upsert - Transformation has allocated 7 threads and 6 rowsets.
+2017/03/02 12:03:50 - Attach Sitekey.0 - Starting to run...
+2017/03/02 12:03:50 - SiteKey Lookup.0 - Starting to run...
+2017/03/02 12:03:50 - Attach Sitekey.0 - Reading from stream [SiteKey Lookup]
+2017/03/02 12:03:50 - SiteKey Lookup.0 - SQL query : SELECT
+2017/03/02 12:03:50 - SiteKey Lookup.0 - Prefix,
+2017/03/02 12:03:50 - SiteKey Lookup.0 - ID AS SiteKey
+2017/03/02 12:03:50 - SiteKey Lookup.0 - FROM
+2017/03/02 12:03:50 - SiteKey Lookup.0 - DimSite
+2017/03/02 12:03:50 - SiteKey Lookup.0 - WHERE
+2017/03/02 12:03:50 - SiteKey Lookup.0 - Learn=0
+2017/03/02 12:03:50 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/G_Catalog.xml
+2017/03/02 12:03:50 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:03:50 - SiteKey Lookup.0 - Finished reading query, closing connection.
+2017/03/02 12:03:50 - Warehouse - Connection to database closed!
+2017/03/02 12:03:50 - SiteKey Lookup.0 - Finished processing (I=25, O=0, R=0, W=25, U=0, E=0)
+2017/03/02 12:03:50 - Warehouse - Setting preparedStatement to [SELECT ID AS ProductKey FROM DimProduct WHERE DWSKU = ? ]
+2017/03/02 12:03:50 - ProductKey Lookup.0 - Checking row: [201-400], [00403], [G_Catalog.xml], [G]
+2017/03/02 12:03:50 - Attach Sitekey.0 - Field [SitePrefix] has nr [3]
+2017/03/02 12:03:50 - Table output.0 - Prepared statement : INSERT INTO BridgeDemandwareCategoriesToProducts (SiteKey, ProductKey, DemandwareCategoryKey) VALUES ( ?,  ?,  ?)
+2017/03/02 12:04:12 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/G_Catalog.xml
+2017/03/02 12:04:12 - Get data from XML.0 - We found [0] occurrences for file [G_Catalog.xml]
+2017/03/02 12:04:12 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/K_Catalog.xml
+2017/03/02 12:04:12 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:04:28 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/K_Catalog.xml
+2017/03/02 12:04:28 - Get data from XML.0 - We found [0] occurrences for file [K_Catalog.xml]
+2017/03/02 12:04:28 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/L_Catalog.xml
+2017/03/02 12:04:28 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:06:37 - ProductKey Lookup.0 - linenr 50000
+2017/03/02 12:06:37 - Strings cut.0 - linenr 50000
+2017/03/02 12:07:14 - Attach Sitekey.0 - linenr 50000
+2017/03/02 12:07:14 - DWCategory CLU.0 - linenr 50000
+2017/03/02 12:07:14 - Table output.0 - linenr 50000
+2017/03/02 12:10:03 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/L_Catalog.xml
+2017/03/02 12:10:03 - Get data from XML.0 - We found [0] occurrences for file [L_Catalog.xml]
+2017/03/02 12:10:03 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/M_Catalog.xml
+2017/03/02 12:10:03 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:12:01 - ProductKey Lookup.0 - linenr 100000
+2017/03/02 12:12:01 - Strings cut.0 - linenr 100000
+2017/03/02 12:14:09 - Attach Sitekey.0 - linenr 100000
+2017/03/02 12:14:10 - DWCategory CLU.0 - linenr 100000
+2017/03/02 12:14:10 - Table output.0 - linenr 100000
+2017/03/02 12:15:21 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/M_Catalog.xml
+2017/03/02 12:15:21 - Get data from XML.0 - We found [0] occurrences for file [M_Catalog.xml]
+2017/03/02 12:15:21 - Get data from XML.0 - Opening file: file:///C:/Spoon/DWH/DimProduct/W_Catalog.xml
+2017/03/02 12:15:21 - Get data from XML.0 - Streaming mode for processing large XML files is activated.
+2017/03/02 12:15:28 - Get data from XML.0 - Finished opening file file:///C:/Spoon/DWH/DimProduct/W_Catalog.xml
+2017/03/02 12:15:28 - Get data from XML.0 - We found [0] occurrences for file [W_Catalog.xml]
+2017/03/02 12:15:28 - Get data from XML.0 - Finished processing files.
+2017/03/02 12:15:28 - Get data from XML.0 - Finished processing (I=128459, O=0, R=0, W=128459, U=0, E=0)
+2017/03/02 12:15:28 - Strings cut.0 - Finished processing (I=0, O=0, R=128459, W=128459, U=0, E=0)
+2017/03/02 12:15:28 - Warehouse - Connection to database closed!
+2017/03/02 12:15:28 - ProductKey Lookup.0 - Finished processing (I=50847, O=0, R=128459, W=111850, U=0, E=0)
+2017/03/02 12:15:28 - Attach Sitekey.0 - Stopped processing with empty row after 111875 rows.
+2017/03/02 12:15:28 - Attach Sitekey.0 - Finished processing (I=0, O=0, R=111875, W=111850, U=0, E=0)
+2017/03/02 12:15:28 - Warehouse - Connection to database closed!
+2017/03/02 12:15:28 - DWCategory CLU.0 - Finished processing (I=1628, O=0, R=111850, W=111850, U=0, E=0)
+2017/03/02 12:15:28 - Warehouse - Connection to database closed!
+2017/03/02 12:15:28 - Table output.0 - Finished processing (I=0, O=111850, R=111850, W=111850, U=0, E=0)
+2017/03/02 12:15:28 - DimProductDemandwareJob - Finished job entry [Demandware Category Assignments] (result=[true])
+2017/03/02 12:15:28 - DimProductDemandwareJob - Finished job entry [Parent Product Assignments] (result=[true])
+2017/03/02 12:15:28 - DimProductDemandwareJob - Finished job entry [Pull In DemandWare ProductInfo] (result=[true])
+2017/03/02 12:15:28 - DimProductDemandwareJob - Job execution finished
+2017/03/02 12:15:28 - Kitchen - Finished!
+2017/03/02 12:15:28 - Kitchen - Start=2017/03/02 11:42:33.955, Stop=2017/03/02 12:15:28.871
+2017/03/02 12:15:28 - Kitchen - Processing ended after 32 minutes and 54 seconds (1974 seconds total).

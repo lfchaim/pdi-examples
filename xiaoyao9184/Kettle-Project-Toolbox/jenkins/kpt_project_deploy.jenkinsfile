@@ -1,0 +1,599 @@
+/**
+ * Kettle-Project-Toolbox project deploy archive pipeline script
+ *
+ * Created by xiaoyao9184 on 2020/5/15.
+ *
+ * It will copy last artifact form project,
+ * Then find last artifact(sort by file name),
+ * And deploy it to all etl jenkins nodes.
+ *
+ *
+ * Plugin dependencies
+ * - file-operation
+ * - copyartifact
+ *
+ * Shared library dependencies(Optional)
+ * - KPT_Shared_Libraries
+ *
+ */
+pipeline {
+    agent {
+        node { 
+            label "${params.Node}"
+        }
+    }
+    parameters {
+        string(
+            name: 'Node',
+            defaultValue: 'master',
+            description: 'Node label or node name for run')
+        string(
+            name: 'WorkPath_On_Windows', 
+            defaultValue: 'D:\\Program\\jenkins_workspace',  
+            description: """jenkins job work directory, 
+                for fix cant cross-device hard link when 
+                jenkins run in docker default workspace and PDI path with different mount.""")
+        string(
+            name: 'WorkPath_On_Unix', 
+            defaultValue: '/home/jenkins/workspace', 
+            description: """jenkins job work directory, 
+                for fix cant cross-device hard link when 
+                jenkins run in docker default workspace and PDI path with different mount.""")
+        string(
+            name: 'ProjectName', 
+            description: 'project name!')
+            
+        string(
+            name: 'PDIURL', 
+            defaultValue: 'https://jaist.dl.sourceforge.net/project/pentaho/Data%20Integration/7.1/pdi-ce-7.1.0.0-12.zip', 
+            description: 'The PDI URL!')
+        string(
+            name: 'PDIPath_On_Windows', 
+            defaultValue: 'D:\\Program\\Kettle\\pdi-ce-7.1.0.0-12\\data-integration', 
+            description: 'data-integration directory')
+        string(
+            name: 'PDIPath_On_Unix', 
+            defaultValue: '/home/jenkins/kettle/pdi-ce-7.1.0.0-12/data-integration', 
+            description: 'data-integration directory')
+
+        string(
+            name: 'KPTURL', 
+            defaultValue: 'https://github.com/xiaoyao9184/Kettle-Project-Toolbox.git', 
+            description: 'The KPT git url!')
+        string(
+            name: 'KPTPath_On_Windows', 
+            defaultValue: 'D:\\Program\\Kettle\\Kettle-Project-Toolbox', 
+            description: 'Kettle-Project-Toolbox directory')
+        string(
+            name: 'KPTPath_On_Unix', 
+            defaultValue: '/home/jenkins/kettle/kettle-project-toolbox', 
+            description: 'Kettle-Project-Toolbox directory')
+
+        // deploy source
+        string(
+            name: 'ArchiveProject',
+            defaultValue: 'kpt_project_build',
+            description: 'Archive project for copy archive')
+        string(
+            name: 'ArchivePath_On_Windows', 
+            defaultValue: 'D:\\Archive', 
+            description: 'archive directory!')
+        string(
+            name: 'ArchivePath_On_Unix', 
+            defaultValue: '/home/jenkins/archive', 
+            description: 'archive directory!')
+        string(
+            name: 'ArchiveRegex', 
+            defaultValue: '^.*', 
+            description: 'Archive file name filter')
+
+        // deploy target
+        string(
+            name: 'DeployProfile', 
+            defaultValue: 'dev', 
+            description: 'active profile!')
+        string(
+            name: 'DeployPath_On_Windows', 
+            defaultValue: 'D:\\Program\\ETL', 
+            description: 'project directory!')
+        string(
+            name: 'DeployPath_On_Unix', 
+            defaultValue: '/home/jenkins/etl', 
+            description: 'project directory!')
+    }
+    options {
+        // disableConcurrentBuilds()
+        skipDefaultCheckout()
+    }
+    stages {
+        
+        // ready
+
+        stage('Create info') {
+            steps {
+                echo 'Create info...'
+                script {
+                    flow = [
+                        useSharedLibrary: false,
+                        updateKPT: false,
+                        downloadPDI: false,
+
+                        applyPatch: false,
+                        activeProfile: false
+                    ]
+                    archive = [
+                        path: null,
+                        file: null,
+                        version: null
+                    ]
+                    info = [
+                        workspace: null,
+                        PDIPath: null,
+                        KPTPath: null
+                    ]
+                    target = [
+                        basePath: null,
+                        workPath: null,
+                        projectPath: null
+                    ]
+
+                    try {
+                        // on linux the following code may be reporting an error
+                        library 'KPT_Shared_Libraries@master'
+                        if (deploy) {
+                            println "Global variable 'deploy' exists use Shared Library"
+                            flow."useSharedLibrary" = true
+                        }
+                    } catch(MissingPropertyException ex) {
+                        println("Catching the MissingPropertyException, miss 'deploy' mean not use Shared Library!");
+                    } catch(Exception ex) {
+                        println("Catching unknow Exception, that mean not use Shared Library!");
+                    }
+                    
+                    if (isUnix()) {
+                        info."workspace" = "${params.WorkPath_On_Unix}/${env.JOB_NAME}"
+                        info."PDIPath" = params.PDIPath_On_Unix
+                        info."KPTPath" = params.KPTPath_On_Unix
+                        archive."path" = params.ArchivePath_On_Unix
+                        target."basePath" = params.DeployPath_On_Unix
+                    } else {
+                        job_path = "${env.JOB_NAME}".replaceAll('\\/','\\\\')
+                        info."workspace" = "${params.WorkPath_On_Windows}\\${job_path}"
+                        info."PDIPath" = params.PDIPath_On_Windows
+                        info."KPTPath" = params.KPTPath_On_Windows
+                        archive."path" = params.ArchivePath_On_Windows
+                        target."basePath" = params.DeployPath_On_Windows
+                    }
+                }
+            }
+        }
+
+        stage('Check PDI and KPT') {
+            steps {
+                echo 'Check kettle tool...'
+                script {
+                    if (flow.useSharedLibrary) {
+                        //update KPT when not exist or KPT path is manage by git
+                        flow."updateKPT" = deploy.check_path_not_exists_or_manage_by_git("${info.KPTPath}")
+
+                        //download PDI with not exist
+                        flow."downloadPDI" = !deploy.check_file_exists("${info.PDIPath}")
+                    } else if (isUnix()) {
+                        //update KPT when not exist or KPT path is manage by git
+                        flow."updateKPT" = sh(
+                                script: """
+                                [ -d "${info.KPTPath}" ] && [ ! -d "${info.KPTPath}/.git" ] && echo "false" || echo "true"
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                        //download PDI with not exist
+                        flow."downloadPDI" = sh(
+                                script: """
+                                [ -d "${info.PDIPath}" ] && echo "false" || echo "true"
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    } else {
+                        //update KPT when not exist or KPT path is manage by git
+                        flow."updateKPT" = bat(
+                                script: """
+                                @echo off
+                                if exist "${info.KPTPath}" (
+                                    if exist "${info.KPTPath}\\.git" (
+                                        echo true
+                                    ) else (
+                                        echo false
+                                    )
+                                ) else (
+                                    echo true
+                                )
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                        //download PDI with not exist
+                        flow."downloadPDI" = bat(
+                                script: """
+                                @echo off
+                                if exist "${info.PDIPath}" (
+                                    echo false
+                                ) else (
+                                    echo true
+                                )
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    }
+                }
+            }
+        }
+
+        stage('Update KPT') {
+            when { 
+                expression { flow.updateKPT }
+            }
+            steps {
+                dir("${info.KPTPath}") {
+                    echo 'Update KPT...'
+                    git branch: 'master',
+                        url: "${params.KPTURL}"
+                }
+            }
+        }
+
+        stage('Download PDI') {
+            when { 
+                expression { flow.downloadPDI }
+            }
+            steps {
+                echo 'Download PDI...'
+                fileOperations([
+                    fileDownloadOperation(
+                        url: "${params.PDIURL}",
+                        targetFileName: 'pdi-ce.zip',
+                        targetLocation: "${WORKSPACE}",
+                        userName: '',
+                        password: ''),
+                    fileUnZipOperation(
+                        filePath: 'pdi-ce.zip',
+                        targetLocation: "."),
+                    folderCopyOperation(
+                        destinationFolderPath: "${info.PDIPath}",
+                        sourceFolderPath: './data-integration'),
+                    folderDeleteOperation(
+                        './data-integration'),
+                    folderDeleteOperation(
+                        './pdi-ce.zip')
+                ])
+            }
+        }
+
+        // deploy
+
+        stage('Archive copy') {
+            steps {
+                echo 'Copy archive...'
+
+                catchError(buildResult: 'SUCCESS', stageResult: 'ABORTED') {
+                    //Copy Artifact Plugin
+                    copyArtifacts(
+                        projectName: "${params.ArchiveProject}",
+                        filter: "*.zip",
+                        flatten: true,
+                        target: "${archive.path}/${params.ProjectName}"
+                    )
+                }
+            }
+        }
+
+        stage('Archive info') {
+            when { 
+                expression { params.ProjectName } 
+            }
+            steps {
+                echo 'Get archive info...'
+                script {
+                    def archiveLastFile = null
+                    if (flow.useSharedLibrary) {
+                        def archivePathList = deploy.get_path_list_file_info("${archive.path}/${params.ProjectName}")
+                            .findAll { it.isFile && !it.isHidden }
+                            .findAll { it.name.endsWith('.zip') }
+                            .findAll { !it.name.contains('syncthing') }
+                            .findAll { it.name ==~ "${params.ArchiveRegex}" }
+                        if (!archivePathList) {
+                            println "No any archive file!"
+                            archive = null
+                            return
+                        }
+
+                        archiveLastFile = archivePathList
+                            // https://issues.jenkins-ci.org/browse/JENKINS-44924
+                            // .sort{ it.name }
+                            .last()
+                    } else if (isUnix()) {
+                        def fileName = null
+                        dir("${archive.path}/${params.ProjectName}") {
+                            fileName = sh(
+                                    script: """
+                                    ls -I "*syncthing*" -t1 | grep "\\[Deploy\\]${params.ProjectName}.*zip" | grep "${params.ArchiveRegex}" | head -n 1
+                                    """, 
+                                    returnStdout: true)
+                                .trim()
+                        }
+                        archiveLastFile = [
+                            absolutePath: "${archive.path}/${params.ProjectName}/${fileName}",
+                            name: "${fileName}",
+                        ]
+                    } else {
+                        def fileName = null
+                        dir("${archive.path}\\${params.ProjectName}") {
+                            fileName = bat(
+                                    script: """
+                                    @echo off
+                                    for /F "TOKENS=*" %%a in ('dir "[Deploy]${params.ProjectName}*.zip" /b /A:-H /O:ND') do call :SUB "%%~a"
+                                    echo %lastfile%
+                                    exit /B
+
+                                    :SUB file
+                                    set file=%1
+                                    set file=%file:"=%
+                                    echo %file% | findstr /r ".*syncthing.*" >nul 2>&1 && goto CONTINUE || rem
+                                    echo %file% | findstr /r "${params.ArchiveRegex}" >nul 2>&1 && rem || goto CONTINUE
+                                    set lastfile=%file%
+                                    exit /B
+                                    :CONTINUE
+                                    rem
+                                    exit /B
+                                    """, 
+                                    returnStdout: true)
+                                .trim()
+                        }
+                        archiveLastFile = [
+                            absolutePath: "${archive.path}\\${params.ProjectName}\\${fileName}",
+                            name: "${fileName}",
+                        ]
+                    }
+
+                    println "Last archive is: ${archiveLastFile.absolutePath}"
+                    archive."file" = archiveLastFile.absolutePath
+                    archive."version" = archiveLastFile.name.take(archiveLastFile.name.lastIndexOf('.'))
+                    archive."version" = archive.version.minus('[Deploy]')
+                }
+            }
+        }
+        
+        stage('Archive check') {
+            steps {
+                echo "Check archive..."
+                script {
+                    if (!params.ProjectName) {
+                        echo "No 'ProjectName' param!"
+                        archive = null
+                        currentBuild.result = 'UNSTABLE'
+                    } else if (!archive) {
+                        echo "No archive info!"
+                        archive = null
+                        currentBuild.result = 'FAILURE'
+                    }
+                }
+            }
+        }
+
+        stage('Project workspace') {
+            when { 
+                expression { archive } 
+            }
+            steps {
+                echo 'Create workspace info...'
+                script {
+                    if (isUnix()) {
+                        target."workPath" = "${target.basePath}/${archive.version}"
+                        target."projectPath" = "${target.workPath}/${params.ProjectName}"
+                    } else {
+                        target."workPath" = "${target.basePath}\\${archive.version}"
+                        target."projectPath" = "${target.workPath}\\${params.ProjectName}"
+                    }
+                    
+                    def projectPathExists = false
+                    if (flow.useSharedLibrary) {
+                        projectPathExists = deploy.check_file_exists("${target.projectPath}")
+                    } else if (isUnix()) {
+                        projectPathExists = sh(
+                                script: """
+                                [ -d "${target.projectPath}" ] && echo "true" || echo "false"
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    } else {
+                        projectPathExists = bat(
+                                script: """
+                                @echo off
+                                if exist "${target.projectPath}" (
+                                    echo true
+                                ) else (
+                                    echo false
+                                )
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    }
+                    if (projectPathExists) {
+                        println "Deploy target path already exists ${target.projectPath}, skip it!"
+                        archive = null
+                    } else {
+                        println "Deploy project path is: ${target.projectPath}"
+                    }
+                }
+            }
+        }
+
+        stage('Archive release') {
+            when { 
+                expression { archive } 
+            }
+            steps {
+                echo 'Release archive...'
+                fileOperations([
+                    fileUnZipOperation(
+                        filePath: "${archive.file}",
+                        targetLocation: "${target.projectPath}")
+                ])
+            }
+        }
+
+        stage('Project flow') {
+            when { 
+                expression { archive } 
+            }
+            steps {
+                echo 'Check project path...'
+                script {
+                    def patchFileExists = false
+                    if (flow.useSharedLibrary && isUnix()) {
+                        patchFileExists = 
+                            deploy.check_file_exists("${target.projectPath}/patch.PatchPDI.sh")
+                    } else if (flow.useSharedLibrary && !isUnix()) {
+                        patchFileExists = 
+                            deploy.check_file_exists("${target.projectPath}/patch.PatchPDI.bat")
+                    } else if (isUnix()) {
+                        patchFileExists = sh(
+                                script: """
+                                [ -f "${target.projectPath}/patch.PatchPDI.sh" ] && echo "true" || echo "false"
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    } else {
+                        patchFileExists = bat(
+                                script: """
+                                @echo off
+                                if exist "${target.projectPath}\\patch.PatchPDI.bat" (
+                                    echo true
+                                ) else (
+                                    echo false
+                                )
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    }
+                    if (patchFileExists) {
+                        flow."applyPatch" = true
+                        println 'Patch needs to be applied!'
+                    }
+
+                    def profileFileExists = false
+                    if (flow.useSharedLibrary) {
+                        profileFileExists = deploy.check_file_exists("${target.projectPath}/.profile/.profile")
+                    } else if (isUnix()) {
+                        profileFileExists = sh(
+                                script: """
+                                [ -f "${target.projectPath}/.profile/.profile" ] && echo "true" || echo "false"
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    } else {
+                        profileFileExists = bat(
+                                script: """
+                                @echo off
+                                if exist "${target.projectPath}\\.profile\\.profile" (
+                                    echo true
+                                ) else (
+                                    echo false
+                                )
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    }
+                    if (profileFileExists && params.DeployProfile) {
+                        flow."activeProfile" = true
+                        println 'Profile needs to be activated!'
+                    }
+                }
+            }
+        }
+
+        stage('Project link') {
+            when { 
+                expression { archive } 
+            }
+            steps {
+                echo 'Link PDI and KPT...'
+                script {
+                    if (isUnix()) {
+                        sh "bash ${info.KPTPath}/tool/INIT_KPT.sh ${target.workPath} ${info.PDIPath} <&-" 
+                    } else {
+                        bat "call ${info.KPTPath}\\tool\\INIT_KPT.bat ${target.workPath} ${info.PDIPath}"
+                    }
+                }
+            }
+        }
+
+        stage('Project patch') {
+            when { 
+                expression { archive && flow.applyPatch } 
+            }
+            steps {
+                dir("${target.projectPath}") {
+                    echo 'Apply PDI patch...'
+                    script {
+                        if (isUnix()) {
+                            sh 'bash patch.PatchPDI.sh <&-' 
+                        } else {
+                            bat 'call patch.PatchPDI.bat'
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Project profile') {
+            when { 
+                expression { archive && flow.activeProfile } 
+            }
+            steps {
+                dir("${target.projectPath}") {
+                    echo 'Active project profile...'
+                    script {
+                        if (flow.useSharedLibrary) {
+                            try {
+                                deploy.rename_file(
+                                    "${target.projectPath}/.profile/.profile",
+                                    "${target.projectPath}/.profile/${params.DeployProfile}.profile") 
+                            } catch (Exception ex) {
+                                println("Catching unknow Exception, that mean cant use Shared Library rename file!");
+                                fileOperations([
+                                    fileRenameOperation(
+                                        source: ".profile/.profile",
+                                        destination: ".profile/${params.DeployProfile}.profile")
+                                ])
+                            }
+                        } else if (isUnix()) {
+                            sh """
+                            mv "./.profile/.profile" "./.profile/${params.DeployProfile}.profile"
+                            """
+                        } else {
+                            bat """
+                            @echo off
+                            cd ".profile"
+                            REN ".profile" "${params.DeployProfile}.profile"
+                            """
+                        }
+                    }
+                }
+            }
+        }
+    }
+    post {
+        success {
+            deleteDir()
+        }
+    }
+}

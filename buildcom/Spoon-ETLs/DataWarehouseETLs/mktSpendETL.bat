@@ -1,0 +1,1 @@
+C:\data-integration\kitchen.bat  /file:"C:\Spoon\DataWarehouseETLs\BackwardsMarketSpendPopulate.kjb" /level:Detailed >outMktSpend.txt

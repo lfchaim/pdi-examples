@@ -1,0 +1,1 @@
+C:\data-integration\kitchen.bat  /file:"DeactivateProductsFromList.kjb" /level:Detailed >deactivateProductsFromListOutput.txt

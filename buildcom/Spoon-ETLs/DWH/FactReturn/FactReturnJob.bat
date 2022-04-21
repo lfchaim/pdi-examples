@@ -1,0 +1,1 @@
+C:\data-integration\kitchen.bat /file:"FactReturnJob.kjb" "-param:startDate=%1" "-param:DWH_DB=%2" "-param:DWH_HOST=%3" "-param:DWH_PORT=%4"

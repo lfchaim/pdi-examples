@@ -1,0 +1,1 @@
+C:\data-integration\kitchen.bat  /file:"PWA AnyTouch.kjb" "-param:DWH_DB=DataWarehouse" "-param:DWH_PORT=1433" "-param:DWH_HOST=Capella"

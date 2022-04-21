@@ -1,0 +1,1 @@
+C:\data-integration\kitchen.bat  /file:"C:\Spoon\PebblePost\PebblePostJob.kjb" /level:Detailed >outpebblepost.txt

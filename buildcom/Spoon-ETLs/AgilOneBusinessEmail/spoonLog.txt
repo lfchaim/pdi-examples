@@ -1,0 +1,213 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/27 06:27:48 - Kitchen - Logging is at level : Detailed logging
+2017/03/27 06:27:48 - Kitchen - Start of run.
+2017/03/27 06:27:49 - AgilOneBusinessAccountJob - Start of job execution
+2017/03/27 06:27:49 - AgilOneBusinessAccountJob - exec(0, 0, START.0)
+2017/03/27 06:27:49 - START - Starting job entry
+2017/03/27 06:27:49 - AgilOneBusinessAccountJob - Starting entry [Demandware Post Transform]
+2017/03/27 06:27:49 - AgilOneBusinessAccountJob - exec(1, 0, Demandware Post Transform.0)
+2017/03/27 06:27:49 - Demandware Post Transform - Starting job entry
+2017/03/27 06:27:49 - Demandware Post Transform - Opening transformation: [file:///C:/Spoon/AgilOneBusinessEmail/DWAccount.ktr]
+2017/03/27 06:27:49 - Demandware Post Transform - Loading transformation from XML file [file:///C:/Spoon/AgilOneBusinessEmail/DWAccount.ktr]
+2017/03/27 06:27:50 - Demandware Post Transform - Starting transformation...(file=${Internal.Job.Filename.Directory}/DWAccount.ktr, name=Demandware Post Transform, repinfo=null)
+2017/03/27 06:27:50 - DWAccount - Transformation is pre-loaded.
+2017/03/27 06:27:50 - DWAccount - Dispatching started for transformation [DWAccount]
+2017/03/27 06:27:50 - DWAccount - Nr of arguments detected:0 
+2017/03/27 06:27:50 - DWAccount - This is not a replay transformation
+2017/03/27 06:27:50 - DWAccount - I found 10 different steps to launch.
+2017/03/27 06:27:50 - DWAccount - Allocating rowsets...
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 0 --> Text file input
+2017/03/27 06:27:50 - DWAccount -   prevcopies = 1, nextcopies=1
+2017/03/27 06:27:50 - DWAccount - Transformation allocated new rowset [Text file input.0 - If field value is null.0]
+2017/03/27 06:27:50 - DWAccount -  Allocated 1 rowsets for step 0 --> Text file input  
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 1 --> If field value is null
+2017/03/27 06:27:50 - DWAccount -   prevcopies = 1, nextcopies=1
+2017/03/27 06:27:50 - DWAccount - Transformation allocated new rowset [If field value is null.0 - Add constants.0]
+2017/03/27 06:27:50 - DWAccount -  Allocated 2 rowsets for step 1 --> If field value is null  
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 2 --> Add constants
+2017/03/27 06:27:50 - DWAccount -   prevcopies = 1, nextcopies=1
+2017/03/27 06:27:50 - DWAccount - Transformation allocated new rowset [Add constants.0 - String operations.0]
+2017/03/27 06:27:50 - DWAccount -  Allocated 3 rowsets for step 2 --> Add constants  
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 3 --> Filter rows 2
+2017/03/27 06:27:50 - DWAccount -   prevcopies = 1, nextcopies=1
+2017/03/27 06:27:50 - DWAccount - Transformation allocated new rowset [Filter rows 2.0 - Filter rows.0]
+2017/03/27 06:27:50 - DWAccount -  Allocated 4 rowsets for step 3 --> Filter rows 2  
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 4 --> Filter rows
+2017/03/27 06:27:50 - DWAccount -   prevcopies = 1, nextcopies=1
+2017/03/27 06:27:50 - DWAccount - Transformation allocated new rowset [Filter rows.0 - HTTP Post.0]
+2017/03/27 06:27:50 - DWAccount -  Allocated 5 rowsets for step 4 --> Filter rows  
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 5 --> Get File Names
+2017/03/27 06:27:50 - DWAccount -   prevcopies = 1, nextcopies=1
+2017/03/27 06:27:50 - DWAccount - Transformation allocated new rowset [Get File Names.0 - Text file input.0]
+2017/03/27 06:27:50 - DWAccount -  Allocated 6 rowsets for step 5 --> Get File Names  
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 6 --> String operations
+2017/03/27 06:27:50 - DWAccount -   prevcopies = 1, nextcopies=1
+2017/03/27 06:27:50 - DWAccount - Transformation allocated new rowset [String operations.0 - Replace in string.0]
+2017/03/27 06:27:50 - DWAccount -  Allocated 7 rowsets for step 6 --> String operations  
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 7 --> Replace in string
+2017/03/27 06:27:50 - DWAccount -   prevcopies = 1, nextcopies=1
+2017/03/27 06:27:50 - DWAccount - Transformation allocated new rowset [Replace in string.0 - Modified Java Script Value.0]
+2017/03/27 06:27:50 - DWAccount -  Allocated 8 rowsets for step 7 --> Replace in string  
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 8 --> Modified Java Script Value
+2017/03/27 06:27:50 - DWAccount -   prevcopies = 1, nextcopies=1
+2017/03/27 06:27:50 - DWAccount - Transformation allocated new rowset [Modified Java Script Value.0 - Filter rows 2.0]
+2017/03/27 06:27:50 - DWAccount -  Allocated 9 rowsets for step 8 --> Modified Java Script Value  
+2017/03/27 06:27:50 - DWAccount -  Allocating rowsets for step 9 --> HTTP Post
+2017/03/27 06:27:50 - DWAccount -  Allocated 9 rowsets for step 9 --> HTTP Post  
+2017/03/27 06:27:50 - DWAccount - Allocating Steps & StepData...
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [Text file input] of type [TextFileInput]
+2017/03/27 06:27:50 - Text file input.0 - distribution activated
+2017/03/27 06:27:50 - Text file input.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - Text file input.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 06:27:50 - Text file input.0 - Got previous step from [Text file input] #0 --> Get File Names
+2017/03/27 06:27:50 - Text file input.0 - input rel is 1:1
+2017/03/27 06:27:50 - Text file input.0 - Found input rowset [Get File Names.0 - Text file input.0]
+2017/03/27 06:27:50 - Text file input.0 - output rel. is  1:1
+2017/03/27 06:27:50 - Text file input.0 - Found output rowset [Text file input.0 - If field value is null.0]
+2017/03/27 06:27:50 - Text file input.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [Text file input].0
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [If field value is null] of type [IfNull]
+2017/03/27 06:27:50 - If field value is null.0 - distribution activated
+2017/03/27 06:27:50 - If field value is null.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - If field value is null.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 06:27:50 - If field value is null.0 - Got previous step from [If field value is null] #0 --> Text file input
+2017/03/27 06:27:50 - If field value is null.0 - input rel is 1:1
+2017/03/27 06:27:50 - If field value is null.0 - Found input rowset [Text file input.0 - If field value is null.0]
+2017/03/27 06:27:50 - If field value is null.0 - output rel. is  1:1
+2017/03/27 06:27:50 - If field value is null.0 - Found output rowset [If field value is null.0 - Add constants.0]
+2017/03/27 06:27:50 - If field value is null.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [If field value is null].0
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [Add constants] of type [Constant]
+2017/03/27 06:27:50 - Add constants.0 - distribution activated
+2017/03/27 06:27:50 - Add constants.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - Add constants.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 06:27:50 - Add constants.0 - Got previous step from [Add constants] #0 --> If field value is null
+2017/03/27 06:27:50 - Add constants.0 - input rel is 1:1
+2017/03/27 06:27:50 - Add constants.0 - Found input rowset [If field value is null.0 - Add constants.0]
+2017/03/27 06:27:50 - Add constants.0 - output rel. is  1:1
+2017/03/27 06:27:50 - Add constants.0 - Found output rowset [Add constants.0 - String operations.0]
+2017/03/27 06:27:50 - Add constants.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [Add constants].0
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [Filter rows 2] of type [FilterRows]
+2017/03/27 06:27:50 - Filter rows 2.0 - distribution activated
+2017/03/27 06:27:50 - Filter rows 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - Filter rows 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 06:27:50 - Filter rows 2.0 - Got previous step from [Filter rows 2] #0 --> Modified Java Script Value
+2017/03/27 06:27:50 - Filter rows 2.0 - input rel is 1:1
+2017/03/27 06:27:50 - Filter rows 2.0 - Found input rowset [Modified Java Script Value.0 - Filter rows 2.0]
+2017/03/27 06:27:50 - Filter rows 2.0 - output rel. is  1:1
+2017/03/27 06:27:50 - Filter rows 2.0 - Found output rowset [Filter rows 2.0 - Filter rows.0]
+2017/03/27 06:27:50 - Filter rows 2.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [Filter rows 2].0
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [Filter rows] of type [FilterRows]
+2017/03/27 06:27:50 - Filter rows.0 - distribution activated
+2017/03/27 06:27:50 - Filter rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - Filter rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 06:27:50 - Filter rows.0 - Got previous step from [Filter rows] #0 --> Filter rows 2
+2017/03/27 06:27:50 - Filter rows.0 - input rel is 1:1
+2017/03/27 06:27:50 - Filter rows.0 - Found input rowset [Filter rows 2.0 - Filter rows.0]
+2017/03/27 06:27:50 - Filter rows.0 - output rel. is  1:1
+2017/03/27 06:27:50 - Filter rows.0 - Found output rowset [Filter rows.0 - HTTP Post.0]
+2017/03/27 06:27:50 - Filter rows.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [Filter rows].0
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [Get File Names] of type [GetFileNames]
+2017/03/27 06:27:50 - Get File Names.0 - distribution activated
+2017/03/27 06:27:50 - Get File Names.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - Get File Names.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 06:27:50 - Get File Names.0 - output rel. is  1:1
+2017/03/27 06:27:50 - Get File Names.0 - Found output rowset [Get File Names.0 - Text file input.0]
+2017/03/27 06:27:50 - Get File Names.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [Get File Names].0
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [String operations] of type [StringOperations]
+2017/03/27 06:27:50 - String operations.0 - distribution activated
+2017/03/27 06:27:50 - String operations.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - String operations.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 06:27:50 - String operations.0 - Got previous step from [String operations] #0 --> Add constants
+2017/03/27 06:27:50 - String operations.0 - input rel is 1:1
+2017/03/27 06:27:50 - String operations.0 - Found input rowset [Add constants.0 - String operations.0]
+2017/03/27 06:27:50 - String operations.0 - output rel. is  1:1
+2017/03/27 06:27:50 - String operations.0 - Found output rowset [String operations.0 - Replace in string.0]
+2017/03/27 06:27:50 - String operations.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [String operations].0
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [Replace in string] of type [ReplaceString]
+2017/03/27 06:27:50 - Replace in string.0 - distribution activated
+2017/03/27 06:27:50 - Replace in string.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - Replace in string.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 06:27:50 - Replace in string.0 - Got previous step from [Replace in string] #0 --> String operations
+2017/03/27 06:27:50 - Replace in string.0 - input rel is 1:1
+2017/03/27 06:27:50 - Replace in string.0 - Found input rowset [String operations.0 - Replace in string.0]
+2017/03/27 06:27:50 - Replace in string.0 - output rel. is  1:1
+2017/03/27 06:27:50 - Replace in string.0 - Found output rowset [Replace in string.0 - Modified Java Script Value.0]
+2017/03/27 06:27:50 - Replace in string.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [Replace in string].0
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [Modified Java Script Value] of type [ScriptValueMod]
+2017/03/27 06:27:50 - Modified Java Script Value.0 - distribution activated
+2017/03/27 06:27:50 - Modified Java Script Value.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - Modified Java Script Value.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 06:27:50 - Modified Java Script Value.0 - Got previous step from [Modified Java Script Value] #0 --> Replace in string
+2017/03/27 06:27:50 - Modified Java Script Value.0 - input rel is 1:1
+2017/03/27 06:27:50 - Modified Java Script Value.0 - Found input rowset [Replace in string.0 - Modified Java Script Value.0]
+2017/03/27 06:27:50 - Modified Java Script Value.0 - output rel. is  1:1
+2017/03/27 06:27:50 - Modified Java Script Value.0 - Found output rowset [Modified Java Script Value.0 - Filter rows 2.0]
+2017/03/27 06:27:50 - Modified Java Script Value.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [Modified Java Script Value].0
+2017/03/27 06:27:50 - DWAccount -  Transformation is about to allocate step [HTTP Post] of type [HTTPPOST]
+2017/03/27 06:27:50 - HTTP Post.0 - distribution activated
+2017/03/27 06:27:50 - HTTP Post.0 - Starting allocation of buffers & new threads...
+2017/03/27 06:27:50 - HTTP Post.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 06:27:50 - HTTP Post.0 - Got previous step from [HTTP Post] #0 --> Filter rows
+2017/03/27 06:27:50 - HTTP Post.0 - input rel is 1:1
+2017/03/27 06:27:50 - HTTP Post.0 - Found input rowset [Filter rows.0 - HTTP Post.0]
+2017/03/27 06:27:50 - HTTP Post.0 - Finished dispatching
+2017/03/27 06:27:50 - DWAccount -  Transformation has allocated a new step: [HTTP Post].0
+2017/03/27 06:27:50 - DWAccount - This transformation can be replayed with replay date: 2017/03/27 06:27:50
+2017/03/27 06:27:50 - DWAccount - Initialising 10 steps...
+2017/03/27 06:27:50 - Text file input.0 - Running on slave server #0/1.
+2017/03/27 06:27:50 - If field value is null.0 - Running on slave server #0/1.
+2017/03/27 06:27:50 - Add constants.0 - Running on slave server #0/1.
+2017/03/27 06:27:50 - Filter rows 2.0 - Running on slave server #0/1.
+2017/03/27 06:27:50 - Filter rows.0 - Running on slave server #0/1.
+2017/03/27 06:27:50 - Get File Names.0 - Running on slave server #0/1.
+2017/03/27 06:27:50 - String operations.0 - Running on slave server #0/1.
+2017/03/27 06:27:50 - Modified Java Script Value.0 - Running on slave server #0/1.
+2017/03/27 06:27:50 - Replace in string.0 - Running on slave server #0/1.
+2017/03/27 06:27:50 - HTTP Post.0 - Running on slave server #0/1.
+2017/03/27 06:27:53 - DWAccount - Step [Text file input.0] initialized flawlessly.
+2017/03/27 06:27:53 - DWAccount - Step [If field value is null.0] initialized flawlessly.
+2017/03/27 06:27:53 - DWAccount - Step [Add constants.0] initialized flawlessly.
+2017/03/27 06:27:53 - DWAccount - Step [Filter rows 2.0] initialized flawlessly.
+2017/03/27 06:27:53 - DWAccount - Step [Filter rows.0] initialized flawlessly.
+2017/03/27 06:27:53 - DWAccount - Step [Get File Names.0] initialized flawlessly.
+2017/03/27 06:27:53 - DWAccount - Step [String operations.0] initialized flawlessly.
+2017/03/27 06:27:53 - DWAccount - Step [Replace in string.0] initialized flawlessly.
+2017/03/27 06:27:53 - DWAccount - Step [Modified Java Script Value.0] initialized flawlessly.
+2017/03/27 06:27:53 - DWAccount - Step [HTTP Post.0] initialized flawlessly.
+2017/03/27 06:27:53 - Text file input.0 - Starting to run...
+2017/03/27 06:27:53 - If field value is null.0 - Starting to run...
+2017/03/27 06:27:53 - Add constants.0 - Starting to run...
+2017/03/27 06:27:53 - Filter rows 2.0 - Starting to run...
+2017/03/27 06:27:53 - Filter rows.0 - Starting to run...
+2017/03/27 06:27:53 - Get File Names.0 - Starting to run...
+2017/03/27 06:27:53 - String operations.0 - Starting to run...
+2017/03/27 06:27:53 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - Replace in string.0 - Starting to run...
+2017/03/27 06:27:53 - Modified Java Script Value.0 - Starting to run...
+2017/03/27 06:27:53 - DWAccount - Transformation has allocated 10 threads and 9 rowsets.
+2017/03/27 06:27:53 - HTTP Post.0 - Starting to run...
+2017/03/27 06:27:53 - Text file input.0 - No file(s) specified! Stop processing.
+2017/03/27 06:27:53 - Text file input.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - If field value is null.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - Add constants.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - String operations.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - Replace in string.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - Modified Java Script Value.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - Filter rows 2.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - Filter rows.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - HTTP Post.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 06:27:53 - AgilOneBusinessAccountJob - Finished job entry [Demandware Post Transform] (result=[true])
+2017/03/27 06:27:53 - AgilOneBusinessAccountJob - Job execution finished
+2017/03/27 06:27:53 - Kitchen - Finished!
+2017/03/27 06:27:53 - Kitchen - Start=2017/03/27 06:27:48.996, Stop=2017/03/27 06:27:53.857
+2017/03/27 06:27:53 - Kitchen - Processing ended after 4 seconds.

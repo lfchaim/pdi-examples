@@ -1,0 +1,1 @@
+call C:\data-integration\pan.bat "/file:./AffirmOrderExport.ktr" "-/param:startDate=2016-07-12" "-/param:endDate=2016-07-14" "-/param:affirmPayMethod=AX" /level:Detailed

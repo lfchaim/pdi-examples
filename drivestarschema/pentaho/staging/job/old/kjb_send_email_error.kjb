@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job>
+  <name>kjb_send_email_error</name>
+    <description/>
+    <extended_description/>
+    <job_version/>
+    <job_status>1</job_status>
+  <directory>&#x2f;</directory>
+  <created_user>-</created_user>
+  <created_date>2016&#x2f;04&#x2f;24 10&#x3a;15&#x3a;48.517</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2016&#x2f;04&#x2f;24 10&#x3a;15&#x3a;48.517</modified_date>
+    <parameters>
+        <parameter>
+            <name>DestinationAdress</name>
+            <default_value/>
+            <description>List of destination mail address for receive the e-mail error</description>
+        </parameter>
+        <parameter>
+            <name>DestinationAdressCC</name>
+            <default_value/>
+            <description>List of destination mail address for receive the e-mail error - in copy</description>
+        </parameter>
+        <parameter>
+            <name>DestinationAdressCCB</name>
+            <default_value/>
+            <description>List of destination mail address for receive the e-mail error - in hide copy</description>
+        </parameter>
+        <parameter>
+            <name>EnableSendMail</name>
+            <default_value/>
+            <description>Enable&#x2f;Disable Send Mail Error</description>
+        </parameter>
+        <parameter>
+            <name>JobNameError</name>
+            <default_value>sdfasd</default_value>
+            <description>Job error</description>
+        </parameter>
+        <parameter>
+            <name>ProcessDate</name>
+            <default_value>2016-01-01</default_value>
+            <description>Process Date</description>
+        </parameter>
+        <parameter>
+            <name>SMTPAuthenticationPassord</name>
+            <default_value/>
+            <description>Password of SMTP Server</description>
+        </parameter>
+        <parameter>
+            <name>SMTPAuthenticationUser</name>
+            <default_value/>
+            <description>User of SMTP Server</description>
+        </parameter>
+        <parameter>
+            <name>SMTPPort</name>
+            <default_value/>
+            <description>Port of SMTP Server</description>
+        </parameter>
+        <parameter>
+            <name>SMTPServer</name>
+            <default_value/>
+            <description>Address of SMTP server</description>
+        </parameter>
+        <parameter>
+            <name>SenderAddress</name>
+            <default_value/>
+            <description>E-mail account of BI administratitor</description>
+        </parameter>
+        <parameter>
+            <name>SenderContactPerson</name>
+            <default_value/>
+            <description>Name of BI people responsible</description>
+        </parameter>
+        <parameter>
+            <name>SenderContactPhone</name>
+            <default_value/>
+            <description>Contact Phone of BI people responsible</description>
+        </parameter>
+        <parameter>
+            <name>SenderName</name>
+            <default_value/>
+            <description>Name of sender e-mail error</description>
+        </parameter>
+        <parameter>
+            <name>SenderReplayTo</name>
+            <default_value/>
+            <description>E-mail account of BI administratitor - reply</description>
+        </parameter>
+        <parameter>
+            <name>WorkFolder</name>
+            <default_value>&#x2f;staging</default_value>
+            <description>Folder of Work Ex&#x3a; &#x2f;staging</description>
+        </parameter>
+    </parameters>
+    <slaveservers>
+    </slaveservers>
+<job-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_JOB</id><enabled>Y</enabled><name>ID_JOB</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>JOBNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>START_JOB_ENTRY</id><enabled>N</enabled><name>START_JOB_ENTRY</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></job-log-table>
+<jobentry-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>JOBNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>JOBENTRYNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>RESULT</id><enabled>Y</enabled><name>RESULT</name></field><field><id>NR_RESULT_ROWS</id><enabled>Y</enabled><name>NR_RESULT_ROWS</name></field><field><id>NR_RESULT_FILES</id><enabled>Y</enabled><name>NR_RESULT_FILES</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field><field><id>COPY_NR</id><enabled>N</enabled><name>COPY_NR</name></field></jobentry-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+   <pass_batchid>N</pass_batchid>
+   <shared_objects_file/>
+  <entries>
+    <entry>
+      <name>START</name>
+      <description/>
+      <type>SPECIAL</type>
+      <start>Y</start>
+      <dummy>N</dummy>
+      <repeat>N</repeat>
+      <schedulerType>0</schedulerType>
+      <intervalSeconds>0</intervalSeconds>
+      <intervalMinutes>60</intervalMinutes>
+      <hour>12</hour>
+      <minutes>0</minutes>
+      <weekDay>1</weekDay>
+      <DayOfMonth>1</DayOfMonth>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>48</xloc>
+      <yloc>160</yloc>
+      </entry>
+    <entry>
+      <name>Mail</name>
+      <description/>
+      <type>MAIL</type>
+      <server>&#x24;&#x7b;SMTPServer&#x7d;</server>
+      <port>&#x24;&#x7b;SMTPPort&#x7d;</port>
+      <destination>&#x24;&#x7b;DestinationAdress&#x7d;</destination>
+      <destinationCc>&#x24;&#x7b;DestinationAdressCC&#x7d;</destinationCc>
+      <destinationBCc>&#x24;&#x7b;DestinationAdressCCB&#x7d;</destinationBCc>
+      <replyto>&#x24;&#x7b;SenderAddress&#x7d;</replyto>
+      <replytoname>&#x24;&#x7b;SenderName&#x7d;</replytoname>
+      <subject>Job Error - &#x24;&#x7b;JobNameError&#x7d;</subject>
+      <include_date>Y</include_date>
+      <contact_person>&#x24;&#x7b;SenderContactPerson&#x7d;</contact_person>
+      <contact_phone>&#x24;&#x7b;SenderContactPhone&#x7d;</contact_phone>
+      <comment>Execution error &#x24;&#x7b;JobNameError&#x7d;&#xa;&#xa;Process Date&#x3a; &#x24;&#x7b;ProcessDate&#x7d;&#xa;&#xa;Please, contact the &#x24;&#x7b;SenderContactPerson&#x7d;&#xa;Phone&#x3a; &#x24;&#x7b;SenderContactPhone&#x7d;</comment>
+      <include_files>Y</include_files>
+      <zip_files>Y</zip_files>
+      <zip_name>error_&#x24;&#x7b;JobNameError&#x7d;.zip</zip_name>
+      <use_auth>Y</use_auth>
+      <use_secure_auth>Y</use_secure_auth>
+      <auth_user>&#x24;&#x7b;SMTPAuthenticationUser&#x7d;</auth_user>
+      <auth_password>&#x24;&#x7b;SMTPAuthenticationPassord&#x7d;</auth_password>
+      <only_comment>N</only_comment>
+      <use_HTML>N</use_HTML>
+      <use_Priority>Y</use_Priority>
+      <encoding>UTF-8</encoding>
+      <priority>high</priority>
+      <importance>high</importance>
+      <sensitivity>normal</sensitivity>
+      <secureconnectiontype>SSL</secureconnectiontype>
+      <replyToAddresses>&#x24;&#x7b;SenderReplayTo&#x7d;</replyToAddresses>
+      <filetypes>        <filetype>LOG</filetype>
+        <filetype>ERRORLINE</filetype>
+        <filetype>ERROR</filetype>
+      </filetypes>      <embeddedimages>
+      </embeddedimages>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>400</xloc>
+      <yloc>160</yloc>
+      </entry>
+    <entry>
+      <name>SMTP Configurations</name>
+      <description/>
+      <type>SET_VARIABLES</type>
+      <replacevars>Y</replacevars>
+      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x2f;SMTP.properties</filename>
+      <file_variable_type>ROOT_JOB</file_variable_type>
+      <fields>
+        <field>
+          <variable_name>EnableSendMail</variable_name>
+          <variable_value>&#x24;&#x7b;EnableSendMail&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>DestinationAdress</variable_name>
+          <variable_value>&#x24;&#x7b;DestinationAdress&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>DestinationAdressCCB</variable_name>
+          <variable_value>&#x24;&#x7b;DestinationAdressCCB&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>SenderName</variable_name>
+          <variable_value>&#x24;&#x7b;SenderName&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>SenderAddress</variable_name>
+          <variable_value>&#x24;&#x7b;SenderAddress&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>SenderReplayTo</variable_name>
+          <variable_value>&#x24;&#x7b;SenderReplayTo&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>SenderContactPerson</variable_name>
+          <variable_value>&#x24;&#x7b;SenderContactPerson&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>SenderContactPhone</variable_name>
+          <variable_value>&#x24;&#x7b;SenderContactPhone&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>SMTPServer</variable_name>
+          <variable_value>&#x24;&#x7b;SMTPServer&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>SMTPPort</variable_name>
+          <variable_value>&#x24;&#x7b;SMTPPort&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>SMTPAuthenticationUser</variable_name>
+          <variable_value>&#x24;&#x7b;SMTPAuthenticationUser&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+        <field>
+          <variable_name>SMTPAuthenticationPassord</variable_name>
+          <variable_value>&#x24;&#x7b;SMTPAuthenticationPassord&#x7d;</variable_value>
+          <variable_type>CURRENT_JOB</variable_type>
+        </field>
+      </fields>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>144</xloc>
+      <yloc>160</yloc>
+      </entry>
+    <entry>
+      <name>Enable Send Mail</name>
+      <description/>
+      <type>EVAL</type>
+      <script>_entry_.getVariable&#x28;&#x22;EnableSendMail&#x22;&#x29;.equals&#x28;&#x22;1&#x22;&#x29;&#x3b;</script>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>288</xloc>
+      <yloc>160</yloc>
+      </entry>
+    <entry>
+      <name>Success</name>
+      <description/>
+      <type>SUCCESS</type>
+      <parallel>N</parallel>
+      <draw>Y</draw>
+      <nr>0</nr>
+      <xloc>288</xloc>
+      <yloc>240</yloc>
+      </entry>
+  </entries>
+  <hops>
+    <hop>
+      <from>START</from>
+      <to>SMTP Configurations</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+    <hop>
+      <from>SMTP Configurations</from>
+      <to>Enable Send Mail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Enable Send Mail</from>
+      <to>Mail</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>Y</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Enable Send Mail</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>N</unconditional>
+    </hop>
+    <hop>
+      <from>Mail</from>
+      <to>Success</to>
+      <from_nr>0</from_nr>
+      <to_nr>0</to_nr>
+      <enabled>Y</enabled>
+      <evaluation>N</evaluation>
+      <unconditional>Y</unconditional>
+    </hop>
+  </hops>
+  <notepads>
+  </notepads>
+
+</job>

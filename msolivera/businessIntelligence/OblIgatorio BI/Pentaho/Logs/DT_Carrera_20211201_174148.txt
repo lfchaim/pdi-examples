@@ -1,0 +1,207 @@
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Transformation is pre-loaded.
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Dispatching started for transformation [TGenerarDT_Carrera]
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Nr of arguments detected:0 
+2021/12/01 17:41:48 - TGenerarDT_Carrera - This is not a replay transformation
+2021/12/01 17:41:48 - TGenerarDT_Carrera - I found 8 different steps to launch.
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Allocating rowsets...
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocating rowsets for step 0 --> races.csv
+2021/12/01 17:41:48 - TGenerarDT_Carrera -   prevcopies = 1, nextcopies=1
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Transformation allocated new rowset [races.csv.0 - seleccion de valores.0]
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocated 1 rowsets for step 0 --> races.csv  
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocating rowsets for step 1 --> seleccion de valores
+2021/12/01 17:41:48 - TGenerarDT_Carrera -   prevcopies = 1, nextcopies=1
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Transformation allocated new rowset [seleccion de valores.0 - Join.0]
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocated 2 rowsets for step 1 --> seleccion de valores  
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocating rowsets for step 2 --> circuits.csv
+2021/12/01 17:41:48 - TGenerarDT_Carrera -   prevcopies = 1, nextcopies=1
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Transformation allocated new rowset [circuits.csv.0 - seleccion de valores 2.0]
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocated 3 rowsets for step 2 --> circuits.csv  
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocating rowsets for step 3 --> seleccion de valores 2
+2021/12/01 17:41:48 - TGenerarDT_Carrera -   prevcopies = 1, nextcopies=1
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Transformation allocated new rowset [seleccion de valores 2.0 - Join.0]
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocated 4 rowsets for step 3 --> seleccion de valores 2  
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocating rowsets for step 4 --> Join
+2021/12/01 17:41:48 - TGenerarDT_Carrera -   prevcopies = 1, nextcopies=1
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Transformation allocated new rowset [Join.0 - seleccion de valores 3.0]
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocated 5 rowsets for step 4 --> Join  
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocating rowsets for step 5 --> seleccion de valores 3
+2021/12/01 17:41:48 - TGenerarDT_Carrera -   prevcopies = 1, nextcopies=1
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Transformation allocated new rowset [seleccion de valores 3.0 - poblar dt_carrera.0]
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocated 6 rowsets for step 5 --> seleccion de valores 3  
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocating rowsets for step 6 --> poblar dt_carrera
+2021/12/01 17:41:48 - TGenerarDT_Carrera -   prevcopies = 1, nextcopies=1
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Transformation allocated new rowset [poblar dt_carrera.0 - Escritura en log.0]
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocated 7 rowsets for step 6 --> poblar dt_carrera  
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocating rowsets for step 7 --> Escritura en log
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Allocated 7 rowsets for step 7 --> Escritura en log  
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Allocating Steps & StepData...
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation is about to allocate step [races.csv] of type [CsvInput]
+2021/12/01 17:41:48 - races.csv.0 - distribution activated
+2021/12/01 17:41:48 - races.csv.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:41:48 - races.csv.0 - Step info: nrinput=0 nroutput=1
+2021/12/01 17:41:48 - races.csv.0 - output rel. is  1:1
+2021/12/01 17:41:48 - races.csv.0 - Found output rowset [races.csv.0 - seleccion de valores.0]
+2021/12/01 17:41:48 - races.csv.0 - Finished dispatching
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation has allocated a new step: [races.csv].0
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation is about to allocate step [seleccion de valores] of type [SelectValues]
+2021/12/01 17:41:48 - seleccion de valores.0 - distribution activated
+2021/12/01 17:41:48 - seleccion de valores.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:41:48 - seleccion de valores.0 - Step info: nrinput=1 nroutput=1
+2021/12/01 17:41:48 - seleccion de valores.0 - Got previous step from [seleccion de valores] #0 --> races.csv
+2021/12/01 17:41:48 - seleccion de valores.0 - input rel is 1:1
+2021/12/01 17:41:48 - seleccion de valores.0 - Found input rowset [races.csv.0 - seleccion de valores.0]
+2021/12/01 17:41:48 - seleccion de valores.0 - output rel. is  1:1
+2021/12/01 17:41:48 - seleccion de valores.0 - Found output rowset [seleccion de valores.0 - Join.0]
+2021/12/01 17:41:48 - seleccion de valores.0 - Finished dispatching
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation has allocated a new step: [seleccion de valores].0
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation is about to allocate step [circuits.csv] of type [CsvInput]
+2021/12/01 17:41:48 - circuits.csv.0 - distribution activated
+2021/12/01 17:41:48 - circuits.csv.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:41:48 - circuits.csv.0 - Step info: nrinput=0 nroutput=1
+2021/12/01 17:41:48 - circuits.csv.0 - output rel. is  1:1
+2021/12/01 17:41:48 - circuits.csv.0 - Found output rowset [circuits.csv.0 - seleccion de valores 2.0]
+2021/12/01 17:41:48 - circuits.csv.0 - Finished dispatching
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation has allocated a new step: [circuits.csv].0
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation is about to allocate step [seleccion de valores 2] of type [SelectValues]
+2021/12/01 17:41:48 - seleccion de valores 2.0 - distribution activated
+2021/12/01 17:41:48 - seleccion de valores 2.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:41:48 - seleccion de valores 2.0 - Step info: nrinput=1 nroutput=1
+2021/12/01 17:41:48 - seleccion de valores 2.0 - Got previous step from [seleccion de valores 2] #0 --> circuits.csv
+2021/12/01 17:41:48 - seleccion de valores 2.0 - input rel is 1:1
+2021/12/01 17:41:48 - seleccion de valores 2.0 - Found input rowset [circuits.csv.0 - seleccion de valores 2.0]
+2021/12/01 17:41:48 - seleccion de valores 2.0 - output rel. is  1:1
+2021/12/01 17:41:48 - seleccion de valores 2.0 - Found output rowset [seleccion de valores 2.0 - Join.0]
+2021/12/01 17:41:48 - seleccion de valores 2.0 - Finished dispatching
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation has allocated a new step: [seleccion de valores 2].0
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation is about to allocate step [Join] of type [JoinRows]
+2021/12/01 17:41:48 - Join.0 - distribution activated
+2021/12/01 17:41:48 - Join.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:41:48 - Join.0 - Step info: nrinput=2 nroutput=1
+2021/12/01 17:41:48 - Join.0 - Got previous step from [Join] #0 --> seleccion de valores
+2021/12/01 17:41:48 - Join.0 - input rel is 1:1
+2021/12/01 17:41:48 - Join.0 - Found input rowset [seleccion de valores.0 - Join.0]
+2021/12/01 17:41:48 - Join.0 - Got previous step from [Join] #1 --> seleccion de valores 2
+2021/12/01 17:41:48 - Join.0 - input rel is 1:1
+2021/12/01 17:41:48 - Join.0 - Found input rowset [seleccion de valores 2.0 - Join.0]
+2021/12/01 17:41:48 - Join.0 - output rel. is  1:1
+2021/12/01 17:41:48 - Join.0 - Found output rowset [Join.0 - seleccion de valores 3.0]
+2021/12/01 17:41:48 - Join.0 - Finished dispatching
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation has allocated a new step: [Join].0
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation is about to allocate step [seleccion de valores 3] of type [SelectValues]
+2021/12/01 17:41:48 - seleccion de valores 3.0 - distribution activated
+2021/12/01 17:41:48 - seleccion de valores 3.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:41:48 - seleccion de valores 3.0 - Step info: nrinput=1 nroutput=1
+2021/12/01 17:41:48 - seleccion de valores 3.0 - Got previous step from [seleccion de valores 3] #0 --> Join
+2021/12/01 17:41:48 - seleccion de valores 3.0 - input rel is 1:1
+2021/12/01 17:41:48 - seleccion de valores 3.0 - Found input rowset [Join.0 - seleccion de valores 3.0]
+2021/12/01 17:41:48 - seleccion de valores 3.0 - output rel. is  1:1
+2021/12/01 17:41:48 - seleccion de valores 3.0 - Found output rowset [seleccion de valores 3.0 - poblar dt_carrera.0]
+2021/12/01 17:41:48 - seleccion de valores 3.0 - Finished dispatching
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation has allocated a new step: [seleccion de valores 3].0
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation is about to allocate step [poblar dt_carrera] of type [TableOutput]
+2021/12/01 17:41:48 - poblar dt_carrera.0 - distribution activated
+2021/12/01 17:41:48 - poblar dt_carrera.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:41:48 - poblar dt_carrera.0 - Step info: nrinput=1 nroutput=1
+2021/12/01 17:41:48 - poblar dt_carrera.0 - Got previous step from [poblar dt_carrera] #0 --> seleccion de valores 3
+2021/12/01 17:41:48 - poblar dt_carrera.0 - input rel is 1:1
+2021/12/01 17:41:48 - poblar dt_carrera.0 - Found input rowset [seleccion de valores 3.0 - poblar dt_carrera.0]
+2021/12/01 17:41:48 - poblar dt_carrera.0 - output rel. is  1:1
+2021/12/01 17:41:48 - poblar dt_carrera.0 - Found output rowset [poblar dt_carrera.0 - Escritura en log.0]
+2021/12/01 17:41:48 - poblar dt_carrera.0 - Finished dispatching
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation has allocated a new step: [poblar dt_carrera].0
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation is about to allocate step [Escritura en log] of type [WriteToLog]
+2021/12/01 17:41:48 - Escritura en log.0 - distribution activated
+2021/12/01 17:41:48 - Escritura en log.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:41:48 - Escritura en log.0 - Step info: nrinput=1 nroutput=0
+2021/12/01 17:41:48 - Escritura en log.0 - Got previous step from [Escritura en log] #0 --> poblar dt_carrera
+2021/12/01 17:41:48 - Escritura en log.0 - input rel is 1:1
+2021/12/01 17:41:48 - Escritura en log.0 - Found input rowset [poblar dt_carrera.0 - Escritura en log.0]
+2021/12/01 17:41:48 - Escritura en log.0 - Finished dispatching
+2021/12/01 17:41:48 - TGenerarDT_Carrera -  Transformation has allocated a new step: [Escritura en log].0
+2021/12/01 17:41:48 - TGenerarDT_Carrera - This transformation can be replayed with replay date: 2021/12/01 17:41:48
+2021/12/01 17:41:48 - TGenerarDT_Carrera - Initialising 8 steps...
+2021/12/01 17:41:48 - seleccion de valores.0 - Released server socket on port 0
+2021/12/01 17:41:48 - seleccion de valores 2.0 - Released server socket on port 0
+2021/12/01 17:41:48 - races.csv.0 - Released server socket on port 0
+2021/12/01 17:41:48 - circuits.csv.0 - Released server socket on port 0
+2021/12/01 17:41:48 - poblar dt_carrera.0 - Released server socket on port 0
+2021/12/01 17:41:48 - Join.0 - Released server socket on port 0
+2021/12/01 17:41:48 - post - New database connection defined
+2021/12/01 17:41:48 - Escritura en log.0 - Released server socket on port 0
+2021/12/01 17:41:48 - seleccion de valores 3.0 - Released server socket on port 0
+2021/12/01 17:41:49 - poblar dt_carrera.0 - Connected to database [post] (commit=1000)
+2021/12/01 17:41:49 - post - Auto commit off
+2021/12/01 17:41:49 - TGenerarDT_Carrera - Step [races.csv.0] initialized flawlessly.
+2021/12/01 17:41:49 - TGenerarDT_Carrera - Step [seleccion de valores.0] initialized flawlessly.
+2021/12/01 17:41:49 - TGenerarDT_Carrera - Step [circuits.csv.0] initialized flawlessly.
+2021/12/01 17:41:49 - TGenerarDT_Carrera - Step [seleccion de valores 2.0] initialized flawlessly.
+2021/12/01 17:41:49 - TGenerarDT_Carrera - Step [Join.0] initialized flawlessly.
+2021/12/01 17:41:49 - TGenerarDT_Carrera - Step [seleccion de valores 3.0] initialized flawlessly.
+2021/12/01 17:41:49 - TGenerarDT_Carrera - Step [poblar dt_carrera.0] initialized flawlessly.
+2021/12/01 17:41:49 - TGenerarDT_Carrera - Step [Escritura en log.0] initialized flawlessly.
+2021/12/01 17:41:49 - races.csv.0 - Starting to run...
+2021/12/01 17:41:49 - seleccion de valores.0 - Starting to run...
+2021/12/01 17:41:49 - TGenerarDT_Carrera - Transformation has allocated 8 threads and 7 rowsets.
+2021/12/01 17:41:49 - Join.0 - Starting to run...
+2021/12/01 17:41:49 - races.csv.0 - Header row skipped in file 'M:\UCU\2021\Segundo Semestre\Inteligencia de Negocios\OblIgatorio BI\Data Source\races.csv'
+2021/12/01 17:41:49 - seleccion de valores 2.0 - Starting to run...
+2021/12/01 17:41:49 - circuits.csv.0 - Starting to run...
+2021/12/01 17:41:49 - seleccion de valores 3.0 - Starting to run...
+2021/12/01 17:41:49 - poblar dt_carrera.0 - Starting to run...
+2021/12/01 17:41:49 - Escritura en log.0 - Starting to run...
+2021/12/01 17:41:49 - circuits.csv.0 - Header row skipped in file 'M:\UCU\2021\Segundo Semestre\Inteligencia de Negocios\OblIgatorio BI\Data Source\circuits.csv'
+2021/12/01 17:41:49 - races.csv.0 - Finished processing (I=1059, O=0, R=0, W=1058, U=0, E=0)
+2021/12/01 17:41:49 - circuits.csv.0 - Finished processing (I=78, O=0, R=0, W=77, U=0, E=0)
+2021/12/01 17:41:49 - seleccion de valores.0 - Finished processing (I=0, O=0, R=1058, W=1058, U=0, E=0)
+2021/12/01 17:41:49 - seleccion de valores 2.0 - Finished processing (I=0, O=0, R=77, W=77, U=0, E=0)
+2021/12/01 17:41:49 - poblar dt_carrera.0 - Prepared statement : INSERT INTO "public".dt_carrera (id_carrera, sk_carrera, nombre, circuito_nombre, temporada_anio, ronda, fecha) VALUES ( ?,  ?,  ?,  ?,  ?,  ?,  ?)
+2021/12/01 17:41:49 - Join.0 - Finished processing (I=0, O=0, R=1135, W=1058, U=0, E=0)
+2021/12/01 17:41:49 - seleccion de valores 3.0 - Finished processing (I=0, O=0, R=1058, W=1058, U=0, E=0)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - ERROR (version 9.2.0.0-290, build 9.2.0.0-290 from 2021-06-02 06.36.08 by buildguy) : Because of an error, this step can't continue: 
+2021/12/01 17:41:50 - poblar dt_carrera.0 - ERROR (version 9.2.0.0-290, build 9.2.0.0-290 from 2021-06-02 06.36.08 by buildguy) : org.pentaho.di.core.exception.KettleException: 
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Error batch inserting rows into table [dt_carrera].
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Errors encountered (first 10):
+2021/12/01 17:41:50 - poblar dt_carrera.0 - ERROR: duplicate key value violates unique constraint "dt_carrera_pkey"
+  Detail: Key (id_carrera)=(1) already exists.
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Error updating batch
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Batch entry 0 INSERT INTO "public".dt_carrera (id_carrera, sk_carrera, nombre, circuito_nombre, temporada_anio, ronda, fecha) VALUES ( 1,  1,  'Australian Grand Prix',  'Albert Park Grand Prix Circuit',  2009,  1,  '2009-03-29 00:00:00-03') was aborted: ERROR: duplicate key value violates unique constraint "dt_carrera_pkey"
+  Detail: Key (id_carrera)=(1) already exists.  Call getNextException to see other errors in the batch.
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:348)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.processRow(TableOutput.java:125)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.pentaho.di.trans.step.RunThread.run(RunThread.java:62)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at java.lang.Thread.run(Unknown Source)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Caused by: org.pentaho.di.core.exception.KettleDatabaseBatchException: 
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Error updating batch
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Batch entry 0 INSERT INTO "public".dt_carrera (id_carrera, sk_carrera, nombre, circuito_nombre, temporada_anio, ronda, fecha) VALUES ( 1,  1,  'Australian Grand Prix',  'Albert Park Grand Prix Circuit',  2009,  1,  '2009-03-29 00:00:00-03') was aborted: ERROR: duplicate key value violates unique constraint "dt_carrera_pkey"
+  Detail: Key (id_carrera)=(1) already exists.  Call getNextException to see other errors in the batch.
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.pentaho.di.core.database.Database.createKettleDatabaseBatchException(Database.java:1440)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:295)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	... 3 more
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Caused by: java.sql.BatchUpdateException: Batch entry 0 INSERT INTO "public".dt_carrera (id_carrera, sk_carrera, nombre, circuito_nombre, temporada_anio, ronda, fecha) VALUES ( 1,  1,  'Australian Grand Prix',  'Albert Park Grand Prix Circuit',  2009,  1,  '2009-03-29 00:00:00-03') was aborted: ERROR: duplicate key value violates unique constraint "dt_carrera_pkey"
+  Detail: Key (id_carrera)=(1) already exists.  Call getNextException to see other errors in the batch.
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.postgresql.jdbc.BatchResultHandler.handleError(BatchResultHandler.java:148)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2184)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.flushIfDeadlockRisk(QueryExecutorImpl.java:1299)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.sendQuery(QueryExecutorImpl.java:1324)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:467)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.postgresql.jdbc.PgStatement.executeBatch(PgStatement.java:840)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.postgresql.jdbc.PgPreparedStatement.executeBatch(PgPreparedStatement.java:1538)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.pentaho.di.trans.steps.tableoutput.TableOutput.writeToTable(TableOutput.java:291)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	... 3 more
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Caused by: org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique constraint "dt_carrera_pkey"
+  Detail: Key (id_carrera)=(1) already exists.
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2440)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2183)
+2021/12/01 17:41:50 - poblar dt_carrera.0 - 	... 9 more
+2021/12/01 17:41:50 - post - Connection to database closed!
+2021/12/01 17:41:50 - poblar dt_carrera.0 - Finished processing (I=0, O=999, R=1000, W=0, U=0, E=1)
+2021/12/01 17:41:50 - TGenerarDT_Carrera - Transformation detected one or more steps with errors.
+2021/12/01 17:41:50 - TGenerarDT_Carrera - ERROR (version 9.2.0.0-290, build 9.2.0.0-290 from 2021-06-02 06.36.08 by buildguy) : Errors detected!
+2021/12/01 17:41:50 - TGenerarDT_Carrera - Transformation is killing the other steps!
+2021/12/01 17:41:50 - Escritura en log.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2021/12/01 17:41:51 - TGenerarDT_Carrera - ERROR (version 9.2.0.0-290, build 9.2.0.0-290 from 2021-06-02 06.36.08 by buildguy) : Errors detected!

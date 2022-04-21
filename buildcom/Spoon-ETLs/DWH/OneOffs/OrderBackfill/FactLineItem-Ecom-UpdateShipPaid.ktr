@@ -1,0 +1,2034 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>FactLineItem-Ecom-UpdateShipPaid</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+        <parameter>
+            <name>DWH_DB</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>DWH_HOST</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>DWH_PORT</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>endDate</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>startDate</name>
+            <default_value/>
+            <description/>
+        </parameter>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>100000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file/>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2016&#x2f;03&#x2f;22 11&#x3a;08&#x3a;13.844</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2016&#x2f;03&#x2f;22 11&#x3a;08&#x3a;13.844</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Get Keys from DW Lookups</note>
+      <xloc>280</xloc>
+      <yloc>60</yloc>
+      <width>173</width>
+      <heigth>25</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Set Calculated Values</note>
+      <xloc>260</xloc>
+      <yloc>320</yloc>
+      <width>138</width>
+      <heigth>25</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>Bolt</name>
+    <server>&#x24;&#x7b;BOLT_HOST&#x7d;</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;BOLT_DB&#x7d;</database>
+    <port>&#x24;&#x7b;BOLT_PORT&#x7d;</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQLUseIntegratedSecurity</code><attribute>true</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;BOLT_PORT&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Ecom</name>
+    <server>Capella</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>Ecomedate</database>
+    <port>1433</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQLUseIntegratedSecurity</code><attribute>true</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>PWA Transactions</name>
+    <server>trjktzc2x0.database.windows.net</server>
+    <type>MSSQL</type>
+    <access>Native</access>
+    <database>PhoneWebAttribution</database>
+    <port>1433</port>
+    <username>ldsql</username>
+    <password>Encrypted 2be98afc86aa7be8dbd10a0778cc2fe8f</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MSSQL.socketTimeOut</code><attribute>300</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>StaticWarehouse</name>
+    <server>Capella</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>Datawarehouse</database>
+    <port>1433</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQLUseIntegratedSecurity</code><attribute>true</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Warehouse</name>
+    <server>Capella</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>DataWarehouse</database>
+    <port>1433</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQLUseIntegratedSecurity</code><attribute>true</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>WordPress</name>
+    <server>&#x24;&#x7b;wordPressHost&#x7d;</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;wordPressDB&#x7d;</database>
+    <port>3306</port>
+    <username>&#x24;&#x7b;wordPressUser&#x7d;</username>
+    <password>&#x24;&#x7b;wordPressPW&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>WordPressDB</name>
+    <server>&#x24;&#x7b;wordPressHost&#x7d;</server>
+    <type>MYSQL</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;wordPressDB&#x7d;</database>
+    <port>3306</port>
+    <username>&#x24;&#x7b;wordPressUser&#x7d;</username>
+    <password>&#x24;&#x7b;wordPressPW&#x7d;</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MYSQL.defaultFetchSize</code><attribute>500</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MYSQL.useCursorFetch</code><attribute>true</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>3306</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>STREAM_RESULTS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Set AverageShipCost</from><to>Set ShipPaid_Source</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set ShipPaid_Source</from><to>Set ShipPaid_Items</to><enabled>Y</enabled> </hop>
+  <hop> <from>ORD_ITEM_TYPE_LGCY_CD &#x3d; R</from><to>Set ShipPaid to ShipPaid_Items</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set ShipPaid to 0</from><to>Set AverageShipCost</to><enabled>Y</enabled> </hop>
+  <hop> <from>ORD_ITEM_TYPE_LGCY_CD &#x3d; C</from><to>Keep ShipPaid at 0</to><enabled>Y</enabled> </hop>
+  <hop> <from>ORD_ITEM_TYPE_LGCY_CD &#x3d; C</from><to>ORD_ITEM_TYPE_LGCY_CD &#x3d; R</to><enabled>Y</enabled> </hop>
+  <hop> <from>Lookup ProductKey</from><to>Lookup OrderKey</to><enabled>Y</enabled> </hop>
+  <hop> <from>Lookup OrderKey</from><to>Lookup BridgeKey</to><enabled>Y</enabled> </hop>
+  <hop> <from>Lookup BridgeKey</from><to>Set ShipPaid to 0</to><enabled>Y</enabled> </hop>
+  <hop> <from>Keep ShipPaid at 0</from><to>BridgeID to ShipPaid</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set ShipPaid to ShipPaid_Items</from><to>BridgeID to ShipPaid 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>BridgeID to ShipPaid 2</from><to>Append 2 and 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>BridgeID to ShipPaid 3</from><to>Append 2 and 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get Data for this Day</from><to>Convert ShipNos</to><enabled>Y</enabled> </hop>
+  <hop> <from>Convert ShipNos</from><to>Lookup ProductKey</to><enabled>Y</enabled> </hop>
+  <hop> <from>BridgeID to ShipPaid</from><to>Append 1 and 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Append 2 and 3</from><to>Append 1 and 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Append 1 and 2</from><to>Update</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set ShipPaid_Items</from><to>Select values</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values</from><to>Sort rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows</from><to>Group by</to><enabled>Y</enabled> </hop>
+  <hop> <from>Group by</from><to>ORD_ITEM_TYPE_LGCY_CD &#x3d; C</to><enabled>Y</enabled> </hop>
+  <hop> <from>ORD_ITEM_TYPE_LGCY_CD &#x3d; R</from><to>Set field value</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set field value</from><to>BridgeID to ShipPaid 3</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Append 1 and 2</name>
+    <type>Append</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<head_name>BridgeID to ShipPaid</head_name>
+<tail_name>Append 2 and 3</tail_name>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>920</xloc>
+      <yloc>500</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Append 2 and 3</name>
+    <type>Append</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<head_name>BridgeID to ShipPaid 2</head_name>
+<tail_name>BridgeID to ShipPaid 3</tail_name>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1140</xloc>
+      <yloc>500</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>BridgeID to ShipPaid</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>BridgeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipPaid</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>920</xloc>
+      <yloc>380</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>BridgeID to ShipPaid 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>BridgeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipPaid</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1140</xloc>
+      <yloc>380</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>BridgeID to ShipPaid 3</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>BridgeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipPaid</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1360</xloc>
+      <yloc>380</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Convert ShipNos</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>SALES_ORD_NR</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>ITM_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>SALES_ORD_SHIP_NR</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>SALES_ORD_SHIP_TO_NR</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>OrderAndAssociated</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>ORD_ITM_TYPE_LGCY_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>ITM_QTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>kittedQTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>actualFreight</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>salesChannel</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>shipType</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>ShipCharged</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>ShipDue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>Product_Revenue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>SHIP_METH_LGCY_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>USE_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>ITM_STA_LGCY_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>EST_SHIP_COST</name>
+        <rename/>
+        <length>-2</length>
+        <precision>10</precision>
+      </field>      <field>        <name>FIN_TRANS_AMT</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>LTLApprovedAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>ShipDueAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>ShipCost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>0</precision>
+      </field>      <field>        <name>SALES_ORD_LN_NR</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>SALES_ORD_NR</name>
+        <rename>SALES_ORD_NR</rename>
+        <type>None</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ITM_CD</name>
+        <rename>ITM_CD</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>SALES_ORD_SHIP_NR</name>
+        <rename>SALES_ORD_SHIP_NR</rename>
+        <type>Integer</type>
+        <length>2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>SALES_ORD_SHIP_TO_NR</name>
+        <rename>SALES_ORD_SHIP_TO_NR</rename>
+        <type>Integer</type>
+        <length>2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>OrderAndAssociated</name>
+        <rename>OrderAndAssociated</rename>
+        <type>None</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ORD_ITM_TYPE_LGCY_CD</name>
+        <rename>ORD_ITM_TYPE_LGCY_CD</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ITM_QTY</name>
+        <rename>ITM_QTY</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>kittedQTY</name>
+        <rename>kittedQTY</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>actualFreight</name>
+        <rename>actualFreight</rename>
+        <type>None</type>
+        <length>38</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>salesChannel</name>
+        <rename>salesChannel</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>shipType</name>
+        <rename>shipType</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipCharged</name>
+        <rename>ShipCharged</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipDue</name>
+        <rename>ShipDue</rename>
+        <type>None</type>
+        <length>38</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Product_Revenue</name>
+        <rename>Product_Revenue</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>SHIP_METH_LGCY_CD</name>
+        <rename>SHIP_METH_LGCY_CD</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>USE_CD</name>
+        <rename>USE_CD</rename>
+        <type>None</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ITM_STA_LGCY_CD</name>
+        <rename>ITM_STA_LGCY_CD</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>EST_SHIP_COST</name>
+        <rename>EST_SHIP_COST</rename>
+        <type>Number</type>
+        <length>15</length>
+        <precision>10</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>FIN_TRANS_AMT</name>
+        <rename>FIN_TRANS_AMT</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>LTLApprovedAmt</name>
+        <rename>LTLApprovedAmt</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipDueAmt</name>
+        <rename>ShipDueAmt</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipCost</name>
+        <rename>ShipCost</rename>
+        <type>None</type>
+        <length>19</length>
+        <precision>0</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>SALES_ORD_LN_NR</name>
+        <rename>SALES_ORD_LN_NR</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>60</xloc>
+      <yloc>120</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get Data for this Day</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Ecom</connection>
+    <sql>SELECT &#xd;&#xa;AL1.SALES_ORD_NR, &#xd;&#xa;AL3.ITM_CD,&#xd;&#xa;AL1.SALES_ORD_SHIP_NR, &#xd;&#xa;AL1.SALES_ORD_SHIP_TO_NR,&#xd;&#xa;AL1.SALES_ORD_NR &#x2b; convert&#x28;varchar&#x28;2&#x29;, AL1.ASSOC_LN_NR&#x29; AS OrderAndAssociated,&#xd;&#xa;AL1.ORD_ITM_TYPE_LGCY_CD,&#xd;&#xa;AL1.ITM_QTY,&#xd;&#xa;AL1.SALES_ORD_LN_NR,&#xd;&#xa;CASE &#xd;&#xa;  WHEN AL1.ORD_ITM_TYPE_LGCY_CD &#x21;&#x3d; &#x27;H&#x27; THEN AL1.ITM_QTY &#xd;&#xa;  ELSE 0 &#xd;&#xa;END AS kittedQTY,&#xd;&#xa;&#xd;&#xa;CASE &#xd;&#xa;	WHEN AL15.postage_amount &#x3e; 0 THEN AL15.postage_amount &#xd;&#xa;    ELSE NULL &#xd;&#xa;END AS actualFreight,&#xd;&#xa;&#xd;&#xa;CASE &#xd;&#xa;    WHEN AL6.CONDITION IS NOT NULL THEN AL6.CONDITION &#xd;&#xa;    WHEN RIGHT&#x28;AL3.ITM_CD, 2&#x29; &#x3d; &#x27;OB&#x27; OR RIGHT&#x28;AL3.ITM_CD, 2&#x29; &#x3d; &#x27;SD&#x27; OR RIGHT&#x28;AL3.ITM_CD, 4&#x29; &#x3d; &#x27;SDDS&#x27; THEN &#x27;OB &#x2f; SD&#x27; &#xd;&#xa;    WHEN AL2.USE_CD &#x3d; &#x27;DWOBD&#x27; THEN &#x27;OB &#x2f; SD&#x27; &#xd;&#xa;    WHEN AL10.ReportingName IS NOT NULL THEN AL10.ReportingName &#xd;&#xa;    ELSE &#x27;Other&#x27; &#xd;&#xa;END AS salesChannel,&#xd;&#xa;&#xd;&#xa;CASE &#xd;&#xa;    WHEN AL1.SHIP_METH_LGCY_CD IN &#x28; &#x27;04&#x27;,  &#x27;07&#x27;,  &#x27;36&#x27;,  &#x27;38&#x27;,  &#x27;47&#x27;,  &#x27;48&#x27;,  &#x27;49&#x27;,  &#x27;51&#x27;,  &#x27;53&#x27;,  &#x27;54&#x27;,  &#x27;55&#x27;,  &#x27;57&#x27;,  &#x27;58&#x27;,  &#x27;59&#x27;,  &#x27;60&#x27;,  &#x27;62&#x27;,  &#x27;63&#x27;,  &#x27;64&#x27;,  &#x27;65&#x27;,  &#x27;66&#x27;,  &#x27;67&#x27;,  &#x27;68&#x27;,  &#x27;69&#x27;,  &#x27;70&#x27;,  &#x27;71&#x27;,  &#x27;72&#x27;,  &#x27;73&#x27;,  &#x27;74&#x27;,  &#x27;76&#x27;,  &#x27;78&#x27;,  &#x27;79&#x27;,  &#x27;80&#x27;,  &#x27;81&#x27;,  &#x27;82&#x27;,  &#x27;87&#x27;,  &#x27;89&#x27;,  &#x27;90&#x27;,  &#x27;91&#x27;,  &#x27;97&#x27;&#x29; THEN &#x27;LTL&#x27;&#xd;&#xa;    WHEN AL1.SHIP_METH_LGCY_CD IN &#x28; &#x27;01&#x27;,  &#x27;02&#x27;,  &#x27;03&#x27;,  &#x27;06&#x27;,  &#x27;11&#x27;,  &#x27;12&#x27;,  &#x27;13&#x27;,  &#x27;18&#x27;,  &#x27;19&#x27;,  &#x27;21&#x27;,  &#x27;34&#x27;,  &#x27;35&#x27;,  &#x27;41&#x27;,  &#x27;42&#x27;,  &#x27;43&#x27;,  &#x27;44&#x27;,  &#x27;45&#x27;,  &#x27;46&#x27;,  &#x27;50&#x27;,  &#x27;56&#x27;,  &#x27;61&#x27;,  &#x27;75&#x27;,  &#x27;83&#x27;,  &#x27;84&#x27;,  &#x27;85&#x27;,  &#x27;86&#x27;,  &#x27;92&#x27;,  &#x27;93&#x27;,  &#x27;94&#x27;,  &#x27;95&#x27;,  &#x27;96&#x27;,  &#x27;FX&#x27;&#x29; THEN &#x27;Parcel&#x27;&#xd;&#xa;    ELSE &#x27;Undefined&#x27;&#xd;&#xa;END as shipType,&#xd;&#xa;&#xd;&#xa;&#x28;isnull&#x28;CASE WHEN ORD_ITM_TYPE_LGCY_CD IN &#x28;&#x27;H&#x27;,&#x27;R&#x27;&#x29; THEN FIN_TRANS_AMT ELSE 0 END, 0&#x29;&#x29; AS ShipCharged,&#xd;&#xa;&#xd;&#xa;sum&#x28;isnull&#x28;LTLApprovedAmt, ShipDueAmt&#x29;&#x29; over &#x28;partition by AL11.OrderID, AL11.OrderShipNo, AL11.OrderShipToNo, AL11.EstimationEDPNo&#x29; AS ShipDue,&#xd;&#xa;&#xd;&#xa;AL1.EXT_PRC_AMT AS Product_Revenue,&#xd;&#xa;AL1.SHIP_METH_LGCY_CD,&#xd;&#xa;AL2.USE_CD,&#xd;&#xa;AL3.ITM_STA_LGCY_CD,&#xd;&#xa;CAST&#x28;AL7.EST_SHIP_COST AS Float&#x29; AS EST_SHIP_COST,&#xd;&#xa;AL8.FIN_TRANS_AMT,&#xd;&#xa;AL11.LTLApprovedAmt,&#xd;&#xa;AL11.ShipDueAmt,&#xd;&#xa;AL13.ShipCost &#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;FROM Ecomedate.dbo.SV_MACORD_SALES_ORD_LINES AS AL1&#xd;&#xa;&#xd;&#xa;RIGHT OUTER JOIN ecomedate.dbo.SV_MACORD_ORDER_HEADER &#xd;&#xa;AS AL2 with &#x28;NOLOCK&#x29; &#xd;&#xa;ON AL1.SALES_ORD_NR &#x3d; AL2.SALES_ORD_NR &#xd;&#xa;    &#xd;&#xa;INNER JOIN ecomedate.dbo.SV_MACITM_ITEM_MAST AS AL3 with &#x28;NOLOCK&#x29; &#xd;&#xa;ON AL1.EDP_NO_ID &#x3d; AL3.EDP_NO_ID   &#xd;&#xa;    &#xd;&#xa;LEFT OUTER JOIN ecomedate.dbo.CATEGORIES AS AL6 with &#x28;NOLOCK&#x29; &#xd;&#xa;ON AL3.CATEGORY &#x3d; AL6.PRODUCT_CATEGORY &#xd;&#xa;&#xd;&#xa;LEFT OUTER JOIN ecomedate.dbo.ext_EST_SHIPPING AS AL7 with &#x28;NOLOCK&#x29; &#xd;&#xa;ON AL3.EDP_NO_ID &#x3d; AL7.EDP_NUMBER &#xd;&#xa;&#xd;&#xa;LEFT OUTER JOIN Ecomedate.dbo.SV_MACORD_FT_SHIP_AMT AS AL8 with &#x28;NOLOCK&#x29;&#xd;&#xa;ON AL1.SALES_ORD_NR &#x3d; AL8.SALES_ORD_NR &#xd;&#xa;AND AL8.FIN_TRANS_LGCY_CD IN &#x28;&#x27;11&#x27;, &#x27;12&#x27;, &#x27;13&#x27;, &#x27;14&#x27;, &#x27;15&#x27;, &#x27;16&#x27;, &#x27;17&#x27;, &#x27;18&#x27;&#x29; &#xd;&#xa;AND AL8.FIN_AMT_TYPE_LGCY_CD &#x3d; &#x27;PHCG&#x27; &#xd;&#xa;AND AL1.SALES_ORD_SHIP_NR &#x3d; AL8.SALES_ORD_SHIP_NR &#xd;&#xa;AND AL8.FIN_TRANS_LGCY_CD IN &#x28;&#x27;11&#x27;, &#x27;12&#x27;, &#x27;13&#x27;, &#x27;14&#x27;, &#x27;15&#x27;, &#x27;16&#x27;, &#x27;17&#x27;, &#x27;18&#x27;&#x29; &#xd;&#xa;AND AL8.FIN_AMT_TYPE_LGCY_CD &#x3d; &#x27;PHCG&#x27; &#xd;&#xa;AND AL1.SALES_ORD_SHIP_TO_NR &#x3d; AL8.SALES_ORD_SHIP_TO_NR &#xd;&#xa;AND AL8.FIN_TRANS_LGCY_CD IN &#x28;&#x27;11&#x27;, &#x27;12&#x27;, &#x27;13&#x27;, &#x27;14&#x27;, &#x27;15&#x27;, &#x27;16&#x27;, &#x27;17&#x27;, &#x27;18&#x27;&#x29; &#xd;&#xa;AND AL8.FIN_AMT_TYPE_LGCY_CD &#x3d; &#x27;PHCG&#x27;&#xd;&#xa;&#xd;&#xa;LEFT OUTER JOIN ecomedate.dbo.SourceCodeReporting AS AL10 with &#x28;NOLOCK&#x29; &#xd;&#xa;ON AL2.OFFER_CD &#x3d; AL10.Offer_CD &#xd;&#xa;AND AL2.USE_CD &#x3d; AL10.Use_CD &#xd;&#xa;&#xd;&#xa;&#xd;&#xa;LEFT OUTER JOIN ecomedate.dbo.ext_Freight_Details AS AL11 with &#x28;NOLOCK&#x29; &#xd;&#xa;ON AL1.SALES_ORD_NR &#x3d; AL11.OrderID &#xd;&#xa;AND AL1.SALES_ORD_SHIP_NR &#x3d; AL11.OrderShipNo &#xd;&#xa;AND AL1.SALES_ORD_SHIP_TO_NR &#x3d; AL11.OrderShipToNo &#xd;&#xa;AND AL1.EDP_NO_ID &#x3d; AL11.EstimationEDPNo &#xd;&#xa;&#xd;&#xa;&#xd;&#xa;LEFT OUTER JOIN ecomedate.dbo.ext_CalculatedShipCosts AS AL13 with &#x28;NOLOCK&#x29; &#xd;&#xa;ON AL1.SALES_ORD_NR &#x3d; AL13.OrderNumber &#xd;&#xa;AND AL1.SALES_ORD_SHIP_TO_NR &#x3d; AL13.ShipToNumber &#xd;&#xa;AND AL1.SALES_ORD_SHIP_NR &#x3d; AL13.ShipNumber &#xd;&#xa;AND AL1.EDP_NO_ID &#x3d; AL13.EDPNumber &#xd;&#xa;&#xd;&#xa;&#xd;&#xa;LEFT OUTER JOIN&#xd;&#xa;&#x28;&#xd;&#xa;SELECT  &#xd;&#xa;D14AL1.SALES_ORD_NR, &#xd;&#xa;D14AL1.SALES_ORD_SHIP_TO_NR, &#xd;&#xa;D14AL1.SALES_ORD_SHIP_NR, &#xd;&#xa;SUM&#x28;D14AL2.POST_AMT&#x29; AS EXPR1, &#xd;&#xa;D14AL2.WH_CD,&#xd;&#xa;D14AL2.CITY as SHIPTOCITY,&#xd;&#xa;D14AL2.STATE_ as SHIPTOSTATE&#xd;&#xa;FROM  ecomedate.dbo.SV_MACMAN_MANI_PKG_SHIP AS D14AL1 with &#x28;NOLOCK&#x29; &#xd;&#xa;LEFT OUTER JOIN ecomedate.dbo.SV_MA_900_MANIFEST_ENTRIES AS D14AL2 with &#x28;NOLOCK&#x29; &#xd;&#xa;ON D14AL1.MANI_REF_NR &#x3d; D14AL2.MANI_REF_NR &#xd;&#xa;AND D14AL2.WH_CD IN &#x28;&#x27;&#x27;, &#x27;00&#x27;&#x29; &#xd;&#xa;AND D14AL1.MANI_PKG_SEQ_NR &#x3d; D14AL2.MANI_PKG_SEQ_NR &#xd;&#xa;GROUP BY &#xd;&#xa;D14AL1.SALES_ORD_NR, &#xd;&#xa;D14AL1.SALES_ORD_SHIP_TO_NR, &#xd;&#xa;D14AL1.SALES_ORD_SHIP_NR, &#xd;&#xa;D14AL2.WH_CD,&#xd;&#xa;D14AL2.CITY,&#xd;&#xa;D14AL2.STATE_&#x29; AS AL15 &#x28;order_number, ship_to_number, shipment_number, postage_amount, warehouse_code, city, state&#x29;&#xd;&#xa;ON AL1.SALES_ORD_NR &#x3d; AL15.order_number &#xd;&#xa;AND AL1.SALES_ORD_SHIP_TO_NR &#x3d; AL15.ship_to_number &#xd;&#xa;AND AL1.SALES_ORD_SHIP_NR &#x3d; AL15.shipment_number&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;WHERE &#xd;&#xa;&#xd;&#xa;--Check the transaction dates for the base orders or check the transaction dates on the manifest table&#xd;&#xa;&#x28;AL2.SALES_ORD_ENTRY_DT &#x3e;&#x3d; &#x27;&#x24;&#x7b;startDate&#x7d;&#x27; OR &#xd;&#xa;AL2.SALES_ORD_NR &#xd;&#xa;IN &#x28;&#xd;&#xa;	SELECT &#xd;&#xa;	SALES_ORD_NR&#xd;&#xa;	FROM &#xd;&#xa;	SV_MACMAN_MANI_PKG_SHIP&#xd;&#xa;	WHERE SRC_SYS_TRANS_DT &#x3e;&#x3d; &#x27;&#x24;&#x7b;startDate&#x7d;&#x27;&#xd;&#xa;	&#x29;&#xd;&#xa;OR&#xd;&#xa;AL2.SALES_ORD_NR&#xd;&#xa;IN &#x28;&#xd;&#xa;	SELECT&#xd;&#xa;	OrderID&#xd;&#xa;	FROM&#xd;&#xa;	ecomedate.dbo.ext_Freight_Details&#xd;&#xa;	WHERE CreationDate &#x3e;&#x3d; &#x27;&#x24;&#x7b;startDate&#x7d;&#x27; AND CreationDate &#x3c; &#x27;&#x24;&#x7b;endDate&#x7d;&#x27;&#xd;&#xa;	&#x29;&#xd;&#xa;&#x29;&#xd;&#xa;  AND AL2.SALES_ORD_ENTRY_DT &#x3c; &#x27;&#x24;&#x7b;endDate&#x7d;&#x27;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>60</xloc>
+      <yloc>0</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Group by</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>Y</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>Y</give_back_row>
+      <group>
+        <field>
+          <name>OrderAndAssociated</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate>ShipPaid_ItemsSum</aggregate>
+          <subject>ShipPaid_Items</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>700</xloc>
+      <yloc>120</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Keep ShipPaid at 0</name>
+    <type>Dummy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>920</xloc>
+      <yloc>280</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Lookup BridgeKey</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <cache>N</cache>
+    <cache_load_all>N</cache_load_all>
+    <cache_size>10000</cache_size>
+    <lookup>
+      <schema>dbo</schema>
+      <table>BridgeOrdersToProducts</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>OrderKey</name>
+        <field>OrderKey</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>SALES_ORD_LN_NR</name>
+        <field>LineNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>BridgeKey</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>460</xloc>
+      <yloc>120</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Lookup OrderKey</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>dbo</schema>
+      <table>FactOrder</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>SALES_ORD_NR</name>
+        <field>OrderNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>OrderKey</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>320</xloc>
+      <yloc>120</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Lookup ProductKey</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema>dbo</schema>
+      <table>DimProduct</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>ITM_CD</name>
+        <field>SKU</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>ProductKey</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>180</xloc>
+      <yloc>120</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ORD_ITEM_TYPE_LGCY_CD &#x3d; C</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Keep ShipPaid at 0</send_true_to>
+<send_false_to>ORD_ITEM_TYPE_LGCY_CD &#x3d; R</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>ORD_ITM_TYPE_LGCY_CD</leftvalue>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>C</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>920</xloc>
+      <yloc>120</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>ORD_ITEM_TYPE_LGCY_CD &#x3d; R</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Set ShipPaid to ShipPaid_Items</send_true_to>
+<send_false_to>Set field value</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <leftvalue>ORD_ITM_TYPE_LGCY_CD</leftvalue>
+ <function>&#x3d;</function>
+ <rightvalue/>
+ <value><name>constant</name><type>String</type><text>R</text><length>-1</length><precision>-1</precision><isnull>N</isnull><mask/></value> </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1140</xloc>
+      <yloc>120</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>SALES_ORD_NR</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SALES_ORD_SHIP_NR</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SALES_ORD_SHIP_TO_NR</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>OrderAndAssociated</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ORD_ITM_TYPE_LGCY_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_QTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>kittedQTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>actualFreight</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>salesChannel</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>shipType</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipCharged</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipDue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Product_Revenue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SHIP_METH_LGCY_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>USE_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_STA_LGCY_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EST_SHIP_COST</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>FIN_TRANS_AMT</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LTLApprovedAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipDueAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipCost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ProductKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>OrderKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>BridgeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipPaid</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>averageShipCost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipPaid_Source</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipPaid_Items</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>SALES_ORD_NR</name>
+        <rename>SALES_ORD_NR</rename>
+        <type>None</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ITM_CD</name>
+        <rename>ITM_CD</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>SALES_ORD_SHIP_NR</name>
+        <rename>SALES_ORD_SHIP_NR</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>SALES_ORD_SHIP_TO_NR</name>
+        <rename>SALES_ORD_SHIP_TO_NR</rename>
+        <type>None</type>
+        <length>2</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>OrderAndAssociated</name>
+        <rename>OrderAndAssociated</rename>
+        <type>None</type>
+        <length>10</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ORD_ITM_TYPE_LGCY_CD</name>
+        <rename>ORD_ITM_TYPE_LGCY_CD</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ITM_QTY</name>
+        <rename>ITM_QTY</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>kittedQTY</name>
+        <rename>kittedQTY</rename>
+        <type>None</type>
+        <length>18</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>actualFreight</name>
+        <rename>actualFreight</rename>
+        <type>None</type>
+        <length>38</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>salesChannel</name>
+        <rename>salesChannel</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>shipType</name>
+        <rename>shipType</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipCharged</name>
+        <rename>ShipCharged</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipDue</name>
+        <rename>ShipDue</rename>
+        <type>None</type>
+        <length>38</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Product_Revenue</name>
+        <rename>Product_Revenue</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>SHIP_METH_LGCY_CD</name>
+        <rename>SHIP_METH_LGCY_CD</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>USE_CD</name>
+        <rename>USE_CD</rename>
+        <type>None</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ITM_STA_LGCY_CD</name>
+        <rename>ITM_STA_LGCY_CD</rename>
+        <type>None</type>
+        <length>20</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>EST_SHIP_COST</name>
+        <rename>EST_SHIP_COST</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>10</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>FIN_TRANS_AMT</name>
+        <rename>FIN_TRANS_AMT</rename>
+        <type>None</type>
+        <length>15</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>LTLApprovedAmt</name>
+        <rename>LTLApprovedAmt</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipDueAmt</name>
+        <rename>ShipDueAmt</rename>
+        <type>None</type>
+        <length>12</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipCost</name>
+        <rename>ShipCost</rename>
+        <type>None</type>
+        <length>19</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ProductKey</name>
+        <rename>ProductKey</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>OrderKey</name>
+        <rename>OrderKey</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>BridgeKey</name>
+        <rename>BridgeKey</rename>
+        <type>None</type>
+        <length>9</length>
+        <precision>0</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipPaid</name>
+        <rename>ShipPaid</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>averageShipCost</name>
+        <rename>averageShipCost</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipPaid_Source</name>
+        <rename>ShipPaid_Source</rename>
+        <type>None</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipPaid_Items</name>
+        <rename>ShipPaid_Items</rename>
+        <type>None</type>
+        <length>4</length>
+        <precision>10</precision>
+        <conversion_mask>&#x23;&#x23;&#x23;.&#x23;&#x23;&#x23;&#x23;</conversion_mask>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>580</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set AverageShipCost</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;newAvgShipCost &#x3d; 0&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;T2&#x27; &#x7c;&#x7c; ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;T3&#x27; &#x7c;&#x7c; ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;T4&#x27;&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;&#xd;&#xa;	if &#x28;shipType &#x3d;&#x3d; &#x27;LTL&#x27;&#x29;&#xd;&#xa;		newAvgShipCost &#x3d; 164.87&#x3b;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;	if &#x28;shipType &#x3d;&#x3d; &#x27;Parcel&#x27;&#x29;&#xd;&#xa;		newAvgShipCost &#x3d; 25&#x3b;&#xd;&#xa;&#xd;&#xa;&#x7d;&#xd;&#xa;else if &#x28;ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;E2&#x27; &#x7c;&#x7c; ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;G1&#x27; &#x7c;&#x7c; ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;K1&#x27; &#x7c;&#x7c;&#xd;&#xa;		  ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;R1&#x27; &#x7c;&#x7c; ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;R2&#x27; &#x7c;&#x7c; ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;R5&#x27; &#x7c;&#x7c; &#xd;&#xa;          ITM_STA_LGCY_CD &#x3d;&#x3d; &#x27;C1&#x27;&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;	if &#x28;shipType &#x3d;&#x3d; &#x27;LTL&#x27;&#x29;&#xd;&#xa;		newAvgShipCost &#x3d; 142.58&#x3b;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;	if &#x28;shipType &#x3d;&#x3d; &#x27;Parcel&#x27;&#x29;&#xd;&#xa;		newAvgShipCost &#x3d; 24.74&#x3b;&#xd;&#xa;&#xd;&#xa;&#x7d;&#xd;&#xa;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>newAvgShipCost</name>
+        <rename>averageShipCost</rename>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>180</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set ShipPaid to 0</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>ShipPaid</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>40</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set ShipPaid to ShipPaid_Items</name>
+    <type>SetValueField</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>ShipPaid</name>
+        <replaceby>ShipPaid_Items</replaceby>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1140</xloc>
+      <yloc>280</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set ShipPaid_Items</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var Items &#x3d; 0&#x3b;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#x2f;&#x2f; FOR THE PRODUCT_REVENUE IF BRANCH.&#xd;&#xa;var RevShip &#x3d; &#x28;Product_Revenue &#x2b; ShipCharged&#x29; &#x2a; .081&#x3b;&#xd;&#xa;var A &#x3d; RevShip &#x3c; &#x28;EST_SHIP_COST &#x2a; kittedQTY&#x29;&#x3b;&#xd;&#xa;var B &#x3d; &#x21;EST_SHIP_COST &#x7c;&#x7c; EST_SHIP_COST &#x3c; 1&#x3b;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;if &#x28;averageShipCost &#x3e; 0&#x29;&#xd;&#xa;	Items &#x3d; averageShipCost &#x2a; ITM_QTY&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;EST_SHIP_COST &#x3e; 0&#x29;&#xd;&#xa;	Items &#x3d; EST_SHIP_COST &#x2a; ITM_QTY&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;salesChannel &#x3d;&#x3d; &#x27;Business&#x27; &#x26;&#x26; &#x28;A &#x7c;&#x7c; B&#x29;&#x29;&#xd;&#xa;	Items &#x3d; RevShip&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;EST_SHIP_COST &#x3d;&#x3d; 0.01&#x29;&#xd;&#xa;	Items &#x3d; EST_SHIP_COST&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;ITM_CD &#x3d;&#x3d; &#x27;MTR MBQ-144&#x27;&#x29;&#xd;&#xa;	Items &#x3d; .01&#xd;&#xa;&#xd;&#xa;if &#x28;USE_CD &#x3d;&#x3d; &#x27;AZDIRECT&#x27;&#x29;&#xd;&#xa;	Items &#x3d; &#x28;Product_Revenue &#x2b; ShipCharged&#x29; &#x2a; .06&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;actualFreight &#x3e; 0&#x29;&#xd;&#xa;	Items &#x3d; actualFreight&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;ShipDue &#x21;&#x3d; null&#x29;&#xd;&#xa;	Items &#x3d; ShipDue&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;ShipCost &#x21;&#x3d; null&#x29;&#xd;&#xa;	Items &#x3d; ShipCost&#x3b;&#xd;&#xa;&#xd;&#xa;&#x2f;&#x2f;&#x2002;&#x2002; when SHIP_METH_LGCY_CD IN &#x28;&#x27;35&#x27;, &#x27;65&#x27;&#x29; then 0&#xd;&#xa;if &#x28;SHIP_METH_LGCY_CD &#x3d;&#x3d; 35 &#x7c;&#x7c; SHIP_METH_LGCY_CD &#x3d;&#x3d; 65&#x29;&#xd;&#xa;	Items &#x3d; 0&#x3b;&#xd;&#xa;&#xd;&#xa;&#x2f;&#x2f;&#x2002;&#x2002; when ORD_ITM_TYPE_LGCY_CD &#x3d; &#x27;C&#x27; and ShipPaid_Source&#x2002;&#x2002;&#x3d; &#x27;Average Ship Cost&#x27; then 0&#xd;&#xa;if &#x28;ORD_ITM_TYPE_LGCY_CD &#x3d;&#x3d; &#x27;C&#x27; &#x26;&#x26; ShipPaid_Source&#x2002;&#x3d;&#x3d; &#x27;Average Ship Cost&#x27;&#x29;&#xd;&#xa;	Items &#x3d; 0&#x3b;&#xd;&#xa;&#xd;&#xa;&#x2f;&#x2f;   when ORD_ITM_TYPE_LGCY_CD &#x3d; &#x27;C&#x27; and ShipPaid_Source &#x3d; &#x27;Estimated Ship&#x27; then 0&#xd;&#xa;if &#x28;ORD_ITM_TYPE_LGCY_CD &#x3d;&#x3d; &#x27;C&#x27; &#x26;&#x26; ShipPaid_Source&#x2002;&#x3d;&#x3d; &#x27;Estimated Ship&#x27;&#x29;&#xd;&#xa;	Items &#x3d; 0&#x3b;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>Items</name>
+        <rename>ShipPaid_Items</rename>
+        <type>Number</type>
+        <length>4</length>
+        <precision>10</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>460</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set ShipPaid_Source</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;Source &#x3d; &#x27;Unknown&#x27;&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;SHIP_METH_LGCY_CD &#x3d;&#x3d; &#x27;35&#x27; &#x7c;&#x7c; SHIP_METH_LGCY_CD &#x3d;&#x3d; &#x27;65&#x27;&#x29;&#xd;&#xa;	Source &#x3d; &#x27;Customer Pickup&#x27;&#x3b;&#xd;&#xa;&#xd;&#xa;else if &#x28;ShipDueAmt&#x29;&#xd;&#xa;	Source &#x3d; &#x27;Freight Actual&#x27;&#x3b;&#xd;&#xa;&#xd;&#xa;else if &#x28;ShipCost&#x29;&#xd;&#xa;	Source &#x3d; &#x27;Freight Calculated&#x27;&#x3b;&#xd;&#xa;&#xd;&#xa;else if &#x28;actualFreight &#x3e; 0&#x29;&#xd;&#xa;	Source &#x3d; &#x27;VendorNet&#x27;&#x3b;&#xd;&#xa;&#xd;&#xa;else if &#x28;USE_CD &#x3d;&#x3d; &#x27;AZDIRECT&#x27;&#x29;&#xd;&#xa;	Source &#x3d; &#x27;AZDIRECT&#x27;&#x3b;&#xd;&#xa;&#xd;&#xa;else if &#x28;salesChannel &#x3d;&#x3d; &#x27;Business&#x27;&#x29; &#xd;&#xa;	Source &#x3d; &#x27;Business&#x27;&#x3b;&#xd;&#xa;&#xd;&#xa;else if &#x28;EST_SHIP_COST &#x3e; 0&#x29; &#xd;&#xa;	Source &#x3d; &#x27;Estimated Ship&#x27;&#x3b;&#xd;&#xa;&#xd;&#xa;else if &#x28;averageShipCost  &#x3e; 0&#x29; &#xd;&#xa;	Source &#x3d; &#x27;Average Ship Cost&#x27;&#x3b;&#xd;&#xa;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>Source</name>
+        <rename>ShipPaid_Source</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>320</xloc>
+      <yloc>240</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set field value</name>
+    <type>SetValueField</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>ShipPaid</name>
+        <replaceby>ShipPaid_ItemsSum</replaceby>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1360</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>OrderAndAssociated</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>580</xloc>
+      <yloc>120</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Update</name>
+    <type>Update</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <skip_lookup>Y</skip_lookup>
+    <commit>100</commit>
+    <use_batch>N</use_batch>
+    <error_ignored>N</error_ignored>
+    <ignore_flag_field/>
+    <lookup>
+      <schema>dbo</schema>
+      <table>BridgeOrdersToProducts</table>
+      <key>
+        <name>BridgeKey</name>
+        <field>ID</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+        </key>
+      <value>
+        <name>ShipPaid</name>
+        <rename>ShipPaid</rename>
+        </value>
+      </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>620</xloc>
+      <yloc>500</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

@@ -1,0 +1,1 @@
+.\psftp.exe V5SEH3Z744RHKKLX@sam.affirm.com -hostkey b1:34:ac:3a:74:4d:43:01:bb:d5:1e:31:ad:2a:f0:00 -P 2222 -b .\sftpCmd.txt

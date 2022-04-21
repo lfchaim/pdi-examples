@@ -1,0 +1,495 @@
+2016/04/21 17:53:48 - kjb_stage_cotacao_cambio - Starting entry [File Exists]
+2016/04/21 17:53:48 - kjb_stage_cotacao_cambio - Starting entry [ktr_stage_cotacao_cambio.ktr]
+2016/04/21 17:53:48 - ktr_stage_cotacao_cambio.ktr - Loading transformation from XML file [/staging/job/ktr_stage_cotacao_cambio.ktr]
+2016/04/21 17:53:48 - ktr_stage_cotacao_cambio - Dispatching started for transformation [ktr_stage_cotacao_cambio]
+2016/04/21 17:53:54 - Execute SQL script.0 - Finished reading query, closing connection.
+2016/04/21 17:53:54 - Execute SQL script.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2016/04/21 17:53:54 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150102.csv
+2016/04/21 17:53:54 - MySQL Bulk Loader.0 - Creating FIFO file using this command : mkfifo /tmp/fifo
+2016/04/21 17:53:54 - MySQL Bulk Loader.0 - Setting FIFO file permissings using this command : chmod 666 /tmp/fifo
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150105.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150106.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150107.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150108.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150109.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150112.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150113.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150114.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150115.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150116.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150119.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150120.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150121.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150122.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150123.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150126.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150127.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150128.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150129.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150130.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150202.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150203.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150204.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150205.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150206.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150209.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150210.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150211.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150212.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150213.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150218.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150219.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150220.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150223.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150224.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150225.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150226.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150227.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150302.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150303.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150304.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150305.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150306.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150309.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150310.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150311.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150312.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150313.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150316.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150317.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150318.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150319.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150320.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150323.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150324.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150325.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150326.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150327.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150330.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150331.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150401.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150402.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150406.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150407.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150408.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150409.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150410.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150413.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150414.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150415.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150416.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150417.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150420.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150422.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150423.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150424.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150427.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150428.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150429.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150430.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150501.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150504.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150505.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150506.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150507.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150508.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150511.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150512.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150513.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150514.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150515.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150518.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150519.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150520.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150521.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150522.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150525.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150526.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150527.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150528.csv
+2016/04/21 17:53:55 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20160104.csv
+2016/04/21 17:53:55 - Text file input.0 - Finished processing (I=15656, O=0, R=0, W=15656, U=102, E=0)
+2016/04/21 17:53:56 - MySQL Bulk Loader.0 - Connected to MySQL
+2016/04/21 17:53:56 - MySQL Bulk Loader.0 - Starting the MySQL bulk Load in a separate thread : LOAD DATA LOCAL INFILE '/tmp/fifo' INTO TABLE stage.bcb_cotacao_cambio FIELDS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\' (dt_cotacao,cd_moeda_bcb,ii_tipo_moeda_bcb,cd_moeda,vl_compra_brl,vl_venda_brl,vl_paridade_usd_compra,vl_paridade_usd_venda);
+2016/04/21 17:53:56 - MySQL Bulk Loader.0 - Opening fifo /tmp/fifo for writing.
+2016/04/21 17:53:56 - Select values.0 - Finished processing (I=0, O=0, R=15656, W=15656, U=0, E=0)
+2016/04/21 17:54:00 - MySQL Bulk Loader.0 - Finished processing (I=0, O=15656, R=15656, W=15656, U=0, E=0)
+2016/04/21 17:54:03 - kjb_stage_cotacao_cambio - Starting entry [Create ctl file]
+2016/04/21 17:54:03 - kjb_stage_cotacao_cambio - File [/staging/ctl/kjb_stage_cotacao_cambio.ctl] created!
+2016/04/21 17:54:03 - kjb_stage_cotacao_cambio - Starting entry [Success]
+2016/04/21 17:54:03 - kjb_stage_cotacao_cambio - Finished job entry [Success] (result=[true])
+2016/04/21 17:54:03 - kjb_stage_cotacao_cambio - Finished job entry [Create ctl file] (result=[true])
+2016/04/21 17:54:03 - kjb_stage_cotacao_cambio - Finished job entry [ktr_stage_cotacao_cambio.ktr] (result=[true])
+2016/04/21 17:54:03 - kjb_stage_cotacao_cambio - Finished job entry [File Exists] (result=[true])
+2016/04/21 18:21:03 - kjb_stage_cotacao_cambio - Starting entry [File Exists]
+2016/04/21 18:21:03 - kjb_stage_cotacao_cambio - Starting entry [ktr_stage_cotacao_cambio.ktr]
+2016/04/21 18:21:03 - ktr_stage_cotacao_cambio.ktr - Loading transformation from XML file [/staging/job/ktr_stage_cotacao_cambio.ktr]
+2016/04/21 18:21:03 - ktr_stage_cotacao_cambio - Dispatching started for transformation [ktr_stage_cotacao_cambio]
+2016/04/21 18:21:12 - Execute SQL script.0 - Finished reading query, closing connection.
+2016/04/21 18:21:12 - Execute SQL script.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150102.csv
+2016/04/21 18:21:12 - MySQL Bulk Loader.0 - Creating FIFO file using this command : mkfifo /tmp/fifo
+2016/04/21 18:21:12 - MySQL Bulk Loader.0 - Setting FIFO file permissings using this command : chmod 666 /tmp/fifo
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150105.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150106.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150107.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150108.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150109.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150112.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150113.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150114.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150115.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150116.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150119.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150120.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150121.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150122.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150123.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150126.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150127.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150128.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150129.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150130.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150202.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150203.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150204.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150205.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150206.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150209.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150210.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150211.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150212.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150213.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150218.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150219.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150220.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150223.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150224.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150225.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150226.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150227.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150302.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150303.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150304.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150305.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150306.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150309.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150310.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150311.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150312.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150313.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150315.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150316.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150317.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150318.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150319.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150320.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150323.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150324.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150325.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150326.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150327.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150330.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150331.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150401.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150402.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150406.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150407.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150408.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150409.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150410.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150413.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150414.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150415.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150416.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150417.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150420.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150422.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150423.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150424.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150427.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150428.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150429.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150430.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150501.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150504.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150505.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150506.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150507.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150508.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150511.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150512.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150513.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150514.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150515.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150518.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150519.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150520.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150521.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150522.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150525.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150526.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150527.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150528.csv
+2016/04/21 18:21:12 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20160104.csv
+2016/04/21 18:21:12 - Text file input.0 - Finished processing (I=15656, O=0, R=0, W=15656, U=103, E=0)
+2016/04/21 18:21:13 - MySQL Bulk Loader.0 - Connected to MySQL
+2016/04/21 18:21:13 - MySQL Bulk Loader.0 - Starting the MySQL bulk Load in a separate thread : LOAD DATA LOCAL INFILE '/tmp/fifo' INTO TABLE stage.bcb_cotacao_cambio FIELDS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\' (dt_cotacao,cd_moeda_bcb,ii_tipo_moeda_bcb,cd_moeda,vl_compra_brl,vl_venda_brl,vl_paridade_usd_compra,vl_paridade_usd_venda);
+2016/04/21 18:21:13 - MySQL Bulk Loader.0 - Opening fifo /tmp/fifo for writing.
+2016/04/21 18:21:14 - Select values.0 - Finished processing (I=0, O=0, R=15656, W=15656, U=0, E=0)
+2016/04/21 18:21:27 - MySQL Bulk Loader.0 - Finished processing (I=0, O=15656, R=15656, W=15656, U=0, E=0)
+2016/04/21 18:21:30 - kjb_stage_cotacao_cambio - Starting entry [Create ctl file]
+2016/04/21 18:21:30 - kjb_stage_cotacao_cambio - File [/staging/ctl/kjb_stage_cotacao_cambio.ctl] created!
+2016/04/21 18:21:30 - kjb_stage_cotacao_cambio - Starting entry [Success]
+2016/04/21 18:21:30 - kjb_stage_cotacao_cambio - Finished job entry [Success] (result=[true])
+2016/04/21 18:21:30 - kjb_stage_cotacao_cambio - Finished job entry [Create ctl file] (result=[true])
+2016/04/21 18:21:30 - kjb_stage_cotacao_cambio - Finished job entry [ktr_stage_cotacao_cambio.ktr] (result=[true])
+2016/04/21 18:21:30 - kjb_stage_cotacao_cambio - Finished job entry [File Exists] (result=[true])
+2016/04/21 20:56:11 - kjb_stage_cotacao_cambio - Starting entry [File Exists]
+2016/04/21 20:56:11 - kjb_stage_cotacao_cambio - Starting entry [ktr_stage_cotacao_cambio.ktr]
+2016/04/21 20:56:11 - ktr_stage_cotacao_cambio.ktr - Loading transformation from XML file [/staging/job/ktr_stage_cotacao_cambio.ktr]
+2016/04/21 20:56:11 - ktr_stage_cotacao_cambio - Dispatching started for transformation [ktr_stage_cotacao_cambio]
+2016/04/21 20:56:16 - Execute SQL script.0 - Finished reading query, closing connection.
+2016/04/21 20:56:16 - Execute SQL script.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150102.csv
+2016/04/21 20:56:16 - MySQL Bulk Loader.0 - Creating FIFO file using this command : mkfifo /tmp/fifo
+2016/04/21 20:56:16 - MySQL Bulk Loader.0 - Setting FIFO file permissings using this command : chmod 666 /tmp/fifo
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150105.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150106.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150107.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150108.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150109.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150112.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150113.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150114.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150115.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150116.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150119.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150120.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150121.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150122.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150123.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150126.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150127.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150128.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150129.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150130.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150202.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150203.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150204.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150205.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150206.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150209.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150210.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150211.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150212.csv
+2016/04/21 20:56:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150213.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150218.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150219.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150220.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150223.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150224.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150225.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150226.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150227.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150302.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150303.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150304.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150305.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150306.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150309.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150310.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150311.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150312.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150313.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150315.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150316.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150317.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150318.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150319.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150320.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150323.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150324.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150325.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150326.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150327.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150330.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150331.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150401.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150402.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150406.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150407.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150408.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150409.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150410.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150413.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150414.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150415.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150416.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150417.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150420.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150422.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150423.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150424.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150427.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150428.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150429.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150430.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150501.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150504.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150505.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150506.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150507.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150508.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150511.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150512.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150513.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150514.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150515.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150518.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150519.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150520.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150521.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150522.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150525.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150526.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150527.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150528.csv
+2016/04/21 20:56:17 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20160104.csv
+2016/04/21 20:56:17 - Text file input.0 - Finished processing (I=15656, O=0, R=0, W=15656, U=103, E=0)
+2016/04/21 20:56:18 - MySQL Bulk Loader.0 - Connected to MySQL
+2016/04/21 20:56:18 - MySQL Bulk Loader.0 - Starting the MySQL bulk Load in a separate thread : LOAD DATA LOCAL INFILE '/tmp/fifo' INTO TABLE stage.bcb_cotacao_cambio FIELDS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\' (dt_cotacao,cd_moeda_bcb,ii_tipo_moeda_bcb,cd_moeda,vl_compra_brl,vl_venda_brl,vl_paridade_usd_compra,vl_paridade_usd_venda);
+2016/04/21 20:56:18 - MySQL Bulk Loader.0 - Opening fifo /tmp/fifo for writing.
+2016/04/21 20:56:19 - Select values.0 - Finished processing (I=0, O=0, R=15656, W=15656, U=0, E=0)
+2016/04/21 20:56:24 - MySQL Bulk Loader.0 - Finished processing (I=0, O=15656, R=15656, W=15656, U=0, E=0)
+2016/04/21 20:56:27 - kjb_stage_cotacao_cambio - Starting entry [Create ctl file]
+2016/04/21 20:56:27 - kjb_stage_cotacao_cambio - File [/staging/ctl/kjb_stage_cotacao_cambio.ctl] created!
+2016/04/21 20:56:27 - kjb_stage_cotacao_cambio - Starting entry [Success]
+2016/04/21 20:56:27 - kjb_stage_cotacao_cambio - Finished job entry [Success] (result=[true])
+2016/04/21 20:56:27 - kjb_stage_cotacao_cambio - Finished job entry [Create ctl file] (result=[true])
+2016/04/21 20:56:27 - kjb_stage_cotacao_cambio - Finished job entry [ktr_stage_cotacao_cambio.ktr] (result=[true])
+2016/04/21 20:56:27 - kjb_stage_cotacao_cambio - Finished job entry [File Exists] (result=[true])
+2016/04/24 07:24:43 - kjb_stage_cotacao_cambio - Starting entry [File Exists]
+2016/04/24 07:24:43 - kjb_stage_cotacao_cambio - Starting entry [ktr_stage_cotacao_cambio.ktr]
+2016/04/24 07:24:43 - ktr_stage_cotacao_cambio.ktr - Loading transformation from XML file [/staging/job/ktr_stage_cotacao_cambio.ktr]
+2016/04/24 07:24:43 - ktr_stage_cotacao_cambio - Dispatching started for transformation [ktr_stage_cotacao_cambio]
+2016/04/24 07:24:46 - Execute SQL script.0 - Finished reading query, closing connection.
+2016/04/24 07:24:46 - Execute SQL script.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150102.csv
+2016/04/24 07:24:46 - MySQL Bulk Loader.0 - Creating FIFO file using this command : mkfifo /tmp/fifo
+2016/04/24 07:24:46 - MySQL Bulk Loader.0 - Setting FIFO file permissings using this command : chmod 666 /tmp/fifo
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150105.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150106.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150107.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150108.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150109.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150112.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150113.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150114.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150115.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150116.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150119.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150120.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150121.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150122.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150123.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150126.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150127.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150128.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150129.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150130.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150202.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150203.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150204.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150205.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150206.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150209.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150210.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150211.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150212.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150213.csv
+2016/04/24 07:24:46 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150218.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150219.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150220.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150223.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150224.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150225.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150226.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150227.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150302.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150303.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150304.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150305.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150306.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150309.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150310.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150311.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150312.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150313.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150315.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150316.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150317.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150318.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150319.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150320.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150323.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150324.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150325.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150326.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150327.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150330.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150331.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150401.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150402.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150406.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150407.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150408.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150409.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150410.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150413.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150414.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150415.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150416.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150417.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150420.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150422.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150423.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150424.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150427.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150428.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150429.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150430.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150501.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150504.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150505.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150506.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150507.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150508.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150511.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150512.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150513.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150514.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150515.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150518.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150519.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150520.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150521.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150522.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150525.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150526.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150527.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20150528.csv
+2016/04/24 07:24:47 - Text file input.0 - Opening file: file:///staging/inp/bcb_exchange_20160104.csv
+2016/04/24 07:24:47 - Text file input.0 - Finished processing (I=15656, O=0, R=0, W=15656, U=103, E=0)
+2016/04/24 07:24:48 - MySQL Bulk Loader.0 - Connected to MySQL
+2016/04/24 07:24:48 - MySQL Bulk Loader.0 - Starting the MySQL bulk Load in a separate thread : LOAD DATA LOCAL INFILE '/tmp/fifo' INTO TABLE stage.bcb_cotacao_cambio FIELDS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\' (dt_cotacao,cd_moeda_bcb,ii_tipo_moeda_bcb,cd_moeda,vl_compra_brl,vl_venda_brl,vl_paridade_usd_compra,vl_paridade_usd_venda);
+2016/04/24 07:24:48 - MySQL Bulk Loader.0 - Opening fifo /tmp/fifo for writing.
+2016/04/24 07:24:49 - Select values.0 - Finished processing (I=0, O=0, R=15656, W=15656, U=0, E=0)
+2016/04/24 07:24:54 - MySQL Bulk Loader.0 - Finished processing (I=0, O=15656, R=15656, W=15656, U=0, E=0)
+2016/04/24 07:24:54 - kjb_stage_cotacao_cambio - Starting entry [Create ctl file]
+2016/04/24 07:24:54 - kjb_stage_cotacao_cambio - File [/staging/ctl/kjb_stage_cotacao_cambio.ctl] created!
+2016/04/24 07:24:54 - kjb_stage_cotacao_cambio - Starting entry [Success]
+2016/04/24 07:24:54 - kjb_stage_cotacao_cambio - Finished job entry [Success] (result=[true])
+2016/04/24 07:24:54 - kjb_stage_cotacao_cambio - Finished job entry [Create ctl file] (result=[true])
+2016/04/24 07:24:54 - kjb_stage_cotacao_cambio - Finished job entry [ktr_stage_cotacao_cambio.ktr] (result=[true])
+2016/04/24 07:24:54 - kjb_stage_cotacao_cambio - Finished job entry [File Exists] (result=[true])

@@ -1,0 +1,333 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/27 04:03:08 - Kitchen - Logging is at level : Detailed logging
+2017/03/27 04:03:08 - Kitchen - Start of run.
+2017/03/27 04:03:08 - AweberJob - Start of job execution
+2017/03/27 04:03:08 - AweberJob - exec(0, 0, START.0)
+2017/03/27 04:03:08 - START - Starting job entry
+2017/03/27 04:03:08 - AweberJob - Starting entry [Shell]
+2017/03/27 04:03:08 - AweberJob - exec(1, 0, Shell.0)
+2017/03/27 04:03:08 - Shell - Starting job entry
+2017/03/27 04:03:08 - Shell - Found 0 previous result rows
+2017/03/27 04:03:08 - Shell - Running on platform : Windows Server 2008 R2
+2017/03/27 04:03:08 - Shell - Executing command : cmd.exe /C "C:\Spoon\Aweber\Exports\kettle_326a39bc-12cc-11e7-bba0-61b10e450c54shell.bat"
+2017/03/27 04:03:08 - Shell - (stdout) 
+2017/03/27 04:03:08 - Shell - (stdout) C:\Spoon\Aweber\Exports>C:\Spoon\Aweber\Exports\AweberAPIExport.exe 1 
+2017/03/27 04:03:19 - Shell - (stdout) RESPONSE-12810
+2017/03/27 04:03:22 - Shell - (stdout) RESPONSE-12910
+2017/03/27 04:03:24 - Shell - (stdout) RESPONSE-13010
+2017/03/27 04:03:30 - Shell - (stdout) RESPONSE-46468
+2017/03/27 04:03:31 - Shell - (stdout) RESPONSE-46568
+2017/03/27 04:03:33 - Shell - (stdout) RESPONSE-46668
+2017/03/27 04:03:37 - Shell - (stdout) RESPONSE-4866
+2017/03/27 04:03:40 - Shell - (stdout) RESPONSE-4966
+2017/03/27 04:03:43 - Shell - (stdout) RESPONSE-5066
+2017/03/27 04:03:46 - Shell - (stdout) RESPONSE-4440
+2017/03/27 04:03:49 - Shell - (stdout) RESPONSE-4540
+2017/03/27 04:03:52 - Shell - (stdout) RESPONSE-4640
+2017/03/27 04:03:56 - Shell - (stdout) RESPONSE-6026
+2017/03/27 04:03:58 - Shell - (stdout) RESPONSE-6126
+2017/03/27 04:04:01 - Shell - (stdout) RESPONSE-6226
+2017/03/27 04:04:05 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:04:07 - Shell - (stdout) RESPONSE-100
+2017/03/27 04:04:11 - Shell - (stdout) RESPONSE-7458
+2017/03/27 04:04:14 - Shell - (stdout) RESPONSE-7558
+2017/03/27 04:04:17 - Shell - (stdout) RESPONSE-7658
+2017/03/27 04:04:23 - Shell - (stdout) RESPONSE-105206
+2017/03/27 04:04:23 - Shell - (stdout) RESPONSE-105106
+2017/03/27 04:04:26 - Shell - (stdout) RESPONSE-105306
+2017/03/27 04:04:30 - Shell - (stdout) RESPONSE-20953
+2017/03/27 04:04:32 - Shell - (stdout) RESPONSE-21053
+2017/03/27 04:04:36 - Shell - (stdout) RESPONSE-21153
+2017/03/27 04:04:40 - Shell - (stdout) RESPONSE-15142
+2017/03/27 04:04:42 - Shell - (stdout) RESPONSE-15242
+2017/03/27 04:04:45 - Shell - (stdout) RESPONSE-15342
+2017/03/27 04:04:48 - Shell - (stdout) RESPONSE-1856
+2017/03/27 04:04:51 - Shell - (stdout) RESPONSE-1956
+2017/03/27 04:04:54 - Shell - (stdout) RESPONSE-2056
+2017/03/27 04:04:57 - Shell - (stdout) RESPONSE-1320
+2017/03/27 04:05:00 - Shell - (stdout) RESPONSE-1420
+2017/03/27 04:05:03 - Shell - (stdout) RESPONSE-1520
+2017/03/27 04:05:06 - Shell - (stdout) RESPONSE-175
+2017/03/27 04:05:10 - Shell - (stdout) RESPONSE-275
+2017/03/27 04:05:12 - Shell - (stdout) RESPONSE-375
+2017/03/27 04:05:16 - Shell - (stdout) RESPONSE-7659
+2017/03/27 04:05:18 - Shell - (stdout) RESPONSE-7759
+2017/03/27 04:05:21 - Shell - (stdout) RESPONSE-7859
+2017/03/27 04:05:25 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:05:28 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:05:31 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:05:34 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:05:37 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:05:41 - Shell - (stdout) RESPONSE-1303
+2017/03/27 04:05:44 - Shell - (stdout) RESPONSE-1403
+2017/03/27 04:05:46 - Shell - (stdout) RESPONSE-1503
+2017/03/27 04:05:49 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:05:53 - Shell - (stdout) RESPONSE-1766
+2017/03/27 04:05:56 - Shell - (stdout) RESPONSE-1866
+2017/03/27 04:05:59 - Shell - (stdout) RESPONSE-1966
+2017/03/27 04:06:02 - Shell - (stdout) RESPONSE-1911
+2017/03/27 04:06:05 - Shell - (stdout) RESPONSE-2011
+2017/03/27 04:06:08 - Shell - (stdout) RESPONSE-2111
+2017/03/27 04:06:11 - Shell - (stdout) RESPONSE-313
+2017/03/27 04:06:14 - Shell - (stdout) RESPONSE-413
+2017/03/27 04:06:17 - Shell - (stdout) RESPONSE-513
+2017/03/27 04:06:20 - Shell - (stdout) RESPONSE-129
+2017/03/27 04:06:23 - Shell - (stdout) RESPONSE-229
+2017/03/27 04:06:26 - Shell - (stdout) RESPONSE-329
+2017/03/27 04:06:29 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:06:32 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:06:35 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:06:39 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:06:42 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:06:45 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:06:48 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:06:51 - Shell - (stdout) RESPONSE-0
+2017/03/27 04:06:51 - Shell - Command cmd.exe /C "C:\Spoon\Aweber\Exports\kettle_326a39bc-12cc-11e7-bba0-61b10e450c54shell.bat" has finished
+2017/03/27 04:06:51 - AweberJob - Starting entry [Transformation 2]
+2017/03/27 04:06:51 - AweberJob - exec(2, 0, Transformation 2.0)
+2017/03/27 04:06:51 - Transformation 2 - Starting job entry
+2017/03/27 04:06:51 - Transformation 2 - Opening transformation: [file:///C:/spoon/Aweber/AweberDateSet.ktr]
+2017/03/27 04:06:51 - Transformation 2 - Loading transformation from XML file [file:///C:/spoon/Aweber/AweberDateSet.ktr]
+2017/03/27 04:06:52 - Transformation 2 - Starting transformation...(file=${Internal.Job.Filename.Directory}/AweberDateSet.ktr, name=Transformation 2, repinfo=null)
+2017/03/27 04:06:52 - AweberDateSet - Transformation is pre-loaded.
+2017/03/27 04:06:52 - AweberDateSet - Dispatching started for transformation [AweberDateSet]
+2017/03/27 04:06:52 - AweberDateSet - Nr of arguments detected:0 
+2017/03/27 04:06:52 - AweberDateSet - This is not a replay transformation
+2017/03/27 04:06:52 - AweberDateSet - I found 3 different steps to launch.
+2017/03/27 04:06:52 - AweberDateSet - Allocating rowsets...
+2017/03/27 04:06:52 - AweberDateSet -  Allocating rowsets for step 0 --> Get System Info
+2017/03/27 04:06:52 - AweberDateSet -   prevcopies = 1, nextcopies=1
+2017/03/27 04:06:52 - AweberDateSet - Transformation allocated new rowset [Get System Info.0 - Modified Java Script Value.0]
+2017/03/27 04:06:52 - AweberDateSet -  Allocated 1 rowsets for step 0 --> Get System Info  
+2017/03/27 04:06:52 - AweberDateSet -  Allocating rowsets for step 1 --> Modified Java Script Value
+2017/03/27 04:06:52 - AweberDateSet -   prevcopies = 1, nextcopies=1
+2017/03/27 04:06:52 - AweberDateSet - Transformation allocated new rowset [Modified Java Script Value.0 - Set Variables.0]
+2017/03/27 04:06:52 - AweberDateSet -  Allocated 2 rowsets for step 1 --> Modified Java Script Value  
+2017/03/27 04:06:52 - AweberDateSet -  Allocating rowsets for step 2 --> Set Variables
+2017/03/27 04:06:52 - AweberDateSet -  Allocated 2 rowsets for step 2 --> Set Variables  
+2017/03/27 04:06:52 - AweberDateSet - Allocating Steps & StepData...
+2017/03/27 04:06:52 - AweberDateSet -  Transformation is about to allocate step [Get System Info] of type [SystemInfo]
+2017/03/27 04:06:52 - Get System Info.0 - distribution activated
+2017/03/27 04:06:52 - Get System Info.0 - Starting allocation of buffers & new threads...
+2017/03/27 04:06:52 - Get System Info.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 04:06:52 - Get System Info.0 - output rel. is  1:1
+2017/03/27 04:06:52 - Get System Info.0 - Found output rowset [Get System Info.0 - Modified Java Script Value.0]
+2017/03/27 04:06:52 - Get System Info.0 - Finished dispatching
+2017/03/27 04:06:52 - AweberDateSet -  Transformation has allocated a new step: [Get System Info].0
+2017/03/27 04:06:52 - AweberDateSet -  Transformation is about to allocate step [Modified Java Script Value] of type [ScriptValueMod]
+2017/03/27 04:06:52 - Modified Java Script Value.0 - distribution activated
+2017/03/27 04:06:52 - Modified Java Script Value.0 - Starting allocation of buffers & new threads...
+2017/03/27 04:06:52 - Modified Java Script Value.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 04:06:52 - Modified Java Script Value.0 - Got previous step from [Modified Java Script Value] #0 --> Get System Info
+2017/03/27 04:06:52 - Modified Java Script Value.0 - input rel is 1:1
+2017/03/27 04:06:52 - Modified Java Script Value.0 - Found input rowset [Get System Info.0 - Modified Java Script Value.0]
+2017/03/27 04:06:52 - Modified Java Script Value.0 - output rel. is  1:1
+2017/03/27 04:06:52 - Modified Java Script Value.0 - Found output rowset [Modified Java Script Value.0 - Set Variables.0]
+2017/03/27 04:06:52 - Modified Java Script Value.0 - Finished dispatching
+2017/03/27 04:06:52 - AweberDateSet -  Transformation has allocated a new step: [Modified Java Script Value].0
+2017/03/27 04:06:52 - AweberDateSet -  Transformation is about to allocate step [Set Variables] of type [SetVariable]
+2017/03/27 04:06:52 - Set Variables.0 - distribution activated
+2017/03/27 04:06:52 - Set Variables.0 - Starting allocation of buffers & new threads...
+2017/03/27 04:06:52 - Set Variables.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 04:06:52 - Set Variables.0 - Got previous step from [Set Variables] #0 --> Modified Java Script Value
+2017/03/27 04:06:52 - Set Variables.0 - input rel is 1:1
+2017/03/27 04:06:52 - Set Variables.0 - Found input rowset [Modified Java Script Value.0 - Set Variables.0]
+2017/03/27 04:06:52 - Set Variables.0 - Finished dispatching
+2017/03/27 04:06:52 - AweberDateSet -  Transformation has allocated a new step: [Set Variables].0
+2017/03/27 04:06:52 - AweberDateSet - This transformation can be replayed with replay date: 2017/03/27 04:06:52
+2017/03/27 04:06:52 - AweberDateSet - Initialising 3 steps...
+2017/03/27 04:06:52 - Set Variables.0 - Running on slave server #0/1.
+2017/03/27 04:06:52 - Get System Info.0 - Running on slave server #0/1.
+2017/03/27 04:06:52 - Modified Java Script Value.0 - Running on slave server #0/1.
+2017/03/27 04:06:52 - AweberDateSet - Step [Get System Info.0] initialized flawlessly.
+2017/03/27 04:06:52 - AweberDateSet - Step [Modified Java Script Value.0] initialized flawlessly.
+2017/03/27 04:06:52 - AweberDateSet - Step [Set Variables.0] initialized flawlessly.
+2017/03/27 04:06:52 - Get System Info.0 - Starting to run...
+2017/03/27 04:06:52 - Modified Java Script Value.0 - Starting to run...
+2017/03/27 04:06:52 - AweberDateSet - Transformation has allocated 3 threads and 2 rowsets.
+2017/03/27 04:06:52 - Set Variables.0 - Starting to run...
+2017/03/27 04:06:52 - Get System Info.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 04:06:52 - Modified Java Script Value.0 - Value #0 -  [Date] is used in the script.
+2017/03/27 04:06:54 - Modified Java Script Value.0 - This script is using 1 values from the input stream(s)
+2017/03/27 04:06:54 - Modified Java Script Value.0 - Optimization level set to 9.
+2017/03/27 04:06:54 - Modified Java Script Value.0 - No starting Script found!
+2017/03/27 04:06:54 - Modified Java Script Value.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 04:06:54 - Set Variables.0 - Setting environment variables...
+2017/03/27 04:06:54 - Set Variables.0 - Set variable endDate to value [2017-03-26]
+2017/03/27 04:06:54 - Modified Java Script Value.0 - No end Script found!
+2017/03/27 04:06:54 - Modified Java Script Value.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 04:06:54 - Set Variables.0 - Finished after 1 rows.
+2017/03/27 04:06:54 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 04:06:54 - AweberJob - Starting entry [Transformation]
+2017/03/27 04:06:54 - AweberJob - exec(3, 0, Transformation.0)
+2017/03/27 04:06:54 - Transformation - Starting job entry
+2017/03/27 04:06:54 - Transformation - Opening transformation: [file:///C:/spoon/Aweber/AweberToKenshoo.ktr]
+2017/03/27 04:06:54 - Transformation - Loading transformation from XML file [file:///C:/spoon/Aweber/AweberToKenshoo.ktr]
+2017/03/27 04:06:55 - Transformation - Starting transformation...(file=${Internal.Job.Filename.Directory}/AweberToKenshoo.ktr, name=Transformation, repinfo=null)
+2017/03/27 04:06:55 - AweberToKenshoo - Transformation is pre-loaded.
+2017/03/27 04:06:55 - AweberToKenshoo - Dispatching started for transformation [AweberToKenshoo]
+2017/03/27 04:06:55 - AweberToKenshoo - Nr of arguments detected:0 
+2017/03/27 04:06:55 - AweberToKenshoo - This is not a replay transformation
+2017/03/27 04:06:55 - AweberToKenshoo - I found 6 different steps to launch.
+2017/03/27 04:06:55 - AweberToKenshoo - Allocating rowsets...
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocating rowsets for step 0 --> Get File Names
+2017/03/27 04:06:55 - AweberToKenshoo -   prevcopies = 1, nextcopies=1
+2017/03/27 04:06:55 - AweberToKenshoo - Transformation allocated new rowset [Get File Names.0 - CSV file input.0]
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocated 1 rowsets for step 0 --> Get File Names  
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocating rowsets for step 1 --> CSV file input
+2017/03/27 04:06:55 - AweberToKenshoo -   prevcopies = 1, nextcopies=1
+2017/03/27 04:06:55 - AweberToKenshoo - Transformation allocated new rowset [CSV file input.0 - Add constants.0]
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocated 2 rowsets for step 1 --> CSV file input  
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocating rowsets for step 2 --> Add constants
+2017/03/27 04:06:55 - AweberToKenshoo -   prevcopies = 1, nextcopies=1
+2017/03/27 04:06:55 - AweberToKenshoo - Transformation allocated new rowset [Add constants.0 - Filter rows.0]
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocated 3 rowsets for step 2 --> Add constants  
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocating rowsets for step 3 --> Filter rows
+2017/03/27 04:06:55 - AweberToKenshoo -   prevcopies = 1, nextcopies=1
+2017/03/27 04:06:55 - AweberToKenshoo - Transformation allocated new rowset [Filter rows.0 - Select values.0]
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocated 4 rowsets for step 3 --> Filter rows  
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocating rowsets for step 4 --> Select values
+2017/03/27 04:06:55 - AweberToKenshoo -   prevcopies = 1, nextcopies=1
+2017/03/27 04:06:55 - AweberToKenshoo - Transformation allocated new rowset [Select values.0 - Text file output.0]
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocated 5 rowsets for step 4 --> Select values  
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocating rowsets for step 5 --> Text file output
+2017/03/27 04:06:55 - AweberToKenshoo -  Allocated 5 rowsets for step 5 --> Text file output  
+2017/03/27 04:06:55 - AweberToKenshoo - Allocating Steps & StepData...
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation is about to allocate step [Get File Names] of type [GetFileNames]
+2017/03/27 04:06:55 - Get File Names.0 - distribution activated
+2017/03/27 04:06:55 - Get File Names.0 - Starting allocation of buffers & new threads...
+2017/03/27 04:06:55 - Get File Names.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 04:06:55 - Get File Names.0 - output rel. is  1:1
+2017/03/27 04:06:55 - Get File Names.0 - Found output rowset [Get File Names.0 - CSV file input.0]
+2017/03/27 04:06:55 - Get File Names.0 - Finished dispatching
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation has allocated a new step: [Get File Names].0
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation is about to allocate step [CSV file input] of type [CsvInput]
+2017/03/27 04:06:55 - CSV file input.0 - distribution activated
+2017/03/27 04:06:55 - CSV file input.0 - Starting allocation of buffers & new threads...
+2017/03/27 04:06:55 - CSV file input.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 04:06:55 - CSV file input.0 - Got previous step from [CSV file input] #0 --> Get File Names
+2017/03/27 04:06:55 - CSV file input.0 - input rel is 1:1
+2017/03/27 04:06:55 - CSV file input.0 - Found input rowset [Get File Names.0 - CSV file input.0]
+2017/03/27 04:06:55 - CSV file input.0 - output rel. is  1:1
+2017/03/27 04:06:55 - CSV file input.0 - Found output rowset [CSV file input.0 - Add constants.0]
+2017/03/27 04:06:55 - CSV file input.0 - Finished dispatching
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation has allocated a new step: [CSV file input].0
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation is about to allocate step [Add constants] of type [Constant]
+2017/03/27 04:06:55 - Add constants.0 - distribution activated
+2017/03/27 04:06:55 - Add constants.0 - Starting allocation of buffers & new threads...
+2017/03/27 04:06:55 - Add constants.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 04:06:55 - Add constants.0 - Got previous step from [Add constants] #0 --> CSV file input
+2017/03/27 04:06:55 - Add constants.0 - input rel is 1:1
+2017/03/27 04:06:55 - Add constants.0 - Found input rowset [CSV file input.0 - Add constants.0]
+2017/03/27 04:06:55 - Add constants.0 - output rel. is  1:1
+2017/03/27 04:06:55 - Add constants.0 - Found output rowset [Add constants.0 - Filter rows.0]
+2017/03/27 04:06:55 - Add constants.0 - Finished dispatching
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation has allocated a new step: [Add constants].0
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation is about to allocate step [Filter rows] of type [FilterRows]
+2017/03/27 04:06:55 - Filter rows.0 - distribution activated
+2017/03/27 04:06:55 - Filter rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 04:06:55 - Filter rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 04:06:55 - Filter rows.0 - Got previous step from [Filter rows] #0 --> Add constants
+2017/03/27 04:06:55 - Filter rows.0 - input rel is 1:1
+2017/03/27 04:06:55 - Filter rows.0 - Found input rowset [Add constants.0 - Filter rows.0]
+2017/03/27 04:06:55 - Filter rows.0 - output rel. is  1:1
+2017/03/27 04:06:55 - Filter rows.0 - Found output rowset [Filter rows.0 - Select values.0]
+2017/03/27 04:06:55 - Filter rows.0 - Finished dispatching
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation has allocated a new step: [Filter rows].0
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/27 04:06:55 - Select values.0 - distribution activated
+2017/03/27 04:06:55 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/27 04:06:55 - Select values.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 04:06:55 - Select values.0 - Got previous step from [Select values] #0 --> Filter rows
+2017/03/27 04:06:55 - Select values.0 - input rel is 1:1
+2017/03/27 04:06:55 - Select values.0 - Found input rowset [Filter rows.0 - Select values.0]
+2017/03/27 04:06:55 - Select values.0 - output rel. is  1:1
+2017/03/27 04:06:55 - Select values.0 - Found output rowset [Select values.0 - Text file output.0]
+2017/03/27 04:06:55 - Select values.0 - Finished dispatching
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation has allocated a new step: [Select values].0
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation is about to allocate step [Text file output] of type [TextFileOutput]
+2017/03/27 04:06:55 - Text file output.0 - distribution activated
+2017/03/27 04:06:55 - Text file output.0 - Starting allocation of buffers & new threads...
+2017/03/27 04:06:55 - Text file output.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 04:06:55 - Text file output.0 - Got previous step from [Text file output] #0 --> Select values
+2017/03/27 04:06:55 - Text file output.0 - input rel is 1:1
+2017/03/27 04:06:55 - Text file output.0 - Found input rowset [Select values.0 - Text file output.0]
+2017/03/27 04:06:55 - Text file output.0 - Finished dispatching
+2017/03/27 04:06:55 - AweberToKenshoo -  Transformation has allocated a new step: [Text file output].0
+2017/03/27 04:06:55 - AweberToKenshoo - This transformation can be replayed with replay date: 2017/03/27 04:06:55
+2017/03/27 04:06:55 - AweberToKenshoo - Initialising 6 steps...
+2017/03/27 04:06:55 - Get File Names.0 - Running on slave server #0/1.
+2017/03/27 04:06:55 - CSV file input.0 - Running on slave server #0/1.
+2017/03/27 04:06:55 - Filter rows.0 - Running on slave server #0/1.
+2017/03/27 04:06:55 - Add constants.0 - Running on slave server #0/1.
+2017/03/27 04:06:55 - Text file output.0 - Running on slave server #0/1.
+2017/03/27 04:06:55 - Select values.0 - Running on slave server #0/1.
+2017/03/27 04:06:55 - Text file output.0 - Parent folder exists [file:///C:/Spoon/Aweber/kenshooExports]!
+2017/03/27 04:06:55 - Text file output.0 - Opening output stream in nocompress mode
+2017/03/27 04:06:55 - Text file output.0 - Opening output stream in default encoding
+2017/03/27 04:06:55 - Text file output.0 - Opened new file with name [C:\Spoon\Aweber\kenshooExports\living_direct-2017-03-26.csv]
+2017/03/27 04:06:55 - AweberToKenshoo - Step [Get File Names.0] initialized flawlessly.
+2017/03/27 04:06:55 - AweberToKenshoo - Step [CSV file input.0] initialized flawlessly.
+2017/03/27 04:06:55 - AweberToKenshoo - Step [Add constants.0] initialized flawlessly.
+2017/03/27 04:06:55 - AweberToKenshoo - Step [Filter rows.0] initialized flawlessly.
+2017/03/27 04:06:55 - AweberToKenshoo - Step [Select values.0] initialized flawlessly.
+2017/03/27 04:06:55 - AweberToKenshoo - Step [Text file output.0] initialized flawlessly.
+2017/03/27 04:06:56 - Get File Names.0 - Starting to run...
+2017/03/27 04:06:56 - CSV file input.0 - Starting to run...
+2017/03/27 04:06:56 - Add constants.0 - Starting to run...
+2017/03/27 04:06:56 - AweberToKenshoo - Transformation has allocated 6 threads and 5 rowsets.
+2017/03/27 04:06:56 - Select values.0 - Starting to run...
+2017/03/27 04:06:56 - Filter rows.0 - Starting to run...
+2017/03/27 04:06:56 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 04:06:56 - Text file output.0 - Starting to run...
+2017/03/27 04:06:56 - CSV file input.0 - Reading from 1 files.
+2017/03/27 04:06:56 - CSV file input.0 - Header row skipped in file 'C:\Spoon\Aweber\Exports\aweberExport_20170327.csv'
+2017/03/27 04:06:56 - CSV file input.0 - Finished processing (I=1, O=0, R=1, W=0, U=0, E=0)
+2017/03/27 04:06:56 - Add constants.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 04:06:56 - Filter rows.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 04:06:56 - Select values.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 04:06:56 - Text file output.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 04:06:56 - AweberJob - Starting entry [Put a file with FTP]
+2017/03/27 04:06:56 - AweberJob - exec(4, 0, Put a file with FTP.0)
+2017/03/27 04:06:56 - Put a file with FTP - Starting job entry
+2017/03/27 04:06:56 - Put a file with FTP - Start of SFTP job entry
+2017/03/27 04:06:56 - Put a file with FTP - Using PDIFTPClient override for exists() fix.
+2017/03/27 04:06:56 - Put a file with FTP - Opened FTP connection to server [ftp.kenshoo.com]
+2017/03/27 04:06:56 - Put a file with FTP - set passive ftp connection mode
+2017/03/27 04:06:56 - Put a file with FTP - Set control encoding to [ISO-8859-1]
+2017/03/27 04:06:56 - Put a file with FTP - logged in with user [compactappliance37]
+2017/03/27 04:06:56 - Put a file with FTP - Found [1] files in the local directory [C:\Spoon\Aweber\KenshooExports]
+2017/03/27 04:06:57 - AweberJob - Starting entry [Move Files]
+2017/03/27 04:06:57 - AweberJob - exec(5, 0, Move Files.0)
+2017/03/27 04:06:57 - Put a file with FTP - Starting job entry
+2017/03/27 04:06:57 - Put a file with FTP - Processing row source File/folder source : [C:\Spoon\Aweber\KenshooExports\] ... destination file/folder : [C:\Spoon\Aweber\KenshooExports\Completed\]... wildcard : [^.*csv]
+2017/03/27 04:06:57 - Put a file with FTP -   
+2017/03/27 04:06:57 - Put a file with FTP - Fetching folder [file:///C:/Spoon/Aweber/KenshooExports]
+2017/03/27 04:07:00 - Put a file with FTP - File [file:///C:/Spoon/Aweber/KenshooExports/living_direct-2017-03-26.csv] was moved to [file:///C:/Spoon/Aweber/KenshooExports/Completed/living_direct-2017-03-26.csv] 
+2017/03/27 04:07:00 - Put a file with FTP - =======================================
+2017/03/27 04:07:00 - Put a file with FTP - Total files in error : 0
+2017/03/27 04:07:00 - Put a file with FTP - Total files successfully processed : 1
+2017/03/27 04:07:00 - Put a file with FTP - =======================================
+2017/03/27 04:07:00 - AweberJob - Starting entry [Move Files 2]
+2017/03/27 04:07:00 - AweberJob - exec(6, 0, Move Files 2.0)
+2017/03/27 04:07:00 - Put a file with FTP - Starting job entry
+2017/03/27 04:07:00 - Put a file with FTP - Processing row source File/folder source : [C:\Spoon\Aweber\Exports\] ... destination file/folder : [C:\Spoon\Aweber\Exports\Completed\]... wildcard : [^.*csv]
+2017/03/27 04:07:00 - Put a file with FTP -   
+2017/03/27 04:07:00 - Put a file with FTP - Fetching folder [file:///C:/Spoon/Aweber/Exports]
+2017/03/27 04:07:04 - Put a file with FTP - File [file:///C:/Spoon/Aweber/Exports/aweberExport_20170327.csv] was moved to [file:///C:/Spoon/Aweber/Exports/Completed/aweberExport_20170327.csv] 
+2017/03/27 04:07:04 - Put a file with FTP - =======================================
+2017/03/27 04:07:04 - Put a file with FTP - Total files in error : 0
+2017/03/27 04:07:04 - Put a file with FTP - Total files successfully processed : 1
+2017/03/27 04:07:04 - Put a file with FTP - =======================================
+2017/03/27 04:07:04 - AweberJob - Finished job entry [Move Files 2] (result=[true])
+2017/03/27 04:07:04 - AweberJob - Finished job entry [Move Files] (result=[true])
+2017/03/27 04:07:04 - AweberJob - Finished job entry [Put a file with FTP] (result=[true])
+2017/03/27 04:07:04 - AweberJob - Finished job entry [Transformation] (result=[true])
+2017/03/27 04:07:04 - AweberJob - Finished job entry [Transformation 2] (result=[true])
+2017/03/27 04:07:04 - AweberJob - Finished job entry [Shell] (result=[true])
+2017/03/27 04:07:04 - AweberJob - Job execution finished
+2017/03/27 04:07:04 - Kitchen - Finished!
+2017/03/27 04:07:04 - Kitchen - Start=2017/03/27 04:03:08.058, Stop=2017/03/27 04:07:04.207
+2017/03/27 04:07:04 - Kitchen - Processing ended after 3 minutes and 56 seconds (236 seconds total).

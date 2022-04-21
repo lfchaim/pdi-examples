@@ -1,0 +1,1 @@
+C:\data-integration\pan.bat  /file:"ETL_DimProduct-Bolt-SKU-IDs_Update.ktr" "-param:DWH_DB=DataWarehouse" "-param:DWH_PORT=1433" "-param:DWH_HOST=Capella"

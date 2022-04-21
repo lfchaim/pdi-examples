@@ -1,0 +1,302 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/21 15:41:26 - Kitchen - Logging is at level : Detailed logging
+2017/03/21 15:41:26 - Kitchen - Start of run.
+2017/03/21 15:41:27 - ProductTableUpdate - Start of job execution
+2017/03/21 15:41:27 - ProductTableUpdate - exec(0, 0, START.0)
+2017/03/21 15:41:27 - START - Starting job entry
+2017/03/21 15:41:27 - ProductTableUpdate - Starting entry [Run Product Table Update KTR]
+2017/03/21 15:41:27 - ProductTableUpdate - exec(1, 0, Run Product Table Update KTR.0)
+2017/03/21 15:41:27 - Run Product Table Update KTR - Starting job entry
+2017/03/21 15:41:27 - Run Product Table Update KTR - Opening transformation: [C:\Spoon\DataWarehouseETLs\ProductTableUpdate.ktr]
+2017/03/21 15:41:27 - Run Product Table Update KTR - Loading transformation from XML file [C:\Spoon\DataWarehouseETLs\ProductTableUpdate.ktr]
+2017/03/21 15:41:28 - Run Product Table Update KTR - Starting transformation...(file=C:\Spoon\DataWarehouseETLs\ProductTableUpdate.ktr, name=Run Product Table Update KTR, repinfo=null)
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation is pre-loaded.
+2017/03/21 15:41:28 - Run Product Table Update KTR - Dispatching started for transformation [ProductTableUpdate]
+2017/03/21 15:41:28 - Run Product Table Update KTR - Nr of arguments detected:0 
+2017/03/21 15:41:28 - Run Product Table Update KTR - This is not a replay transformation
+2017/03/21 15:41:28 - Run Product Table Update KTR - I found 11 different steps to launch.
+2017/03/21 15:41:28 - Run Product Table Update KTR - Allocating rowsets...
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 0 --> Get Bolt Categories
+2017/03/21 15:41:28 - Run Product Table Update KTR -   prevcopies = 1, nextcopies=1
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation allocated new rowset [Get Bolt Categories.0 - Add Categories.0]
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 1 rowsets for step 0 --> Get Bolt Categories  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 1 --> Add Categories
+2017/03/21 15:41:28 - Run Product Table Update KTR -   prevcopies = 1, nextcopies=1
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation allocated new rowset [Add Categories.0 - Merge Join.0]
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 2 rowsets for step 1 --> Add Categories  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 2 --> BoltSKUTable
+2017/03/21 15:41:28 - Run Product Table Update KTR -   prevcopies = 1, nextcopies=1
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation allocated new rowset [BoltSKUTable.0 - Add Categories.0]
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 3 rowsets for step 2 --> BoltSKUTable  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 3 --> Remove Null SKUs
+2017/03/21 15:41:28 - Run Product Table Update KTR -   prevcopies = 1, nextcopies=1
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation allocated new rowset [Remove Null SKUs.0 - Category LU.0]
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 4 rowsets for step 3 --> Remove Null SKUs  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 4 --> Category LU
+2017/03/21 15:41:28 - Run Product Table Update KTR -   prevcopies = 1, nextcopies=1
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation allocated new rowset [Category LU.0 - Set Null CatergoryID.0]
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 5 rowsets for step 4 --> Category LU  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 5 --> Set Null CatergoryID
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 5 rowsets for step 5 --> Set Null CatergoryID  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 6 --> Merge Join
+2017/03/21 15:41:28 - Run Product Table Update KTR -   prevcopies = 1, nextcopies=1
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation allocated new rowset [Merge Join.0 - Modified Java Script Value.0]
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 6 rowsets for step 6 --> Merge Join  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 7 --> ECOM SKUs
+2017/03/21 15:41:28 - Run Product Table Update KTR -   prevcopies = 1, nextcopies=1
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation allocated new rowset [ECOM SKUs.0 - Merge Join.0]
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 7 rowsets for step 7 --> ECOM SKUs  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 8 --> Modified Java Script Value
+2017/03/21 15:41:28 - Run Product Table Update KTR -   prevcopies = 1, nextcopies=1
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation allocated new rowset [Modified Java Script Value.0 - Select values.0]
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 8 rowsets for step 8 --> Modified Java Script Value  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 9 --> Select values
+2017/03/21 15:41:28 - Run Product Table Update KTR -   prevcopies = 1, nextcopies=1
+2017/03/21 15:41:28 - Run Product Table Update KTR - Transformation allocated new rowset [Select values.0 - Remove Null SKUs.0]
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 9 rowsets for step 9 --> Select values  
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocating rowsets for step 10 --> Insert / Update
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Allocated 9 rowsets for step 10 --> Insert / Update  
+2017/03/21 15:41:28 - Run Product Table Update KTR - Allocating Steps & StepData...
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [Get Bolt Categories] of type [TableInput]
+2017/03/21 15:41:28 - Get Bolt Categories.0 - distribution activated
+2017/03/21 15:41:28 - Get Bolt Categories.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - Get Bolt Categories.0 - Step info: nrinput=0 nroutput=1
+2017/03/21 15:41:28 - Get Bolt Categories.0 - output rel. is  1:1
+2017/03/21 15:41:28 - Get Bolt Categories.0 - Found output rowset [Get Bolt Categories.0 - Add Categories.0]
+2017/03/21 15:41:28 - Get Bolt Categories.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [Get Bolt Categories].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [Add Categories] of type [StreamLookup]
+2017/03/21 15:41:28 - Add Categories.0 - distribution activated
+2017/03/21 15:41:28 - Add Categories.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - Add Categories.0 - Step info: nrinput=2 nroutput=1
+2017/03/21 15:41:28 - Add Categories.0 - Got previous step from [Add Categories] #0 --> Get Bolt Categories
+2017/03/21 15:41:28 - Add Categories.0 - input rel is 1:1
+2017/03/21 15:41:28 - Add Categories.0 - Found input rowset [Get Bolt Categories.0 - Add Categories.0]
+2017/03/21 15:41:28 - Add Categories.0 - Got previous step from [Add Categories] #1 --> BoltSKUTable
+2017/03/21 15:41:28 - Add Categories.0 - input rel is 1:1
+2017/03/21 15:41:28 - Add Categories.0 - Found input rowset [BoltSKUTable.0 - Add Categories.0]
+2017/03/21 15:41:28 - Add Categories.0 - output rel. is  1:1
+2017/03/21 15:41:28 - Add Categories.0 - Found output rowset [Add Categories.0 - Merge Join.0]
+2017/03/21 15:41:28 - Add Categories.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [Add Categories].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [BoltSKUTable] of type [TableInput]
+2017/03/21 15:41:28 - BoltSKUTable.0 - distribution de-activated
+2017/03/21 15:41:28 - BoltSKUTable.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - BoltSKUTable.0 - Step info: nrinput=0 nroutput=1
+2017/03/21 15:41:28 - BoltSKUTable.0 - output rel. is  1:1
+2017/03/21 15:41:28 - BoltSKUTable.0 - Found output rowset [BoltSKUTable.0 - Add Categories.0]
+2017/03/21 15:41:28 - BoltSKUTable.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [BoltSKUTable].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [Remove Null SKUs] of type [FilterRows]
+2017/03/21 15:41:28 - Remove Null SKUs.0 - distribution activated
+2017/03/21 15:41:28 - Remove Null SKUs.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - Remove Null SKUs.0 - Step info: nrinput=1 nroutput=1
+2017/03/21 15:41:28 - Remove Null SKUs.0 - Got previous step from [Remove Null SKUs] #0 --> Select values
+2017/03/21 15:41:28 - Remove Null SKUs.0 - input rel is 1:1
+2017/03/21 15:41:28 - Remove Null SKUs.0 - Found input rowset [Select values.0 - Remove Null SKUs.0]
+2017/03/21 15:41:28 - Remove Null SKUs.0 - output rel. is  1:1
+2017/03/21 15:41:28 - Remove Null SKUs.0 - Found output rowset [Remove Null SKUs.0 - Category LU.0]
+2017/03/21 15:41:28 - Remove Null SKUs.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [Remove Null SKUs].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [Category LU] of type [DBLookup]
+2017/03/21 15:41:28 - Category LU.0 - distribution activated
+2017/03/21 15:41:28 - Category LU.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - Category LU.0 - Step info: nrinput=1 nroutput=1
+2017/03/21 15:41:28 - Category LU.0 - Got previous step from [Category LU] #0 --> Remove Null SKUs
+2017/03/21 15:41:28 - Category LU.0 - input rel is 1:1
+2017/03/21 15:41:28 - Category LU.0 - Found input rowset [Remove Null SKUs.0 - Category LU.0]
+2017/03/21 15:41:28 - Category LU.0 - output rel. is  1:1
+2017/03/21 15:41:28 - Category LU.0 - Found output rowset [Category LU.0 - Set Null CatergoryID.0]
+2017/03/21 15:41:28 - Category LU.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [Category LU].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [Set Null CatergoryID] of type [IfNull]
+2017/03/21 15:41:28 - Set Null CatergoryID.0 - distribution de-activated
+2017/03/21 15:41:28 - Set Null CatergoryID.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - Set Null CatergoryID.0 - Step info: nrinput=1 nroutput=0
+2017/03/21 15:41:28 - Set Null CatergoryID.0 - Got previous step from [Set Null CatergoryID] #0 --> Category LU
+2017/03/21 15:41:28 - Set Null CatergoryID.0 - input rel is 1:1
+2017/03/21 15:41:28 - Set Null CatergoryID.0 - Found input rowset [Category LU.0 - Set Null CatergoryID.0]
+2017/03/21 15:41:28 - Set Null CatergoryID.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [Set Null CatergoryID].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [Merge Join] of type [MergeJoin]
+2017/03/21 15:41:28 - Merge Join.0 - distribution activated
+2017/03/21 15:41:28 - Merge Join.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - Merge Join.0 - Step info: nrinput=2 nroutput=1
+2017/03/21 15:41:28 - Merge Join.0 - Got previous step from [Merge Join] #0 --> Add Categories
+2017/03/21 15:41:28 - Merge Join.0 - input rel is 1:1
+2017/03/21 15:41:28 - Merge Join.0 - Found input rowset [Add Categories.0 - Merge Join.0]
+2017/03/21 15:41:28 - Merge Join.0 - Got previous step from [Merge Join] #1 --> ECOM SKUs
+2017/03/21 15:41:28 - Merge Join.0 - input rel is 1:1
+2017/03/21 15:41:28 - Merge Join.0 - Found input rowset [ECOM SKUs.0 - Merge Join.0]
+2017/03/21 15:41:28 - Merge Join.0 - output rel. is  1:1
+2017/03/21 15:41:28 - Merge Join.0 - Found output rowset [Merge Join.0 - Modified Java Script Value.0]
+2017/03/21 15:41:28 - Merge Join.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [Merge Join].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [ECOM SKUs] of type [TableInput]
+2017/03/21 15:41:28 - ECOM SKUs.0 - distribution de-activated
+2017/03/21 15:41:28 - ECOM SKUs.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - ECOM SKUs.0 - Step info: nrinput=0 nroutput=1
+2017/03/21 15:41:28 - ECOM SKUs.0 - output rel. is  1:1
+2017/03/21 15:41:28 - ECOM SKUs.0 - Found output rowset [ECOM SKUs.0 - Merge Join.0]
+2017/03/21 15:41:28 - ECOM SKUs.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [ECOM SKUs].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [Modified Java Script Value] of type [ScriptValueMod]
+2017/03/21 15:41:28 - Modified Java Script Value.0 - distribution activated
+2017/03/21 15:41:28 - Modified Java Script Value.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - Modified Java Script Value.0 - Step info: nrinput=1 nroutput=1
+2017/03/21 15:41:28 - Modified Java Script Value.0 - Got previous step from [Modified Java Script Value] #0 --> Merge Join
+2017/03/21 15:41:28 - Modified Java Script Value.0 - input rel is 1:1
+2017/03/21 15:41:28 - Modified Java Script Value.0 - Found input rowset [Merge Join.0 - Modified Java Script Value.0]
+2017/03/21 15:41:28 - Modified Java Script Value.0 - output rel. is  1:1
+2017/03/21 15:41:28 - Modified Java Script Value.0 - Found output rowset [Modified Java Script Value.0 - Select values.0]
+2017/03/21 15:41:28 - Modified Java Script Value.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [Modified Java Script Value].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/21 15:41:28 - Select values.0 - distribution activated
+2017/03/21 15:41:28 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - Select values.0 - Step info: nrinput=1 nroutput=1
+2017/03/21 15:41:28 - Select values.0 - Got previous step from [Select values] #0 --> Modified Java Script Value
+2017/03/21 15:41:28 - Select values.0 - input rel is 1:1
+2017/03/21 15:41:28 - Select values.0 - Found input rowset [Modified Java Script Value.0 - Select values.0]
+2017/03/21 15:41:28 - Select values.0 - output rel. is  1:1
+2017/03/21 15:41:28 - Select values.0 - Found output rowset [Select values.0 - Remove Null SKUs.0]
+2017/03/21 15:41:28 - Select values.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [Select values].0
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation is about to allocate step [Insert / Update] of type [InsertUpdate]
+2017/03/21 15:41:28 - Insert / Update.0 - distribution activated
+2017/03/21 15:41:28 - Insert / Update.0 - Starting allocation of buffers & new threads...
+2017/03/21 15:41:28 - Insert / Update.0 - Step info: nrinput=0 nroutput=0
+2017/03/21 15:41:28 - Insert / Update.0 - Finished dispatching
+2017/03/21 15:41:28 - Run Product Table Update KTR -  Transformation has allocated a new step: [Insert / Update].0
+2017/03/21 15:41:28 - Run Product Table Update KTR - This transformation can be replayed with replay date: 2017/03/21 15:41:28
+2017/03/21 15:41:28 - Run Product Table Update KTR - Initialising 11 steps...
+2017/03/21 15:41:28 - Get Bolt Categories.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - BoltSKUTable.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - Add Categories.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - Remove Null SKUs.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - Set Null CatergoryID.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - Category LU.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - ECOM SKUs.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - Modified Java Script Value.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - Merge Join.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - Select values.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - Insert / Update.0 - Running on slave server #0/1.
+2017/03/21 15:41:28 - Warehouse - New database connection defined
+2017/03/21 15:41:28 - Ecom - New database connection defined
+2017/03/21 15:41:28 - Warehouse - New database connection defined
+2017/03/21 15:41:28 - Ecom - New database connection defined
+2017/03/21 15:41:28 - Ecom - New database connection defined
+2017/03/21 15:41:30 - Warehouse - Connected to database.
+2017/03/21 15:41:30 - Warehouse - Auto commit off
+2017/03/21 15:41:32 - Ecom - Connected to database.
+2017/03/21 15:41:32 - Ecom - Auto commit off
+2017/03/21 15:41:32 - BoltSKUTable.0 - Connected to database...
+2017/03/21 15:41:32 - Warehouse - Connected to database.
+2017/03/21 15:41:32 - Warehouse - Auto commit off
+2017/03/21 15:41:32 - Category LU.0 - Connected to database...
+2017/03/21 15:41:32 - Ecom - Connected to database.
+2017/03/21 15:41:32 - Ecom - Auto commit off
+2017/03/21 15:41:32 - Get Bolt Categories.0 - Connected to database...
+2017/03/21 15:41:32 - Ecom - Connected to database.
+2017/03/21 15:41:32 - Ecom - Auto commit off
+2017/03/21 15:41:32 - ECOM SKUs.0 - Connected to database...
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [Get Bolt Categories.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [Add Categories.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [BoltSKUTable.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [Remove Null SKUs.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [Category LU.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [Set Null CatergoryID.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [Merge Join.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [ECOM SKUs.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [Modified Java Script Value.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [Select values.0] initialized flawlessly.
+2017/03/21 15:41:32 - Run Product Table Update KTR - Step [Insert / Update.0] initialized flawlessly.
+2017/03/21 15:41:32 - Get Bolt Categories.0 - Starting to run...
+2017/03/21 15:41:32 - Get Bolt Categories.0 - SQL query : SELECT sub.PRODUCT_CATEGORY as catKey
+2017/03/21 15:41:32 - Get Bolt Categories.0 -      , major.CATEGORY as majorCat
+2017/03/21 15:41:32 - Get Bolt Categories.0 -      , sub.CATEGORY as subCat
+2017/03/21 15:41:32 - Get Bolt Categories.0 -   FROM [Ecomedate].[dbo].[CATEGORIES] as sub
+2017/03/21 15:41:32 - Get Bolt Categories.0 -   inner join CATEGORIES as major on major.PRODUCT_CATEGORY = sub.MAJOR_CATEGORY_CODE
+2017/03/21 15:41:32 - Add Categories.0 - Starting to run...
+2017/03/21 15:41:32 - BoltSKUTable.0 - Starting to run...
+2017/03/21 15:41:32 - BoltSKUTable.0 - SQL query : SELECT 
+2017/03/21 15:41:32 - BoltSKUTable.0 - Manf_SKU AS Bolt_SKU
+2017/03/21 15:41:32 - BoltSKUTable.0 - , isnull(Ecometry_Cat,'TTT') as Bolt_EcomCat
+2017/03/21 15:41:32 - BoltSKUTable.0 - , DW_SKU as Bolt_DW_SKU
+2017/03/21 15:41:32 - BoltSKUTable.0 - , isnull(DisplayName,' ') as Bolt_DisplayName
+2017/03/21 15:41:32 - BoltSKUTable.0 - , 106 as Bolt_CategoryKey 
+2017/03/21 15:41:32 - BoltSKUTable.0 - 
+2017/03/21 15:41:32 - BoltSKUTable.0 - FROM ext_Bolt_SKU 
+2017/03/21 15:41:32 - BoltSKUTable.0 - 
+2017/03/21 15:41:32 - BoltSKUTable.0 - --where Last_Updated_Date > dateadd(day, -5, GETDATE())
+2017/03/21 15:41:32 - BoltSKUTable.0 - 
+2017/03/21 15:41:32 - BoltSKUTable.0 - ORDER BY Bolt_SKU ASC
+2017/03/21 15:41:32 - Category LU.0 - Starting to run...
+2017/03/21 15:41:32 - Run Product Table Update KTR - Transformation has allocated 11 threads and 9 rowsets.
+2017/03/21 15:41:32 - ECOM SKUs.0 - Starting to run...
+2017/03/21 15:41:32 - Select values.0 - Starting to run...
+2017/03/21 15:41:32 - Merge Join.0 - Starting to run...
+2017/03/21 15:41:32 - Set Null CatergoryID.0 - Starting to run...
+2017/03/21 15:41:32 - Remove Null SKUs.0 - Starting to run...
+2017/03/21 15:41:32 - Add Categories.0 - Reading from stream [Get Bolt Categories]
+2017/03/21 15:41:32 - Insert / Update.0 - Starting to run...
+2017/03/21 15:41:32 - ECOM SKUs.0 - SQL query : SELECT 
+2017/03/21 15:41:32 - ECOM SKUs.0 - SKU_NUMBER AS Ecom_SKU
+2017/03/21 15:41:32 - ECOM SKUs.0 - , CATEGORY AS Ecom_Cat
+2017/03/21 15:41:32 - ECOM SKUs.0 - , SUBCATEGORY AS Ecom_SubCat
+2017/03/21 15:41:32 - ECOM SKUs.0 - , SKU_DESCRIPTION AS Ecom_Desc
+2017/03/21 15:41:32 - ECOM SKUs.0 - 
+2017/03/21 15:41:32 - ECOM SKUs.0 - 
+2017/03/21 15:41:32 - ECOM SKUs.0 - FROM MGC_SKU
+2017/03/21 15:41:32 - ECOM SKUs.0 - where CATEGORY is not null and SUBCATEGORY is not null
+2017/03/21 15:41:32 - ECOM SKUs.0 - ORDER BY Ecom_SKU ASC
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Starting to run...
+2017/03/21 15:41:32 - Warehouse - Connection to database closed!
+2017/03/21 15:41:32 - Insert / Update.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/21 15:41:32 - Get Bolt Categories.0 - Finished reading query, closing connection.
+2017/03/21 15:41:32 - Ecom - Connection to database closed!
+2017/03/21 15:41:32 - Get Bolt Categories.0 - Finished processing (I=136, O=0, R=0, W=136, U=0, E=0)
+2017/03/21 15:41:32 - Add Categories.0 - Field [Bolt_EcomCat] has nr [1]
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Value #0 -  [Bolt_SKU] is used in the script.
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Value #2 -  [Bolt_DW_SKU] is used in the script.
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Value #3 -  [Bolt_DisplayName] is used in the script.
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Value #5 -  [majorCat] is used in the script.
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Value #6 -  [subCat] is used in the script.
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Value #7 -  [Ecom_SKU] is used in the script.
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Value #8 -  [Ecom_Cat] is used in the script.
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Value #9 -  [Ecom_SubCat] is used in the script.
+2017/03/21 15:41:32 - Modified Java Script Value.0 - Value #10 -  [Ecom_Desc] is used in the script.
+2017/03/21 15:41:32 - Modified Java Script Value.0 - This script is using 9 values from the input stream(s)
+2017/03/21 15:41:33 - Modified Java Script Value.0 - Optimization level set to 9.
+2017/03/21 15:41:33 - Modified Java Script Value.0 - No starting Script found!
+2017/03/21 15:41:33 - Modified Java Script Value.0 - No tran_Status found. Transformation status checking not available.
+2017/03/21 15:41:34 - Warehouse - Setting preparedStatement to [SELECT ID AS CategoryID FROM DiMCategory WHERE CategoryName = ?  AND SubCategoryName = ? ]
+2017/03/21 15:41:34 - Category LU.0 - Checking row: [ H250BL], [null], [Packaging], [Warehouse Packaging], [Not used anymore]
+2017/03/21 15:41:34 - Merge Join.0 - linenr 50000
+2017/03/21 15:41:34 - BoltSKUTable.0 - Finished reading query, closing connection.
+2017/03/21 15:41:34 - Ecom - Connection to database closed!
+2017/03/21 15:41:34 - BoltSKUTable.0 - Finished processing (I=43336, O=0, R=0, W=43336, U=0, E=0)
+2017/03/21 15:41:35 - Add Categories.0 - Stopped processing with empty row after 43472 rows.
+2017/03/21 15:41:35 - Add Categories.0 - Finished processing (I=0, O=0, R=43472, W=43336, U=0, E=0)
+2017/03/21 15:41:35 - ECOM SKUs.0 - Finished reading query, closing connection.
+2017/03/21 15:41:35 - Ecom - Connection to database closed!
+2017/03/21 15:41:35 - ECOM SKUs.0 - Finished processing (I=49360, O=0, R=0, W=49360, U=0, E=0)
+2017/03/21 15:41:35 - Modified Java Script Value.0 - linenr 50000
+2017/03/21 15:41:35 - Select values.0 - linenr 50000
+2017/03/21 15:41:35 - Remove Null SKUs.0 - linenr 50000
+2017/03/21 15:41:35 - Category LU.0 - linenr 50000
+2017/03/21 15:41:35 - Merge Join.0 - Finished processing (I=0, O=0, R=92696, W=55682, U=0, E=0)
+2017/03/21 15:41:35 - Modified Java Script Value.0 - No end Script found!
+2017/03/21 15:41:35 - Modified Java Script Value.0 - Finished processing (I=0, O=0, R=55682, W=55682, U=0, E=0)
+2017/03/21 15:41:35 - Select values.0 - Finished processing (I=0, O=0, R=55682, W=55682, U=0, E=0)
+2017/03/21 15:41:35 - Remove Null SKUs.0 - Finished processing (I=0, O=0, R=55682, W=54959, U=0, E=0)
+2017/03/21 15:41:35 - Warehouse - Connection to database closed!
+2017/03/21 15:41:35 - Category LU.0 - Finished processing (I=123, O=0, R=54959, W=54624, U=0, E=0)
+2017/03/21 15:41:35 - Set Null CatergoryID.0 - Finished processing (I=0, O=0, R=54624, W=54624, U=0, E=0)
+2017/03/21 15:41:35 - ProductTableUpdate - Finished job entry [Run Product Table Update KTR] (result=[true])
+2017/03/21 15:41:35 - ProductTableUpdate - Job execution finished
+2017/03/21 15:41:35 - Kitchen - Finished!
+2017/03/21 15:41:35 - Kitchen - Start=2017/03/21 15:41:26.872, Stop=2017/03/21 15:41:35.753
+2017/03/21 15:41:35 - Kitchen - Processing ended after 8 seconds.

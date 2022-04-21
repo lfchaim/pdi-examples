@@ -1,0 +1,631 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/27 08:04:18 - Kitchen - Logging is at level : Detailed logging
+2017/03/27 08:04:18 - Kitchen - Start of run.
+2017/03/27 08:04:18 - j_CM_with_Forecast - Start of job execution
+2017/03/27 08:04:18 - j_CM_with_Forecast - exec(0, 0, START.0)
+2017/03/27 08:04:18 - START - Starting job entry
+2017/03/27 08:04:18 - j_CM_with_Forecast - Starting entry [CM with Forecast MC and SC]
+2017/03/27 08:04:18 - j_CM_with_Forecast - exec(1, 0, CM with Forecast MC and SC.0)
+2017/03/27 08:04:18 - CM with Forecast MC and SC - Starting job entry
+2017/03/27 08:04:18 - CM with Forecast MC and SC - Opening transformation: [file:///C:/Spoon/Data Warehouse Reporting/CM with Forecast MTD/t_CM_with_Forecast.ktr]
+2017/03/27 08:04:18 - CM with Forecast MC and SC - Loading transformation from XML file [file:///C:/Spoon/Data Warehouse Reporting/CM with Forecast MTD/t_CM_with_Forecast.ktr]
+2017/03/27 08:04:19 - CM with Forecast MC and SC - Starting transformation...(file=${Internal.Job.Filename.Directory}/t_CM_with_Forecast.ktr, name=CM with Forecast MC and SC, repinfo=null)
+2017/03/27 08:04:19 - t_CM_with_Forecast - Transformation is pre-loaded.
+2017/03/27 08:04:19 - t_CM_with_Forecast - Dispatching started for transformation [t_CM_with_Forecast]
+2017/03/27 08:04:19 - t_CM_with_Forecast - Nr of arguments detected:0 
+2017/03/27 08:04:19 - t_CM_with_Forecast - This is not a replay transformation
+2017/03/27 08:04:19 - t_CM_with_Forecast - I found 3 different steps to launch.
+2017/03/27 08:04:19 - t_CM_with_Forecast - Allocating rowsets...
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Allocating rowsets for step 0 --> capella
+2017/03/27 08:04:19 - t_CM_with_Forecast -   prevcopies = 1, nextcopies=1
+2017/03/27 08:04:19 - t_CM_with_Forecast - Transformation allocated new rowset [capella.0 - Sort rows.0]
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Allocated 1 rowsets for step 0 --> capella  
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Allocating rowsets for step 1 --> Sort rows
+2017/03/27 08:04:19 - t_CM_with_Forecast -   prevcopies = 1, nextcopies=1
+2017/03/27 08:04:19 - t_CM_with_Forecast - Transformation allocated new rowset [Sort rows.0 - Microsoft Excel Output XLS.0]
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Allocated 2 rowsets for step 1 --> Sort rows  
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Allocating rowsets for step 2 --> Microsoft Excel Output XLS
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Allocated 2 rowsets for step 2 --> Microsoft Excel Output XLS  
+2017/03/27 08:04:19 - t_CM_with_Forecast - Allocating Steps & StepData...
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Transformation is about to allocate step [capella] of type [TableInput]
+2017/03/27 08:04:19 - capella.0 - distribution de-activated
+2017/03/27 08:04:19 - capella.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:04:19 - capella.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 08:04:19 - capella.0 - output rel. is  1:1
+2017/03/27 08:04:19 - capella.0 - Found output rowset [capella.0 - Sort rows.0]
+2017/03/27 08:04:19 - capella.0 - Finished dispatching
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Transformation has allocated a new step: [capella].0
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Transformation is about to allocate step [Sort rows] of type [SortRows]
+2017/03/27 08:04:19 - Sort rows.0 - distribution de-activated
+2017/03/27 08:04:19 - Sort rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:04:19 - Sort rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 08:04:19 - Sort rows.0 - Got previous step from [Sort rows] #0 --> capella
+2017/03/27 08:04:19 - Sort rows.0 - input rel is 1:1
+2017/03/27 08:04:19 - Sort rows.0 - Found input rowset [capella.0 - Sort rows.0]
+2017/03/27 08:04:19 - Sort rows.0 - output rel. is  1:1
+2017/03/27 08:04:19 - Sort rows.0 - Found output rowset [Sort rows.0 - Microsoft Excel Output XLS.0]
+2017/03/27 08:04:19 - Sort rows.0 - Finished dispatching
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Transformation has allocated a new step: [Sort rows].0
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Transformation is about to allocate step [Microsoft Excel Output XLS] of type [ExcelOutput]
+2017/03/27 08:04:19 - Microsoft Excel Output XLS.0 - distribution activated
+2017/03/27 08:04:19 - Microsoft Excel Output XLS.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:04:19 - Microsoft Excel Output XLS.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 08:04:19 - Microsoft Excel Output XLS.0 - Got previous step from [Microsoft Excel Output XLS] #0 --> Sort rows
+2017/03/27 08:04:19 - Microsoft Excel Output XLS.0 - input rel is 1:1
+2017/03/27 08:04:19 - Microsoft Excel Output XLS.0 - Found input rowset [Sort rows.0 - Microsoft Excel Output XLS.0]
+2017/03/27 08:04:19 - Microsoft Excel Output XLS.0 - Finished dispatching
+2017/03/27 08:04:19 - t_CM_with_Forecast -  Transformation has allocated a new step: [Microsoft Excel Output XLS].0
+2017/03/27 08:04:19 - t_CM_with_Forecast - This transformation can be replayed with replay date: 2017/03/27 08:04:19
+2017/03/27 08:04:19 - t_CM_with_Forecast - Initialising 3 steps...
+2017/03/27 08:04:19 - Sort rows.0 - Running on slave server #0/1.
+2017/03/27 08:04:19 - capella.0 - Running on slave server #0/1.
+2017/03/27 08:04:19 - Microsoft Excel Output XLS.0 - Running on slave server #0/1.
+2017/03/27 08:04:19 - capella - New database connection defined
+2017/03/27 08:04:25 - capella - Connected to database.
+2017/03/27 08:04:25 - capella - Auto commit off
+2017/03/27 08:04:25 - capella.0 - Connected to database...
+2017/03/27 08:04:25 - t_CM_with_Forecast - Step [capella.0] initialized flawlessly.
+2017/03/27 08:04:25 - t_CM_with_Forecast - Step [Sort rows.0] initialized flawlessly.
+2017/03/27 08:04:25 - t_CM_with_Forecast - Step [Microsoft Excel Output XLS.0] initialized flawlessly.
+2017/03/27 08:04:25 - capella.0 - Starting to run...
+2017/03/27 08:04:25 - t_CM_with_Forecast - Transformation has allocated 3 threads and 2 rowsets.
+2017/03/27 08:04:25 - Sort rows.0 - Starting to run...
+2017/03/27 08:04:25 - Microsoft Excel Output XLS.0 - Starting to run...
+2017/03/27 08:04:25 - capella.0 - SQL query : select 
+2017/03/27 08:04:25 - capella.0 - 	[Major Category],
+2017/03/27 08:04:25 - capella.0 - 	SubCategory,
+2017/03/27 08:04:25 - capella.0 - 	Team,
+2017/03/27 08:04:25 - capella.0 - 	sum([PY Gross Margin Dollars]) as 'PY Gross Margin Dollars',
+2017/03/27 08:04:25 - capella.0 - 	sum([PY Total Revenue with Freight In]) as 'PY Total Revenue with Freight In',
+2017/03/27 08:04:25 - capella.0 - 	sum([CY Gross Margin Dollars]) as 'CY Gross Margin Dollars',
+2017/03/27 08:04:25 - capella.0 - 	sum([CY Total Revenue with Freight In]) as 'CY Total Revenue with Freight In',
+2017/03/27 08:04:25 - capella.0 - 	sum([Forecast Margin]) as 'Forecast Margin',
+2017/03/27 08:04:25 - capella.0 - 	sum([Forecast Revenue]) as 'Forecast Revenue',
+2017/03/27 08:04:25 - capella.0 - 	sum(Prev_Month_TGM) as Prev_Month_TGM,
+2017/03/27 08:04:25 - capella.0 - 	sum(Prev_Month_MS) as Prev_Month_MS,
+2017/03/27 08:04:25 - capella.0 - 	sum(Curr_Month_TGM) as Curr_Month_TGM,
+2017/03/27 08:04:25 - capella.0 - 	sum(Curr_Month_MS) as Curr_Month_MS,
+2017/03/27 08:04:25 - capella.0 - 	sum([Backorder Margin]) as 'Backorder Margin',
+2017/03/27 08:04:25 - capella.0 - 	sum([Backorder Revenue]) as 'Backorder Revenue',
+2017/03/27 08:04:25 - capella.0 - 	sum(Modified_NCM) as Modified_NCM,
+2017/03/27 08:04:25 - capella.0 - 	sum(Net_Revenue) as Net_Revenue,
+2017/03/27 08:04:25 - capella.0 - 	sum(RPR) as RPR,
+2017/03/27 08:04:25 - capella.0 - 	sum(Gross_Revenue) as Gross_Revenue,
+2017/03/27 08:04:25 - capella.0 - 	sum(Modified_NCM_Forecast) as Modified_NCM_Forecast,
+2017/03/27 08:04:25 - capella.0 - 	sum(Rev_Forecast) as Rev_Forecast,
+2017/03/27 08:04:25 - capella.0 - 	sum(Return_Rev_Forecast) as Return_Rev_Forecast
+2017/03/27 08:04:25 - capella.0 - from
+2017/03/27 08:04:25 - capella.0 - (
+2017/03/27 08:04:25 - capella.0 - 	SELECT        
+2017/03/27 08:04:25 - capella.0 - 		isnull(CFO_Data.topCategory, Forecast.topCategory) 'Major Category',
+2017/03/27 08:04:25 - capella.0 - 		isnull(CFO_Data.subCategory, Forecast.subCategory) 'SubCategory', 
+2017/03/27 08:04:25 - capella.0 - 		CFO_Data.Team, 
+2017/03/27 08:04:25 - capella.0 - 		isnull(CFO_Data.P1_GM_DLLS, 0) 'PY Gross Margin Dollars', 
+2017/03/27 08:04:25 - capella.0 - 		isnull(CFO_Data.P1_TRwFI, 0) 'PY Total Revenue with Freight In', 
+2017/03/27 08:04:25 - capella.0 - 		isnull(CFO_Data.P2_GM_DLLS, 0) 'CY Gross Margin Dollars', 
+2017/03/27 08:04:25 - capella.0 - 		isnull(CFO_Data.P2_TRwFI, 0) 'CY Total Revenue with Freight In', 
+2017/03/27 08:04:25 - capella.0 - 		isnull(Forecast.Margin_calc, 0) 'Forecast Margin', 
+2017/03/27 08:04:25 - capella.0 - 		isnull(Forecast.Revenue_calc, 0) 'Forecast Revenue', 
+2017/03/27 08:04:25 - capella.0 - 		0 as Prev_Month_TGM,
+2017/03/27 08:04:25 - capella.0 - 		0 as Prev_Month_MS,
+2017/03/27 08:04:25 - capella.0 - 		0 as Curr_Month_TGM,
+2017/03/27 08:04:25 - capella.0 - 		0 as Curr_Month_MS,
+2017/03/27 08:04:25 - capella.0 - 		Backorders.EST_MARGIN 'Backorder Margin', 
+2017/03/27 08:04:25 - capella.0 - 		Backorders.PRICE 'Backorder Revenue',
+2017/03/27 08:04:25 - capella.0 - 		0 as Modified_NCM,
+2017/03/27 08:04:25 - capella.0 - 		0 as Net_Revenue,
+2017/03/27 08:04:25 - capella.0 - 		0 as RPR,
+2017/03/27 08:04:25 - capella.0 - 		0 as Gross_Revenue,
+2017/03/27 08:04:25 - capella.0 - 		0 as Modified_NCM_Forecast,
+2017/03/27 08:04:25 - capella.0 - 		0 as Rev_Forecast,
+2017/03/27 08:04:25 - capella.0 - 		0 as Return_Rev_Forecast
+2017/03/27 08:04:25 - capella.0 - 	FROM 
+2017/03/27 08:04:25 - capella.0 - 	(
+2017/03/27 08:04:25 - capella.0 - 		/* Main CFO Query*/ 
+2017/03/27 08:04:25 - capella.0 - 		SELECT 
+2017/03/27 08:04:25 - capella.0 - 			topCategory, 
+2017/03/27 08:04:25 - capella.0 - 			subCategory, 
+2017/03/27 08:04:25 - capella.0 - 			EcomCat, 
+2017/03/27 08:04:25 - capella.0 - 			Team, 
+2017/03/27 08:04:25 - capella.0 - 			sum(P1_GM_DLLS) AS P1_GM_DLLS, 
+2017/03/27 08:04:25 - capella.0 - 			sum(P1_Revenue) + sum(P1_ShipCharged) AS P1_TRwFI, 
+2017/03/27 08:04:25 - capella.0 - 			sum(P2_GM_DLLS) AS P2_GM_DLLS, 
+2017/03/27 08:04:25 - capella.0 - 			sum(P2_Revenue) + sum(P2_ShipCharged) AS P2_TRwFI
+2017/03/27 08:04:25 - capella.0 - 		FROM
+2017/03/27 08:04:25 - capella.0 - 		(
+2017/03/27 08:04:25 - capella.0 - 			SELECT        
+2017/03/27 08:04:25 - capella.0 - 				'Period 1' AS PERIOD, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.topCategory, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.subCategory, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.EcomCat, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.shipDateMonth, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.shipDateYear, 
+2017/03/27 08:04:25 - capella.0 - 				CAT.SMOOTHIE_BUYER Team, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.SHIP_DT, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.Product_Revenue AS P1_Revenue, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.ShipCharged AS P1_ShipCharged, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.Gross_Margin_DLLS AS P1_GM_DLLS, 
+2017/03/27 08:04:25 - capella.0 - 				0 AS P2_Revenue, 
+2017/03/27 08:04:25 - capella.0 - 				0 AS P2_ShipCharged, 
+2017/03/27 08:04:25 - capella.0 - 				0 AS P2_GM_DLLS
+2017/03/27 08:04:25 - capella.0 - 			FROM Ecomedate.dbo.CFO_REPORT2 CFO 
+2017/03/27 08:04:25 - capella.0 - 			LEFT JOIN Ecomedate.dbo.CATEGORIES CAT 
+2017/03/27 08:04:25 - capella.0 - 			  ON CFO.EcomCat = CAT.PRODUCT_CATEGORY
+2017/03/27 08:04:25 - capella.0 - 			WHERE ORD_ITM_STA_LGCY_CD NOT IN ('C', 'F', 'N') 
+2017/03/27 08:04:25 - capella.0 - 			  AND ORD_SUB_STA_LGCY_CD IN ('S', 'X') 
+2017/03/27 08:04:25 - capella.0 - 			  AND CFO.SHIP_DT BETWEEN 
+2017/03/27 08:04:25 - capella.0 - 					case when (year(getdate()) % 400 = 0 or (year(getdate()) % 4 = 0 and year(getdate()) % 100 <> 0)) then DATEADD(MONTH, DATEDIFF(MONTH, '19010101', GETDATE() - 1), '19000101') + 2 else DATEADD(MONTH, DATEDIFF(MONTH, '19010101', GETDATE() - 1), '19000101') + 1 end AND 
+2017/03/27 08:04:25 - capella.0 - 					case when (year(getdate()) % 400 = 0 or (year(getdate()) % 4 = 0 and year(getdate()) % 100 <> 0)) then DATEADD(day, DATEDIFF(day, '19010101', GETDATE()), '19000101') else DATEADD(day, DATEDIFF(day, '19010101', GETDATE()), '19000101') - 1 end
+2017/03/27 08:04:25 - capella.0 - 			  
+2017/03/27 08:04:25 - capella.0 - 			UNION ALL
+2017/03/27 08:04:25 - capella.0 -         
+2017/03/27 08:04:25 - capella.0 - 			SELECT        
+2017/03/27 08:04:25 - capella.0 - 				'Period 2' AS PERIOD, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.topCategory, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.subCategory, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.EcomCat, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.shipDateMonth, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.shipDateYear, 
+2017/03/27 08:04:25 - capella.0 - 				CAT.SMOOTHIE_BUYER Team, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.SHIP_DT, 
+2017/03/27 08:04:25 - capella.0 - 				0 AS P1_Revenue, 
+2017/03/27 08:04:25 - capella.0 - 				0 AS P1_ShipCharged, 
+2017/03/27 08:04:25 - capella.0 - 				0 AS P1_GM_DLLS, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.Product_Revenue AS P2_Revenue, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.ShipCharged AS P2_ShipCharged, 
+2017/03/27 08:04:25 - capella.0 - 				CFO.Gross_Margin_DLLS AS P2_GM_DLLS
+2017/03/27 08:04:25 - capella.0 - 			FROM Ecomedate.dbo.CFO_REPORT2 CFO 
+2017/03/27 08:04:25 - capella.0 - 			LEFT JOIN Ecomedate.dbo.CATEGORIES CAT 
+2017/03/27 08:04:25 - capella.0 - 			  ON CFO.EcomCat = CAT.PRODUCT_CATEGORY
+2017/03/27 08:04:25 - capella.0 - 			WHERE ORD_ITM_STA_LGCY_CD NOT IN ('C', 'F', 'N') 
+2017/03/27 08:04:25 - capella.0 - 			  AND ORD_SUB_STA_LGCY_CD IN ('S', 'X') 
+2017/03/27 08:04:25 - capella.0 - 			  AND SHIP_DT BETWEEN CONVERT(varchar(10), dateadd(d, - (day(getdate() - 1)), getdate()), 120) AND CONVERT(varchar(10), GetDate() - 1, 120)
+2017/03/27 08:04:25 - capella.0 - 	) A
+2017/03/27 08:04:25 - capella.0 - 	GROUP BY topCategory, subCategory, EcomCat, Team) CFO_Data 
+2017/03/27 08:04:25 - capella.0 - 	FULL OUTER JOIN
+2017/03/27 08:04:25 - capella.0 - 	(
+2017/03/27 08:04:25 - capella.0 - 		/* Forecast Query*/ 
+2017/03/27 08:04:25 - capella.0 - 		SELECT DISTINCT 
+2017/03/27 08:04:25 - capella.0 - 			MCLC.LONG_NM topCategory, 
+2017/03/27 08:04:25 - capella.0 - 			CAT.CATEGORY subCategory, 
+2017/03/27 08:04:25 - capella.0 - 			F.Forecast_Name EcomCat, 
+2017/03/27 08:04:25 - capella.0 - 			(F.Revenue / DT.TotalShippingDaysinMonth) * DT.MaxShippingDay AS Revenue_calc, 
+2017/03/27 08:04:25 - capella.0 - 			(F.Margin / DT.TotalShippingDaysinMonth) * DT.MaxShippingDay AS Margin_calc
+2017/03/27 08:04:25 - capella.0 - 		FROM Ecomedate.dbo.Forecast F 
+2017/03/27 08:04:25 - capella.0 - 		INNER JOIN 
+2017/03/27 08:04:25 - capella.0 - 		(
+2017/03/27 08:04:25 - capella.0 - 			SELECT        
+2017/03/27 08:04:25 - capella.0 - 				RPT.FULL_DATE, 
+2017/03/27 08:04:25 - capella.0 - 				RPT.YEAR_, 
+2017/03/27 08:04:25 - capella.0 - 				RPT.MONTH_NUMBER, 
+2017/03/27 08:04:25 - capella.0 - 				SDC.ShippingDayofMonth, 
+2017/03/27 08:04:25 - capella.0 - 				SDC.TotalShippingDaysinMonth, 
+2017/03/27 08:04:25 - capella.0 - 				SDC.IsHoliday, 
+2017/03/27 08:04:25 - capella.0 - 				RPT.WEEKEND_FLAG, 
+2017/03/27 08:04:25 - capella.0 - 				max(SDC.ShippingDayofMonth) OVER (partition BY RPT.YEAR_, RPT.MONTH_NUMBER) MaxShippingDay
+2017/03/27 08:04:25 - capella.0 - 			FROM Ecomedate.dbo.ShipDayCalendar SDC 
+2017/03/27 08:04:25 - capella.0 - 			LEFT JOIN Ecomedate.dbo.REF_PERIOD_TABLE RPT 
+2017/03/27 08:04:25 - capella.0 - 			  ON SDC.DT = RPT.FULL_DATE
+2017/03/27 08:04:25 - capella.0 - 			WHERE DT BETWEEN DATEADD(MONTH, DATEDIFF(MONTH, 1, GETDATE() - 1), '19000101') AND CONVERT(varchar(10), DateAdd(yy, 0, GetDate() - 1), 120)
+2017/03/27 08:04:25 - capella.0 - 		) DT 
+2017/03/27 08:04:25 - capella.0 - 			  ON F.Year = DT.YEAR_ AND F.Period = DT.MONTH_NUMBER 
+2017/03/27 08:04:25 - capella.0 - 			LEFT JOIN Ecomedate.dbo.CATEGORIES CAT 
+2017/03/27 08:04:25 - capella.0 - 			  ON F.Forecast_Name = CAT.PRODUCT_CATEGORY 
+2017/03/27 08:04:25 - capella.0 - 			LEFT JOIN Ecomedate.dbo.REF_MAJ_CAT_LGCY_CD MCLC 
+2017/03/27 08:04:25 - capella.0 - 			  ON CAT.MAJOR_CATEGORY_CODE = MCLC.MAJ_CAT_LGCY_CD
+2017/03/27 08:04:25 - capella.0 - 			WHERE CAT.CATEGORY IS NOT NULL
+2017/03/27 08:04:25 - capella.0 - 	) Forecast 
+2017/03/27 08:04:25 - capella.0 - 	  ON CFO_Data.EcomCat = Forecast.EcomCat 
+2017/03/27 08:04:25 - capella.0 - 	FULL OUTER JOIN
+2017/03/27 08:04:25 - capella.0 - 	(
+2017/03/27 08:04:25 - capella.0 - 		/*BackOrders Query*/ 
+2017/03/27 08:04:25 - capella.0 - 		SELECT DISTINCT 
+2017/03/27 08:04:25 - capella.0 - 			ITM.CATEGORY EcomCat, 
+2017/03/27 08:04:25 - capella.0 - 			CAT.SMOOTHIE_BUYER Team, 
+2017/03/27 08:04:25 - capella.0 - 			sum(CASE WHEN LEFT(ITM.ITM_CD, 2) IN ('ES', 'KF') THEN SOL.EXT_PRC_AMT * .3 ELSE SOL.EXT_PRC_AMT * .2 END) AS EST_MARGIN, 
+2017/03/27 08:04:25 - capella.0 - 			sum(SOL.EXT_PRC_AMT) PRICE
+2017/03/27 08:04:25 - capella.0 - 		FROM Ecomedate.dbo.SV_MACORD_BACK_ORDER BO 
+2017/03/27 08:04:25 - capella.0 - 		INNER JOIN 
+2017/03/27 08:04:25 - capella.0 - 		(
+2017/03/27 08:04:25 - capella.0 - 			SELECT
+2017/03/27 08:04:25 - capella.0 - 				EDP_NO_ID, 
+2017/03/27 08:04:25 - capella.0 - 				sum(TOT_TO_BE_REC_QTY) QTY, 
+2017/03/27 08:04:25 - capella.0 - 				CONVERT(varchar(10), min(NEW_REQ_ITM_DT), 120) DUE_DT
+2017/03/27 08:04:25 - capella.0 - 			FROM Ecomedate.dbo.SV_MACITM_PO_DETAILS
+2017/03/27 08:04:25 - capella.0 - 			WHERE TOT_TO_BE_REC_QTY > 0 
+2017/03/27 08:04:25 - capella.0 - 			  AND PURCH_ORD_ITM_STA_LGCY_CD = 'OP' 
+2017/03/27 08:04:25 - capella.0 - 			  AND NEW_REQ_ITM_DT >= CONVERT(varchar(10), GETDATE(), 120) 
+2017/03/27 08:04:25 - capella.0 - 			  AND NEW_REQ_ITM_DT < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) + 1, 0)
+2017/03/27 08:04:25 - capella.0 - 			GROUP BY EDP_NO_ID
+2017/03/27 08:04:25 - capella.0 - 		) Open_PO 
+2017/03/27 08:04:25 - capella.0 - 		  ON BO.EDP_NO_ID = Open_PO.EDP_NO_ID 
+2017/03/27 08:04:25 - capella.0 - 		INNER JOIN Ecomedate.dbo.SV_IT_1000_ITEM_MAST ITM 
+2017/03/27 08:04:25 - capella.0 - 		  ON BO.EDP_NO_ID = ITM.EDP_NO_ID 
+2017/03/27 08:04:25 - capella.0 - 		INNER JOIN Ecomedate.dbo.SV_OR_1000_ORDER_HEADER OH 
+2017/03/27 08:04:25 - capella.0 - 		  ON BO.SALES_ORD_NR = OH.SALES_ORD_NR 
+2017/03/27 08:04:25 - capella.0 - 		INNER JOIN Ecomedate.dbo.SV_MACORD_SALES_ORD_LINES SOL 
+2017/03/27 08:04:25 - capella.0 - 		  ON BO.SALES_ORD_NR = SOL.SALES_ORD_NR 
+2017/03/27 08:04:25 - capella.0 - 		  AND BO.SALES_ORD_LN_NR = SOL.SALES_ORD_LN_NR 
+2017/03/27 08:04:25 - capella.0 - 		  AND OH.SALES_ORD_NR = SOL.SALES_ORD_NR 
+2017/03/27 08:04:25 - capella.0 - 		LEFT JOIN Ecomedate.dbo.CATEGORIES CAT 
+2017/03/27 08:04:25 - capella.0 - 		  ON ITM.CATEGORY = CAT.PRODUCT_CATEGORY
+2017/03/27 08:04:25 - capella.0 - 		WHERE ITM.CATEGORY NOT IN ('OOO', 'SND', 'ERP')
+2017/03/27 08:04:25 - capella.0 - 		GROUP BY ITM.CATEGORY, CAT.SMOOTHIE_BUYER
+2017/03/27 08:04:25 - capella.0 - 	) Backorders 
+2017/03/27 08:04:25 - capella.0 - 	  ON CFO_Data.EcomCat = Backorders.EcomCat 
+2017/03/27 08:04:25 - capella.0 - 	
+2017/03/27 08:04:25 - capella.0 - 	union all
+2017/03/27 08:04:25 - capella.0 - 	
+2017/03/27 08:04:25 - capella.0 - --	/* GMROI Query 1 - Prev Month*/ 
+2017/03/27 08:04:25 - capella.0 - 		SELECT 
+2017/03/27 08:04:25 - capella.0 - 			GM.Category topCategory, 
+2017/03/27 08:04:25 - capella.0 - 			GM.SubCategory subCategory, 
+2017/03/27 08:04:25 - capella.0 - 			CAT.SMOOTHIE_BUYER Team, 
+2017/03/27 08:04:25 - capella.0 - --			GM.EcomCat, 
+2017/03/27 08:04:25 - capella.0 - 			0 as 'PY Gross Margin Dollars',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'PY Total Revenue with Freight In',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'CY Gross Margin Dollars',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'CY Total Revenue with Freight In',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Forecast Margin', 
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Forecast Revenue', 
+2017/03/27 08:04:25 - capella.0 - 			sum(Total_Gross_Margin) 'Prev_Month_TGM', 
+2017/03/27 08:04:25 - capella.0 - 			sum(Marketing_Spend) 'Prev_Month_MS', 
+2017/03/27 08:04:25 - capella.0 - --			CASE WHEN sum(Marketing_Spend) = 0 THEN 0 ELSE sum(Total_Gross_Margin) / sum(Marketing_Spend) END AS Prev_Month_GMROI
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Curr_Month_TGM',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Curr_Month_MS',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Backorder Margin',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Backorder Revenue',
+2017/03/27 08:04:25 - capella.0 - 			0 as Modified_NCM,
+2017/03/27 08:04:25 - capella.0 - 			0 as Net_Revenue,
+2017/03/27 08:04:25 - capella.0 - 			0 as RPR,
+2017/03/27 08:04:25 - capella.0 - 			0 as Gross_Revenue,
+2017/03/27 08:04:25 - capella.0 - 			0 as Modified_NCM_Forecast,
+2017/03/27 08:04:25 - capella.0 - 			0 as Rev_Forecast,
+2017/03/27 08:04:25 - capella.0 - 			0 as Return_Rev_Forecast
+2017/03/27 08:04:25 - capella.0 - 		FROM Ecomedate.dbo.ext_GMROI_by_Category_and_SalesChannel GM 
+2017/03/27 08:04:25 - capella.0 - 		LEFT JOIN Ecomedate.dbo.CATEGORIES CAT 
+2017/03/27 08:04:25 - capella.0 - 		  ON GM.EcomCat = CAT.PRODUCT_CATEGORY
+2017/03/27 08:04:25 - capella.0 - 		WHERE Order_Entry_Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) - 1, 0) 
+2017/03/27 08:04:25 - capella.0 - 		  AND Order_Entry_Date < DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) - 0, 0)
+2017/03/27 08:04:25 - capella.0 - 		GROUP BY 
+2017/03/27 08:04:25 - capella.0 - 			GM.Category, 
+2017/03/27 08:04:25 - capella.0 - 			GM.SubCategory, 
+2017/03/27 08:04:25 - capella.0 - --			GM.EcomCat, 
+2017/03/27 08:04:25 - capella.0 - 			CAT.SMOOTHIE_BUYER
+2017/03/27 08:04:25 - capella.0 - 	
+2017/03/27 08:04:25 - capella.0 - 	union all
+2017/03/27 08:04:25 - capella.0 - 
+2017/03/27 08:04:25 - capella.0 - --		/* GMROI Query 2 - Curr Month*/ 
+2017/03/27 08:04:25 - capella.0 - 		SELECT 
+2017/03/27 08:04:25 - capella.0 - 			GM.Category topCategory, 
+2017/03/27 08:04:25 - capella.0 - 			GM.SubCategory subCategory, 
+2017/03/27 08:04:25 - capella.0 - --			GM.EcomCat, 
+2017/03/27 08:04:25 - capella.0 - 			CAT.SMOOTHIE_BUYER Team, 
+2017/03/27 08:04:25 - capella.0 - 			0 as 'PY Gross Margin Dollars',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'PY Total Revenue with Freight In',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'CY Gross Margin Dollars',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'CY Total Revenue with Freight In',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Forecast Margin', 
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Forecast Revenue', 
+2017/03/27 08:04:25 - capella.0 - 			0 as Prev_Month_TGM, 
+2017/03/27 08:04:25 - capella.0 - 			0 as Prev_Month_MS,
+2017/03/27 08:04:25 - capella.0 - 			sum(Total_Gross_Margin) Curr_Month_TGM, 
+2017/03/27 08:04:25 - capella.0 - 			sum(Marketing_Spend) Curr_Month_MS, 
+2017/03/27 08:04:25 - capella.0 - --			CASE WHEN sum(Marketing_Spend) = 0 THEN 0 ELSE sum(Total_Gross_Margin) / sum(Marketing_Spend) END AS Curr_Month_GMROI
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Backorder Margin',
+2017/03/27 08:04:25 - capella.0 - 			0 as 'Backorder Revenue',
+2017/03/27 08:04:25 - capella.0 - 			0 as Modified_NCM,
+2017/03/27 08:04:25 - capella.0 - 			0 as Net_Revenue,
+2017/03/27 08:04:25 - capella.0 - 			0 as RPR,
+2017/03/27 08:04:25 - capella.0 - 			0 as Gross_Revenue,
+2017/03/27 08:04:25 - capella.0 - 			0 as Modified_NCM_Forecast,
+2017/03/27 08:04:25 - capella.0 - 			0 as Rev_Forecast,
+2017/03/27 08:04:25 - capella.0 - 			0 as Return_Rev_Forecast
+2017/03/27 08:04:25 - capella.0 - 		FROM Ecomedate.dbo.ext_GMROI_by_Category_and_SalesChannel GM 
+2017/03/27 08:04:25 - capella.0 - 		LEFT JOIN Ecomedate.dbo.CATEGORIES CAT 
+2017/03/27 08:04:25 - capella.0 - 		  ON GM.EcomCat = CAT.PRODUCT_CATEGORY
+2017/03/27 08:04:25 - capella.0 - 		WHERE Order_Entry_Date >= DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) - 0, 0)
+2017/03/27 08:04:25 - capella.0 - 		GROUP BY 
+2017/03/27 08:04:25 - capella.0 - 			GM.Category, 
+2017/03/27 08:04:25 - capella.0 - 			GM.SubCategory, 
+2017/03/27 08:04:25 - capella.0 - --			GM.EcomCat, 
+2017/03/27 08:04:25 - capella.0 - 			CAT.SMOOTHIE_BUYER
+2017/03/27 08:04:25 - capella.0 - 
+2017/03/27 08:04:25 - capella.0 - 	union all
+2017/03/27 08:04:25 - capella.0 - 
+2017/03/27 08:04:25 - capella.0 - 	select 
+2017/03/27 08:04:25 - capella.0 - 		CMR.MajorCategory,
+2017/03/27 08:04:25 - capella.0 - 		isnull(Forecast_MCM.subCategory, '_MTD_MCM_Goal') as subCategory,
+2017/03/27 08:04:25 - capella.0 - 		null as Team,
+2017/03/27 08:04:25 - capella.0 - 		0 as 'PY Gross Margin Dollars',
+2017/03/27 08:04:25 - capella.0 - 		0 as 'PY Total Revenue with Freight In',
+2017/03/27 08:04:25 - capella.0 - 		0 as 'CY Gross Margin Dollars',
+2017/03/27 08:04:25 - capella.0 - 		0 as 'CY Total Revenue with Freight In',
+2017/03/27 08:04:25 - capella.0 - 		0 as 'Forecast Margin', 
+2017/03/27 08:04:25 - capella.0 - 		0 as 'Forecast Revenue', 
+2017/03/27 08:04:25 - capella.0 - 		0 as 'Prev_Month_TGM',
+2017/03/27 08:04:25 - capella.0 - 		0 as 'Prev_Month_MS',
+2017/03/27 08:04:25 - capella.0 - 		0 as 'Curr_Month_TGM',
+2017/03/27 08:04:25 - capella.0 - 		0 as 'Curr_Month_MS',
+2017/03/27 08:04:25 - capella.0 - 		0 as 'Backorder Margin',
+2017/03/27 08:04:25 - capella.0 - 		0 as 'Backorder Revenue',
+2017/03/27 08:04:25 - capella.0 - 		sum(Product_Revenue + Shipping_Charged - Direct_Product_Costs - Freight_Out - Rebate_Discount) + sum(Return_Product_Revenue) 
+2017/03/27 08:04:25 - capella.0 - 			+ sum(Return_Product_Costs) - sum(Inventory_Freight_Returns) - sum(Inventory_Adjustment) - sum(Other_Credit) 
+2017/03/27 08:04:25 - capella.0 - 			- sum(fixedCosts + PPC_Costs + CSE_Costs + Affiliate_Costs + Facebook_Costs + Pinterest_Costs) - sum(TotalMerchantFees) as Modified_NCM,
+2017/03/27 08:04:25 - capella.0 - 		sum(Total_Revenue_with_Freight_In) + sum(Return_Product_Revenue) as Net_Revenue,
+2017/03/27 08:04:25 - capella.0 - 		-1 * sum(Return_Product_Revenue) RPR,
+2017/03/27 08:04:25 - capella.0 - 		sum(Total_Revenue_with_Freight_In) Gross_Revenue,
+2017/03/27 08:04:25 - capella.0 - 
+2017/03/27 08:04:25 - capella.0 - 		sum(Forecast_MCM.MCM_Forecast) / count(CMR.MajorCategory) Modified_NCM_Forecast,
+2017/03/27 08:04:25 - capella.0 - 		sum(Forecast_Revenue.Rev_Forecast) /  count(CMR.MajorCategory) Rev_Forecast,
+2017/03/27 08:04:25 - capella.0 - 		(sum(Forecast_Return_Rev.Return_Forecast) / count(CMR.MajorCategory)) Return_Rev_Forecast
+2017/03/27 08:04:25 - capella.0 - 
+2017/03/27 08:04:25 - capella.0 - 	from Ecomedate.dbo.ext_CM_with_Returns_and_Marketing_Spend CMR
+2017/03/27 08:04:25 - capella.0 - 	left join 
+2017/03/27 08:04:25 - capella.0 - 	(
+2017/03/27 08:04:25 - capella.0 - 		select 
+2017/03/27 08:04:25 - capella.0 - 			F.MajorCategory,
+2017/03/27 08:04:25 - capella.0 - 			F.subCategory,
+2017/03/27 08:04:25 - capella.0 - 			F.Value,
+2017/03/27 08:04:25 - capella.0 - 			F.Value_Percent,
+2017/03/27 08:04:25 - capella.0 - 			( F.Value / F.Ship_Days_in_Period ) * SDC.ShippingDayofMonth as MCM_Forecast
+2017/03/27 08:04:25 - capella.0 - 		from Ecomedate.dbo.ShipDayCalendar SDC
+2017/03/27 08:04:25 - capella.0 - 		left join Ecomedate.[dbo].[ext_Modified_CM_Forecast] F
+2017/03/27 08:04:25 - capella.0 - 		  on SDC.Year = F.Year
+2017/03/27 08:04:25 - capella.0 - 		  and SDC.Period = F.Period
+2017/03/27 08:04:25 - capella.0 - 		where SDC.DT = convert(varchar(10), getdate()-1, 120)
+2017/03/27 08:04:25 - capella.0 - 		  and Forecast_Type = 'MCM_Forecast'
+2017/03/27 08:04:25 - capella.0 - 	) Forecast_MCM
+2017/03/27 08:04:25 - capella.0 - 	  on CMR.MajorCategory = Forecast_MCM.MajorCategory
+2017/03/27 08:04:25 - capella.0 - 	left join
+2017/03/27 08:04:25 - capella.0 - 	(
+2017/03/27 08:04:25 - capella.0 - 		select 
+2017/03/27 08:04:25 - capella.0 - 			F.MajorCategory,
+2017/03/27 08:04:25 - capella.0 - 			F.subCategory,
+2017/03/27 08:04:25 - capella.0 - 			F.Value,
+2017/03/27 08:04:25 - capella.0 - 			F.Value_Percent,
+2017/03/27 08:04:25 - capella.0 - 			( F.Value / F.Ship_Days_in_Period ) * SDC.ShippingDayofMonth as Return_Forecast
+2017/03/27 08:04:25 - capella.0 - 		from Ecomedate.dbo.ShipDayCalendar SDC
+2017/03/27 08:04:25 - capella.0 - 		left join Ecomedate.[dbo].[ext_Modified_CM_Forecast] F
+2017/03/27 08:04:25 - capella.0 - 		  on SDC.Year = F.Year
+2017/03/27 08:04:25 - capella.0 - 		  and SDC.Period = F.Period
+2017/03/27 08:04:25 - capella.0 - 		where SDC.DT = convert(varchar(10), getdate()-1, 120)
+2017/03/27 08:04:25 - capella.0 - 		  and Forecast_Type = 'Return_Forecast'
+2017/03/27 08:04:25 - capella.0 - 	) Forecast_Return_Rev
+2017/03/27 08:04:25 - capella.0 - 	  on CMR.MajorCategory = Forecast_Return_Rev.MajorCategory
+2017/03/27 08:04:25 - capella.0 - 	left join 
+2017/03/27 08:04:25 - capella.0 - 	(
+2017/03/27 08:04:25 - capella.0 - 		select 
+2017/03/27 08:04:25 - capella.0 - 			MCLC.SHORT_NM MajorCategory,
+2017/03/27 08:04:25 - capella.0 - 			sum((F.Revenue / F.Ship_Days_in_Period ) * SDC.ShippingDayofMonth) as Rev_Forecast
+2017/03/27 08:04:25 - capella.0 - 		from Ecomedate.dbo.ShipDayCalendar SDC
+2017/03/27 08:04:25 - capella.0 - 		left join Ecomedate.dbo.Forecast F
+2017/03/27 08:04:25 - capella.0 - 		  on SDC.Year = F.Year
+2017/03/27 08:04:25 - capella.0 - 		  and SDC.Period = F.Period
+2017/03/27 08:04:25 - capella.0 - 		left join Ecomedate.dbo.CATEGORIES C
+2017/03/27 08:04:25 - capella.0 - 		  on F.Forecast_Name = C.PRODUCT_CATEGORY
+2017/03/27 08:04:25 - capella.0 - 		left join Ecomedate.dbo.REF_MAJ_CAT_LGCY_CD MCLC
+2017/03/27 08:04:25 - capella.0 - 		  on C.MAJOR_CATEGORY_CODE = MCLC.MAJ_CAT_LGCY_CD
+2017/03/27 08:04:25 - capella.0 - 		where SDC.DT = convert(varchar(10), getdate()-1, 120)
+2017/03/27 08:04:25 - capella.0 - 		group by
+2017/03/27 08:04:25 - capella.0 - 			MCLC.SHORT_NM
+2017/03/27 08:04:25 - capella.0 - 	) Forecast_Revenue
+2017/03/27 08:04:25 - capella.0 - 	  on CMR.MajorCategory = case when Forecast_Revenue.MajorCategory = 'Beverage Fridge' then 'Beverage Refrigerators' else Forecast_Revenue.MajorCategory end
+2017/03/27 08:04:25 - capella.0 - 	where Date between DATEADD(MONTH, DATEDIFF(MONTH, 0, DATEADD(DAY,-1,GETDATE())), 0) and convert(varchar(10), getdate()-1, 120)
+2017/03/27 08:04:25 - capella.0 - 	group by
+2017/03/27 08:04:25 - capella.0 - 		CMR.MajorCategory,
+2017/03/27 08:04:25 - capella.0 - 		isnull(Forecast_MCM.subCategory, '_MTD_MCM_Goal')
+2017/03/27 08:04:25 - capella.0 - 	
+2017/03/27 08:04:25 - capella.0 - ) A
+2017/03/27 08:04:25 - capella.0 - --where [Major Category] is not null 
+2017/03/27 08:04:25 - capella.0 - -- and [Major Category] not in ('Advertising', 'Unassigned')
+2017/03/27 08:04:25 - capella.0 - -- and SubCategory <> '_MTD_MCM_Goal'
+2017/03/27 08:04:25 - capella.0 - group by
+2017/03/27 08:04:25 - capella.0 - 	[Major Category],
+2017/03/27 08:04:25 - capella.0 - 	SubCategory,
+2017/03/27 08:04:25 - capella.0 - 	Team
+2017/03/27 08:04:25 - capella.0 - order by 
+2017/03/27 08:04:25 - capella.0 - 	[Major Category],
+2017/03/27 08:04:25 - capella.0 - 	SubCategory,
+2017/03/27 08:04:25 - capella.0 - 	Team
+2017/03/27 08:07:37 - capella.0 - Finished reading query, closing connection.
+2017/03/27 08:07:37 - capella - Connection to database closed!
+2017/03/27 08:07:37 - capella.0 - Finished processing (I=125, O=0, R=0, W=125, U=0, E=0)
+2017/03/27 08:07:37 - Sort rows.0 - Starting quickSort algorithm...
+2017/03/27 08:07:37 - Sort rows.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 08:07:37 - Sort rows.0 - QuickSort algorithm has finished.
+2017/03/27 08:07:37 - Sort rows.0 - Finished processing (I=0, O=0, R=125, W=125, U=0, E=0)
+2017/03/27 08:07:37 - Microsoft Excel Output XLS.0 - Finished processing (I=0, O=125, R=125, W=125, U=0, E=0)
+2017/03/27 08:07:37 - j_CM_with_Forecast - Starting entry [Rename files]
+2017/03/27 08:07:37 - j_CM_with_Forecast - exec(2, 0, Rename files.0)
+2017/03/27 08:07:37 - Rename files - Starting job entry
+2017/03/27 08:07:37 - Rename files - Opening transformation: [file:///C:/Spoon/Data Warehouse Reporting/CM with Forecast MTD/t_Rename files.ktr]
+2017/03/27 08:07:37 - Rename files - Loading transformation from XML file [file:///C:/Spoon/Data Warehouse Reporting/CM with Forecast MTD/t_Rename files.ktr]
+2017/03/27 08:07:38 - Rename files - Starting transformation...(file=${Internal.Job.Filename.Directory}/t_Rename files.ktr, name=Rename files, repinfo=null)
+2017/03/27 08:07:38 - Rename files - Transformation is pre-loaded.
+2017/03/27 08:07:38 - Rename files - Dispatching started for transformation [Rename files]
+2017/03/27 08:07:38 - Rename files - Nr of arguments detected:0 
+2017/03/27 08:07:38 - Rename files - This is not a replay transformation
+2017/03/27 08:07:38 - Rename files - I found 8 different steps to launch.
+2017/03/27 08:07:38 - Rename files - Allocating rowsets...
+2017/03/27 08:07:38 - Rename files -  Allocating rowsets for step 0 --> Get File Names
+2017/03/27 08:07:38 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 08:07:38 - Rename files - Transformation allocated new rowset [Get File Names.0 - Split Fields.0]
+2017/03/27 08:07:38 - Rename files -  Allocated 1 rowsets for step 0 --> Get File Names  
+2017/03/27 08:07:38 - Rename files -  Allocating rowsets for step 1 --> Split Fields
+2017/03/27 08:07:38 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 08:07:38 - Rename files - Transformation allocated new rowset [Split Fields.0 - Add constants.0]
+2017/03/27 08:07:38 - Rename files -  Allocated 2 rowsets for step 1 --> Split Fields  
+2017/03/27 08:07:38 - Rename files -  Allocating rowsets for step 2 --> Add constants
+2017/03/27 08:07:38 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 08:07:38 - Rename files - Transformation allocated new rowset [Add constants.0 - Select values.0]
+2017/03/27 08:07:38 - Rename files -  Allocated 3 rowsets for step 2 --> Add constants  
+2017/03/27 08:07:38 - Rename files -  Allocating rowsets for step 3 --> Select values
+2017/03/27 08:07:38 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 08:07:38 - Rename files - Transformation allocated new rowset [Select values.0 - Merge Join.0]
+2017/03/27 08:07:38 - Rename files -  Allocated 4 rowsets for step 3 --> Select values  
+2017/03/27 08:07:38 - Rename files -  Allocating rowsets for step 4 --> Get Yesterday's Date
+2017/03/27 08:07:38 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 08:07:38 - Rename files - Transformation allocated new rowset [Get Yesterday's Date.0 - Merge Join.0]
+2017/03/27 08:07:38 - Rename files -  Allocated 5 rowsets for step 4 --> Get Yesterday's Date  
+2017/03/27 08:07:38 - Rename files -  Allocating rowsets for step 5 --> Merge Join
+2017/03/27 08:07:38 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 08:07:38 - Rename files - Transformation allocated new rowset [Merge Join.0 - Concat Fields.0]
+2017/03/27 08:07:38 - Rename files -  Allocated 6 rowsets for step 5 --> Merge Join  
+2017/03/27 08:07:38 - Rename files -  Allocating rowsets for step 6 --> Concat Fields
+2017/03/27 08:07:38 - Rename files -   prevcopies = 1, nextcopies=1
+2017/03/27 08:07:38 - Rename files - Transformation allocated new rowset [Concat Fields.0 - Process files.0]
+2017/03/27 08:07:38 - Rename files -  Allocated 7 rowsets for step 6 --> Concat Fields  
+2017/03/27 08:07:38 - Rename files -  Allocating rowsets for step 7 --> Process files
+2017/03/27 08:07:38 - Rename files -  Allocated 7 rowsets for step 7 --> Process files  
+2017/03/27 08:07:38 - Rename files - Allocating Steps & StepData...
+2017/03/27 08:07:38 - Rename files -  Transformation is about to allocate step [Get File Names] of type [GetFileNames]
+2017/03/27 08:07:38 - Get File Names.0 - distribution activated
+2017/03/27 08:07:38 - Get File Names.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:07:38 - Get File Names.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 08:07:38 - Get File Names.0 - output rel. is  1:1
+2017/03/27 08:07:38 - Get File Names.0 - Found output rowset [Get File Names.0 - Split Fields.0]
+2017/03/27 08:07:38 - Get File Names.0 - Finished dispatching
+2017/03/27 08:07:38 - Rename files -  Transformation has allocated a new step: [Get File Names].0
+2017/03/27 08:07:38 - Rename files -  Transformation is about to allocate step [Split Fields] of type [FieldSplitter]
+2017/03/27 08:07:38 - Split Fields.0 - distribution activated
+2017/03/27 08:07:38 - Split Fields.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:07:38 - Split Fields.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 08:07:38 - Split Fields.0 - Got previous step from [Split Fields] #0 --> Get File Names
+2017/03/27 08:07:38 - Split Fields.0 - input rel is 1:1
+2017/03/27 08:07:38 - Split Fields.0 - Found input rowset [Get File Names.0 - Split Fields.0]
+2017/03/27 08:07:38 - Split Fields.0 - output rel. is  1:1
+2017/03/27 08:07:38 - Split Fields.0 - Found output rowset [Split Fields.0 - Add constants.0]
+2017/03/27 08:07:38 - Split Fields.0 - Finished dispatching
+2017/03/27 08:07:38 - Rename files -  Transformation has allocated a new step: [Split Fields].0
+2017/03/27 08:07:38 - Rename files -  Transformation is about to allocate step [Add constants] of type [Constant]
+2017/03/27 08:07:38 - Add constants.0 - distribution activated
+2017/03/27 08:07:38 - Add constants.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:07:38 - Add constants.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 08:07:38 - Add constants.0 - Got previous step from [Add constants] #0 --> Split Fields
+2017/03/27 08:07:38 - Add constants.0 - input rel is 1:1
+2017/03/27 08:07:38 - Add constants.0 - Found input rowset [Split Fields.0 - Add constants.0]
+2017/03/27 08:07:38 - Add constants.0 - output rel. is  1:1
+2017/03/27 08:07:38 - Add constants.0 - Found output rowset [Add constants.0 - Select values.0]
+2017/03/27 08:07:38 - Add constants.0 - Finished dispatching
+2017/03/27 08:07:38 - Rename files -  Transformation has allocated a new step: [Add constants].0
+2017/03/27 08:07:38 - Rename files -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/27 08:07:38 - Select values.0 - distribution activated
+2017/03/27 08:07:38 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:07:38 - Select values.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 08:07:38 - Select values.0 - Got previous step from [Select values] #0 --> Add constants
+2017/03/27 08:07:38 - Select values.0 - input rel is 1:1
+2017/03/27 08:07:38 - Select values.0 - Found input rowset [Add constants.0 - Select values.0]
+2017/03/27 08:07:38 - Select values.0 - output rel. is  1:1
+2017/03/27 08:07:38 - Select values.0 - Found output rowset [Select values.0 - Merge Join.0]
+2017/03/27 08:07:38 - Select values.0 - Finished dispatching
+2017/03/27 08:07:38 - Rename files -  Transformation has allocated a new step: [Select values].0
+2017/03/27 08:07:38 - Rename files -  Transformation is about to allocate step [Get Yesterday's Date] of type [TableInput]
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - distribution activated
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - output rel. is  1:1
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - Found output rowset [Get Yesterday's Date.0 - Merge Join.0]
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - Finished dispatching
+2017/03/27 08:07:38 - Rename files -  Transformation has allocated a new step: [Get Yesterday's Date].0
+2017/03/27 08:07:38 - Rename files -  Transformation is about to allocate step [Merge Join] of type [MergeJoin]
+2017/03/27 08:07:38 - Merge Join.0 - distribution activated
+2017/03/27 08:07:38 - Merge Join.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:07:38 - Merge Join.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 08:07:38 - Merge Join.0 - Got previous step from [Merge Join] #0 --> Get Yesterday's Date
+2017/03/27 08:07:38 - Merge Join.0 - input rel is 1:1
+2017/03/27 08:07:38 - Merge Join.0 - Found input rowset [Get Yesterday's Date.0 - Merge Join.0]
+2017/03/27 08:07:38 - Merge Join.0 - Got previous step from [Merge Join] #1 --> Select values
+2017/03/27 08:07:38 - Merge Join.0 - input rel is 1:1
+2017/03/27 08:07:38 - Merge Join.0 - Found input rowset [Select values.0 - Merge Join.0]
+2017/03/27 08:07:38 - Merge Join.0 - output rel. is  1:1
+2017/03/27 08:07:38 - Merge Join.0 - Found output rowset [Merge Join.0 - Concat Fields.0]
+2017/03/27 08:07:38 - Merge Join.0 - Finished dispatching
+2017/03/27 08:07:38 - Rename files -  Transformation has allocated a new step: [Merge Join].0
+2017/03/27 08:07:38 - Rename files -  Transformation is about to allocate step [Concat Fields] of type [ConcatFields]
+2017/03/27 08:07:38 - Concat Fields.0 - distribution activated
+2017/03/27 08:07:38 - Concat Fields.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:07:38 - Concat Fields.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 08:07:38 - Concat Fields.0 - Got previous step from [Concat Fields] #0 --> Merge Join
+2017/03/27 08:07:38 - Concat Fields.0 - input rel is 1:1
+2017/03/27 08:07:38 - Concat Fields.0 - Found input rowset [Merge Join.0 - Concat Fields.0]
+2017/03/27 08:07:38 - Concat Fields.0 - output rel. is  1:1
+2017/03/27 08:07:38 - Concat Fields.0 - Found output rowset [Concat Fields.0 - Process files.0]
+2017/03/27 08:07:38 - Concat Fields.0 - Finished dispatching
+2017/03/27 08:07:38 - Rename files -  Transformation has allocated a new step: [Concat Fields].0
+2017/03/27 08:07:38 - Rename files -  Transformation is about to allocate step [Process files] of type [ProcessFiles]
+2017/03/27 08:07:38 - Process files.0 - distribution activated
+2017/03/27 08:07:38 - Process files.0 - Starting allocation of buffers & new threads...
+2017/03/27 08:07:38 - Process files.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 08:07:38 - Process files.0 - Got previous step from [Process files] #0 --> Concat Fields
+2017/03/27 08:07:38 - Process files.0 - input rel is 1:1
+2017/03/27 08:07:38 - Process files.0 - Found input rowset [Concat Fields.0 - Process files.0]
+2017/03/27 08:07:38 - Process files.0 - Finished dispatching
+2017/03/27 08:07:38 - Rename files -  Transformation has allocated a new step: [Process files].0
+2017/03/27 08:07:38 - Rename files - This transformation can be replayed with replay date: 2017/03/27 08:07:38
+2017/03/27 08:07:38 - Rename files - Initialising 8 steps...
+2017/03/27 08:07:38 - Get File Names.0 - Running on slave server #0/1.
+2017/03/27 08:07:38 - Split Fields.0 - Running on slave server #0/1.
+2017/03/27 08:07:38 - Select values.0 - Running on slave server #0/1.
+2017/03/27 08:07:38 - Add constants.0 - Running on slave server #0/1.
+2017/03/27 08:07:38 - Merge Join.0 - Running on slave server #0/1.
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - Running on slave server #0/1.
+2017/03/27 08:07:38 - Process files.0 - Running on slave server #0/1.
+2017/03/27 08:07:38 - Concat Fields.0 - Running on slave server #0/1.
+2017/03/27 08:07:38 - capella - New database connection defined
+2017/03/27 08:07:38 - capella - Connected to database.
+2017/03/27 08:07:38 - capella - Auto commit off
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - Connected to database...
+2017/03/27 08:07:38 - Rename files - Step [Get File Names.0] initialized flawlessly.
+2017/03/27 08:07:38 - Rename files - Step [Split Fields.0] initialized flawlessly.
+2017/03/27 08:07:38 - Rename files - Step [Add constants.0] initialized flawlessly.
+2017/03/27 08:07:38 - Rename files - Step [Select values.0] initialized flawlessly.
+2017/03/27 08:07:38 - Rename files - Step [Get Yesterday's Date.0] initialized flawlessly.
+2017/03/27 08:07:38 - Rename files - Step [Merge Join.0] initialized flawlessly.
+2017/03/27 08:07:38 - Rename files - Step [Concat Fields.0] initialized flawlessly.
+2017/03/27 08:07:38 - Rename files - Step [Process files.0] initialized flawlessly.
+2017/03/27 08:07:38 - Get File Names.0 - Starting to run...
+2017/03/27 08:07:38 - Split Fields.0 - Starting to run...
+2017/03/27 08:07:38 - Add constants.0 - Starting to run...
+2017/03/27 08:07:38 - Select values.0 - Starting to run...
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - Starting to run...
+2017/03/27 08:07:38 - Merge Join.0 - Starting to run...
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - SQL query : SELECT 
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - 	'Join' as joinfield,
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - 	replace(convert(varchar(10), getdate()-1, 120), '-', '') as fulldate,
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - 	replace(convert(varchar(8), getdate()-1, 120), '-', '') as yyyymm
+2017/03/27 08:07:38 - Rename files - Transformation has allocated 8 threads and 7 rowsets.
+2017/03/27 08:07:38 - Process files.0 - Starting to run...
+2017/03/27 08:07:38 - Concat Fields.0 - Starting to run...
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - Finished reading query, closing connection.
+2017/03/27 08:07:38 - capella - Connection to database closed!
+2017/03/27 08:07:38 - Get Yesterday's Date.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 08:07:38 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 08:07:38 - Split Fields.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 08:07:38 - Add constants.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 08:07:38 - Select values.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 08:07:38 - Merge Join.0 - Finished processing (I=0, O=0, R=2, W=1, U=0, E=0)
+2017/03/27 08:07:38 - Concat Fields.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 08:07:38 - Process files.0 - Target file [file:////lynx/c$/Spoon/Data Warehouse Reporting/CM With Forecast MTD/CM_with_Forecast_201703.xls] exists.
+2017/03/27 08:07:38 - Process files.0 - Source file [file:////lynx/c$/Spoon/Data Warehouse Reporting/CM with Forecast MTD/Working Files/CM_with_Forecast.xls] was copied to [file:////lynx/c$/Spoon/Data Warehouse Reporting/CM With Forecast MTD/CM_with_Forecast_201703.xls]
+2017/03/27 08:07:38 - Process files.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 08:07:38 - j_CM_with_Forecast - Starting entry [Move Files]
+2017/03/27 08:07:38 - j_CM_with_Forecast - exec(3, 0, Move Files.0)
+2017/03/27 08:07:38 - Move Files - Starting job entry
+2017/03/27 08:07:38 - Move Files - Processing row source File/folder source : [C:\Spoon\Data Warehouse Reporting\CM with Forecast MTD\Working Files] ... destination file/folder : [C:\Spoon\Data Warehouse Reporting\CM with Forecast MTD]... wildcard : [.*\.xls]
+2017/03/27 08:07:38 - Move Files -   
+2017/03/27 08:07:38 - Move Files - Fetching folder [file:///C:/Spoon/Data Warehouse Reporting/CM with Forecast MTD/Working Files]
+2017/03/27 08:07:38 - Move Files - File [file:///C:/Spoon/Data Warehouse Reporting/CM with Forecast MTD/Working Files/CM_with_Forecast.xls] was moved to [file:///C:/Spoon/Data Warehouse Reporting/CM with Forecast MTD/CM_with_Forecast.xls] 
+2017/03/27 08:07:38 - Move Files - =======================================
+2017/03/27 08:07:38 - Move Files - Total files in error : 0
+2017/03/27 08:07:38 - Move Files - Total files successfully processed : 1
+2017/03/27 08:07:38 - Move Files - =======================================
+2017/03/27 08:07:38 - j_CM_with_Forecast - Finished job entry [Move Files] (result=[true])
+2017/03/27 08:07:38 - j_CM_with_Forecast - Finished job entry [Rename files] (result=[true])
+2017/03/27 08:07:38 - j_CM_with_Forecast - Finished job entry [CM with Forecast MC and SC] (result=[true])
+2017/03/27 08:07:38 - j_CM_with_Forecast - Job execution finished
+2017/03/27 08:07:38 - Kitchen - Finished!
+2017/03/27 08:07:38 - Kitchen - Start=2017/03/27 08:04:18.015, Stop=2017/03/27 08:07:38.983
+2017/03/27 08:07:38 - Kitchen - Processing ended after 3 minutes and 20 seconds (200 seconds total).

@@ -1,0 +1,65 @@
+2016/04/21 18:03:21 - ktr_dim_bcb_moeda.ktr - Loading transformation from XML file [/staging/job/ktr_dim_bcb_moeda.ktr]
+2016/04/21 18:03:21 - ktr_dim_bcb_moeda - Dispatching started for transformation [ktr_dim_bcb_moeda]
+2016/04/21 18:03:27 - Execute SQL script.0 - ERROR (version 6.0.0.0-353, build 1 from 2015-10-07 13.27.43 by buildguy) : Database connection is missing for step [Execute SQL script]!
+2016/04/21 18:03:27 - Execute SQL script.0 - ERROR (version 6.0.0.0-353, build 1 from 2015-10-07 13.27.43 by buildguy) : Error initializing step [Execute SQL script]
+2016/04/21 18:03:27 - ktr_dim_bcb_moeda - ERROR (version 6.0.0.0-353, build 1 from 2015-10-07 13.27.43 by buildguy) : Step [Execute SQL script.0] failed to initialize!
+2016/04/21 18:03:27 - Execute SQL script.0 - Finished reading query, closing connection.
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - ERROR (version 6.0.0.0-353, build 1 from 2015-10-07 13.27.43 by buildguy) : Unable to open transformation: null
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - ERROR (version 6.0.0.0-353, build 1 from 2015-10-07 13.27.43 by buildguy) : java.lang.NullPointerException
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - 	at org.pentaho.di.trans.Trans.fireTransFinishedListeners(Trans.java:1484)
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - 	at org.pentaho.di.trans.Trans.prepareExecution(Trans.java:1137)
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - 	at org.pentaho.di.trans.Trans.execute(Trans.java:613)
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - 	at org.pentaho.di.job.entries.trans.JobEntryTrans.execute(JobEntryTrans.java:1068)
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - 	at org.pentaho.di.job.Job.execute(Job.java:730)
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - 	at org.pentaho.di.job.Job.execute(Job.java:873)
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - 	at org.pentaho.di.job.Job.execute(Job.java:873)
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - 	at org.pentaho.di.job.Job.execute(Job.java:546)
+2016/04/21 18:03:31 - ktr_dim_bcb_moeda.ktr - 	at org.pentaho.di.job.Job.run(Job.java:435)
+2016/04/21 18:21:46 - ktr_dim_bcb_moeda.ktr - Loading transformation from XML file [/staging/job/ktr_dim_bcb_moeda.ktr]
+2016/04/21 18:21:47 - ktr_dim_bcb_moeda - Dispatching started for transformation [ktr_dim_bcb_moeda]
+2016/04/21 18:21:53 - Execute SQL script.0 - Finished reading query, closing connection.
+2016/04/21 18:21:53 - Text file input.0 - Opening file: file:///staging/inp/bcb_moeda.csv
+2016/04/21 18:21:53 - Execute SQL script.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2016/04/21 18:21:53 - MySQL Bulk Loader.0 - Creating FIFO file using this command : mkfifo /tmp/fifo
+2016/04/21 18:21:53 - MySQL Bulk Loader.0 - Setting FIFO file permissings using this command : chmod 666 /tmp/fifo
+2016/04/21 18:21:53 - Text file input.0 - Finished processing (I=243, O=0, R=0, W=242, U=1, E=0)
+2016/04/21 18:21:54 - MySQL Bulk Loader.0 - Connected to MySQL
+2016/04/21 18:21:54 - MySQL Bulk Loader.0 - Starting the MySQL bulk Load in a separate thread : LOAD DATA LOCAL INFILE '/tmp/fifo' INTO TABLE dim.bcb_moeda FIELDS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\' (sk_moeda,nm_moeda,nk_cd_moeda,cd_pais,nm_pais,ii_moeda,dt_exclusao_moeda);
+2016/04/21 18:21:54 - MySQL Bulk Loader.0 - Opening fifo /tmp/fifo for writing.
+2016/04/21 18:21:55 - MySQL Bulk Loader.0 - Finished processing (I=0, O=242, R=242, W=242, U=0, E=0)
+2016/04/21 20:56:39 - ktr_dim_bcb_moeda.ktr - Loading transformation from XML file [/staging/job/ktr_dim_bcb_moeda.ktr]
+2016/04/21 20:56:39 - ktr_dim_bcb_moeda - Dispatching started for transformation [ktr_dim_bcb_moeda]
+2016/04/21 20:56:44 - Execute SQL script.0 - Finished reading query, closing connection.
+2016/04/21 20:56:44 - Execute SQL script.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2016/04/21 20:56:44 - Text file input.0 - Opening file: file:///staging/inp/bcb_moeda.csv
+2016/04/21 20:56:44 - MySQL Bulk Loader.0 - Creating FIFO file using this command : mkfifo /tmp/fifo
+2016/04/21 20:56:44 - MySQL Bulk Loader.0 - Setting FIFO file permissings using this command : chmod 666 /tmp/fifo
+2016/04/21 20:56:44 - Text file input.0 - Finished processing (I=243, O=0, R=0, W=242, U=1, E=0)
+2016/04/21 20:56:46 - MySQL Bulk Loader.0 - Connected to MySQL
+2016/04/21 20:56:46 - MySQL Bulk Loader.0 - Starting the MySQL bulk Load in a separate thread : LOAD DATA LOCAL INFILE '/tmp/fifo' INTO TABLE dim.bcb_moeda FIELDS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\' (sk_moeda,nm_moeda,nk_cd_moeda,cd_pais,nm_pais,ii_moeda,dt_exclusao_moeda);
+2016/04/21 20:56:46 - MySQL Bulk Loader.0 - Opening fifo /tmp/fifo for writing.
+2016/04/21 20:56:46 - MySQL Bulk Loader.0 - Finished processing (I=0, O=242, R=242, W=242, U=0, E=0)
+2016/04/24 07:26:14 - ktr_dim_bcb_moeda.ktr - Loading transformation from XML file [/staging/job/ktr_dim_bcb_moeda.ktr]
+2016/04/24 07:26:14 - ktr_dim_bcb_moeda - Dispatching started for transformation [ktr_dim_bcb_moeda]
+2016/04/24 07:26:16 - Execute SQL script.0 - Finished reading query, closing connection.
+2016/04/24 07:26:16 - Execute SQL script.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2016/04/24 07:26:16 - Text file input.0 - Opening file: file:///staging/inp/bcb_moeda.csv
+2016/04/24 07:26:16 - MySQL Bulk Loader.0 - Creating FIFO file using this command : mkfifo /tmp/fifo
+2016/04/24 07:26:16 - MySQL Bulk Loader.0 - Setting FIFO file permissings using this command : chmod 666 /tmp/fifo
+2016/04/24 07:26:16 - Text file input.0 - Finished processing (I=243, O=0, R=0, W=242, U=1, E=0)
+2016/04/24 07:26:18 - MySQL Bulk Loader.0 - Connected to MySQL
+2016/04/24 07:26:18 - MySQL Bulk Loader.0 - Starting the MySQL bulk Load in a separate thread : LOAD DATA LOCAL INFILE '/tmp/fifo' INTO TABLE dim.bcb_moeda FIELDS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\' (sk_moeda,nm_moeda,nk_cd_moeda,cd_pais,nm_pais,ii_moeda,dt_exclusao_moeda);
+2016/04/24 07:26:18 - MySQL Bulk Loader.0 - Opening fifo /tmp/fifo for writing.
+2016/04/24 07:26:19 - MySQL Bulk Loader.0 - Finished processing (I=0, O=242, R=242, W=242, U=0, E=0)
+2016/04/24 07:57:28 - ktr_dim_bcb_moeda.ktr - Loading transformation from XML file [/staging/job/ktr_dim_bcb_moeda.ktr]
+2016/04/24 07:57:28 - ktr_dim_bcb_moeda - Dispatching started for transformation [ktr_dim_bcb_moeda]
+2016/04/24 07:57:30 - Execute SQL script.0 - Finished reading query, closing connection.
+2016/04/24 07:57:30 - Text file input.0 - Opening file: file:///staging/inp/bcb_moeda.csv
+2016/04/24 07:57:30 - MySQL Bulk Loader.0 - Creating FIFO file using this command : mkfifo /tmp/fifo
+2016/04/24 07:57:30 - Execute SQL script.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2016/04/24 07:57:30 - Text file input.0 - Finished processing (I=243, O=0, R=0, W=242, U=1, E=0)
+2016/04/24 07:57:30 - MySQL Bulk Loader.0 - Setting FIFO file permissings using this command : chmod 666 /tmp/fifo
+2016/04/24 07:57:32 - MySQL Bulk Loader.0 - Connected to MySQL
+2016/04/24 07:57:32 - MySQL Bulk Loader.0 - Starting the MySQL bulk Load in a separate thread : LOAD DATA LOCAL INFILE '/tmp/fifo' INTO TABLE dim.bcb_moeda FIELDS TERMINATED BY '\t' OPTIONALLY ENCLOSED BY '"' ESCAPED BY '\\' (sk_moeda,nm_moeda,nk_cd_moeda,cd_pais,nm_pais,ii_moeda,dt_exclusao_moeda);
+2016/04/24 07:57:32 - MySQL Bulk Loader.0 - Opening fifo /tmp/fifo for writing.
+2016/04/24 07:57:35 - MySQL Bulk Loader.0 - Finished processing (I=0, O=242, R=242, W=242, U=0, E=0)

@@ -1,0 +1,430 @@
+/**
+ * Kettle-Project-Toolbox project build source pipeline script
+ *
+ * Created by xiaoyao9184 on 2020/5/15.
+ *
+ * It will checkout source code and build to artifact and archive it.
+ *
+ *
+ * Plugin dependencies
+ * - file-operation
+ *
+ * Shared library dependencies(Optional)
+ * - KPT_Shared_Libraries
+ *
+ */
+pipeline {
+    agent {
+        node {
+            label "${params.Node}"
+        }
+    }
+    parameters {
+        string(
+            name: 'Node',
+            defaultValue: 'master',
+            description: 'Node label or node name for run')
+        string(
+            name: 'WorkPath_On_Windows', 
+            defaultValue: 'D:\\Program\\jenkins_workspace',  
+            description: """jenkins job work directory, 
+                for fix cant cross-device hard link when 
+                jenkins run in docker default workspace and PDI path with different mount.""")
+        string(
+            name: 'WorkPath_On_Unix', 
+            defaultValue: '/home/jenkins/workspace', 
+            description: """jenkins job work directory, 
+                for fix cant cross-device hard link when 
+                jenkins run in docker default workspace and PDI path with different mount.""")
+        string(
+            name: 'ProjectName', 
+            description: 'project name!')
+            
+        string(
+            name: 'PDIURL', 
+            defaultValue: 'https://jaist.dl.sourceforge.net/project/pentaho/Data%20Integration/7.1/pdi-ce-7.1.0.0-12.zip', 
+            description: 'The PDI URL!')
+        string(
+            name: 'PDIPath_On_Windows', 
+            defaultValue: 'D:\\Program\\Kettle\\pdi-ce-7.1.0.0-12\\data-integration', 
+            description: 'data-integration directory')
+        string(
+            name: 'PDIPath_On_Unix', 
+            defaultValue: '/home/jenkins/kettle/pdi-ce-7.1.0.0-12/data-integration', 
+            description: 'data-integration directory')
+
+        string(
+            name: 'KPTURL', 
+            defaultValue: 'https://github.com/xiaoyao9184/Kettle-Project-Toolbox.git', 
+            description: 'The KPT git url!')
+        string(
+            name: 'KPTPath_On_Windows', 
+            defaultValue: 'D:\\Program\\Kettle\\Kettle-Project-Toolbox', 
+            description: 'Kettle-Project-Toolbox directory')
+        string(
+            name: 'KPTPath_On_Unix', 
+            defaultValue: '/home/jenkins/kettle/kettle-project-toolbox', 
+            description: 'Kettle-Project-Toolbox directory')
+
+        // build source
+        string(
+            name: 'ProjectRepository', 
+            description: """project git repository! 
+                default branch use master, credentials Id use 'Mr.Robot'.""")
+        
+        // build target
+        string(
+            name: 'ArchivePath_On_Windows', 
+            defaultValue: 'D:\\Archive', 
+            description: 'archive directory!')
+        string(
+            name: 'ArchivePath_On_Unix', 
+            defaultValue: '/home/jenkins/archive', 
+            description: 'archive directory!')
+    }
+    options {
+        disableConcurrentBuilds()
+        skipDefaultCheckout()
+    }
+    stages {
+        
+        // ready
+
+        stage('Create info') {
+            steps {
+                echo 'Create info...'
+                script {
+                    flow = [
+                        useSharedLibrary: false,
+                        updateKPT: false,
+                        downloadPDI: false
+                    ]
+                    archive = [
+                        path: null,
+                        file: null,
+                        version: null
+                    ]
+                    info = [
+                        node: "${env.NODE_NAME}",
+                        workspace: null,
+                        PDIPath: null,
+                        KPTPath: null
+                    ]
+
+                    try {
+                        // on linux the following code may be reporting an error
+                        library 'KPT_Shared_Libraries@master'
+                        if (deploy) {
+                            println "Global variable 'deploy' exists use Shared Library"
+                            flow."useSharedLibrary" = true
+                        }
+                    } catch(MissingPropertyException ex) {
+                        println("Catching the MissingPropertyException, miss 'deploy' mean not use Shared Library!");
+                    } catch(Exception ex) {
+                        println("Catching unknow Exception, that mean not use Shared Library!");
+                    }
+                    
+                   if (isUnix()) {
+                        info."workspace" = "${params.WorkPath_On_Unix}/${env.JOB_NAME}"
+                        info."PDIPath" = params.PDIPath_On_Unix
+                        info."KPTPath" = params.KPTPath_On_Unix
+                    } else {
+                        job_path = "${env.JOB_NAME}".replaceAll('\\/','\\\\')
+                        info."workspace" = "${params.WorkPath_On_Windows}\\${job_path}"
+                        info."PDIPath" = params.PDIPath_On_Windows
+                        info."KPTPath" = params.KPTPath_On_Windows
+                    }
+                }
+                echo "Build run on node: ${info.node}"
+            }
+        }
+
+        stage('Check PDI and KPT') {
+            agent {
+                node {
+                    label info.node
+                    customWorkspace info.workspace
+                }
+            }
+            steps {
+                echo 'Check kettle tool...'
+                script {
+                    if (flow.useSharedLibrary) {
+                        //update KPT when not exist or KPT path is manage by git
+                        flow."updateKPT" = deploy.check_path_not_exists_or_manage_by_git("${info.KPTPath}")
+
+                        //download PDI with not exist
+                        flow."downloadPDI" = !deploy.check_file_exists("${info.PDIPath}")
+                    } else if (isUnix()) {
+                        //update KPT when not exist or KPT path is manage by git
+                        flow."updateKPT" = sh(
+                                script: """
+                                [ -d "${info.KPTPath}" ] && [ ! -d "${info.KPTPath}/.git" ] && echo "false" || echo "true"
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                        //download PDI with not exist
+                        flow."downloadPDI" = sh(
+                                script: """
+                                [ -d "${info.PDIPath}" ] && echo "false" || echo "true"
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    } else {
+                        //update KPT when not exist or KPT path is manage by git
+                        flow."updateKPT" = bat(
+                                script: """
+                                @echo off
+                                if exist "${info.KPTPath}" (
+                                    if exist "${info.KPTPath}\\.git" (
+                                        echo true
+                                    ) else (
+                                        echo false
+                                    )
+                                ) else (
+                                    echo true
+                                )
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                        //download PDI with not exist
+                        flow."downloadPDI" = bat(
+                                script: """
+                                @echo off
+                                if exist "${info.PDIPath}" (
+                                    echo false
+                                ) else (
+                                    echo true
+                                )
+                                """, 
+                                returnStdout: true)
+                            .trim()
+                            .toBoolean()
+                    }
+                }
+            }
+        }
+
+        stage('Update KPT') {
+            agent {
+                node {
+                    label info.node
+                    customWorkspace info.workspace
+                }
+            }
+            when { 
+                expression { flow.updateKPT }
+            }
+            steps {
+                dir("${info.KPTPath}") {
+                    echo 'Update KPT...'
+                    git branch: 'master',
+                        url: "${params.KPTURL}"
+                }
+            }
+        }
+
+        stage('Download PDI') {
+            agent {
+                node {
+                    label info.node
+                    customWorkspace info.workspace
+                }
+            }
+            when { 
+                expression { flow.downloadPDI }
+            }
+            steps {
+                echo 'Download PDI...'
+                fileOperations([
+                    fileDownloadOperation(
+                        url: "${params.PDIURL}",
+                        targetFileName: 'pdi-ce.zip',
+                        targetLocation: "${WORKSPACE}",
+                        userName: '',
+                        password: ''),
+                    fileUnZipOperation(
+                        filePath: 'pdi-ce.zip',
+                        targetLocation: "."),
+                    folderCopyOperation(
+                        destinationFolderPath: "${info.PDIPath}",
+                        sourceFolderPath: './data-integration'),
+                    folderDeleteOperation(
+                        './data-integration'),
+                    folderDeleteOperation(
+                        './pdi-ce.zip')
+                ])
+            }
+        }
+
+        // build
+        
+        stage('Project checkout') {
+            agent {
+                node {
+                    label info.node
+                    customWorkspace info.workspace
+                }
+            }
+            when { 
+                expression { !flow.useCustomizeRepository }
+            }
+            steps {
+                echo 'Checkout project...'
+                dir("${params.ProjectName}") {
+                    script {
+                        if (params.ProjectRepository) {
+                            echo "Will use 'Mr.Robot' check master @ ${params.ProjectRepository} for project" 
+                            git branch: 'master',
+                                credentialsId: 'Mr.Robot',
+                                url: "${params.ProjectRepository}"
+                        } else {
+                            checkout scm
+                        }
+                    }
+                }
+            }
+        }
+
+        stage('Project link') {
+            agent {
+                node {
+                    label info.node
+                    customWorkspace info.workspace
+                }
+            }
+            when { 
+                expression { params.ProjectName }
+            }
+            steps {
+                echo 'Link KPT...'
+                script {
+                    if (isUnix()) {
+                        sh """
+                        bash "${info.KPTPath}/tool/INIT_KPT.sh" "\$(pwd)" "${info.PDIPath}" <&-
+                        """
+                    } else {
+                        bat """
+                        call "${info.KPTPath}\\tool\\INIT_KPT.bat" "%cd%" "${info.PDIPath}"
+                        """
+                    }
+                }
+            }
+        }
+
+        stage('Project package') {
+            agent {
+                node {
+                    label info.node
+                    customWorkspace info.workspace
+                }
+            }
+            when { 
+                expression { params.ProjectName }
+            }
+            steps {
+                echo 'Package project...'
+                script {
+                    if (isUnix()) {
+                        sh """
+                        bash "\$(pwd)/tool/PACKAGE_DEPLOY_PATH.sh" "\$(pwd)/${params.ProjectName}" <&-
+                        """
+                    } else {
+                        bat """
+                        call %cd%\\tool\\PACKAGE_DEPLOY_PATH.bat %cd%\\${params.ProjectName}
+                        """
+                    }
+                }
+            }
+        }
+
+        stage('Project archive') {
+            agent {
+                node {
+                    label info.node
+                    customWorkspace info.workspace
+                }
+            }
+            when { 
+                expression { params.ProjectName }
+            }
+            steps {
+                echo "Archive project..."
+                script {
+                    if (isUnix()) {
+                        archive."name" = sh(
+                            script: "find . -name '\\[Deploy\\]${params.ProjectName}*.zip' -print", 
+                            returnStdout: true).trim()
+                        archive."version" = sh(
+                            script: "basename \$(find . -name '\\[Deploy\\]${params.ProjectName}*.zip' -print) .zip", 
+                            returnStdout: true).trim()
+                    } else {
+                        archive."name" = bat(
+                            script: "@echo off & FOR %%F IN ([Deploy]${params.ProjectName}*.zip) DO echo %%~nxF", 
+                            returnStdout: true).trim()
+                        archive."version" = bat(
+                            script: "@echo off & FOR %%F IN ([Deploy]${params.ProjectName}*.zip) DO echo %%~nF", 
+                            returnStdout: true).trim()
+                    }
+
+                    if (!archive.name) {
+                        echo "No archive file!"
+                        archive = null
+                        currentBuild.result = 'FAILURE'
+                    }
+                    archive."version" = archive.version.minus('[Deploy]')
+                }
+                echo "Archive name is: ${archive.name}"
+                echo "Archive version is: ${archive.version}"
+                
+                archiveArtifacts artifacts: "*.zip", fingerprint: true
+                stash name: "kpt_build", includes: '*.zip'
+
+                fileOperations([
+                    fileDeleteOperation(
+                        includes: "*.zip")
+                ])
+            }
+        }
+
+        stage('Project archive to path') {
+            agent {
+                node {
+                    label "master"
+                    customWorkspace info.workspace
+                }
+            }
+            when { 
+                expression { params.ProjectName }
+            }
+            steps {
+                echo "Unstash project to path..."
+                unstash name: "kpt_build"
+                script {
+                    if (isUnix()) {
+                        archive."path" = "${params.ArchivePath_On_Unix}/${params.ProjectName}"
+                    } else {
+                        archive."path" = "${params.ArchivePath_On_Windows}\\${params.ProjectName}"
+                    }
+                    echo "Archive path is: ${archive.path}"
+
+                    fileOperations([
+                        fileCopyOperation(
+                            targetLocation: "${archive.path}",
+                            includes: "${archive.name}"),
+                        fileDeleteOperation(
+                            includes: "${archive.name}")
+                    ])
+                }
+            }
+        }
+    }
+    post {
+        success {
+            deleteDir()
+        }
+    }
+}

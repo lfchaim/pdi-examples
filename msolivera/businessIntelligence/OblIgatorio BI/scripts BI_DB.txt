@@ -1,0 +1,194 @@
+***************CONEXION BORRAR DESPUES**************
+HOST intnegocio.cattaneo.uy
+BASE obligatoriobi
+USER intnegocio
+PASS aAintnegocio1234
+https://gist.github.com/bcattaneo/e3b07d47fea1c2ec295b110e27cd2951
+
+-----------------------------------------------------------
+-- dt_campeonato
+DROP TABLE dt_campeonato CASCADE;
+
+CREATE TABLE dt_campeonato (
+    id_campeonato SERIAL PRIMARY KEY,
+    sk_campeonato INT NOT NULL,
+    temporada_anio character varying,
+    CONSTRAINT dt_campeonato_unique UNIQUE (sk_campeonato)
+	
+);
+
+----------------------------------------------------------
+-- dt_nacionalidad
+DROP TABLE dt_nacionalidad CASCADE;
+
+CREATE TABLE dt_nacionalidad (
+    id_nacionalidad SERIAL PRIMARY KEY,
+    sk_nacionalidad INT NOT NULL,
+    CONSTRAINT dt_nacionalidad_unique UNIQUE (sk_nacionalidad),
+    nacionalidad VARCHAR(255) NOT NULL
+);
+
+
+------------------------------------------------------------
+-- dt_carrera
+DROP TABLE dt_carrera CASCADE;
+
+CREATE TABLE dt_carrera (
+    id_carrera SERIAL PRIMARY KEY,
+    sk_carrera INT NOT NULL,
+    nombre VARCHAR(255) NOT NULL,
+    circuito_nombre VARCHAR(255) NOT NULL,
+    temporada_anio VARCHAR(255) NOT NULL,
+    ronda VARCHAR(255) NOT NULL,
+    CONSTRAINT dt_carrera_unique UNIQUE (sk_carrera),
+    fecha VARCHAR(255) NOT NULL
+);
+
+------------------------------------------------------------
+-- dt_constructor
+DROP TABLE dt_constructor CASCADE;
+
+CREATE TABLE dt_constructor (
+    id_constructor SERIAL PRIMARY KEY,
+    sk_constructor INT NOT NULL,
+    CONSTRAINT dt_constructor_unique UNIQUE (sk_constructor),
+    id_nacionalidad INT NOT NULL,
+    FOREIGN KEY (id_nacionalidad) REFERENCES dt_nacionalidad(sk_nacionalidad),
+    nombre VARCHAR(255) NOT NULL
+);
+
+----------------------------------------------------------------
+-- dt_piloto
+DROP TABLE dt_piloto CASCADE;
+
+CREATE TABLE dt_piloto (
+    id_piloto SERIAL PRIMARY KEY,
+    sk_piloto INT NOT NULL,
+    CONSTRAINT dt_piloto_unique UNIQUE (sk_piloto),
+    id_nacionalidad INT NOT NULL,
+    FOREIGN KEY (id_nacionalidad) REFERENCES dt_nacionalidad(sk_nacionalidad),
+    nombre VARCHAR(255) NOT NULL,
+    apellido VARCHAR(255) NOT NULL,
+    fecha_nacimiento DATE NOT NULL
+);
+
+-----------------------------------------------------------------
+
+-- dt_pais
+DROP TABLE dt_pais CASCADE;
+
+CREATE TABLE dt_pais (
+    id_pais SERIAL PRIMARY KEY,
+    sk_pais INT NOT NULL,
+    CONSTRAINT dt_pais_unique UNIQUE (sk_pais),
+    pais VARCHAR(255) NOT NULL
+);
+-----------------------------------------------------------------
+-- dt_ciudad
+DROP TABLE dt_ciudad CASCADE;
+
+CREATE TABLE dt_ciudad (
+    id_ciudad SERIAL PRIMARY KEY,
+    sk_ciudad INT NOT NULL,
+    CONSTRAINT dt_ciudad_unique UNIQUE (sk_ciudad),
+    nombre VARCHAR(255) NOT NULL,
+    latitud VARCHAR(255) NOT NULL,
+    longitud VARCHAR(255) NOT NULL,
+    altitud VARCHAR(255) NOT NULL,
+    id_pais INT NOT NULL,
+    FOREIGN KEY (id_pais) REFERENCES dt_pais(sk_pais)
+);
+
+------------------------------------------------------------
+-- dt_circuito
+DROP TABLE dt_circuito CASCADE;
+
+CREATE TABLE dt_circuito (
+    id_circuito SERIAL PRIMARY KEY,
+    sk_circuito INT NOT NULL,
+    CONSTRAINT dt_circuito_unique UNIQUE (sk_circuito),
+    nombre VARCHAR(255) NOT NULL,
+    id_ciudad INT NOT NULL,
+    FOREIGN KEY (id_ciudad) REFERENCES dt_ciudad(sk_ciudad)
+);
+
+-----------------------------------------------------------------------
+-- ft_paradas_tecnicas
+DROP TABLE IF EXISTS ft_paradas_tecnicas;
+
+CREATE TABLE ft_paradas_tecnicas (
+    sk_carrera INT,
+    FOREIGN KEY (sk_carrera) REFERENCES dt_carrera(sk_carrera),
+    sk_circuito INT,
+    FOREIGN KEY (sk_circuito) REFERENCES dt_circuito(sk_circuito),
+    sk_campeonato INT,
+    FOREIGN KEY (sk_campeonato) REFERENCES dt_campeonato(sk_campeonato),
+    sk_piloto INT,
+    FOREIGN KEY (sk_piloto) REFERENCES dt_piloto(sk_piloto),
+    sk_constructor INT,
+    FOREIGN KEY (sk_constructor) REFERENCES dt_constructor(sk_constructor),
+    numero_parada INT NOT NULL,
+    vuelta INT NOT NULL,
+    duracion INTEGER NOT NULL,
+    hora VARCHAR(10) NOT NULL
+	
+);
+
+-------------------------------------------------------------------------
+-- ft_resultados
+DROP TABLE IF EXISTS ft_resultados;
+
+CREATE TABLE ft_resultados (
+    sk_carrera INT,
+    FOREIGN KEY (sk_carrera) REFERENCES dt_carrera(sk_carrera),
+    sk_circuito INT,
+    FOREIGN KEY (sk_circuito) REFERENCES dt_circuito(sk_circuito),
+    sk_piloto INT,
+    FOREIGN KEY (sk_piloto) REFERENCES dt_piloto(sk_piloto),
+    sk_constructor INT,
+    FOREIGN KEY (sk_constructor) REFERENCES dt_constructor(sk_constructor),
+    pais_circuito VARCHAR(20) NOT NULL,
+    posicion VARCHAR(5) NULL,
+    tiempo_vuelta_mas_rapida VARCHAR(10) NOT NULL,
+    numero_de_vuelta_rapida VARCHAR(5) NULL,
+    velocidad_de_vuelta_rapida VARCHAR(10) NULL,
+    numero VARCHAR(5) NOT NULL,
+    puntosPiloto VARCHAR(5) NOT NULL,
+    puntosTotalConstructor VARCHAR(5) NOT NULL,
+    campeonato_anio VARCHAR(5) NOT NULL,
+    grilla_clasificacion VARCHAR(5) NOT NULL,
+	tiempo VARCHAR(15) NOT NULL,
+	milisegundos INTEGER NOT NULL
+	
+);
+
+---------------------------------------------------------------------------------------
+-- ft_campeonatos_constructores
+DROP TABLE IF EXISTS ft_campeonatos_constructores;
+
+CREATE TABLE ft_campeonatos_constructores (
+    sk_campeonato INT,
+    FOREIGN KEY (sk_campeonato) REFERENCES dt_campeonato(sk_campeonato),
+    sk_constructor INT,
+    FOREIGN KEY (sk_constructor) REFERENCES dt_constructor(sk_constructor),
+    sk_carrera INT,
+    FOREIGN KEY (sk_carrera) REFERENCES dt_carrera(sk_carrera),
+    posicion VARCHAR(255) NOT NULL,
+    puntos VARCHAR(255) NOT NULL
+);
+
+-----------------------------------------------------------------------------------------
+
+-- ft_campeonatos_pilotos
+DROP TABLE IF EXISTS ft_campeonatos_pilotos;
+
+CREATE TABLE ft_campeonatos_pilotos (
+    sk_campeonato INT,
+    FOREIGN KEY (sk_campeonato) REFERENCES dt_campeonato(sk_campeonato),
+    sk_piloto INT,
+    FOREIGN KEY (sk_piloto) REFERENCES dt_piloto(sk_piloto),
+	sk_carrera INT,
+	FOREIGN KEY (sk_carrera) REFERENCES dt_carrera(sk_carrera),
+    posicion VARCHAR(255) NOT NULL,
+	puntos VARCHAR(255) NOT NULL
+);

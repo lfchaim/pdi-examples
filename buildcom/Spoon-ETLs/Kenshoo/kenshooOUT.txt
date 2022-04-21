@@ -1,0 +1,759 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/27 07:16:35 - Kitchen - Logging is at level : Detailed logging
+2017/03/27 07:16:35 - Kitchen - Start of run.
+2017/03/27 07:16:36 - j_Kenshoo_Import-NEW2 - Start of job execution
+2017/03/27 07:16:36 - j_Kenshoo_Import-NEW2 - exec(0, 0, START.0)
+2017/03/27 07:16:36 - START - Starting job entry
+2017/03/27 07:16:36 - j_Kenshoo_Import-NEW2 - Starting entry [Transformation]
+2017/03/27 07:16:36 - j_Kenshoo_Import-NEW2 - exec(1, 0, Transformation.0)
+2017/03/27 07:16:36 - Transformation - Starting job entry
+2017/03/27 07:16:36 - Transformation - Opening transformation: [file:///C:/spoon/kenshoo/t_Kenshoo_Last7Days_Delete2.ktr]
+2017/03/27 07:16:36 - Transformation - Loading transformation from XML file [file:///C:/spoon/kenshoo/t_Kenshoo_Last7Days_Delete2.ktr]
+2017/03/27 07:16:36 - Transformation - Starting transformation...(file=${Internal.Job.Filename.Directory}/t_Kenshoo_Last7Days_Delete2.ktr, name=Transformation, repinfo=null)
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation is pre-loaded.
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Dispatching started for transformation [t_Kenshoo_Last7Days_Delete2]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Nr of arguments detected:0 
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - This is not a replay transformation
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - I found 10 different steps to launch.
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Allocating rowsets...
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 0 --> Calculator
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -   prevcopies = 1, nextcopies=1
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation allocated new rowset [Calculator.0 - DeletePPC.0]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 1 rowsets for step 0 --> Calculator  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 1 --> DeletePPC
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -   prevcopies = 1, nextcopies=1
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation allocated new rowset [DeletePPC.0 - DeletePLA.0]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 2 rowsets for step 1 --> DeletePPC  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 2 --> Add constants
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -   prevcopies = 1, nextcopies=1
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation allocated new rowset [Add constants.0 - Calculator.0]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 3 rowsets for step 2 --> Add constants  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 3 --> DeletePLA
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -   prevcopies = 1, nextcopies=1
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation allocated new rowset [DeletePLA.0 - DeleteAmazon.0]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 4 rowsets for step 3 --> DeletePLA  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 4 --> DeleteAmazon
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -   prevcopies = 1, nextcopies=1
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation allocated new rowset [DeleteAmazon.0 - DeleteDisplay.0]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 5 rowsets for step 4 --> DeleteAmazon  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 5 --> DeleteDisplay
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 5 rowsets for step 5 --> DeleteDisplay  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 6 --> Get File Names
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -   prevcopies = 1, nextcopies=1
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation allocated new rowset [Get File Names.0 - Select values.0]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 6 rowsets for step 6 --> Get File Names  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 7 --> Select values
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -   prevcopies = 1, nextcopies=1
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation allocated new rowset [Select values.0 - Strings cut.0]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 7 rowsets for step 7 --> Select values  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 8 --> Strings cut
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -   prevcopies = 1, nextcopies=1
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation allocated new rowset [Strings cut.0 - Select values 2.0]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 8 rowsets for step 8 --> Strings cut  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocating rowsets for step 9 --> Select values 2
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -   prevcopies = 1, nextcopies=1
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Transformation allocated new rowset [Select values 2.0 - Add constants.0]
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Allocated 9 rowsets for step 9 --> Select values 2  
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Allocating Steps & StepData...
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [Calculator] of type [Calculator]
+2017/03/27 07:16:36 - Calculator.0 - distribution activated
+2017/03/27 07:16:36 - Calculator.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - Calculator.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:16:36 - Calculator.0 - Got previous step from [Calculator] #0 --> Add constants
+2017/03/27 07:16:36 - Calculator.0 - input rel is 1:1
+2017/03/27 07:16:36 - Calculator.0 - Found input rowset [Add constants.0 - Calculator.0]
+2017/03/27 07:16:36 - Calculator.0 - output rel. is  1:1
+2017/03/27 07:16:36 - Calculator.0 - Found output rowset [Calculator.0 - DeletePPC.0]
+2017/03/27 07:16:36 - Calculator.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [Calculator].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [DeletePPC] of type [Delete]
+2017/03/27 07:16:36 - DeletePPC.0 - distribution activated
+2017/03/27 07:16:36 - DeletePPC.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - DeletePPC.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:16:36 - DeletePPC.0 - Got previous step from [DeletePPC] #0 --> Calculator
+2017/03/27 07:16:36 - DeletePPC.0 - input rel is 1:1
+2017/03/27 07:16:36 - DeletePPC.0 - Found input rowset [Calculator.0 - DeletePPC.0]
+2017/03/27 07:16:36 - DeletePPC.0 - output rel. is  1:1
+2017/03/27 07:16:36 - DeletePPC.0 - Found output rowset [DeletePPC.0 - DeletePLA.0]
+2017/03/27 07:16:36 - DeletePPC.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [DeletePPC].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [Add constants] of type [Constant]
+2017/03/27 07:16:36 - Add constants.0 - distribution activated
+2017/03/27 07:16:36 - Add constants.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - Add constants.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:16:36 - Add constants.0 - Got previous step from [Add constants] #0 --> Select values 2
+2017/03/27 07:16:36 - Add constants.0 - input rel is 1:1
+2017/03/27 07:16:36 - Add constants.0 - Found input rowset [Select values 2.0 - Add constants.0]
+2017/03/27 07:16:36 - Add constants.0 - output rel. is  1:1
+2017/03/27 07:16:36 - Add constants.0 - Found output rowset [Add constants.0 - Calculator.0]
+2017/03/27 07:16:36 - Add constants.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [Add constants].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [DeletePLA] of type [Delete]
+2017/03/27 07:16:36 - DeletePLA.0 - distribution activated
+2017/03/27 07:16:36 - DeletePLA.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - DeletePLA.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:16:36 - DeletePLA.0 - Got previous step from [DeletePLA] #0 --> DeletePPC
+2017/03/27 07:16:36 - DeletePLA.0 - input rel is 1:1
+2017/03/27 07:16:36 - DeletePLA.0 - Found input rowset [DeletePPC.0 - DeletePLA.0]
+2017/03/27 07:16:36 - DeletePLA.0 - output rel. is  1:1
+2017/03/27 07:16:36 - DeletePLA.0 - Found output rowset [DeletePLA.0 - DeleteAmazon.0]
+2017/03/27 07:16:36 - DeletePLA.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [DeletePLA].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [DeleteAmazon] of type [Delete]
+2017/03/27 07:16:36 - DeleteAmazon.0 - distribution activated
+2017/03/27 07:16:36 - DeleteAmazon.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - DeleteAmazon.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:16:36 - DeleteAmazon.0 - Got previous step from [DeleteAmazon] #0 --> DeletePLA
+2017/03/27 07:16:36 - DeleteAmazon.0 - input rel is 1:1
+2017/03/27 07:16:36 - DeleteAmazon.0 - Found input rowset [DeletePLA.0 - DeleteAmazon.0]
+2017/03/27 07:16:36 - DeleteAmazon.0 - output rel. is  1:1
+2017/03/27 07:16:36 - DeleteAmazon.0 - Found output rowset [DeleteAmazon.0 - DeleteDisplay.0]
+2017/03/27 07:16:36 - DeleteAmazon.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [DeleteAmazon].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [DeleteDisplay] of type [Delete]
+2017/03/27 07:16:36 - DeleteDisplay.0 - distribution activated
+2017/03/27 07:16:36 - DeleteDisplay.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - DeleteDisplay.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 07:16:36 - DeleteDisplay.0 - Got previous step from [DeleteDisplay] #0 --> DeleteAmazon
+2017/03/27 07:16:36 - DeleteDisplay.0 - input rel is 1:1
+2017/03/27 07:16:36 - DeleteDisplay.0 - Found input rowset [DeleteAmazon.0 - DeleteDisplay.0]
+2017/03/27 07:16:36 - DeleteDisplay.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [DeleteDisplay].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [Get File Names] of type [GetFileNames]
+2017/03/27 07:16:36 - Get File Names.0 - distribution activated
+2017/03/27 07:16:36 - Get File Names.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - Get File Names.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 07:16:36 - Get File Names.0 - output rel. is  1:1
+2017/03/27 07:16:36 - Get File Names.0 - Found output rowset [Get File Names.0 - Select values.0]
+2017/03/27 07:16:36 - Get File Names.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [Get File Names].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/27 07:16:36 - Select values.0 - distribution activated
+2017/03/27 07:16:36 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - Select values.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:16:36 - Select values.0 - Got previous step from [Select values] #0 --> Get File Names
+2017/03/27 07:16:36 - Select values.0 - input rel is 1:1
+2017/03/27 07:16:36 - Select values.0 - Found input rowset [Get File Names.0 - Select values.0]
+2017/03/27 07:16:36 - Select values.0 - output rel. is  1:1
+2017/03/27 07:16:36 - Select values.0 - Found output rowset [Select values.0 - Strings cut.0]
+2017/03/27 07:16:36 - Select values.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [Select values].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [Strings cut] of type [StringCut]
+2017/03/27 07:16:36 - Strings cut.0 - distribution activated
+2017/03/27 07:16:36 - Strings cut.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - Strings cut.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:16:36 - Strings cut.0 - Got previous step from [Strings cut] #0 --> Select values
+2017/03/27 07:16:36 - Strings cut.0 - input rel is 1:1
+2017/03/27 07:16:36 - Strings cut.0 - Found input rowset [Select values.0 - Strings cut.0]
+2017/03/27 07:16:36 - Strings cut.0 - output rel. is  1:1
+2017/03/27 07:16:36 - Strings cut.0 - Found output rowset [Strings cut.0 - Select values 2.0]
+2017/03/27 07:16:36 - Strings cut.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [Strings cut].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation is about to allocate step [Select values 2] of type [SelectValues]
+2017/03/27 07:16:36 - Select values 2.0 - distribution activated
+2017/03/27 07:16:36 - Select values 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:16:36 - Select values 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:16:36 - Select values 2.0 - Got previous step from [Select values 2] #0 --> Strings cut
+2017/03/27 07:16:36 - Select values 2.0 - input rel is 1:1
+2017/03/27 07:16:36 - Select values 2.0 - Found input rowset [Strings cut.0 - Select values 2.0]
+2017/03/27 07:16:36 - Select values 2.0 - output rel. is  1:1
+2017/03/27 07:16:36 - Select values 2.0 - Found output rowset [Select values 2.0 - Add constants.0]
+2017/03/27 07:16:36 - Select values 2.0 - Finished dispatching
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 -  Transformation has allocated a new step: [Select values 2].0
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - This transformation can be replayed with replay date: 2017/03/27 07:16:36
+2017/03/27 07:16:36 - t_Kenshoo_Last7Days_Delete2 - Initialising 10 steps...
+2017/03/27 07:16:36 - Calculator.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - DeletePPC.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - Add constants.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - DeletePLA.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - DeleteAmazon.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - DeleteDisplay.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - Get File Names.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - Select values.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - Strings cut.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - Select values 2.0 - Running on slave server #0/1.
+2017/03/27 07:16:36 - Ecomedate - New database connection defined
+2017/03/27 07:16:36 - Ecomedate - New database connection defined
+2017/03/27 07:16:36 - Ecomedate - New database connection defined
+2017/03/27 07:16:36 - Ecomedate - New database connection defined
+2017/03/27 07:16:38 - Ecomedate - Connected to database.
+2017/03/27 07:16:38 - Ecomedate - Connected to database.
+2017/03/27 07:16:38 - Ecomedate - Connected to database.
+2017/03/27 07:16:38 - Ecomedate - Connected to database.
+2017/03/27 07:16:38 - DeletePLA.0 - Connected to database...
+2017/03/27 07:16:38 - DeleteDisplay.0 - Connected to database...
+2017/03/27 07:16:38 - DeleteAmazon.0 - Connected to database...
+2017/03/27 07:16:38 - DeletePPC.0 - Connected to database...
+2017/03/27 07:16:38 - Ecomedate - Auto commit off
+2017/03/27 07:16:38 - Ecomedate - Auto commit off
+2017/03/27 07:16:38 - Ecomedate - Auto commit off
+2017/03/27 07:16:38 - Ecomedate - Auto commit off
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [Calculator.0] initialized flawlessly.
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [DeletePPC.0] initialized flawlessly.
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [Add constants.0] initialized flawlessly.
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [DeletePLA.0] initialized flawlessly.
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [DeleteAmazon.0] initialized flawlessly.
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [DeleteDisplay.0] initialized flawlessly.
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [Get File Names.0] initialized flawlessly.
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [Select values.0] initialized flawlessly.
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [Strings cut.0] initialized flawlessly.
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Step [Select values 2.0] initialized flawlessly.
+2017/03/27 07:16:38 - Calculator.0 - Starting to run...
+2017/03/27 07:16:38 - DeletePPC.0 - Starting to run...
+2017/03/27 07:16:38 - Add constants.0 - Starting to run...
+2017/03/27 07:16:38 - DeletePLA.0 - Starting to run...
+2017/03/27 07:16:38 - DeleteAmazon.0 - Starting to run...
+2017/03/27 07:16:38 - DeleteDisplay.0 - Starting to run...
+2017/03/27 07:16:38 - Get File Names.0 - Starting to run...
+2017/03/27 07:16:38 - Select values.0 - Starting to run...
+2017/03/27 07:16:38 - t_Kenshoo_Last7Days_Delete2 - Transformation has allocated 10 threads and 9 rowsets.
+2017/03/27 07:16:38 - Strings cut.0 - Starting to run...
+2017/03/27 07:16:38 - Select values 2.0 - Starting to run...
+2017/03/27 07:16:38 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 07:16:38 - Select values.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 07:16:38 - Strings cut.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 07:16:38 - Select values 2.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 07:16:38 - Add constants.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 07:16:38 - DeletePPC.0 - Checking row: [2017-03-27], [-7], [PPC], [PLA], [Amazon], [Display], [2017/03/20 00:00:00.000], [2017/03/20 00:00:00.000]
+2017/03/27 07:16:38 - DeletePPC.0 - Setting delete preparedStatement to [DELETE FROM dbo.CFO_REPORT2_ACTIVE
+2017/03/27 07:16:38 - DeletePPC.0 - WHERE SALES_ORD_ENTRY_DT >= ? AND   productDescription = ? ]
+2017/03/27 07:16:38 - Calculator.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 07:17:46 - DeletePLA.0 - Checking row: [2017-03-27], [-7], [PPC], [PLA], [Amazon], [Display], [2017/03/20 00:00:00.000], [2017/03/20 00:00:00.000]
+2017/03/27 07:17:46 - DeletePLA.0 - Setting delete preparedStatement to [DELETE FROM dbo.CFO_REPORT2_ACTIVE
+2017/03/27 07:17:46 - DeletePLA.0 - WHERE SALES_ORD_ENTRY_DT >= ? AND   productDescription = ? ]
+2017/03/27 07:17:47 - Ecomedate - Connection to database closed!
+2017/03/27 07:17:47 - DeletePPC.0 - Finished processing (I=0, O=0, R=1, W=1, U=1, E=0)
+2017/03/27 07:19:21 - DeleteAmazon.0 - Checking row: [2017-03-27], [-7], [PPC], [PLA], [Amazon], [Display], [2017/03/20 00:00:00.000], [2017/03/20 00:00:00.000]
+2017/03/27 07:19:21 - DeleteAmazon.0 - Setting delete preparedStatement to [DELETE FROM dbo.CFO_REPORT2_ACTIVE
+2017/03/27 07:19:21 - DeleteAmazon.0 - WHERE SALES_ORD_ENTRY_DT >= ? AND   productDescription = ? ]
+2017/03/27 07:19:21 - Ecomedate - Connection to database closed!
+2017/03/27 07:19:21 - DeletePLA.0 - Finished processing (I=0, O=0, R=1, W=1, U=1, E=0)
+2017/03/27 07:20:17 - DeleteDisplay.0 - Checking row: [2017-03-27], [-7], [PPC], [PLA], [Amazon], [Display], [2017/03/20 00:00:00.000], [2017/03/20 00:00:00.000]
+2017/03/27 07:20:17 - DeleteDisplay.0 - Setting delete preparedStatement to [DELETE FROM dbo.CFO_REPORT2_ACTIVE
+2017/03/27 07:20:17 - DeleteDisplay.0 - WHERE SALES_ORD_ENTRY_DT >= ? AND   productDescription = ? ]
+2017/03/27 07:20:17 - Ecomedate - Connection to database closed!
+2017/03/27 07:20:17 - DeleteAmazon.0 - Finished processing (I=0, O=0, R=1, W=1, U=1, E=0)
+2017/03/27 07:20:25 - Ecomedate - Connection to database closed!
+2017/03/27 07:20:25 - DeleteDisplay.0 - Finished processing (I=0, O=0, R=1, W=1, U=1, E=0)
+2017/03/27 07:20:25 - j_Kenshoo_Import-NEW2 - Starting entry [Kenshoo_Import]
+2017/03/27 07:20:25 - j_Kenshoo_Import-NEW2 - exec(2, 0, Kenshoo_Import.0)
+2017/03/27 07:20:25 - Kenshoo_Import - Starting job entry
+2017/03/27 07:20:25 - Kenshoo_Import - Opening transformation: [file:///C:/spoon/kenshoo/t_Kenshoo_Import2.ktr]
+2017/03/27 07:20:25 - Kenshoo_Import - Loading transformation from XML file [file:///C:/spoon/kenshoo/t_Kenshoo_Import2.ktr]
+2017/03/27 07:20:25 - Kenshoo_Import - Starting transformation...(file=${Internal.Job.Filename.Directory}/t_Kenshoo_Import2.ktr, name=Kenshoo_Import, repinfo=null)
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation is pre-loaded.
+2017/03/27 07:20:25 - t_Kenshoo_Import - Dispatching started for transformation [t_Kenshoo_Import]
+2017/03/27 07:20:25 - t_Kenshoo_Import - Nr of arguments detected:0 
+2017/03/27 07:20:25 - t_Kenshoo_Import - This is not a replay transformation
+2017/03/27 07:20:25 - t_Kenshoo_Import - I found 23 different steps to launch.
+2017/03/27 07:20:25 - t_Kenshoo_Import - Allocating rowsets...
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 0 --> Get File Names
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Get File Names.0 - CSV file input.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 1 rowsets for step 0 --> Get File Names  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 1 --> CSV file input
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [CSV file input.0 - Remove 0 cost, exclude Facebook.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 2 rowsets for step 1 --> CSV file input  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 2 --> Remove 0 cost, exclude Facebook
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Remove 0 cost, exclude Facebook.0 - Split Fields.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 3 rowsets for step 2 --> Remove 0 cost, exclude Facebook  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 3 --> Add constants
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Add constants.0 - Select values 2.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 4 rowsets for step 3 --> Add constants  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 4 --> Select values 2
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Select values 2.0 - Filter rows.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 5 rowsets for step 4 --> Select values 2  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 5 --> Filter rows
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Filter rows.0 - Replace in string 2.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 6 rowsets for step 5 --> Filter rows  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 6 --> Replace in string 2
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Replace in string 2.0 - Table output.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 7 rowsets for step 6 --> Replace in string 2  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 7 --> Group by
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Group by.0 - Merge Join.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 8 rowsets for step 7 --> Group by  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 8 --> Merge Join
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Merge Join.0 - Select values 3.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 9 rowsets for step 8 --> Merge Join  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 9 --> If field value is null
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [If field value is null.0 - Add constants.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 10 rowsets for step 9 --> If field value is null  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 10 --> Select values 3
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Select values 3.0 - If field value is null.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 11 rowsets for step 10 --> Select values 3  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 11 --> Select values
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Select values.0 - Sort rows.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 12 rowsets for step 11 --> Select values  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 12 --> Sort rows
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Sort rows.0 - Group by.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 13 rowsets for step 12 --> Sort rows  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 13 --> Sort rows 2
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Sort rows 2.0 - Merge Join.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 14 rowsets for step 13 --> Sort rows 2  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 14 --> Split Fields
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Split Fields.0 - Replace in string.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 15 rowsets for step 14 --> Split Fields  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 15 --> Replace in string
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Replace in string.0 - Switch / Case.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 16 rowsets for step 15 --> Replace in string  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 16 --> Table input
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Table input.0 - Sort rows 2.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 17 rowsets for step 16 --> Table input  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 17 --> Table output
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 17 rowsets for step 17 --> Table output  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 18 --> Switch / Case
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Switch / Case.0 - Add PPC.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Switch / Case.0 - Add PLA.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Switch / Case.0 - Add Amazon.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Switch / Case.0 - Add Display.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 21 rowsets for step 18 --> Switch / Case  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 19 --> Add PPC
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Add PPC.0 - Select values.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 22 rowsets for step 19 --> Add PPC  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 20 --> Add PLA
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Add PLA.0 - Select values.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 23 rowsets for step 20 --> Add PLA  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 21 --> Add Amazon
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Add Amazon.0 - Select values.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 24 rowsets for step 21 --> Add Amazon  
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocating rowsets for step 22 --> Add Display
+2017/03/27 07:20:25 - t_Kenshoo_Import -   prevcopies = 1, nextcopies=1
+2017/03/27 07:20:25 - t_Kenshoo_Import - Transformation allocated new rowset [Add Display.0 - Select values.0]
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Allocated 25 rowsets for step 22 --> Add Display  
+2017/03/27 07:20:25 - t_Kenshoo_Import - Allocating Steps & StepData...
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Get File Names] of type [GetFileNames]
+2017/03/27 07:20:25 - Get File Names.0 - distribution activated
+2017/03/27 07:20:25 - Get File Names.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Get File Names.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 07:20:25 - Get File Names.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Get File Names.0 - Found output rowset [Get File Names.0 - CSV file input.0]
+2017/03/27 07:20:25 - Get File Names.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Get File Names].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [CSV file input] of type [CsvInput]
+2017/03/27 07:20:25 - CSV file input.0 - distribution activated
+2017/03/27 07:20:25 - CSV file input.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - CSV file input.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - CSV file input.0 - Got previous step from [CSV file input] #0 --> Get File Names
+2017/03/27 07:20:25 - CSV file input.0 - input rel is 1:1
+2017/03/27 07:20:25 - CSV file input.0 - Found input rowset [Get File Names.0 - CSV file input.0]
+2017/03/27 07:20:25 - CSV file input.0 - output rel. is  1:1
+2017/03/27 07:20:25 - CSV file input.0 - Found output rowset [CSV file input.0 - Remove 0 cost, exclude Facebook.0]
+2017/03/27 07:20:25 - CSV file input.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [CSV file input].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Remove 0 cost, exclude Facebook] of type [FilterRows]
+2017/03/27 07:20:25 - Remove 0 cost, exclude Facebook.0 - distribution activated
+2017/03/27 07:20:25 - Remove 0 cost, exclude Facebook.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Remove 0 cost, exclude Facebook.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Remove 0 cost, exclude Facebook.0 - Got previous step from [Remove 0 cost, exclude Facebook] #0 --> CSV file input
+2017/03/27 07:20:25 - Remove 0 cost, exclude Facebook.0 - input rel is 1:1
+2017/03/27 07:20:25 - Remove 0 cost, exclude Facebook.0 - Found input rowset [CSV file input.0 - Remove 0 cost, exclude Facebook.0]
+2017/03/27 07:20:25 - Remove 0 cost, exclude Facebook.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Remove 0 cost, exclude Facebook.0 - Found output rowset [Remove 0 cost, exclude Facebook.0 - Split Fields.0]
+2017/03/27 07:20:25 - Remove 0 cost, exclude Facebook.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Remove 0 cost, exclude Facebook].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Add constants] of type [Constant]
+2017/03/27 07:20:25 - Add constants.0 - distribution de-activated
+2017/03/27 07:20:25 - Add constants.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Add constants.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Add constants.0 - Got previous step from [Add constants] #0 --> If field value is null
+2017/03/27 07:20:25 - Add constants.0 - input rel is 1:1
+2017/03/27 07:20:25 - Add constants.0 - Found input rowset [If field value is null.0 - Add constants.0]
+2017/03/27 07:20:25 - Add constants.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Add constants.0 - Found output rowset [Add constants.0 - Select values 2.0]
+2017/03/27 07:20:25 - Add constants.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Add constants].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Select values 2] of type [SelectValues]
+2017/03/27 07:20:25 - Select values 2.0 - distribution activated
+2017/03/27 07:20:25 - Select values 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Select values 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Select values 2.0 - Got previous step from [Select values 2] #0 --> Add constants
+2017/03/27 07:20:25 - Select values 2.0 - input rel is 1:1
+2017/03/27 07:20:25 - Select values 2.0 - Found input rowset [Add constants.0 - Select values 2.0]
+2017/03/27 07:20:25 - Select values 2.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Select values 2.0 - Found output rowset [Select values 2.0 - Filter rows.0]
+2017/03/27 07:20:25 - Select values 2.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Select values 2].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Filter rows] of type [FilterRows]
+2017/03/27 07:20:25 - Filter rows.0 - distribution activated
+2017/03/27 07:20:25 - Filter rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Filter rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Filter rows.0 - Got previous step from [Filter rows] #0 --> Select values 2
+2017/03/27 07:20:25 - Filter rows.0 - input rel is 1:1
+2017/03/27 07:20:25 - Filter rows.0 - Found input rowset [Select values 2.0 - Filter rows.0]
+2017/03/27 07:20:25 - Filter rows.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Filter rows.0 - Found output rowset [Filter rows.0 - Replace in string 2.0]
+2017/03/27 07:20:25 - Filter rows.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Filter rows].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Replace in string 2] of type [ReplaceString]
+2017/03/27 07:20:25 - Replace in string 2.0 - distribution activated
+2017/03/27 07:20:25 - Replace in string 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Replace in string 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Replace in string 2.0 - Got previous step from [Replace in string 2] #0 --> Filter rows
+2017/03/27 07:20:25 - Replace in string 2.0 - input rel is 1:1
+2017/03/27 07:20:25 - Replace in string 2.0 - Found input rowset [Filter rows.0 - Replace in string 2.0]
+2017/03/27 07:20:25 - Replace in string 2.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Replace in string 2.0 - Found output rowset [Replace in string 2.0 - Table output.0]
+2017/03/27 07:20:25 - Replace in string 2.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Replace in string 2].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Group by] of type [GroupBy]
+2017/03/27 07:20:25 - Group by.0 - distribution activated
+2017/03/27 07:20:25 - Group by.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Group by.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Group by.0 - Got previous step from [Group by] #0 --> Sort rows
+2017/03/27 07:20:25 - Group by.0 - input rel is 1:1
+2017/03/27 07:20:25 - Group by.0 - Found input rowset [Sort rows.0 - Group by.0]
+2017/03/27 07:20:25 - Group by.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Group by.0 - Found output rowset [Group by.0 - Merge Join.0]
+2017/03/27 07:20:25 - Group by.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Group by].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Merge Join] of type [MergeJoin]
+2017/03/27 07:20:25 - Merge Join.0 - distribution activated
+2017/03/27 07:20:25 - Merge Join.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Merge Join.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 07:20:25 - Merge Join.0 - Got previous step from [Merge Join] #0 --> Group by
+2017/03/27 07:20:25 - Merge Join.0 - input rel is 1:1
+2017/03/27 07:20:25 - Merge Join.0 - Found input rowset [Group by.0 - Merge Join.0]
+2017/03/27 07:20:25 - Merge Join.0 - Got previous step from [Merge Join] #1 --> Sort rows 2
+2017/03/27 07:20:25 - Merge Join.0 - input rel is 1:1
+2017/03/27 07:20:25 - Merge Join.0 - Found input rowset [Sort rows 2.0 - Merge Join.0]
+2017/03/27 07:20:25 - Merge Join.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Merge Join.0 - Found output rowset [Merge Join.0 - Select values 3.0]
+2017/03/27 07:20:25 - Merge Join.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Merge Join].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [If field value is null] of type [IfNull]
+2017/03/27 07:20:25 - If field value is null.0 - distribution activated
+2017/03/27 07:20:25 - If field value is null.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - If field value is null.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - If field value is null.0 - Got previous step from [If field value is null] #0 --> Select values 3
+2017/03/27 07:20:25 - If field value is null.0 - input rel is 1:1
+2017/03/27 07:20:25 - If field value is null.0 - Found input rowset [Select values 3.0 - If field value is null.0]
+2017/03/27 07:20:25 - If field value is null.0 - output rel. is  1:1
+2017/03/27 07:20:25 - If field value is null.0 - Found output rowset [If field value is null.0 - Add constants.0]
+2017/03/27 07:20:25 - If field value is null.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [If field value is null].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Select values 3] of type [SelectValues]
+2017/03/27 07:20:25 - Select values 3.0 - distribution activated
+2017/03/27 07:20:25 - Select values 3.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Select values 3.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Select values 3.0 - Got previous step from [Select values 3] #0 --> Merge Join
+2017/03/27 07:20:25 - Select values 3.0 - input rel is 1:1
+2017/03/27 07:20:25 - Select values 3.0 - Found input rowset [Merge Join.0 - Select values 3.0]
+2017/03/27 07:20:25 - Select values 3.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Select values 3.0 - Found output rowset [Select values 3.0 - If field value is null.0]
+2017/03/27 07:20:25 - Select values 3.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Select values 3].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Select values] of type [SelectValues]
+2017/03/27 07:20:25 - Select values.0 - distribution activated
+2017/03/27 07:20:25 - Select values.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Select values.0 - Step info: nrinput=4 nroutput=1
+2017/03/27 07:20:25 - Select values.0 - Got previous step from [Select values] #0 --> Add PPC
+2017/03/27 07:20:25 - Select values.0 - input rel is 1:1
+2017/03/27 07:20:25 - Select values.0 - Found input rowset [Add PPC.0 - Select values.0]
+2017/03/27 07:20:25 - Select values.0 - Got previous step from [Select values] #1 --> Add PLA
+2017/03/27 07:20:25 - Select values.0 - input rel is 1:1
+2017/03/27 07:20:25 - Select values.0 - Found input rowset [Add PLA.0 - Select values.0]
+2017/03/27 07:20:25 - Select values.0 - Got previous step from [Select values] #2 --> Add Amazon
+2017/03/27 07:20:25 - Select values.0 - input rel is 1:1
+2017/03/27 07:20:25 - Select values.0 - Found input rowset [Add Amazon.0 - Select values.0]
+2017/03/27 07:20:25 - Select values.0 - Got previous step from [Select values] #3 --> Add Display
+2017/03/27 07:20:25 - Select values.0 - input rel is 1:1
+2017/03/27 07:20:25 - Select values.0 - Found input rowset [Add Display.0 - Select values.0]
+2017/03/27 07:20:25 - Select values.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Select values.0 - Found output rowset [Select values.0 - Sort rows.0]
+2017/03/27 07:20:25 - Select values.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Select values].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Sort rows] of type [SortRows]
+2017/03/27 07:20:25 - Sort rows.0 - distribution activated
+2017/03/27 07:20:25 - Sort rows.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Sort rows.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Sort rows.0 - Got previous step from [Sort rows] #0 --> Select values
+2017/03/27 07:20:25 - Sort rows.0 - input rel is 1:1
+2017/03/27 07:20:25 - Sort rows.0 - Found input rowset [Select values.0 - Sort rows.0]
+2017/03/27 07:20:25 - Sort rows.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Sort rows.0 - Found output rowset [Sort rows.0 - Group by.0]
+2017/03/27 07:20:25 - Sort rows.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Sort rows].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Sort rows 2] of type [SortRows]
+2017/03/27 07:20:25 - Sort rows 2.0 - distribution activated
+2017/03/27 07:20:25 - Sort rows 2.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Sort rows 2.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Sort rows 2.0 - Got previous step from [Sort rows 2] #0 --> Table input
+2017/03/27 07:20:25 - Sort rows 2.0 - input rel is 1:1
+2017/03/27 07:20:25 - Sort rows 2.0 - Found input rowset [Table input.0 - Sort rows 2.0]
+2017/03/27 07:20:25 - Sort rows 2.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Sort rows 2.0 - Found output rowset [Sort rows 2.0 - Merge Join.0]
+2017/03/27 07:20:25 - Sort rows 2.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Sort rows 2].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Split Fields] of type [FieldSplitter]
+2017/03/27 07:20:25 - Split Fields.0 - distribution activated
+2017/03/27 07:20:25 - Split Fields.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Split Fields.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Split Fields.0 - Got previous step from [Split Fields] #0 --> Remove 0 cost, exclude Facebook
+2017/03/27 07:20:25 - Split Fields.0 - input rel is 1:1
+2017/03/27 07:20:25 - Split Fields.0 - Found input rowset [Remove 0 cost, exclude Facebook.0 - Split Fields.0]
+2017/03/27 07:20:25 - Split Fields.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Split Fields.0 - Found output rowset [Split Fields.0 - Replace in string.0]
+2017/03/27 07:20:25 - Split Fields.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Split Fields].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Replace in string] of type [ReplaceString]
+2017/03/27 07:20:25 - Replace in string.0 - distribution activated
+2017/03/27 07:20:25 - Replace in string.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Replace in string.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Replace in string.0 - Got previous step from [Replace in string] #0 --> Split Fields
+2017/03/27 07:20:25 - Replace in string.0 - input rel is 1:1
+2017/03/27 07:20:25 - Replace in string.0 - Found input rowset [Split Fields.0 - Replace in string.0]
+2017/03/27 07:20:25 - Replace in string.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Replace in string.0 - Found output rowset [Replace in string.0 - Switch / Case.0]
+2017/03/27 07:20:25 - Replace in string.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Replace in string].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Table input] of type [TableInput]
+2017/03/27 07:20:25 - Table input.0 - distribution activated
+2017/03/27 07:20:25 - Table input.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Table input.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 07:20:25 - Table input.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Table input.0 - Found output rowset [Table input.0 - Sort rows 2.0]
+2017/03/27 07:20:25 - Table input.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Table input].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2017/03/27 07:20:25 - Table output.0 - distribution activated
+2017/03/27 07:20:25 - Table output.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Table output.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 07:20:25 - Table output.0 - Got previous step from [Table output] #0 --> Replace in string 2
+2017/03/27 07:20:25 - Table output.0 - input rel is 1:1
+2017/03/27 07:20:25 - Table output.0 - Found input rowset [Replace in string 2.0 - Table output.0]
+2017/03/27 07:20:25 - Table output.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Table output].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Switch / Case] of type [SwitchCase]
+2017/03/27 07:20:25 - Switch / Case.0 - distribution activated
+2017/03/27 07:20:25 - Switch / Case.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Switch / Case.0 - Step info: nrinput=1 nroutput=4
+2017/03/27 07:20:25 - Switch / Case.0 - Got previous step from [Switch / Case] #0 --> Replace in string
+2017/03/27 07:20:25 - Switch / Case.0 - input rel is 1:1
+2017/03/27 07:20:25 - Switch / Case.0 - Found input rowset [Replace in string.0 - Switch / Case.0]
+2017/03/27 07:20:25 - Switch / Case.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Add PPC.0]
+2017/03/27 07:20:25 - Switch / Case.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Add PLA.0]
+2017/03/27 07:20:25 - Switch / Case.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Add Amazon.0]
+2017/03/27 07:20:25 - Switch / Case.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Switch / Case.0 - Found output rowset [Switch / Case.0 - Add Display.0]
+2017/03/27 07:20:25 - Switch / Case.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Switch / Case].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Add PPC] of type [Constant]
+2017/03/27 07:20:25 - Add PPC.0 - distribution de-activated
+2017/03/27 07:20:25 - Add PPC.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Add PPC.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:25 - Add PPC.0 - Got previous step from [Add PPC] #0 --> Switch / Case
+2017/03/27 07:20:25 - Add PPC.0 - input rel is 1:1
+2017/03/27 07:20:25 - Add PPC.0 - Found input rowset [Switch / Case.0 - Add PPC.0]
+2017/03/27 07:20:25 - Add PPC.0 - output rel. is  1:1
+2017/03/27 07:20:25 - Add PPC.0 - Found output rowset [Add PPC.0 - Select values.0]
+2017/03/27 07:20:25 - Add PPC.0 - Finished dispatching
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation has allocated a new step: [Add PPC].0
+2017/03/27 07:20:25 - t_Kenshoo_Import -  Transformation is about to allocate step [Add PLA] of type [Constant]
+2017/03/27 07:20:25 - Add PLA.0 - distribution de-activated
+2017/03/27 07:20:25 - Add PLA.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:25 - Add PLA.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:26 - Add PLA.0 - Got previous step from [Add PLA] #0 --> Switch / Case
+2017/03/27 07:20:26 - Add PLA.0 - input rel is 1:1
+2017/03/27 07:20:26 - Add PLA.0 - Found input rowset [Switch / Case.0 - Add PLA.0]
+2017/03/27 07:20:26 - Add PLA.0 - output rel. is  1:1
+2017/03/27 07:20:26 - Add PLA.0 - Found output rowset [Add PLA.0 - Select values.0]
+2017/03/27 07:20:26 - Add PLA.0 - Finished dispatching
+2017/03/27 07:20:26 - t_Kenshoo_Import -  Transformation has allocated a new step: [Add PLA].0
+2017/03/27 07:20:26 - t_Kenshoo_Import -  Transformation is about to allocate step [Add Amazon] of type [Constant]
+2017/03/27 07:20:26 - Add Amazon.0 - distribution de-activated
+2017/03/27 07:20:26 - Add Amazon.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:26 - Add Amazon.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:26 - Add Amazon.0 - Got previous step from [Add Amazon] #0 --> Switch / Case
+2017/03/27 07:20:26 - Add Amazon.0 - input rel is 1:1
+2017/03/27 07:20:26 - Add Amazon.0 - Found input rowset [Switch / Case.0 - Add Amazon.0]
+2017/03/27 07:20:26 - Add Amazon.0 - output rel. is  1:1
+2017/03/27 07:20:26 - Add Amazon.0 - Found output rowset [Add Amazon.0 - Select values.0]
+2017/03/27 07:20:26 - Add Amazon.0 - Finished dispatching
+2017/03/27 07:20:26 - t_Kenshoo_Import -  Transformation has allocated a new step: [Add Amazon].0
+2017/03/27 07:20:26 - t_Kenshoo_Import -  Transformation is about to allocate step [Add Display] of type [Constant]
+2017/03/27 07:20:26 - Add Display.0 - distribution de-activated
+2017/03/27 07:20:26 - Add Display.0 - Starting allocation of buffers & new threads...
+2017/03/27 07:20:26 - Add Display.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 07:20:26 - Add Display.0 - Got previous step from [Add Display] #0 --> Switch / Case
+2017/03/27 07:20:26 - Add Display.0 - input rel is 1:1
+2017/03/27 07:20:26 - Add Display.0 - Found input rowset [Switch / Case.0 - Add Display.0]
+2017/03/27 07:20:26 - Add Display.0 - output rel. is  1:1
+2017/03/27 07:20:26 - Add Display.0 - Found output rowset [Add Display.0 - Select values.0]
+2017/03/27 07:20:26 - Add Display.0 - Finished dispatching
+2017/03/27 07:20:26 - t_Kenshoo_Import -  Transformation has allocated a new step: [Add Display].0
+2017/03/27 07:20:26 - t_Kenshoo_Import - This transformation can be replayed with replay date: 2017/03/27 07:20:26
+2017/03/27 07:20:26 - t_Kenshoo_Import - Initialising 23 steps...
+2017/03/27 07:20:26 - Get File Names.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - CSV file input.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Remove 0 cost, exclude Facebook.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Add constants.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Replace in string 2.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Filter rows.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - If field value is null.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Merge Join.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Select values 3.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Group by.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Sort rows.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Sort rows 2.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Split Fields.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Replace in string.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Table output.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Table input.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Select values 2.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Switch / Case.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Add PLA.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Add Amazon.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Select values.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Add Display.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Add PPC.0 - Running on slave server #0/1.
+2017/03/27 07:20:26 - Ecomedate - New database connection defined
+2017/03/27 07:20:26 - Ecomedate - New database connection defined
+2017/03/27 07:20:26 - Ecomedate - Connected to database.
+2017/03/27 07:20:26 - Ecomedate - Connected to database.
+2017/03/27 07:20:26 - Table output.0 - Connected to database [Ecomedate] (commit=10000)
+2017/03/27 07:20:26 - Ecomedate - Auto commit off
+2017/03/27 07:20:26 - Table input.0 - Connected to database...
+2017/03/27 07:20:26 - Ecomedate - Auto commit off
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Get File Names.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [CSV file input.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Remove 0 cost, exclude Facebook.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Add constants.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Select values 2.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Filter rows.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Replace in string 2.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Group by.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Merge Join.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [If field value is null.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Select values 3.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Select values.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Sort rows.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Sort rows 2.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Split Fields.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Replace in string.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Table input.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Table output.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Switch / Case.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Add PPC.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Add PLA.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Add Amazon.0] initialized flawlessly.
+2017/03/27 07:20:26 - t_Kenshoo_Import - Step [Add Display.0] initialized flawlessly.
+2017/03/27 07:20:26 - Get File Names.0 - Starting to run...
+2017/03/27 07:20:26 - CSV file input.0 - Starting to run...
+2017/03/27 07:20:26 - Remove 0 cost, exclude Facebook.0 - Starting to run...
+2017/03/27 07:20:26 - Add constants.0 - Starting to run...
+2017/03/27 07:20:26 - Get File Names.0 - Finished processing (I=0, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 07:20:26 - Select values 2.0 - Starting to run...
+2017/03/27 07:20:26 - Filter rows.0 - Starting to run...
+2017/03/27 07:20:26 - Replace in string 2.0 - Starting to run...
+2017/03/27 07:20:26 - Group by.0 - Starting to run...
+2017/03/27 07:20:26 - Merge Join.0 - Starting to run...
+2017/03/27 07:20:26 - If field value is null.0 - Starting to run...
+2017/03/27 07:20:26 - Select values.0 - Starting to run...
+2017/03/27 07:20:26 - Select values 3.0 - Starting to run...
+2017/03/27 07:20:26 - Sort rows.0 - Starting to run...
+2017/03/27 07:20:26 - Sort rows 2.0 - Starting to run...
+2017/03/27 07:20:26 - Split Fields.0 - Starting to run...
+2017/03/27 07:20:26 - Replace in string.0 - Starting to run...
+2017/03/27 07:20:26 - Table input.0 - Starting to run...
+2017/03/27 07:20:26 - Table input.0 - SQL query : select distinct
+2017/03/27 07:20:26 - Table input.0 - 	CAT.PRODUCT_CATEGORY as EcomCat,
+2017/03/27 07:20:26 - Table input.0 - 	CAT.MAJOR_CATEGORY_CODE,
+2017/03/27 07:20:26 - Table input.0 - 	MCLC.SHORT_NM,
+2017/03/27 07:20:26 - Table input.0 - 	CAT.CATEGORY as SubCategory
+2017/03/27 07:20:26 - Table input.0 - from Ecomedate.dbo.CATEGORIES CAT
+2017/03/27 07:20:26 - Table input.0 - left join Ecomedate.dbo.REF_MAJ_CAT_LGCY_CD MCLC
+2017/03/27 07:20:26 - Table input.0 -   on CAT.MAJOR_CATEGORY_CODE = MCLC.MAJ_CAT_LGCY_CD
+2017/03/27 07:20:26 - Table output.0 - Starting to run...
+2017/03/27 07:20:26 - Switch / Case.0 - Starting to run...
+2017/03/27 07:20:26 - Add PPC.0 - Starting to run...
+2017/03/27 07:20:26 - Add PLA.0 - Starting to run...
+2017/03/27 07:20:26 - Add Amazon.0 - Starting to run...
+2017/03/27 07:20:26 - t_Kenshoo_Import - Transformation has allocated 23 threads and 25 rowsets.
+2017/03/27 07:20:26 - Add Display.0 - Starting to run...
+2017/03/27 07:20:26 - CSV file input.0 - Reading from 1 files.
+2017/03/27 07:20:26 - CSV file input.0 - Header row skipped in file 'C:\Spoon\Kenshoo\processing\KenshooLast7days_2017-03-27 .csv'
+2017/03/27 07:20:26 - Table input.0 - Finished reading query, closing connection.
+2017/03/27 07:20:26 - Ecomedate - Connection to database closed!
+2017/03/27 07:20:26 - Table input.0 - Finished processing (I=136, O=0, R=0, W=136, U=0, E=0)
+2017/03/27 07:20:26 - Sort rows 2.0 - Starting quickSort algorithm...
+2017/03/27 07:20:26 - Sort rows 2.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 07:20:26 - Sort rows 2.0 - QuickSort algorithm has finished.
+2017/03/27 07:20:26 - Sort rows 2.0 - Finished processing (I=0, O=0, R=136, W=136, U=0, E=0)
+2017/03/27 07:20:27 - CSV file input.0 - Finished processing (I=11316, O=0, R=1, W=11315, U=0, E=0)
+2017/03/27 07:20:27 - Remove 0 cost, exclude Facebook.0 - Finished processing (I=0, O=0, R=11315, W=10743, U=0, E=0)
+2017/03/27 07:20:27 - Split Fields.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:20:27 - Replace in string.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:20:27 - Switch / Case.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:20:27 - Add Amazon.0 - Finished processing (I=0, O=0, R=0, W=0, U=0, E=0)
+2017/03/27 07:20:27 - Add Display.0 - Finished processing (I=0, O=0, R=92, W=92, U=0, E=0)
+2017/03/27 07:20:27 - Add PLA.0 - Finished processing (I=0, O=0, R=1212, W=1212, U=0, E=0)
+2017/03/27 07:20:27 - Add PPC.0 - Finished processing (I=0, O=0, R=9439, W=9439, U=0, E=0)
+2017/03/27 07:20:27 - Select values.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:20:28 - Sort rows.0 - Starting quickSort algorithm...
+2017/03/27 07:20:29 - Sort rows.0 - The number of binary string to data type conversions done in this sort block is 0
+2017/03/27 07:20:29 - Sort rows.0 - QuickSort algorithm has finished.
+2017/03/27 07:20:29 - Sort rows.0 - Finished processing (I=0, O=0, R=10743, W=10743, U=0, E=0)
+2017/03/27 07:20:29 - Table output.0 - Prepared statement : INSERT INTO dbo.CFO_REPORT2_ACTIVE (salesOrderNumber, Ship_to_State, ITM_QTY, Product_Revenue, EXT_COST_AMT, TOT_BEFORE_DISC_AMT, Order_Status_Legacy_Cd, CUST_EDP_ID, Order_Status_Legacy_Cd_Descr, ORD_ITM_TYPE_LGCY_CD, SALES_ORD_ENTRY_DT_YYYY_MM, SALES_ORD_ENTRY_DT, SALES_ORD_ENTRY_WK, USER_CD, PayMethodCode, PAY_METHOD, FOP_TYPE_LGCY_CD, VENDOR_NAME, ITM_CD, Entered_Date, Product_Age_in_Days, OFFER_CD, USE_CD, SHIP_DT, SHIP_WK, SHIP_CNT, CO_CD, DIV_CD, ORD_ITM_STA_LGCY_CD, Order_Item_Status, topCategory, freight, postage_amount, po_number, ADDL_PH_AMT, subCategory, ITM_STA_LGCY_CD, STY_CD, productDescription, EcomCat, EST_SHIP_COST, FIN_TRANS_AMT, FIN_TRANS_LGCY_CD, FIN_AMT_TYPE_LGCY_CD, SALES_ORD_LN_NR, ORD_ITM_HP_LGCY_CD, SHIP_METH_LGCY_CD, shipCarrierName, orderNumber, orderNumberLetter, Site_Name, C_ProductRevenueWithShipping, NetRevenue, C_FreightClaims, C_PackagingCost, C_InvAdj, C_OtherCredit, warehouse_code, Tracking_Number, ReportingName, C_InvFreightReturns, C_Juice, ASSOC_LN_NR, ShipDueAmt, NewAmmount, ShipCost, LTLApprovedAmt, EDP_NO_ID, PPC, CSE, ORD_SUB_STA_LGCY_CD, Affiliate, SALES_ORD_SHIP_NR, SALES_ORD_SHIP_TO_NR, socialSpend, fixedCosts, salesChannel, dateEnteredMonth, dateEnteredYear, Freight_Amount, actualFreight, freightPaid, freightCollected, sourceCode, ShipCharged, shipDateMonth, shipDateYear, COGS, kittedQTY, edgestarVsOthers, ProductStatusLabel, shipType, averageShipCost, ShipPaid_Items, Shipped_Product_Revenue, Shipped_COGS, Shipped_Margin, Shipped_Margin_Percent, Total_Shipped_Revenue, Total_Shipped_COGS, Total_Shipped_Margin, Total_Shipped_Margin_Percent, PackagingCost, InvAdj, OtherCredit, FreightClaims, InvFreightReturns, Juice, Gross_Costs, Gross_Margin_DLLS, Gross_Margin_Percent, OrderAndAssociated, ShipPaid, Rebate_Discount, ShipPaid_Kit, ShipPaid_Reason, ShipPaid_Source, ShipDue, ProductGroupRank, Total_Kitted_QTY, Full_QTY, Business_Revenue, Direct_Revenue, Web_Revenue, Phone_Revenue, Business_Gross_Margin, Direct_Gross_Margin, Phone_Gross_Margin, Web_Gross_Margin, Ship_to_Zip) VALUES ( ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?,  ?)
+2017/03/27 07:20:29 - Group by.0 - Finished processing (I=0, O=0, R=10743, W=1893, U=0, E=0)
+2017/03/27 07:20:29 - Merge Join.0 - Finished processing (I=0, O=0, R=2029, W=1893, U=0, E=0)
+2017/03/27 07:20:29 - Select values 3.0 - Finished processing (I=0, O=0, R=1893, W=1893, U=0, E=0)
+2017/03/27 07:20:29 - If field value is null.0 - Finished processing (I=0, O=0, R=1893, W=1893, U=0, E=0)
+2017/03/27 07:20:29 - Add constants.0 - Finished processing (I=0, O=0, R=1893, W=1893, U=0, E=0)
+2017/03/27 07:20:29 - Select values 2.0 - Finished processing (I=0, O=0, R=1893, W=1893, U=0, E=0)
+2017/03/27 07:20:29 - Filter rows.0 - Finished processing (I=0, O=0, R=1893, W=1893, U=0, E=0)
+2017/03/27 07:20:29 - Replace in string 2.0 - Finished processing (I=0, O=0, R=1893, W=1893, U=0, E=0)
+2017/03/27 07:20:31 - Ecomedate - Connection to database closed!
+2017/03/27 07:20:31 - Table output.0 - Finished processing (I=0, O=1893, R=1893, W=1893, U=0, E=0)
+2017/03/27 07:20:31 - j_Kenshoo_Import-NEW2 - Starting entry [Move Files]
+2017/03/27 07:20:31 - j_Kenshoo_Import-NEW2 - exec(3, 0, Move Files.0)
+2017/03/27 07:20:31 - Move Files - Starting job entry
+2017/03/27 07:20:31 - Move Files - Processing row source File/folder source : [\\algol\e$\ftp\kenshoo] ... destination file/folder : [\\algol\e$\ftp\Kenshoo\Complete]... wildcard : [^.*csv]
+2017/03/27 07:20:31 - Move Files -   
+2017/03/27 07:20:31 - Move Files - Fetching folder [file:////algol/e$/ftp/kenshoo]
+2017/03/27 07:20:44 - Move Files - =======================================
+2017/03/27 07:20:44 - Move Files - Total files in error : 0
+2017/03/27 07:20:44 - Move Files - Total files successfully processed : 0
+2017/03/27 07:20:44 - Move Files - =======================================
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - Starting entry [Success]
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - exec(4, 0, Success.0)
+2017/03/27 07:20:44 - Success - Starting job entry
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - Starting entry [Kenshoo Success]
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - exec(5, 0, Kenshoo Success.0)
+2017/03/27 07:20:44 - Kenshoo Success - Starting job entry
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - Finished job entry [Kenshoo Success] (result=[true])
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - Finished job entry [Success] (result=[true])
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - Finished job entry [Move Files] (result=[true])
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - Finished job entry [Kenshoo_Import] (result=[true])
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - Finished job entry [Transformation] (result=[true])
+2017/03/27 07:20:44 - j_Kenshoo_Import-NEW2 - Job execution finished
+2017/03/27 07:20:44 - Kitchen - Finished!
+2017/03/27 07:20:44 - Kitchen - Start=2017/03/27 07:16:35.269, Stop=2017/03/27 07:20:44.626
+2017/03/27 07:20:44 - Kitchen - Processing ended after 4 minutes and 9 seconds (249 seconds total).

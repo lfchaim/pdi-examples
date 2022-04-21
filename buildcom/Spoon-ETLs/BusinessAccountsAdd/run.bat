@@ -1,0 +1,1 @@
+C:\data-integration\kitchen.bat  /file:"C:\Spoon\BusinessAccountsAdd\RunTransform.kjb" /level:Detailed >spoonLog.txt

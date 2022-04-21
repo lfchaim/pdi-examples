@@ -1,0 +1,4478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<transformation>
+  <info>
+    <name>FactOrder-EcomPWA-Insert</name>
+    <description/>
+    <extended_description/>
+    <trans_version/>
+    <trans_type>Normal</trans_type>
+    <trans_status>0</trans_status>
+    <directory>&#x2f;</directory>
+    <parameters>
+    </parameters>
+    <log>
+<trans-log-table><connection/>
+<schema/>
+<table/>
+<size_limit_lines/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STATUS</id><enabled>Y</enabled><name>STATUS</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name><subject/></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name><subject/></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name><subject/></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name><subject/></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name><subject/></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name><subject/></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>STARTDATE</id><enabled>Y</enabled><name>STARTDATE</name></field><field><id>ENDDATE</id><enabled>Y</enabled><name>ENDDATE</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>DEPDATE</id><enabled>Y</enabled><name>DEPDATE</name></field><field><id>REPLAYDATE</id><enabled>Y</enabled><name>REPLAYDATE</name></field><field><id>LOG_FIELD</id><enabled>Y</enabled><name>LOG_FIELD</name></field><field><id>EXECUTING_SERVER</id><enabled>N</enabled><name>EXECUTING_SERVER</name></field><field><id>EXECUTING_USER</id><enabled>N</enabled><name>EXECUTING_USER</name></field><field><id>CLIENT</id><enabled>N</enabled><name>CLIENT</name></field></trans-log-table>
+<perf-log-table><connection/>
+<schema/>
+<table/>
+<interval/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>SEQ_NR</id><enabled>Y</enabled><name>SEQ_NR</name></field><field><id>LOGDATE</id><enabled>Y</enabled><name>LOGDATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>INPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>INPUT_BUFFER_ROWS</name></field><field><id>OUTPUT_BUFFER_ROWS</id><enabled>Y</enabled><name>OUTPUT_BUFFER_ROWS</name></field></perf-log-table>
+<channel-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>LOGGING_OBJECT_TYPE</id><enabled>Y</enabled><name>LOGGING_OBJECT_TYPE</name></field><field><id>OBJECT_NAME</id><enabled>Y</enabled><name>OBJECT_NAME</name></field><field><id>OBJECT_COPY</id><enabled>Y</enabled><name>OBJECT_COPY</name></field><field><id>REPOSITORY_DIRECTORY</id><enabled>Y</enabled><name>REPOSITORY_DIRECTORY</name></field><field><id>FILENAME</id><enabled>Y</enabled><name>FILENAME</name></field><field><id>OBJECT_ID</id><enabled>Y</enabled><name>OBJECT_ID</name></field><field><id>OBJECT_REVISION</id><enabled>Y</enabled><name>OBJECT_REVISION</name></field><field><id>PARENT_CHANNEL_ID</id><enabled>Y</enabled><name>PARENT_CHANNEL_ID</name></field><field><id>ROOT_CHANNEL_ID</id><enabled>Y</enabled><name>ROOT_CHANNEL_ID</name></field></channel-log-table>
+<step-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>TRANSNAME</id><enabled>Y</enabled><name>TRANSNAME</name></field><field><id>STEPNAME</id><enabled>Y</enabled><name>STEPNAME</name></field><field><id>STEP_COPY</id><enabled>Y</enabled><name>STEP_COPY</name></field><field><id>LINES_READ</id><enabled>Y</enabled><name>LINES_READ</name></field><field><id>LINES_WRITTEN</id><enabled>Y</enabled><name>LINES_WRITTEN</name></field><field><id>LINES_UPDATED</id><enabled>Y</enabled><name>LINES_UPDATED</name></field><field><id>LINES_INPUT</id><enabled>Y</enabled><name>LINES_INPUT</name></field><field><id>LINES_OUTPUT</id><enabled>Y</enabled><name>LINES_OUTPUT</name></field><field><id>LINES_REJECTED</id><enabled>Y</enabled><name>LINES_REJECTED</name></field><field><id>ERRORS</id><enabled>Y</enabled><name>ERRORS</name></field><field><id>LOG_FIELD</id><enabled>N</enabled><name>LOG_FIELD</name></field></step-log-table>
+<metrics-log-table><connection/>
+<schema/>
+<table/>
+<timeout_days/>
+<field><id>ID_BATCH</id><enabled>Y</enabled><name>ID_BATCH</name></field><field><id>CHANNEL_ID</id><enabled>Y</enabled><name>CHANNEL_ID</name></field><field><id>LOG_DATE</id><enabled>Y</enabled><name>LOG_DATE</name></field><field><id>METRICS_DATE</id><enabled>Y</enabled><name>METRICS_DATE</name></field><field><id>METRICS_CODE</id><enabled>Y</enabled><name>METRICS_CODE</name></field><field><id>METRICS_DESCRIPTION</id><enabled>Y</enabled><name>METRICS_DESCRIPTION</name></field><field><id>METRICS_SUBJECT</id><enabled>Y</enabled><name>METRICS_SUBJECT</name></field><field><id>METRICS_TYPE</id><enabled>Y</enabled><name>METRICS_TYPE</name></field><field><id>METRICS_VALUE</id><enabled>Y</enabled><name>METRICS_VALUE</name></field></metrics-log-table>
+    </log>
+    <maxdate>
+      <connection/>
+      <table/>
+      <field/>
+      <offset>0.0</offset>
+      <maxdiff>0.0</maxdiff>
+    </maxdate>
+    <size_rowset>100000</size_rowset>
+    <sleep_time_empty>50</sleep_time_empty>
+    <sleep_time_full>50</sleep_time_full>
+    <unique_connections>N</unique_connections>
+    <feedback_shown>Y</feedback_shown>
+    <feedback_size>50000</feedback_size>
+    <using_thread_priorities>Y</using_thread_priorities>
+    <shared_objects_file>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;..&#x2f;Shared&#x2f;Shared.xml</shared_objects_file>
+    <capture_step_performance>N</capture_step_performance>
+    <step_performance_capturing_delay>1000</step_performance_capturing_delay>
+    <step_performance_capturing_size_limit>100</step_performance_capturing_size_limit>
+    <dependencies>
+    </dependencies>
+    <partitionschemas>
+    </partitionschemas>
+    <slaveservers>
+    </slaveservers>
+    <clusterschemas>
+    </clusterschemas>
+  <created_user>-</created_user>
+  <created_date>2015&#x2f;12&#x2f;17 08&#x3a;44&#x3a;44.175</created_date>
+  <modified_user>-</modified_user>
+  <modified_date>2016&#x2f;02&#x2f;24 17&#x3a;51&#x3a;47.178</modified_date>
+  </info>
+  <notepads>
+    <notepad>
+      <note>Transform overview&#x3a;&#xd;&#xa;This transform merges order data from cfo_report2_demand as well as PWA,&#xd;&#xa;splits the streams into whether or not the orders exist in ecom &#x28;ecom revenue&#x2f;contact data is considered more reliable in this case&#x29;,&#xd;&#xa;then denormalizes the data into dimension keys and line item revenue measures&#xd;&#xa;then aggregates the line item rows into order rows and adds bridge rows that establish many-to-many relationship between orders and products</note>
+      <xloc>220</xloc>
+      <yloc>0</yloc>
+      <width>835</width>
+      <heigth>85</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>This takes the ReportingName, &#xd;&#xa;and replaces it with the ID for&#xd;&#xa;that Source &#x28;called ID_&#x21;&#x29;&#xd;&#xa;&#xd;&#xa;Then rename ID_1 to SourceKey</note>
+      <xloc>500</xloc>
+      <yloc>400</yloc>
+      <width>198</width>
+      <heigth>86</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>If ITEM_CD is Null, &#xd;&#xa;then we&#x27;re working with PWA Data,&#xd;&#xa;which gets handled differently than&#xd;&#xa;Ecom Data.</note>
+      <xloc>940</xloc>
+      <yloc>320</yloc>
+      <width>212</width>
+      <heigth>70</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Ecom Data ---&#x3e;</note>
+      <xloc>860</xloc>
+      <yloc>200</yloc>
+      <width>99</width>
+      <heigth>25</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>PWA Data ---&#x3e;</note>
+      <xloc>860</xloc>
+      <yloc>480</yloc>
+      <width>95</width>
+      <heigth>25</heigth>
+      <fontname>Arial</fontname>
+      <fontsize>10</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+  </notepads>
+  <connection>
+    <name>Ecom</name>
+    <server>Capella</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>Ecomedate</database>
+    <port>1433</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQLUseIntegratedSecurity</code><attribute>true</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>PWA Transactions</name>
+    <server>trjktzc2x0.database.windows.net</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>PhoneWebAttribution</database>
+    <port>1433</port>
+    <username>ldsql</username>
+    <password>Encrypted 2be98afc86aa7be8dbd10a0778cc2fe8f</password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>EXTRA_OPTION_MSSQLNATIVE.socketKeepAlive</code><attribute>true</attribute></attribute>
+      <attribute><code>EXTRA_OPTION_MSSQLNATIVE.socketTimeout</code><attribute>30</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>INITIAL_POOL_SIZE</code><attribute>20</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MAXIMUM_POOL_SIZE</code><attribute>20</attribute></attribute>
+      <attribute><code>MSSQLUseIntegratedSecurity</code><attribute>false</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>Y</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>StaticWarehouse</name>
+    <server>Capella</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>Datawarehouse</database>
+    <port>1433</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQLUseIntegratedSecurity</code><attribute>true</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>1433</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <connection>
+    <name>Warehouse</name>
+    <server>&#x24;&#x7b;DWH_HOST&#x7d;</server>
+    <type>MSSQLNATIVE</type>
+    <access>Native</access>
+    <database>&#x24;&#x7b;DWH_DB&#x7d;</database>
+    <port>&#x24;&#x7b;DWH_PORT&#x7d;</port>
+    <username/>
+    <password>Encrypted </password>
+    <servername/>
+    <data_tablespace/>
+    <index_tablespace/>
+    <attributes>
+      <attribute><code>FORCE_IDENTIFIERS_TO_LOWERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>FORCE_IDENTIFIERS_TO_UPPERCASE</code><attribute>N</attribute></attribute>
+      <attribute><code>IS_CLUSTERED</code><attribute>N</attribute></attribute>
+      <attribute><code>MSSQLUseIntegratedSecurity</code><attribute>true</attribute></attribute>
+      <attribute><code>MSSQL_DOUBLE_DECIMAL_SEPARATOR</code><attribute>N</attribute></attribute>
+      <attribute><code>PORT_NUMBER</code><attribute>&#x24;&#x7b;DWH_PORT&#x7d;</attribute></attribute>
+      <attribute><code>PRESERVE_RESERVED_WORD_CASE</code><attribute>N</attribute></attribute>
+      <attribute><code>QUOTE_ALL_FIELDS</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_BOOLEAN_DATA_TYPE</code><attribute>N</attribute></attribute>
+      <attribute><code>SUPPORTS_TIMESTAMP_DATA_TYPE</code><attribute>Y</attribute></attribute>
+      <attribute><code>USE_POOLING</code><attribute>N</attribute></attribute>
+    </attributes>
+  </connection>
+  <order>
+  <hop> <from>Pull from Ecomedate</from><to>Merge Ecom &#x2b; PWA</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter PWA</from><to>Break into Product Rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Break into Product Rows</from><to>Break ProductSeperate into prod and qty</to><enabled>Y</enabled> </hop>
+  <hop> <from>Post-Customer Prune &#x28;PWA&#x29;</from><to>Sort by ITEM_CD</to><enabled>Y</enabled> </hop>
+  <hop> <from>Break ProductSeperate into prod and qty</from><to>Put Names into Place</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter PWA</from><to>Get DATETIMEKEYs</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge Ecom &#x2b; PWA</from><to>Set Values for Null Flags</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get Sites</from><to>Merge Join 3 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get Sites</from><to>Merge Join 3 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2</from><to>Sort rows 2 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 2 3</from><to>Merge Join 3 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 2 2</from><to>Sort rows 2 4</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 4</from><to>Append streams</to><enabled>Y</enabled> </hop>
+  <hop> <from>Group By Order No.</from><to>Insert Orders</to><enabled>Y</enabled> </hop>
+  <hop> <from>Append streams</from><to>Select BridgeVals</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort Orders by Order No.</from><to>Merge Orders w&#x2f; new Order No.</to><enabled>Y</enabled> </hop>
+  <hop> <from>Lookup Source Keys</from><to>Rename ID_1 to SourceKey</to><enabled>Y</enabled> </hop>
+  <hop> <from>Rename ID_1 to SourceKey</from><to>Filter PWA</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get DATETIMEKEYs</from><to>RemapSite</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort by ITEM_CD</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>Stream lookup</from><to>Select values 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge Join 3 2 2</from><to>Stream lookup 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>MGC_SKU</from><to>Stream lookup 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Stream lookup 2</from><to>Stream lookup 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Stream lookup 3</from><to>Select values 4 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>EST_SHIPPING</from><to>Stream lookup 3</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 4 2</from><to>Calculator</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get Products</from><to>Stream lookup 4</to><enabled>Y</enabled> </hop>
+  <hop> <from>Stream lookup 4</from><to>Select values 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Post-Customer Prune  &#x28;Ecom&#x29;</from><to>Stream lookup 4</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>Add constants</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge Orders w&#x2f; new Order No.</from><to>Filter Null OrderKeys</to><enabled>Y</enabled> </hop>
+  <hop> <from>Append streams</from><to>Handle OBSD Sources</to><enabled>Y</enabled> </hop>
+  <hop> <from>Handle OBSD Sources</from><to>Remove CategoryKey</to><enabled>Y</enabled> </hop>
+  <hop> <from>Remove CategoryKey 2</from><to>Sort BridgeVals by Order No.</to><enabled>Y</enabled> </hop>
+  <hop> <from>Pull from PWA</from><to>Merge Ecom &#x2b; PWA</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge Join 3 2</from><to>UseCode CLU</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter Null OrderKeys</from><to>Bridge Output</to><enabled>N</enabled> </hop>
+  <hop> <from>Remove CategoryKey</from><to>Sort rows</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows</from><to>Group By Order No.</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort BridgeVals by Order No.</from><to>Group by</to><enabled>Y</enabled> </hop>
+  <hop> <from>Group by</from><to>Merge Orders w&#x2f; new Order No.</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get DimCust</from><to>CustomerLookup Ecom</to><enabled>Y</enabled> </hop>
+  <hop> <from>CustomerLookup Ecom</from><to>Post-Customer Prune  &#x28;Ecom&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get DimCust</from><to>CustomerLookup Ecom 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>CustomerLookup Ecom 2</from><to>Post-Customer Prune &#x28;PWA&#x29;</to><enabled>Y</enabled> </hop>
+  <hop> <from>Put Names into Place</from><to>CustomerLookup Ecom 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>RemapSite</from><to>CustomerLookup Ecom</to><enabled>Y</enabled> </hop>
+  <hop> <from>Set Values for Null Flags</from><to>LineStatusLookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>LineStatusLookup</from><to>Lookup Source Keys</to><enabled>Y</enabled> </hop>
+  <hop> <from>UseCode CLU</from><to>Add constants 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants 2</from><to>Select values 4</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values 4 2 2</from><to>Append streams</to><enabled>Y</enabled> </hop>
+  <hop> <from>Handle 0 Rev in PWA</from><to>Remove CategoryKey 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Filter Null OrderKeys</from><to>Insert &#x2f; Update</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants</from><to>Sort rows 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 2</from><to>Group by 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Add constants</from><to>Merge Join</to><enabled>Y</enabled> </hop>
+  <hop> <from>Merge Join</from><to>Select values 4 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Group by 2</from><to>Merge Join</to><enabled>Y</enabled> </hop>
+  <hop> <from>Percent of Est Rev</from><to>Calculator 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator 2</from><to>Handle 0 Rev in PWA</to><enabled>Y</enabled> </hop>
+  <hop> <from>Get Products</from><to>String operations 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>String operations 2</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select BridgeVals</from><to>Percent of Est Rev</to><enabled>Y</enabled> </hop>
+  <hop> <from>Sort rows 2 4</from><to>Merge Join 3 2 2</to><enabled>Y</enabled> </hop>
+  <hop> <from>Insert Orders</from><to>Sort Orders by Order No.</to><enabled>Y</enabled> </hop>
+  </order>
+  <step>
+    <name>Add constants</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>ShipDate</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ShipConfDate</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ReturnDate</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ReturnAmt</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0.00</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ReturnQTY</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>CancelledFlag</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ADDL_PH_AMT</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0.00</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>UseCodeKey</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ShipCharged</name>
+        <type>BigNumber</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0.00</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>CostOfGoodsSold</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0.00</nullif>
+        <length>15</length>
+        <precision>2</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ShipmentNumber</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ShipToNumber</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>ReturnCost</name>
+        <type>Number</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0.00</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>LineNumber</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>EcomDateKey</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>EcomTimeKey</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3440</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Add constants 2</name>
+    <type>Constant</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <name>Price</name>
+        <type>BigNumber</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+      <field>
+        <name>TotalPrice</name>
+        <type>BigNumber</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif>0</nullif>
+        <length>-1</length>
+        <precision>-1</precision>
+        <set_empty_string>N</set_empty_string>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3320</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Append streams</name>
+    <type>Append</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<head_name>Select values 4 2 2</head_name>
+<tail_name>Select values 4</tail_name>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3680</xloc>
+      <yloc>360</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Break ProductSeperate into prod and qty</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f; ProductSeperate will be in the form of WIDGET&#x3a;42,&#xd;&#xa;&#x2f;&#x2f; where WIDGET is the product name, and 42 is the quantity.&#xd;&#xa;&#xd;&#xa;&#x2f;&#x2f; set prod and qty fields.&#xd;&#xa;var qty &#x3d; str2num&#x28;ProductSeperate.split&#x28;&#x27;&#x3a;&#x27;&#x29;&#x5b;1&#x5d;&#x29;&#x3b;&#xd;&#xa;var prod &#x3d; ProductSeperate.split&#x28;&#x27;&#x3a;&#x27;&#x29;&#x5b;0&#x5d;&#x3b;&#xd;&#xa;&#xd;&#xa;&#x2f;&#x2f; sets Revenue is there is only one product.&#xd;&#xa;var rev &#x3d; 0&#x3b;&#xd;&#xa;if&#x28;ProdNo &#x3d;&#x3d; 1&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;	rev &#x3d; revenue&#x3b;&#xd;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>qty</name>
+        <rename>ITM_QTY</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>prod</name>
+        <rename>ITM_CD</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>rev</name>
+        <rename>Product_Revenue</rename>
+        <type>Number</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1240</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Break into Product Rows</name>
+    <type>SplitFieldToRows3</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+   <splitfield>products</splitfield>
+   <delimiter>,</delimiter>
+   <newfield>ProductSeperate</newfield>
+   <rownum>Y</rownum>
+   <rownum_field>ProdNo</rownum_field>
+   <resetrownumber>Y</resetrownumber>
+   <delimiter_is_regex>N</delimiter_is_regex>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1020</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Bridge Output</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <schema/>
+    <table>BridgeOrdersToProducts</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>N</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>N</return_keys>
+    <return_field>OrderKey</return_field>
+    <fields>
+        <field>
+          <column_name>Revenue</column_name>
+          <stream_name>Revenue_1</stream_name>
+        </field>
+        <field>
+          <column_name>Quantity</column_name>
+          <stream_name>Quantity</stream_name>
+        </field>
+        <field>
+          <column_name>OrderKey</column_name>
+          <stream_name>OrderKey</stream_name>
+        </field>
+        <field>
+          <column_name>ProductKey</column_name>
+          <stream_name>ProductKey</stream_name>
+        </field>
+        <field>
+          <column_name>Cost</column_name>
+          <stream_name>Cost_1</stream_name>
+        </field>
+        <field>
+          <column_name>ShipCost</column_name>
+          <stream_name>Shipping_1</stream_name>
+        </field>
+        <field>
+          <column_name>ShipDateKey</column_name>
+          <stream_name>ShipDate</stream_name>
+        </field>
+        <field>
+          <column_name>ShipConfDateKey</column_name>
+          <stream_name>ShipConfDate</stream_name>
+        </field>
+        <field>
+          <column_name>ReturnDateKey</column_name>
+          <stream_name>ReturnDate</stream_name>
+        </field>
+        <field>
+          <column_name>ReturnAmt</column_name>
+          <stream_name>ReturnAmt</stream_name>
+        </field>
+        <field>
+          <column_name>ReturnQTY</column_name>
+          <stream_name>ReturnQTY</stream_name>
+        </field>
+        <field>
+          <column_name>FreightOut</column_name>
+          <stream_name>ADDL_PH_AMT</stream_name>
+        </field>
+        <field>
+          <column_name>ShipCharged</column_name>
+          <stream_name>ShipCharged</stream_name>
+        </field>
+        <field>
+          <column_name>COstOfGoodsSold</column_name>
+          <stream_name>CostOfGoodsSold</stream_name>
+        </field>
+        <field>
+          <column_name>ShipmentNumber</column_name>
+          <stream_name>ShipmentNumber</stream_name>
+        </field>
+        <field>
+          <column_name>ShipToNumber</column_name>
+          <stream_name>ShipToNumber</stream_name>
+        </field>
+        <field>
+          <column_name>ReturnCost</column_name>
+          <stream_name>ReturnCost</stream_name>
+        </field>
+        <field>
+          <column_name>LineNumber</column_name>
+          <stream_name>LineNumber</stream_name>
+        </field>
+        <field>
+          <column_name>CancelledFlag</column_name>
+          <stream_name>CancelledFlag</stream_name>
+        </field>
+        <field>
+          <column_name>StatusCodeKey</column_name>
+          <stream_name>StatusKey</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4980</xloc>
+      <yloc>360</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>Cost</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>Cost</field_a>
+<field_b>Quantity</field_b>
+<field_c/>
+<value_type>BigNumber</value_type>
+<value_length>19</value_length>
+<value_precision>4</value_precision>
+<remove>Y</remove>
+<conversion_mask/>
+<decimal_symbol>.</decimal_symbol>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>Shipping</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>Shipping</field_a>
+<field_b>Quantity</field_b>
+<field_c/>
+<value_type>BigNumber</value_type>
+<value_length>19</value_length>
+<value_precision>4</value_precision>
+<remove>Y</remove>
+<conversion_mask/>
+<decimal_symbol>.</decimal_symbol>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>Price</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>Price</field_a>
+<field_b>Quantity</field_b>
+<field_c/>
+<value_type>BigNumber</value_type>
+<value_length>19</value_length>
+<value_precision>4</value_precision>
+<remove>Y</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3360</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Calculator 2</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>EstPrice</field_name>
+<calc_type>MULTIPLY</calc_type>
+<field_a>Revenue</field_a>
+<field_b>EstRevPctg</field_b>
+<field_c/>
+<value_type>BigNumber</value_type>
+<value_length>19</value_length>
+<value_precision>4</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4000</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>CustomerLookup Ecom</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>Get DimCust</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>customerEmail</name>
+        <field>EmailAddress</field>
+      </key>
+      <key>
+        <name>LNAME</name>
+        <field>Last Name</field>
+      </key>
+      <key>
+        <name>FNAME</name>
+        <field>First Name</field>
+      </key>
+      <key>
+        <name>customerPhoneNumber</name>
+        <field>Phone Number</field>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>ID</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1940</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>CustomerLookup Ecom 2</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>Get DimCust</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>customerEmail</name>
+        <field>EmailAddress</field>
+      </key>
+      <key>
+        <name>LNAME</name>
+        <field>Last Name</field>
+      </key>
+      <key>
+        <name>FNAME</name>
+        <field>First Name</field>
+      </key>
+      <key>
+        <name>customerPhoneNumber</name>
+        <field>Phone Number</field>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>ID</rename>
+        <default/>
+        <type>None</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1940</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>EST_SHIPPING</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Ecom</connection>
+    <sql>SELECT cast&#x28;EST_SHIP_COST as decimal&#x28;32,4&#x29;&#x29; as EST_SHIP_COST, RTRIM&#x28;ECOM_SKU&#x29; as trimSKU FROM EST_SHIPPING</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3160</xloc>
+      <yloc>600</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter Null OrderKeys</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Insert &#x2f; Update</send_true_to>
+<send_false_to/>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <leftvalue>OrderKey</leftvalue>
+   <function>IS NOT NULL</function>
+   <rightvalue/>
+   </condition>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <leftvalue>ProductKey</leftvalue>
+   <function>IS NOT NULL</function>
+   <rightvalue/>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4760</xloc>
+      <yloc>360</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Filter PWA</name>
+    <type>FilterRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<send_true_to>Get DATETIMEKEYs</send_true_to>
+<send_false_to>Break into Product Rows</send_false_to>
+    <compare>
+<condition>
+ <negated>N</negated>
+ <conditions>
+  <condition>
+   <negated>N</negated>
+   <operator>AND</operator>
+   <leftvalue>ITM_CD</leftvalue>
+   <function>IS NOT NULL</function>
+   <rightvalue/>
+   </condition>
+  </conditions>
+ </condition>
+    </compare>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>840</xloc>
+      <yloc>340</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get DATETIMEKEYs</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var PWADateKey&#x3d;DateKey&#x3b;&#xd;&#xa;var PWATimeKey&#x3d;TimeKey&#x3b;&#xd;&#xa;if&#x28;DateKey&#x3d;&#x3d;null&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;	DateKey&#x3d;DateKeyCFO&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;if&#x28;TimeKey&#x3d;&#x3d;null&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;	TimeKey&#x3d;TimeKeyCFO&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;var order &#x3d; orderNumber&#x3b;&#xd;&#xa;if&#x28;order&#x3d;&#x3d;null&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;	order &#x3d; salesOrderNumber&#x3b;&#xd;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>order</name>
+        <rename>orderNumber</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>PWADateKey</name>
+        <rename>PWADateKey</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>PWATimeKey</name>
+        <rename>PWATimeKey</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>DateKeyCFO</name>
+        <rename>EcomDateKey</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>TimeKeyCFO</name>
+        <rename>EcomTimeKey</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>      <field>        <name>DateKey</name>
+        <rename>DateKey</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>TimeKey</name>
+        <rename>TimeKey</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1020</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get DimCust</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <sql>SELECT &#xd;&#xa;isnull&#x28;rtrim&#x28;upper&#x28;&#x5b;First Name&#x5d;&#x29;&#x29;,&#x27;&#x27;&#x29; as &#x5b;First Name&#x5d;,&#xd;&#xa;isnull&#x28;rtrim&#x28;upper&#x28;&#x5b;Last Name&#x5d;&#x29;&#x29;,&#x27;&#x27;&#x29; as &#x5b;Last Name&#x5d;,&#xd;&#xa;rtrim&#x28;upper&#x28;EmailAddress&#x29;&#x29; as EmailAddress,&#xd;&#xa;&#x5b;Phone Number&#x5d;,&#xd;&#xa; ID from DimCustomer order by lower&#x28;EmailAddress&#x29; asc&#xd;&#xa;</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1940</xloc>
+      <yloc>360</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get Products</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <sql>SELECT &#xd;&#xa;	ltrim&#x28;rtrim&#x28;DWSKU&#x29;&#x29; as DWSKU, &#xd;&#xa;	upper&#x28;ltrim&#x28;rtrim&#x28;SKU&#x29;&#x29;&#x29; as SKU, &#xd;&#xa;	case when substring&#x28;SKU, 4,1&#x29; &#x3d; &#x27; &#x27; then ltrim&#x28;rtrim&#x28;SUBSTRING&#x28;SKU, 4, 900&#x29;&#x29;&#x29;&#xd;&#xa;	     when substring&#x28;SKU, 3,1&#x29; &#x3d; &#x27; &#x27; then ltrim&#x28;rtrim&#x28;SUBSTRING&#x28;SKU, 3, 900&#x29;&#x29;&#x29;&#xd;&#xa;		 else SKU&#xd;&#xa;	end as trimSKU2, &#xd;&#xa;	ID as prodID, &#xd;&#xa;	CategoryKey as prodCategoryKey &#xd;&#xa;from DataWarehouse.dbo.DimProduct &#xd;&#xa;order by ltrim&#x28;rtrim&#x28;SKU&#x29;&#x29; asc </sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2380</xloc>
+      <yloc>340</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Get Sites</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <sql>SELECT Prefix, ID as siteID from DimSite where learn &#x3d; 0 and Prefix is not null order by Prefix asc</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2860</xloc>
+      <yloc>380</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Group By Order No.</name>
+    <type>MemoryGroupBy</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <give_back_row>N</give_back_row>
+      <group>
+        <field>
+          <name>orderNumber</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate>DateKey</aggregate>
+          <subject>DateKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>TimeKey</aggregate>
+          <subject>TimeKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>CustomerKey</aggregate>
+          <subject>CustomerKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>Revenue</aggregate>
+          <subject>Revenue</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>IsInPWA</aggregate>
+          <subject>IsInPWA</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>IsInEcom</aggregate>
+          <subject>IsInEcom</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>SiteKey</aggregate>
+          <subject>SiteKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>orderNumber</aggregate>
+          <subject>orderNumber</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>CustomerCode</aggregate>
+          <subject>CustomerCode</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>SourceKey</aggregate>
+          <subject>SourceKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>Cost</aggregate>
+          <subject>Cost</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>Shipping</aggregate>
+          <subject>Shipping</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>UseCodeKey</aggregate>
+          <subject>UseCodeKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>PWADateKey</aggregate>
+          <subject>PWADateKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>PWATimeKey</aggregate>
+          <subject>PWATimeKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>EcomDateKey</aggregate>
+          <subject>EcomDateKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>EcomTimeKey</aggregate>
+          <subject>EcomTimeKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4200</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Group by</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>N</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+        <field>
+          <name>orderNumber</name>
+        </field>
+        <field>
+          <name>ShipToNumber</name>
+        </field>
+        <field>
+          <name>ShipmentNumber</name>
+        </field>
+        <field>
+          <name>productKey</name>
+        </field>
+        <field>
+          <name>CancelledFlag</name>
+        </field>
+        <field>
+          <name>LineNumber</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate>Revenue</aggregate>
+          <subject>Revenue</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>Quantity</aggregate>
+          <subject>Quantity</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>Cost</aggregate>
+          <subject>Cost</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>Shipping</aggregate>
+          <subject>Shipping</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>ShipDate</aggregate>
+          <subject>ShipDate</subject>
+          <type>MAX</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>ShipConfDate</aggregate>
+          <subject>ShipConfDate</subject>
+          <type>MAX</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>ReturnDate</aggregate>
+          <subject>ReturnDate</subject>
+          <type>MAX</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>ReturnAmt</aggregate>
+          <subject>ReturnAmt</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>ReturnQTY</aggregate>
+          <subject>ReturnQTY</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>ADDL_PH_AMT</aggregate>
+          <subject>ADDL_PH_AMT</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>DateKey</aggregate>
+          <subject>DateKey</subject>
+          <type>MAX</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>ShipCharged</aggregate>
+          <subject>ShipCharged</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>CostOfGoodsSold</aggregate>
+          <subject>CostOfGoodsSold</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>ReturnCost</aggregate>
+          <subject>ReturnCost</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>StatusKey</aggregate>
+          <subject>StatusKey</subject>
+          <type>FIRST_INCL_NULL</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>EstRevPctg</aggregate>
+          <subject>EstRevPctg</subject>
+          <type>MAX</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>Price</aggregate>
+          <subject>Price</subject>
+          <type>MAX</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>TotalPrice</aggregate>
+          <subject>TotalPrice</subject>
+          <type>MAX</type>
+          <valuefield/>
+        </field>
+        <field>
+          <aggregate>IsInEcom</aggregate>
+          <subject>IsInEcom</subject>
+          <type>MAX</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4520</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Group by 2</name>
+    <type>GroupBy</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <all_rows>N</all_rows>
+      <ignore_aggregate>N</ignore_aggregate>
+      <field_ignore/>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>grp</prefix>
+      <add_linenr>N</add_linenr>
+      <linenr_fieldname/>
+      <give_back_row>N</give_back_row>
+      <group>
+        <field>
+          <name>orderNumber</name>
+        </field>
+      </group>
+      <fields>
+        <field>
+          <aggregate>TotalPrice</aggregate>
+          <subject>Price</subject>
+          <type>SUM</type>
+          <valuefield/>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3540</xloc>
+      <yloc>620</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Handle 0 Rev in PWA</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f; If the IsInEcom &#x3d; 0 and Revenue &#x3d; 0, then use the Price from the SKU table.&#xd;&#xa;var EstRevenue &#x3d; 0.00&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;IsInEcom &#x3d;&#x3d; 0 &#x26;&#x26; EstRevPctg &#x21;&#x3d; 1&#x29;&#xd;&#xa;	EstRevenue &#x3d; Price &#x2a; Quantity&#x3b;&#xd;&#xa;else&#xd;&#xa;	EstRevenue &#x3d; Revenue&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>EstRevenue</name>
+        <rename>EstRevenue</rename>
+        <type>Number</type>
+        <length>19</length>
+        <precision>12</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4100</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Handle OBSD Sources</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f; If the Category Key is one of the CategoryKeys associated with OBSD,&#xd;&#xa;&#x2f;&#x2f; Then we need to set the SourceKey to 7 &#x28;OBSD&#x29;.&#xd;&#xa;var outSource &#x3d; SourceKey&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;CategoryKey &#x3d;&#x3d; 69 &#x7c;&#x7c; CategoryKey &#x3d;&#x3d; 70 &#x7c;&#x7c; CategoryKey &#x3d;&#x3d; 81 &#x7c;&#x7c; CategoryKey &#x3d;&#x3d; 82&#x29;&#xd;&#xa;	outSource &#x3d; 7&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>outSource</name>
+        <rename>SourceKey</rename>
+        <type>Integer</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3840</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Insert &#x2f; Update</name>
+    <type>InsertUpdate</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <commit>100</commit>
+    <update_bypassed>Y</update_bypassed>
+    <lookup>
+      <schema/>
+      <table>BridgeOrdersToProducts</table>
+      <key>
+        <name>OrderKey</name>
+        <field>OrderKey</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ShipmentNumber</name>
+        <field>ShipmentNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>ShipToNumber</name>
+        <field>ShipToNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <key>
+        <name>LineNumber</name>
+        <field>LineNumber</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>Revenue</name>
+        <rename>Revenue_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Quantity</name>
+        <rename>Quantity</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ProductKey</name>
+        <rename>ProductKey</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>Cost</name>
+        <rename>Cost_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ShipCost</name>
+        <rename>Shipping_1</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ShipDateKey</name>
+        <rename>ShipDate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ShipConfDateKey</name>
+        <rename>ShipConfDate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ReturnDateKey</name>
+        <rename>ReturnDate</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ReturnAmt</name>
+        <rename>ReturnAmt</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ReturnQTY</name>
+        <rename>ReturnQTY</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>FreightOut</name>
+        <rename>ADDL_PH_AMT</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ShipCharged</name>
+        <rename>ShipCharged</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>CostOfGoodsSold</name>
+        <rename>CostOfGoodsSold</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ReturnCost</name>
+        <rename>ReturnCost</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>CancelledFlag</name>
+        <rename>CancelledFlag</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>StatusCodeKey</name>
+        <rename>StatusKey</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>OrderKey</name>
+        <rename>OrderKey</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ShipmentNumber</name>
+        <rename>ShipmentNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>ShipToNumber</name>
+        <rename>ShipToNumber</rename>
+        <update>Y</update>
+      </value>
+      <value>
+        <name>LineNumber</name>
+        <rename>LineNumber</rename>
+        <update>Y</update>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>5000</xloc>
+      <yloc>480</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Insert Orders</name>
+    <type>TableOutput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <schema/>
+    <table>FactOrder</table>
+    <commit>1000</commit>
+    <truncate>N</truncate>
+    <ignore_errors>Y</ignore_errors>
+    <use_batch>N</use_batch>
+    <specify_fields>Y</specify_fields>
+    <partitioning_enabled>N</partitioning_enabled>
+    <partitioning_field/>
+    <partitioning_daily>N</partitioning_daily>
+    <partitioning_monthly>Y</partitioning_monthly>
+    <tablename_in_field>N</tablename_in_field>
+    <tablename_field/>
+    <tablename_in_table>Y</tablename_in_table>
+    <return_keys>Y</return_keys>
+    <return_field>OrderKey</return_field>
+    <fields>
+        <field>
+          <column_name>OrderNumber</column_name>
+          <stream_name>orderNumber</stream_name>
+        </field>
+        <field>
+          <column_name>DateKey</column_name>
+          <stream_name>DateKey</stream_name>
+        </field>
+        <field>
+          <column_name>TimeKey</column_name>
+          <stream_name>TimeKey</stream_name>
+        </field>
+        <field>
+          <column_name>CustomerKey</column_name>
+          <stream_name>CustomerKey</stream_name>
+        </field>
+        <field>
+          <column_name>Revenue</column_name>
+          <stream_name>Revenue</stream_name>
+        </field>
+        <field>
+          <column_name>IsInPWA</column_name>
+          <stream_name>IsInPWA</stream_name>
+        </field>
+        <field>
+          <column_name>IsInEcom</column_name>
+          <stream_name>IsInEcom</stream_name>
+        </field>
+        <field>
+          <column_name>SiteKey</column_name>
+          <stream_name>SiteKey</stream_name>
+        </field>
+        <field>
+          <column_name>CustomerCode</column_name>
+          <stream_name>CustomerCode</stream_name>
+        </field>
+        <field>
+          <column_name>SourceKey</column_name>
+          <stream_name>SourceKey</stream_name>
+        </field>
+        <field>
+          <column_name>Cost</column_name>
+          <stream_name>Cost</stream_name>
+        </field>
+        <field>
+          <column_name>ShipCost</column_name>
+          <stream_name>Shipping</stream_name>
+        </field>
+        <field>
+          <column_name>UseCodeKey</column_name>
+          <stream_name>UseCodeKey</stream_name>
+        </field>
+        <field>
+          <column_name>PWADateKey</column_name>
+          <stream_name>PWADateKey</stream_name>
+        </field>
+        <field>
+          <column_name>PWATimeKey</column_name>
+          <stream_name>PWATimeKey</stream_name>
+        </field>
+        <field>
+          <column_name>EcomDateKey</column_name>
+          <stream_name>EcomDateKey</stream_name>
+        </field>
+        <field>
+          <column_name>EcomTimeKey</column_name>
+          <stream_name>EcomTimeKey</stream_name>
+        </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4300</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>LineStatusLookup</name>
+    <type>DBLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Warehouse</connection>
+    <cache>Y</cache>
+    <cache_load_all>Y</cache_load_all>
+    <cache_size>0</cache_size>
+    <lookup>
+      <schema/>
+      <table>DimLineItemStatus</table>
+      <orderby/>
+      <fail_on_multiple>N</fail_on_multiple>
+      <eat_row_on_failure>N</eat_row_on_failure>
+      <key>
+        <name>LineStatus</name>
+        <field>StatusCode</field>
+        <condition>&#x3d;</condition>
+        <name2/>
+      </key>
+      <value>
+        <name>ID</name>
+        <rename>StatusKey</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>360</xloc>
+      <yloc>340</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Lookup Source Keys</name>
+    <type>CombinationLookup</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>DimSource</table>
+      <connection>Warehouse</connection>
+      <commit>100</commit>
+      <cache_size>9999</cache_size>
+      <replace>Y</replace>
+      <crc>N</crc>
+      <crcfield>hashcode</crcfield>
+      <fields>
+        <key>
+          <name>ReportingName</name>
+          <lookup>Source</lookup>
+        </key>
+        <return>
+          <name>ID</name>
+          <creation_method>autoinc</creation_method>
+          <use_autoinc>Y</use_autoinc>
+        </return>
+      </fields>
+      <sequence/>
+      <last_update_field/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>500</xloc>
+      <yloc>340</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>MGC_SKU</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Ecom</connection>
+    <sql>SELECT &#xd;&#xa;	cast&#x28;SKU_PRICE as money&#x29; as SKU_PRICE,&#xd;&#xa;	cast&#x28;SKU_COST as money&#x29; as SKU_COST, &#xd;&#xa;	rtrim&#x28;SKU_NUMBER&#x29; as trimSKU,&#xd;&#xa;	ltrim&#x28;rtrim&#x28;SUBSTRING&#x28;SKU_NUMBER, 4, 900&#x29;&#x29;&#x29; as trimSKU2&#xd;&#xa;FROM MGC_SKU</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>N</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3020</xloc>
+      <yloc>600</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Merge Ecom &#x2b; PWA</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<join_type>FULL OUTER</join_type>
+<step1>Pull from Ecomedate</step1>
+<step2>Pull from PWA</step2>
+    <keys_1>
+      <key>salesOrderNumber</key>
+    </keys_1>
+    <keys_2>
+      <key>orderNumber</key>
+    </keys_2>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>60</xloc>
+      <yloc>340</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Merge Join</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<join_type>INNER</join_type>
+<step1>Add constants</step1>
+<step2>Group by 2</step2>
+    <keys_1>
+      <key>orderNumber</key>
+    </keys_1>
+    <keys_2>
+      <key>orderNumber</key>
+    </keys_2>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3540</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Merge Join 3 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<join_type>RIGHT OUTER</join_type>
+<step1>Get Sites</step1>
+<step2>Sort rows 2 3</step2>
+    <keys_1>
+      <key>Prefix</key>
+    </keys_1>
+    <keys_2>
+      <key>Prefix</key>
+    </keys_2>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2860</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Merge Join 3 2 2</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<join_type>INNER</join_type>
+<step1>Sort rows 2 4</step1>
+<step2>Get Sites</step2>
+    <keys_1>
+      <key>PWAPrefix</key>
+    </keys_1>
+    <keys_2>
+      <key>Prefix</key>
+    </keys_2>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2860</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Merge Orders w&#x2f; new Order No.</name>
+    <type>MergeJoin</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+<join_type>INNER</join_type>
+<step1>Sort Orders by Order No.</step1>
+<step2>Group by</step2>
+    <keys_1>
+      <key>orderNumber</key>
+    </keys_1>
+    <keys_2>
+      <key>orderNumber</key>
+    </keys_2>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4580</xloc>
+      <yloc>360</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Percent of Est Rev</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f; If the IsInEcom &#x3d; 0 and Revenue &#x3d; 0, then use the Price from the SKU table.&#xd;&#xa;var EstRevPctg &#x3d; 1.0000&#x3b;&#xd;&#xa;&#xd;&#xa;if &#x28;TotalPrice &#x3d;&#x3d; 0&#x29;&#xd;&#xa;	EstRevPctg &#x3d; 0.0000&#xd;&#xa;else EstRevPctg &#x3d; &#x28;100 &#x2a; Price&#x29; &#x2f; &#x28;100 &#x2a; TotalPrice&#x29;&#x3b;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>EstRevPctg</name>
+        <rename>EstRevPctg</rename>
+        <type>Number</type>
+        <length>16</length>
+        <precision>4</precision>
+        <replace>N</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3900</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Post-Customer Prune  &#x28;Ecom&#x29;</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>ID_1</name>
+        <rename>custID</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Product_Revenue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_QTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInPWA</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Prefix</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>customerCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SourceKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>cost</name>
+        <rename>Cost</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EST_SHIP_COST</name>
+        <rename>Shipping</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipConfDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnQTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CancelledFlag</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ADDL_PH_AMT</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>USE_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipCharged</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>OFFER_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CostOfGoodsSold</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipmentNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipToNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnCost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LineNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWADateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWATimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomDateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomTimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>StatusKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>ShipmentNumber</name>
+        <rename>ShipmentNumber</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipToNumber</name>
+        <rename>ShipToNumber</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2200</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Post-Customer Prune &#x28;PWA&#x29;</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>ID_1</name>
+        <rename>custID</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Product_Revenue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_QTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TimeKey</name>
+        <rename>PWATimeKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DateKey</name>
+        <rename>PWADateKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInPWA</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWAPrefix</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>customerCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SourceKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>StatusKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2200</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Pull from Ecomedate</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>Ecom</connection>
+    <sql>SELECT salesOrderNumber,&#xd;&#xa;       Upper&#x28;Ltrim&#x28;Rtrim&#x28;ITM_CD&#x29;&#x29;&#x29;                   as ITM_CD,&#xd;&#xa;       USE_CD,&#xd;&#xa;	   OFFER_CD,&#xd;&#xa;       ITM_QTY,&#xd;&#xa;       Product_Revenue,&#xd;&#xa;       SALES_ORD_ENTRY_DT,&#xd;&#xa;       FNAME,&#xd;&#xa;       LNAME,&#xd;&#xa;       Datediff&#x28;second, Dateadd&#x28;day, Datediff&#x28;day, 0, SALES_ORD_ENTRY_DT&#x29;, 0&#x29;,&#xd;&#xa;       SALES_ORD_ENTRY_DT&#x29;                           AS TimeKeyCFO,&#xd;&#xa;       CONVERT&#x28;VARCHAR&#x28;24&#x29;, SALES_ORD_ENTRY_DT, 112&#x29; AS DateKeyCFO,&#xd;&#xa;       Substring&#x28;salesOrderNumber, 1, 1&#x29;             AS Prefix,&#xd;&#xa;       1                                             AS IsInEcom,&#xd;&#xa;       ReportingName,&#xd;&#xa;       Isnull&#x28;cost, 0&#x29;                               as cost,&#xd;&#xa;       Isnull&#x28;EST_SHIP_COST, 0&#x29;                      as EST_SHIP_COST,&#xd;&#xa;       CONVERT&#x28;VARCHAR&#x28;24&#x29;, ShipDate, 112&#x29;           AS ShipDate,&#xd;&#xa;       CONVERT&#x28;VARCHAR&#x28;24&#x29;, ShipConfDate, 112&#x29;       AS ShipConfDate,&#xd;&#xa;       CONVERT&#x28;VARCHAR&#x28;24&#x29;, ReturnDate, 112&#x29;         AS ReturnDate,&#xd;&#xa;       Isnull&#x28;ReturnAmt, 0&#x29;                          as ReturnAmt,&#xd;&#xa;       ReturnCost,&#xd;&#xa;       Isnull&#x28;ReturnQTY, 0&#x29;                          as ReturnQTY,&#xd;&#xa;       CancelledFlag,&#xd;&#xa;       Isnull&#x28;ADDL_PH_AMT, 0&#x29;                        as ADDL_PH_AMT,&#xd;&#xa;       STY_CD,&#xd;&#xa;	   ShipCharged,&#xd;&#xa;	   CostOfGoodsSold,&#xd;&#xa;   	   ShipmentNumber,&#xd;&#xa;	   ShipToNumber,&#xd;&#xa;	   LineNumber,&#xd;&#xa;	   LineStatus&#xd;&#xa;FROM   &#x28;SELECT header.SALES_ORD_ENTRY_DT,&#xd;&#xa;               lines.&#x5b;SALES_ORD_NR&#x5d;                            AS&#xd;&#xa;               salesOrderNumber,&#xd;&#xa;               &#x5b;ITM_QTY&#x5d;,&#xd;&#xa;               &#x5b;EXT_PRC_AMT&#x5d;                                   AS&#xd;&#xa;               Product_Revenue,&#xd;&#xa;			   CASE WHEN ORD_ITM_TYPE_LGCY_CD &#x3d; &#x27;C&#x27; THEN&#xd;&#xa;				0.0&#xd;&#xa;			   ELSE&#xd;&#xa;				&#x5b;EXT_COST_AMT&#x5d;&#xd;&#xa;			   END                                  		   AS CostOfGoodsSold,&#xd;&#xa;			   &#x5b;EXT_COST_AMT&#x5d; 								   AS cost,&#xd;&#xa;               &#x5b;ORIG_PRC_AMT&#x5d;,&#xd;&#xa;               lines.&#x5b;EDP_NO_ID&#x5d;,&#xd;&#xa;               Isnull&#x28;postage_amount&#x2f;&#x28;count&#x28;&#x2a;&#x29; over &#x28;partition by lines.SALES_ORD_NR,lines.SALES_ORD_SHIP_NR,lines.SALES_ORD_SHIP_TO_NR&#x29;&#x29;, EST_SHIP_COST &#x2a; ITM_QTY&#x29; AS EST_SHIP_COST,&#xd;&#xa;               SOURCE_,&#xd;&#xa;               OFFER_CD,&#xd;&#xa;               USE_CD,&#xd;&#xa;               ReportingName,&#xd;&#xa;               rtrim&#x28;upper&#x28;FNAME&#x29;&#x29; as FNAME,&#xd;&#xa;               rtrim&#x28;upper&#x28;LNAME&#x29;&#x29; as LNAME,&#xd;&#xa;               Rtrim&#x28;isnull&#x28;items.ITEM_NO,ECOM_SKU&#x29;&#x29;           AS ITM_CD,&#xd;&#xa;               Isnull&#x28;RETURN_DOLLARS, 0.00&#x29;                    AS ReturnAmt,&#xd;&#xa;			   Isnull&#x28;RTN_PROD_COST,0.00&#x29; 					   AS ReturnCost,&#xd;&#xa;               Isnull&#x28;RETURN_QTY, 0&#x29;                           AS ReturnQTY,&#xd;&#xa;               RTN_DT                                          AS ReturnDate,&#xd;&#xa;               SHIP_DT                                         AS ShipDate,&#xd;&#xa;               SHIP_CONF_DT                                    AS ShipConfDate,&#xd;&#xa;               CASE&#xd;&#xa;                 WHEN ORD_ITM_STA_LGCY_CD IN &#x28; &#x27;C&#x27;, &#x27;F&#x27;, &#x27;N&#x27; &#x29; THEN&#xd;&#xa;                 1&#xd;&#xa;                 ELSE 0&#xd;&#xa;               END                                             AS CancelledFlag,&#xd;&#xa;			   ORD_ITM_STA_LGCY_CD AS LineStatus,&#xd;&#xa;               items.ADDL_PH_AMT,&#xd;&#xa;               items.STY_CD,&#xd;&#xa;			   Isnull&#x28;shipCharged.ShipChargedAmt&#x2f;sum&#x28;case when lines.ORD_ITM_TYPE_LGCY_CD NOT IN &#x28;&#x27;C&#x27;,&#x27;D&#x27;,&#x27;E&#x27;&#x29; then 1 else 0 end&#x29; over &#x28;partition by lines.SALES_ORD_NR,lines.SALES_ORD_SHIP_NR, lines.SALES_ORD_SHIP_TO_NR&#x29;,0&#x29;			   AS ShipCharged,&#xd;&#xa;				lines.SALES_ORD_SHIP_NR as ShipmentNumber,&#xd;&#xa;				lines.SALES_ORD_SHIP_TO_NR as ShipToNumber,&#xd;&#xa;			   lines.SALES_ORD_LN_NR as LineNumber&#xd;&#xa;        FROM   &#x5b;Ecomedate&#x5d;.&#x5b;dbo&#x5d;.&#x5b;SV_MACORD_SALES_ORD_LINES&#x5d; AS lines&#xd;&#xa;               LEFT JOIN &#x28;SELECT D14AL1.SALES_ORD_NR,&#xd;&#xa;                                 D14AL1.SALES_ORD_SHIP_TO_NR,&#xd;&#xa;                                 D14AL1.SALES_ORD_SHIP_NR,&#xd;&#xa;                                 Sum&#x28;D14AL2.POST_AMT&#x29; AS EXPR1,&#xd;&#xa;                                 D14AL2.WH_CD,&#xd;&#xa;                                 D14AL2.CITY          AS SHIPTOCITY,&#xd;&#xa;                                 D14AL2.STATE_        AS SHIPTOSTATE&#xd;&#xa;                          FROM   ecomedate.dbo.SV_MACMAN_MANI_PKG_SHIP AS D14AL1&#xd;&#xa;                                 WITH &#x28;&#xd;&#xa;                                 nolock&#x29;&#xd;&#xa;                                 LEFT OUTER JOIN&#xd;&#xa;                                 ecomedate.dbo.SV_MA_900_MANIFEST_ENTRIES AS&#xd;&#xa;                                 D14AL2 WITH&#xd;&#xa;                                 &#x28;nolock&#x29;&#xd;&#xa;                                              ON D14AL1.MANI_REF_NR &#x3d;&#xd;&#xa;                                                 D14AL2.MANI_REF_NR&#xd;&#xa;                                                 AND D14AL2.WH_CD IN&#xd;&#xa;                                                     &#x28; &#x27;&#x27;, &#x27;00&#x27; &#x29;&#xd;&#xa;                                                 AND D14AL1.MANI_PKG_SEQ_NR &#x3d;&#xd;&#xa;                                                     D14AL2.MANI_PKG_SEQ_NR&#xd;&#xa;                          GROUP  BY D14AL1.SALES_ORD_NR,&#xd;&#xa;                                    D14AL1.SALES_ORD_SHIP_TO_NR,&#xd;&#xa;                                    D14AL1.SALES_ORD_SHIP_NR,&#xd;&#xa;                                    D14AL2.WH_CD,&#xd;&#xa;                                    D14AL2.CITY,&#xd;&#xa;                                    D14AL2.STATE_&#x29; AS AL15 &#x28;order_number,&#xd;&#xa;                         ship_to_number,&#xd;&#xa;               shipment_number, postage_amount, warehouse_code, city, state&#x29;&#xd;&#xa;                      ON AL15.order_number &#x3d; lines.SALES_ORD_NR&#xd;&#xa;                         AND AL15.ship_to_number &#x3d; lines.SALES_ORD_SHIP_TO_NR&#xd;&#xa;                         AND AL15.shipment_number &#x3d; lines.SALES_ORD_SHIP_NR&#xd;&#xa;               LEFT JOIN EST_SHIPPING&#xd;&#xa;                       ON lines.EDP_NO_ID &#x3d; EDP_NUMBER&#xd;&#xa;               INNER JOIN SV_MACORD_ORDER_HEADER AS header&#xd;&#xa;                       ON header.SALES_ORD_NR &#x3d; lines.SALES_ORD_NR&#xd;&#xa;               LEFT JOIN SourceCodeReporting AS SourceTable&#xd;&#xa;                       ON header.USE_CD &#x3d; SourceTable.Use_CD&#xd;&#xa;                          AND header.OFFER_CD &#x3d; SourceTable.Offer_CD&#xd;&#xa;               INNER JOIN SV_MACORD_CUSTOMERS AS custTable&#xd;&#xa;                       ON custTable.CUST_EDP_ID &#x3d; header.CUST_EDP&#xd;&#xa;               INNER JOIN SV_MACITM_ITEM_MAST AS items&#xd;&#xa;                       ON lines.EDP_NO_ID &#x3d; items.EDP_NO_ID&#xd;&#xa;               --Attach Returns to line items&#xd;&#xa;               LEFT JOIN &#x28;SELECT &#xd;&#xa;							SALES_ORD_NR,&#xd;&#xa;							SALES_ORD_SHIP_TO_NR,&#xd;&#xa;							SALES_ORD_SHIP_NR,&#xd;&#xa;							EDP_NO,&#xd;&#xa;							max&#x28;RTN_DT&#x29; as RTN_DT,&#xd;&#xa;							sum&#x28;RTN_QTY&#x29; as RETURN_QTY,&#xd;&#xa;							sum&#x28;RTN_PROD_AMT &#x2b; RTN_P_H_AMT &#x2b; RTN_OTHER_AMT &#x2b; RTN_TAX_AMT&#x29; as RETURN_DOLLARS,&#xd;&#xa;							sum&#x28;case when NO_PRODUCT_IND &#x3d; &#x27;N&#x27; then RTN_EXT_COST_AMT else 0 end&#x29; as RTN_PROD_COST&#xd;&#xa;						FROM &#x5b;Ecomedate&#x5d;.&#x5b;dbo&#x5d;.&#x5b;SV_MACORD_RETURNS&#x5d; &#xd;&#xa;						group by SALES_ORD_NR,SALES_ORD_SHIP_TO_NR,SALES_ORD_SHIP_NR,EDP_NO&#x29; AS ret&#xd;&#xa;                      ON lines.SALES_ORD_NR &#x3d; ret.SALES_ORD_NR&#xd;&#xa;                         AND lines.SALES_ORD_SHIP_NR &#x3d; ret.SALES_ORD_SHIP_NR&#xd;&#xa;                         AND lines.SALES_ORD_SHIP_TO_NR &#x3d;&#xd;&#xa;                             ret.SALES_ORD_SHIP_TO_NR&#xd;&#xa;						AND lines.EDP_NO_ID &#x3d; ret.EDP_NO&#xd;&#xa;               --Attach shipcharged to line items&#xd;&#xa;               LEFT JOIN &#x28;SELECT ship.SALES_ORD_NR,&#xd;&#xa;                                 ship.SALES_ORD_SHIP_TO_NR,&#xd;&#xa;                                 SALES_ORD_SHIP_NR,&#xd;&#xa;                                 FIN_TRANS_AMT AS ShipChargedAmt&#xd;&#xa;                          FROM   SV_MACORD_FT_SHIP_AMT AS ship&#xd;&#xa;                          WHERE  ship.FIN_TRANS_LGCY_CD IN &#x28;&#xd;&#xa;                                 &#x27;11&#x27;, &#x27;12&#x27;, &#x27;13&#x27;, &#x27;14&#x27;,&#xd;&#xa;                                 &#x27;15&#x27;, &#x27;16&#x27;, &#x27;17&#x27;, &#x27;18&#x27; &#x29;&#xd;&#xa;                                 AND ship.FIN_AMT_TYPE_LGCY_CD &#x3d; &#x27;PHCG&#x27;&#xd;&#xa;                          GROUP  BY ship.SALES_ORD_NR,&#xd;&#xa;                                    ship.SALES_ORD_SHIP_TO_NR,&#xd;&#xa;                                    ship.SALES_ORD_SHIP_NR,&#xd;&#xa;                                    FIN_TRANS_AMT&#x29; AS shipCharged&#xd;&#xa;                      ON shipCharged.SALES_ORD_NR &#x3d; lines.SALES_ORD_NR&#xd;&#xa;                         AND shipCharged.SALES_ORD_SHIP_TO_NR &#x3d;&#xd;&#xa;                             lines.SALES_ORD_SHIP_TO_NR&#xd;&#xa;                         AND shipCharged.SALES_ORD_SHIP_NR &#x3d;&#xd;&#xa;                             lines.SALES_ORD_SHIP_NR&#xd;&#xa;                         AND lines.ORD_ITM_TYPE_LGCY_CD IN &#x28; &#x27;H&#x27;, &#x27;R&#x27; &#x29;&#xd;&#xa;                         AND lines.ORD_ITM_TYPE_LGCY_CD NOT IN &#x28; &#x27;C&#x27;, &#x27;D&#x27;, &#x27;E&#x27; &#x29;&#xd;&#xa;        WHERE  convert&#x28;varchar&#x28;10&#x29;, header.SALES_ORD_ENTRY_DT, 120&#x29; &#x3e; Dateadd&#x28;day, -8, &#x27;&#x24;&#x7b;startDate&#x7d;&#x27;&#x29; AND convert&#x28;varchar&#x28;10&#x29;, header.SALES_ORD_ENTRY_DT, 120&#x29; &#x3c; &#x27;&#x24;&#x7b;endDate&#x7d;&#x27;&#x29; AS inside&#xd;&#xa;ORDER  BY salesOrderNumber ASC</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>60</xloc>
+      <yloc>180</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Pull from PWA</name>
+    <type>TableInput</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <connection>PWA Transactions</connection>
+    <sql>SELECT &#x5b;ID&#x5d;&#xd;&#xa;      ,&#x5b;customerCode&#x5d;&#xd;&#xa;      ,&#x5b;interactionSource&#x5d;&#xd;&#xa;      ,&#x5b;orderNumber&#x5d;&#xd;&#xa;      ,&#x5b;agent&#x5d;&#xd;&#xa;      ,&#x5b;timeStamp&#x5d;&#xd;&#xa;      ,&#x5b;kenshooPixelFiredTime&#x5d;&#xd;&#xa;      ,&#x5b;customerName&#x5d;&#xd;&#xa;      ,rtrim&#x28;upper&#x28;&#x5b;customerEmail&#x5d;&#x29;&#x29; as customerEmail&#xd;&#xa;      ,&#x5b;customerPhoneNumber&#x5d;&#xd;&#xa;      ,&#x5b;ipAddress&#x5d;&#xd;&#xa;      ,&#x5b;revenue&#x5d;&#xd;&#xa;    	,&#x5b;products&#x5d;&#xd;&#xa;		,datediff&#x28;second,dateadd&#x28;day,DATEDIFF&#x28;day,0,timestamp&#x29;,0&#x29;,timestamp&#x29; as TimeKey&#xd;&#xa;		,convert&#x28;varchar&#x28;24&#x29;,timestamp,112&#x29; as DateKey&#xd;&#xa;		,substring&#x28;ordernumber,1,1&#x29; as PWAPrefix&#xd;&#xa;		,1 as IsInPWA&#xd;&#xa;from interactions with&#x28;nolock&#x29; where convert&#x28;varchar&#x28;10&#x29;, timeStamp, 120&#x29; &#x3e;&#x3d; dateadd&#x28;day,-5,&#x27;&#x24;&#x7b;startDate&#x7d;&#x27;&#x29; and convert&#x28;varchar&#x28;10&#x29;, timeStamp, 120&#x29; &#x3c; &#x27;&#x24;&#x7b;endDate&#x7d;&#x27; &#xd;&#xa;order by orderNumber asc</sql>
+    <limit>0</limit>
+    <lookup/>
+    <execute_each_row>N</execute_each_row>
+    <variables_active>Y</variables_active>
+    <lazy_conversion_active>N</lazy_conversion_active>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>60</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Put Names into Place</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var first &#x3d; upper&#x28;trim&#x28;FNAME&#x29;&#x29;&#x3b;&#xd;&#xa;var last &#x3d; upper&#x28;trim&#x28;LNAME&#x29;&#x29;&#x3b;&#xd;&#xa;&#xd;&#xa;if&#x28;first&#x3d;&#x3d;null&#x26;&#x26;customerName&#x21;&#x3d;null&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;	first &#x3d; upper&#x28;trim&#x28;customerName.split&#x28;&#x27; &#x27;&#x29;&#x5b;0&#x5d;&#x29;&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;if&#x28;last &#x3d;&#x3d; null&#x26;&#x26;customerName&#x21;&#x3d;null&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;	last &#x3d;&#x27;&#x27;&#x3b;&#xd;&#xa;	for&#x28;var i&#x3d;1&#x3b; i&#x3c;customerName.split&#x28;&#x27; &#x27;&#x29;.length&#x3b; i&#x2b;&#x2b;&#x29;&#xd;&#xa;	&#x7b;&#xd;&#xa;		last &#x2b;&#x3d; customerName.split&#x28;&#x27; &#x27;&#x29;&#x5b;i&#x5d;&#x2b;&#x27; &#x27;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;	last &#x3d; upper&#x28;trim&#x28;last&#x29;&#x29;&#x3b;&#xd;&#xa;&#x7d;&#xd;&#xa;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>first</name>
+        <rename>FNAME</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>      <field>        <name>last</name>
+        <rename>LNAME</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1440</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>RemapSite</name>
+    <type>ScriptValueMod</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <compatible>N</compatible>
+    <optimizationLevel>9</optimizationLevel>
+    <jsScripts>      <jsScript>        <jsScript_type>0</jsScript_type>
+        <jsScript_name>Script 1</jsScript_name>
+        <jsScript_script>&#x2f;&#x2f;Script here&#xd;&#xa;&#xd;&#xa;var prefixOut &#x3d; Prefix&#x3b;&#xd;&#xa;&#xd;&#xa;if&#x28;prefixOut &#x3d;&#x3d; &#x27;P&#x27;&#x29;&#xd;&#xa;&#x7b;&#xd;&#xa;	var mapping &#x3d; &#x7b;&#x27;ALLERY&#x27;&#x3a;&#x27;G&#x27;,&#x27;INTERNET&#x27;&#x3a;&#x27;M&#x27;,&#x27;ESRETAIL&#x27;&#x3a;&#x27;J&#x27;,&#x27;ICEPHONE&#x27;&#x3a;&#x27;I&#x27;,&#x27;KEGERATR&#x27;&#x3a;&#x27;K&#x27;,&#x27;OPENBOX&#x27;&#x3a;&#x27;H&#x27;,&#x27;WCD&#x27;&#x3a;&#x27;W&#x27;&#x7d;&#xd;&#xa;	prefixOut &#x3d; mapping&#x5b;USE_CD&#x5d;&#x3b;&#xd;&#xa;	if&#x28;prefixOut &#x3d;&#x3d; undefined&#x29;&#xd;&#xa;	&#x7b;&#xd;&#xa;		prefixOut &#x3d; &#x27;P&#x27;&#x3b;&#xd;&#xa;	&#x7d;&#xd;&#xa;&#x7d;</jsScript_script>
+      </jsScript>    </jsScripts>    <fields>      <field>        <name>prefixOut</name>
+        <rename>Prefix</rename>
+        <type>String</type>
+        <length>-1</length>
+        <precision>-1</precision>
+        <replace>Y</replace>
+      </field>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>1320</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Remove CategoryKey</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>DateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CustomerKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ProductKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Revenue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Quantity</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInPWA</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SiteKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CustomerCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SourceKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Cost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Shipping</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipConfDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnQTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CancelledFlag</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ADDL_PH_AMT</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UseCodeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWADateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWATimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomDateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomTimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3980</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Remove CategoryKey 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ProductKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EstRevenue</name>
+        <rename>Revenue</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Quantity</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Cost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Shipping</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipConfDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnQTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CancelledFlag</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ADDL_PH_AMT</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipCharged</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CostOfGoodsSold</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipmentNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipToNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnCost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LineNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>StatusKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EstRevPctg</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TotalPrice</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Price</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EstPrice</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4240</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Rename ID_1 to SourceKey</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>ID_1</name>
+        <rename>SourceKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>Y</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>660</xloc>
+      <yloc>340</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select BridgeVals</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ProductKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Revenue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Quantity</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Cost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Shipping</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipConfDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnQTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CancelledFlag</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ADDL_PH_AMT</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CategoryKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipCharged</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CostOfGoodsSold</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipmentNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipToNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnCost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LineNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>StatusKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Price</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TotalPrice</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>ShipDate</name>
+        <rename>ShipDate</rename>
+        <type>None</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipConfDate</name>
+        <rename>ShipConfDate</rename>
+        <type>None</type>
+        <length>8</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3780</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>custID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Product_Revenue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_QTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>prodID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInPWA</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Prefix</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>customerCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SourceKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Cost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Shipping</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipConfDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnQTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CancelledFlag</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ADDL_PH_AMT</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>StatusKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CategoryKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>USE_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipCharged</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>OFFER_CD</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CostOfGoodsSold</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipmentNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipToNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnCost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LineNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWADateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWATimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomDateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomTimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2520</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 2 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>custID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Product_Revenue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_QTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>prodID</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWADateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWATimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInPWA</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWAPrefix</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>customerCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SourceKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>DateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>Y</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2520</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 4</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>DateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWADateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWATimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>custID</name>
+        <rename>CustomerKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>prodID</name>
+        <rename>ProductKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Product_Revenue</name>
+        <rename>Revenue</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_QTY</name>
+        <rename>Quantity</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInPWA</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>siteID</name>
+        <rename>SiteKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>customerCode</name>
+        <rename>CustomerCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SourceKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Cost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Shipping</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CategoryKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>StatusKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipConfDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnQTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CancelledFlag</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ADDL_PH_AMT</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ID</name>
+        <rename>UseCodeKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipCharged</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CostOfGoodsSold</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipmentNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipToNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnCost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LineNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomDateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomTimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Price</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TotalPrice</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>DateKey</name>
+        <rename>DateKey</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Shipping</name>
+        <rename>Shipping</rename>
+        <type>BigNumber</type>
+        <length>19</length>
+        <precision>4</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipDate</name>
+        <rename>ShipDate</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ReturnDate</name>
+        <rename>ReturnDate</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ShipConfDate</name>
+        <rename>ShipConfDate</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ReturnAmt</name>
+        <rename>ReturnAmt</rename>
+        <type>Number</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ReturnQTY</name>
+        <rename>ReturnQTY</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>CancelledFlag</name>
+        <rename>CancelledFlag</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Cost</name>
+        <rename>Cost</rename>
+        <type>BigNumber</type>
+        <length>19</length>
+        <precision>4</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>ReturnCost</name>
+        <rename>ReturnCost</rename>
+        <type>Number</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>PWADateKey</name>
+        <rename>PWADateKey</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>PWATimeKey</name>
+        <rename>PWATimeKey</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>EcomDateKey</name>
+        <rename>EcomDateKey</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>EcomTimeKey</name>
+        <rename>EcomTimeKey</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3520</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 4 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>DateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWADateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWATimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>custID</name>
+        <rename>CustomerKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>prodID</name>
+        <rename>ProductKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Product_Revenue</name>
+        <rename>Revenue</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ITM_QTY</name>
+        <rename>Quantity</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInPWA</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>siteID</name>
+        <rename>SiteKey</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>customerCode</name>
+        <rename>CustomerCode</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SourceKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Cost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Shipping</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CategoryKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>StatusKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Price</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+      <meta>        <name>PWADateKey</name>
+        <rename>PWADateKey</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>PWATimeKey</name>
+        <rename>PWATimeKey</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>      <meta>        <name>Datekey</name>
+        <rename>Datekey</rename>
+        <type>Integer</type>
+        <length>-2</length>
+        <precision>-2</precision>
+        <conversion_mask/>
+        <date_format_lenient>false</date_format_lenient>
+        <date_format_locale/>
+        <date_format_timezone/>
+        <lenient_string_to_number>false</lenient_string_to_number>
+        <encoding/>
+        <decimal_symbol/>
+        <grouping_symbol/>
+        <currency_symbol/>
+        <storage_type/>
+      </meta>    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3260</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Select values 4 2 2</name>
+    <type>SelectValues</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>      <field>        <name>Datekey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWADateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>PWATimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CustomerKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ProductKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Revenue</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Quantity</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInPWA</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>IsInEcom</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SiteKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>orderNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CustomerCode</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>SourceKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Cost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Shipping</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CategoryKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>StatusKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipConfDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnDate</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnAmt</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnQTY</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CancelledFlag</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ADDL_PH_AMT</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>UseCodeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipCharged</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>CostOfGoodsSold</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipmentNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ShipToNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>ReturnCost</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>LineNumber</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomDateKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>EcomTimeKey</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>Price</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>TotalPrice</name>
+        <rename/>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>        <select_unspecified>N</select_unspecified>
+    </fields>     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3640</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Set Values for Null Flags</name>
+    <type>IfNull</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <replaceAllByValue/>
+      <replaceAllMask/>
+      <selectFields>Y</selectFields>
+      <selectValuesType>N</selectValuesType>
+      <setEmptyStringAll>N</setEmptyStringAll>
+    <valuetypes>
+      </valuetypes>
+    <fields>
+      <field>
+        <name>IsInEcom</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>IsInPWA</name>
+        <value>0</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      <field>
+        <name>ReportingName</name>
+        <value>Web</value>
+        <mask/>
+        <set_empty_string>N</set_empty_string>
+        </field>
+      </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>220</xloc>
+      <yloc>340</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort BridgeVals by Order No.</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>orderNumber</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ShipToNumber</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ShipmentNumber</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>ProductKey</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>CancelledFlag</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>LineNumber</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4400</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort Orders by Order No.</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>N</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>orderNumber</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4540</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort by ITEM_CD</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>ITM_CD</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2300</xloc>
+      <yloc>620</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>orderNumber</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>4100</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 2</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>orderNumber</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3440</xloc>
+      <yloc>620</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 2 3</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>Prefix</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2660</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Sort rows 2 4</name>
+    <type>SortRows</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
+      <prefix>out</prefix>
+      <sort_size>1000000</sort_size>
+      <free_memory/>
+      <compress>N</compress>
+      <compress_variable/>
+      <unique_rows>N</unique_rows>
+    <fields>
+      <field>
+        <name>PWAPrefix</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+      <field>
+        <name>orderNumber</name>
+        <ascending>Y</ascending>
+        <case_sensitive>N</case_sensitive>
+        <presorted>N</presorted>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2660</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Stream lookup</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>String operations 2</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>ITM_CD</name>
+        <field>trimSKU2_no_space</field>
+      </key>
+      <value>
+        <name>prodID</name>
+        <rename>prodID</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>SKU</name>
+        <rename>ECOMSKU</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>prodCategoryKey</name>
+        <rename>CategoryKey</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2380</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Stream lookup 2</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>MGC_SKU</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>ECOMSKU</name>
+        <field>trimSKU</field>
+      </key>
+      <value>
+        <name>SKU_COST</name>
+        <rename>Cost</rename>
+        <default>0.00</default>
+        <type>BigNumber</type>
+      </value>
+      <value>
+        <name>SKU_PRICE</name>
+        <rename>Price</rename>
+        <default>0.00</default>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3020</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Stream lookup 3</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>EST_SHIPPING</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>ECOMSKU</name>
+        <field>trimSKU</field>
+      </key>
+      <value>
+        <name>EST_SHIP_COST</name>
+        <rename>Shipping</rename>
+        <default>0</default>
+        <type>BigNumber</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3160</xloc>
+      <yloc>520</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Stream lookup 4</name>
+    <type>StreamLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <from>Get Products</from>
+    <input_sorted>N</input_sorted>
+    <preserve_memory>Y</preserve_memory>
+    <sorted_list>N</sorted_list>
+    <integer_pair>N</integer_pair>
+    <lookup>
+      <key>
+        <name>ITM_CD</name>
+        <field>SKU</field>
+      </key>
+      <value>
+        <name>prodID</name>
+        <rename>prodID</rename>
+        <default/>
+        <type>String</type>
+      </value>
+      <value>
+        <name>prodCategoryKey</name>
+        <rename>CategoryKey</rename>
+        <default/>
+        <type>Integer</type>
+      </value>
+    </lookup>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2380</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>String operations 2</name>
+    <type>StringOperations</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+    <fields>
+      <field>
+        <in_stream_name>trimSKU2</in_stream_name>
+        <out_stream_name>trimSKU2_no_space</out_stream_name>
+        <trim_type>none</trim_type>
+        <lower_upper>none</lower_upper>
+        <padding_type>none</padding_type>
+        <pad_char/>
+        <pad_len/>
+        <init_cap>no</init_cap>
+        <mask_xml>none</mask_xml>
+        <digits>none</digits>
+        <remove_special_characters>espace</remove_special_characters>
+      </field>
+    </fields>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>2380</xloc>
+      <yloc>420</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>UseCode CLU</name>
+    <type>CombinationLookup</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+      <schema/>
+      <table>DimUseCode</table>
+      <connection>Warehouse</connection>
+      <commit>100</commit>
+      <cache_size>9999</cache_size>
+      <replace>Y</replace>
+      <crc>N</crc>
+      <crcfield>hashcode</crcfield>
+      <fields>
+        <key>
+          <name>USE_CD</name>
+          <lookup>UseCode</lookup>
+        </key>
+        <key>
+          <name>OFFER_CD</name>
+          <lookup>OfferCode</lookup>
+        </key>
+        <return>
+          <name>ID</name>
+          <creation_method>autoinc</creation_method>
+          <use_autoinc>Y</use_autoinc>
+        </return>
+      </fields>
+      <sequence/>
+      <last_update_field/>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>3160</xloc>
+      <yloc>200</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step_error_handling>
+  </step_error_handling>
+   <slave-step-copy-partition-distribution>
+</slave-step-copy-partition-distribution>
+   <slave_transformation>N</slave_transformation>
+
+</transformation>

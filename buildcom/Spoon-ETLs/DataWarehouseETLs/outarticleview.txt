@@ -1,0 +1,616 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2017/03/27 03:17:14 - Kitchen - Logging is at level : Detailed logging
+2017/03/27 03:17:14 - Kitchen - Start of run.
+2017/03/27 03:17:15 - BackwardsArticleViewPopulateAlt - Start of job execution
+2017/03/27 03:17:15 - BackwardsArticleViewPopulateAlt - exec(0, 0, START.0)
+2017/03/27 03:17:15 - START - Starting job entry
+2017/03/27 03:17:15 - BackwardsArticleViewPopulateAlt - Starting entry [Get Start and End Dates]
+2017/03/27 03:17:15 - BackwardsArticleViewPopulateAlt - exec(1, 0, Get Start and End Dates.0)
+2017/03/27 03:17:15 - Get Start and End Dates - Starting job entry
+2017/03/27 03:17:15 - Get Start and End Dates - Opening transformation: [C:\Spoon\DataWarehouseETLs\SetArticleViewFactDate_.ktr]
+2017/03/27 03:17:15 - Get Start and End Dates - Loading transformation from XML file [C:\Spoon\DataWarehouseETLs\SetArticleViewFactDate_.ktr]
+2017/03/27 03:17:15 - Get Start and End Dates - Starting transformation...(file=C:\Spoon\DataWarehouseETLs\SetArticleViewFactDate_.ktr, name=Get Start and End Dates, repinfo=null)
+2017/03/27 03:17:15 - Get Start and End Dates - Transformation is pre-loaded.
+2017/03/27 03:17:15 - Get Start and End Dates - Dispatching started for transformation [SetArticleViewFactDate_]
+2017/03/27 03:17:15 - Get Start and End Dates - Nr of arguments detected:0 
+2017/03/27 03:17:15 - Get Start and End Dates - This is not a replay transformation
+2017/03/27 03:17:15 - Get Start and End Dates - I found 2 different steps to launch.
+2017/03/27 03:17:15 - Get Start and End Dates - Allocating rowsets...
+2017/03/27 03:17:15 - Get Start and End Dates -  Allocating rowsets for step 0 --> Table input
+2017/03/27 03:17:15 - Get Start and End Dates -   prevcopies = 1, nextcopies=1
+2017/03/27 03:17:15 - Get Start and End Dates - Transformation allocated new rowset [Table input.0 - Set Variables.0]
+2017/03/27 03:17:15 - Get Start and End Dates -  Allocated 1 rowsets for step 0 --> Table input  
+2017/03/27 03:17:15 - Get Start and End Dates -  Allocating rowsets for step 1 --> Set Variables
+2017/03/27 03:17:15 - Get Start and End Dates -  Allocated 1 rowsets for step 1 --> Set Variables  
+2017/03/27 03:17:15 - Get Start and End Dates - Allocating Steps & StepData...
+2017/03/27 03:17:15 - Get Start and End Dates -  Transformation is about to allocate step [Table input] of type [TableInput]
+2017/03/27 03:17:15 - Table input.0 - distribution activated
+2017/03/27 03:17:15 - Table input.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:17:15 - Table input.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:17:15 - Table input.0 - output rel. is  1:1
+2017/03/27 03:17:15 - Table input.0 - Found output rowset [Table input.0 - Set Variables.0]
+2017/03/27 03:17:15 - Table input.0 - Finished dispatching
+2017/03/27 03:17:15 - Get Start and End Dates -  Transformation has allocated a new step: [Table input].0
+2017/03/27 03:17:15 - Get Start and End Dates -  Transformation is about to allocate step [Set Variables] of type [SetVariable]
+2017/03/27 03:17:15 - Set Variables.0 - distribution activated
+2017/03/27 03:17:15 - Set Variables.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:17:15 - Set Variables.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 03:17:15 - Set Variables.0 - Got previous step from [Set Variables] #0 --> Table input
+2017/03/27 03:17:15 - Set Variables.0 - input rel is 1:1
+2017/03/27 03:17:15 - Set Variables.0 - Found input rowset [Table input.0 - Set Variables.0]
+2017/03/27 03:17:15 - Set Variables.0 - Finished dispatching
+2017/03/27 03:17:15 - Get Start and End Dates -  Transformation has allocated a new step: [Set Variables].0
+2017/03/27 03:17:15 - Get Start and End Dates - This transformation can be replayed with replay date: 2017/03/27 03:17:15
+2017/03/27 03:17:15 - Get Start and End Dates - Initialising 2 steps...
+2017/03/27 03:17:15 - Table input.0 - Running on slave server #0/1.
+2017/03/27 03:17:15 - Set Variables.0 - Running on slave server #0/1.
+2017/03/27 03:17:15 - Warehouse - New database connection defined
+2017/03/27 03:17:17 - Warehouse - Connected to database.
+2017/03/27 03:17:17 - Warehouse - Auto commit off
+2017/03/27 03:17:17 - Table input.0 - Connected to database...
+2017/03/27 03:17:17 - Get Start and End Dates - Step [Table input.0] initialized flawlessly.
+2017/03/27 03:17:17 - Get Start and End Dates - Step [Set Variables.0] initialized flawlessly.
+2017/03/27 03:17:17 - Table input.0 - Starting to run...
+2017/03/27 03:17:17 - Get Start and End Dates - Transformation has allocated 2 threads and 1 rowsets.
+2017/03/27 03:17:17 - Set Variables.0 - Starting to run...
+2017/03/27 03:17:17 - Table input.0 - SQL query : SELECT Dateadd(day, -1, CONVERT(DATE, GETDATE())) AS startDate, 
+2017/03/27 03:17:17 - Table input.0 -        Dateadd(day, 0, CONVERT(DATE, GETDATE())) AS endDate 
+2017/03/27 03:17:17 - Table input.0 - 
+2017/03/27 03:17:17 - Table input.0 - FROM   FactArticleView 
+2017/03/27 03:17:17 - Table input.0 - Finished reading query, closing connection.
+2017/03/27 03:17:17 - Set Variables.0 - Setting environment variables...
+2017/03/27 03:17:17 - Set Variables.0 - Set variable startDate to value [2017/03/26 00:00:00.000]
+2017/03/27 03:17:17 - Set Variables.0 - Set variable endDate to value [2017/03/27 00:00:00.000]
+2017/03/27 03:17:17 - Set Variables.0 - Finished after 1 rows.
+2017/03/27 03:17:17 - Set Variables.0 - Finished processing (I=0, O=0, R=1, W=1, U=0, E=0)
+2017/03/27 03:17:17 - Warehouse - Connection to database closed!
+2017/03/27 03:17:17 - Table input.0 - Finished processing (I=1, O=0, R=0, W=1, U=0, E=0)
+2017/03/27 03:17:17 - BackwardsArticleViewPopulateAlt - Starting entry [Update ArticleVIews]
+2017/03/27 03:17:17 - BackwardsArticleViewPopulateAlt - exec(2, 0, Update ArticleVIews.0)
+2017/03/27 03:17:17 - Update ArticleVIews - Starting job entry
+2017/03/27 03:17:17 - Update ArticleVIews - Opening transformation: [C:\Spoon\DataWarehouseETLs\FactArticleViewUpdate2.ktr]
+2017/03/27 03:17:17 - Update ArticleVIews - Loading transformation from XML file [C:\Spoon\DataWarehouseETLs\FactArticleViewUpdate2.ktr]
+2017/03/27 03:17:18 - Update ArticleVIews - Starting transformation...(file=C:\Spoon\DataWarehouseETLs\FactArticleViewUpdate2.ktr, name=Update ArticleVIews, repinfo=null)
+2017/03/27 03:17:18 - Update ArticleVIews - Transformation is pre-loaded.
+2017/03/27 03:17:18 - Update ArticleVIews - Dispatching started for transformation [FactArticleViewUpdate2]
+2017/03/27 03:17:18 - Update ArticleVIews - Nr of arguments detected:0 
+2017/03/27 03:17:18 - Update ArticleVIews - This is not a replay transformation
+2017/03/27 03:17:18 - Update ArticleVIews - I found 7 different steps to launch.
+2017/03/27 03:17:18 - Update ArticleVIews - Allocating rowsets...
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocating rowsets for step 0 --> Get PWA ArticleViews
+2017/03/27 03:17:18 - Update ArticleVIews -   prevcopies = 1, nextcopies=1
+2017/03/27 03:17:18 - Update ArticleVIews - Transformation allocated new rowset [Get PWA ArticleViews.0 - Dummy (do nothing).0]
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocated 1 rowsets for step 0 --> Get PWA ArticleViews  
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocating rowsets for step 1 --> Dummy (do nothing)
+2017/03/27 03:17:18 - Update ArticleVIews -   prevcopies = 1, nextcopies=1
+2017/03/27 03:17:18 - Update ArticleVIews - Transformation allocated new rowset [Dummy (do nothing).0 - Get DateKeys, TimeKeys, and SitePrefixes.0]
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocated 2 rowsets for step 1 --> Dummy (do nothing)  
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocating rowsets for step 2 --> Get DateKeys, TimeKeys, and SitePrefixes
+2017/03/27 03:17:18 - Update ArticleVIews -   prevcopies = 1, nextcopies=1
+2017/03/27 03:17:18 - Update ArticleVIews - Transformation allocated new rowset [Get DateKeys, TimeKeys, and SitePrefixes.0 - Stream lookup.0]
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocated 3 rowsets for step 2 --> Get DateKeys, TimeKeys, and SitePrefixes  
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocating rowsets for step 3 --> Stream lookup
+2017/03/27 03:17:18 - Update ArticleVIews -   prevcopies = 1, nextcopies=1
+2017/03/27 03:17:18 - Update ArticleVIews - Transformation allocated new rowset [Stream lookup.0 - Combination lookup/update.0]
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocated 4 rowsets for step 3 --> Stream lookup  
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocating rowsets for step 4 --> DimSite
+2017/03/27 03:17:18 - Update ArticleVIews -   prevcopies = 1, nextcopies=1
+2017/03/27 03:17:18 - Update ArticleVIews - Transformation allocated new rowset [DimSite.0 - Stream lookup.0]
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocated 5 rowsets for step 4 --> DimSite  
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocating rowsets for step 5 --> Combination lookup/update
+2017/03/27 03:17:18 - Update ArticleVIews -   prevcopies = 1, nextcopies=1
+2017/03/27 03:17:18 - Update ArticleVIews - Transformation allocated new rowset [Combination lookup/update.0 - Output to FactArticleView.0]
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocated 6 rowsets for step 5 --> Combination lookup/update  
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocating rowsets for step 6 --> Output to FactArticleView
+2017/03/27 03:17:18 - Update ArticleVIews -  Allocated 6 rowsets for step 6 --> Output to FactArticleView  
+2017/03/27 03:17:18 - Update ArticleVIews - Allocating Steps & StepData...
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation is about to allocate step [Get PWA ArticleViews] of type [TableInput]
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - distribution activated
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - output rel. is  1:1
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - Found output rowset [Get PWA ArticleViews.0 - Dummy (do nothing).0]
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - Finished dispatching
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation has allocated a new step: [Get PWA ArticleViews].0
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation is about to allocate step [Dummy (do nothing)] of type [Dummy]
+2017/03/27 03:17:18 - Dummy (do nothing).0 - distribution activated
+2017/03/27 03:17:18 - Dummy (do nothing).0 - Starting allocation of buffers & new threads...
+2017/03/27 03:17:18 - Dummy (do nothing).0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:17:18 - Dummy (do nothing).0 - Got previous step from [Dummy (do nothing)] #0 --> Get PWA ArticleViews
+2017/03/27 03:17:18 - Dummy (do nothing).0 - input rel is 1:1
+2017/03/27 03:17:18 - Dummy (do nothing).0 - Found input rowset [Get PWA ArticleViews.0 - Dummy (do nothing).0]
+2017/03/27 03:17:18 - Dummy (do nothing).0 - output rel. is  1:1
+2017/03/27 03:17:18 - Dummy (do nothing).0 - Found output rowset [Dummy (do nothing).0 - Get DateKeys, TimeKeys, and SitePrefixes.0]
+2017/03/27 03:17:18 - Dummy (do nothing).0 - Finished dispatching
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation has allocated a new step: [Dummy (do nothing)].0
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation is about to allocate step [Get DateKeys, TimeKeys, and SitePrefixes] of type [ScriptValueMod]
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - distribution activated
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Got previous step from [Get DateKeys, TimeKeys, and SitePrefixes] #0 --> Dummy (do nothing)
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - input rel is 1:1
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Found input rowset [Dummy (do nothing).0 - Get DateKeys, TimeKeys, and SitePrefixes.0]
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - output rel. is  1:1
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Found output rowset [Get DateKeys, TimeKeys, and SitePrefixes.0 - Stream lookup.0]
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Finished dispatching
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation has allocated a new step: [Get DateKeys, TimeKeys, and SitePrefixes].0
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation is about to allocate step [Stream lookup] of type [StreamLookup]
+2017/03/27 03:17:18 - Stream lookup.0 - distribution activated
+2017/03/27 03:17:18 - Stream lookup.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:17:18 - Stream lookup.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:17:18 - Stream lookup.0 - Got previous step from [Stream lookup] #0 --> Get DateKeys, TimeKeys, and SitePrefixes
+2017/03/27 03:17:18 - Stream lookup.0 - input rel is 1:1
+2017/03/27 03:17:18 - Stream lookup.0 - Found input rowset [Get DateKeys, TimeKeys, and SitePrefixes.0 - Stream lookup.0]
+2017/03/27 03:17:18 - Stream lookup.0 - Got previous step from [Stream lookup] #1 --> DimSite
+2017/03/27 03:17:18 - Stream lookup.0 - input rel is 1:1
+2017/03/27 03:17:18 - Stream lookup.0 - Found input rowset [DimSite.0 - Stream lookup.0]
+2017/03/27 03:17:18 - Stream lookup.0 - output rel. is  1:1
+2017/03/27 03:17:18 - Stream lookup.0 - Found output rowset [Stream lookup.0 - Combination lookup/update.0]
+2017/03/27 03:17:18 - Stream lookup.0 - Finished dispatching
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation has allocated a new step: [Stream lookup].0
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation is about to allocate step [DimSite] of type [TableInput]
+2017/03/27 03:17:18 - DimSite.0 - distribution activated
+2017/03/27 03:17:18 - DimSite.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:17:18 - DimSite.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:17:18 - DimSite.0 - output rel. is  1:1
+2017/03/27 03:17:18 - DimSite.0 - Found output rowset [DimSite.0 - Stream lookup.0]
+2017/03/27 03:17:18 - DimSite.0 - Finished dispatching
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation has allocated a new step: [DimSite].0
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation is about to allocate step [Combination lookup/update] of type [CombinationLookup]
+2017/03/27 03:17:18 - Combination lookup/update.0 - distribution activated
+2017/03/27 03:17:18 - Combination lookup/update.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:17:18 - Combination lookup/update.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:17:18 - Combination lookup/update.0 - Got previous step from [Combination lookup/update] #0 --> Stream lookup
+2017/03/27 03:17:18 - Combination lookup/update.0 - input rel is 1:1
+2017/03/27 03:17:18 - Combination lookup/update.0 - Found input rowset [Stream lookup.0 - Combination lookup/update.0]
+2017/03/27 03:17:18 - Combination lookup/update.0 - output rel. is  1:1
+2017/03/27 03:17:18 - Combination lookup/update.0 - Found output rowset [Combination lookup/update.0 - Output to FactArticleView.0]
+2017/03/27 03:17:18 - Combination lookup/update.0 - Finished dispatching
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation has allocated a new step: [Combination lookup/update].0
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation is about to allocate step [Output to FactArticleView] of type [TableOutput]
+2017/03/27 03:17:18 - Output to FactArticleView.0 - distribution activated
+2017/03/27 03:17:18 - Output to FactArticleView.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:17:18 - Output to FactArticleView.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 03:17:18 - Output to FactArticleView.0 - Got previous step from [Output to FactArticleView] #0 --> Combination lookup/update
+2017/03/27 03:17:18 - Output to FactArticleView.0 - input rel is 1:1
+2017/03/27 03:17:18 - Output to FactArticleView.0 - Found input rowset [Combination lookup/update.0 - Output to FactArticleView.0]
+2017/03/27 03:17:18 - Output to FactArticleView.0 - Finished dispatching
+2017/03/27 03:17:18 - Update ArticleVIews -  Transformation has allocated a new step: [Output to FactArticleView].0
+2017/03/27 03:17:18 - Update ArticleVIews - This transformation can be replayed with replay date: 2017/03/27 03:17:18
+2017/03/27 03:17:18 - Update ArticleVIews - Initialising 7 steps...
+2017/03/27 03:17:18 - Dummy (do nothing).0 - Running on slave server #0/1.
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - Running on slave server #0/1.
+2017/03/27 03:17:18 - Stream lookup.0 - Running on slave server #0/1.
+2017/03/27 03:17:18 - PWA Transactions - New database connection defined
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Running on slave server #0/1.
+2017/03/27 03:17:18 - DimSite.0 - Running on slave server #0/1.
+2017/03/27 03:17:18 - Combination lookup/update.0 - Running on slave server #0/1.
+2017/03/27 03:17:18 - Output to FactArticleView.0 - Running on slave server #0/1.
+2017/03/27 03:17:18 - Warehouse - New database connection defined
+2017/03/27 03:17:18 - Warehouse - New database connection defined
+2017/03/27 03:17:18 - Warehouse - New database connection defined
+2017/03/27 03:17:18 - Warehouse - Connected to database.
+2017/03/27 03:17:18 - Warehouse - Connected to database.
+2017/03/27 03:17:18 - Combination lookup/update.0 - Connected to database...
+2017/03/27 03:17:18 - Output to FactArticleView.0 - Connected to database [Warehouse] (commit=100)
+2017/03/27 03:17:18 - Warehouse - Auto commit off
+2017/03/27 03:17:18 - Warehouse - Auto commit off
+2017/03/27 03:17:18 - Warehouse - Connected to database.
+2017/03/27 03:17:18 - Warehouse - Auto commit off
+2017/03/27 03:17:18 - DimSite.0 - Connected to database...
+2017/03/27 03:17:18 - PWA Transactions - Connected to database.
+2017/03/27 03:17:18 - PWA Transactions - Auto commit off
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - Connected to database...
+2017/03/27 03:17:18 - Update ArticleVIews - Step [Get PWA ArticleViews.0] initialized flawlessly.
+2017/03/27 03:17:18 - Update ArticleVIews - Step [Dummy (do nothing).0] initialized flawlessly.
+2017/03/27 03:17:18 - Update ArticleVIews - Step [Get DateKeys, TimeKeys, and SitePrefixes.0] initialized flawlessly.
+2017/03/27 03:17:18 - Update ArticleVIews - Step [Stream lookup.0] initialized flawlessly.
+2017/03/27 03:17:18 - Update ArticleVIews - Step [DimSite.0] initialized flawlessly.
+2017/03/27 03:17:18 - Update ArticleVIews - Step [Combination lookup/update.0] initialized flawlessly.
+2017/03/27 03:17:18 - Update ArticleVIews - Step [Output to FactArticleView.0] initialized flawlessly.
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - Starting to run...
+2017/03/27 03:17:18 - Dummy (do nothing).0 - Starting to run...
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - SQL query : SELECT
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 -   "TIMESTAMP"
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - , customerCode
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - , siteID
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - , articleName
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - , ipAddress
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - , subCategory
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - , articleID
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - , ID as PWAKey
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - FROM ArticleViews with (nolock)
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 - WHERE "TIMESTAMP" > DATEADD(day,-1,'2017/03/26 00:00:00.000')
+2017/03/27 03:17:18 - Get PWA ArticleViews.0 -   AND "TIMESTAMP" < '2017/03/27 00:00:00.000'
+2017/03/27 03:17:18 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Starting to run...
+2017/03/27 03:17:18 - Stream lookup.0 - Starting to run...
+2017/03/27 03:17:18 - DimSite.0 - Starting to run...
+2017/03/27 03:17:18 - DimSite.0 - SQL query : SELECT 
+2017/03/27 03:17:18 - DimSite.0 - Prefix
+2017/03/27 03:17:18 - DimSite.0 - ,ID as SiteKey 
+2017/03/27 03:17:18 - DimSite.0 - FROM 
+2017/03/27 03:17:18 - DimSite.0 - DimSite 
+2017/03/27 03:17:18 - DimSite.0 - WHERE
+2017/03/27 03:17:18 - DimSite.0 - Learn=1
+2017/03/27 03:17:18 - Stream lookup.0 - Reading from stream [DimSite]
+2017/03/27 03:17:19 - Update ArticleVIews - Transformation has allocated 7 threads and 6 rowsets.
+2017/03/27 03:17:18 - Combination lookup/update.0 - Starting to run...
+2017/03/27 03:17:19 - Output to FactArticleView.0 - Starting to run...
+2017/03/27 03:17:19 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Value #0 -  [TIMESTAMP] is used in the script.
+2017/03/27 03:17:19 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Value #1 -  [customerCode] is used in the script.
+2017/03/27 03:17:19 - Get DateKeys, TimeKeys, and SitePrefixes.0 - This script is using 2 values from the input stream(s)
+2017/03/27 03:17:19 - DimSite.0 - Finished reading query, closing connection.
+2017/03/27 03:17:19 - Warehouse - Connection to database closed!
+2017/03/27 03:17:19 - DimSite.0 - Finished processing (I=9, O=0, R=0, W=9, U=0, E=0)
+2017/03/27 03:17:19 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Optimization level set to 9.
+2017/03/27 03:17:19 - Get DateKeys, TimeKeys, and SitePrefixes.0 - No starting Script found!
+2017/03/27 03:17:19 - Get DateKeys, TimeKeys, and SitePrefixes.0 - No tran_Status found. Transformation status checking not available.
+2017/03/27 03:17:19 - Stream lookup.0 - Field [SitePrefix] has nr [10]
+2017/03/27 03:17:20 - Output to FactArticleView.0 - Prepared statement : INSERT INTO FactArticleView (DateKey, TimeKey, SiteKey, ArticleKey, CustomerCode, IpAddress, PWAKey) VALUES ( ?,  ?,  ?,  ?,  ?,  ?,  ?)
+2017/03/27 03:17:20 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:00:06.647000000], [M00000RIA3G], [Learn CompactAppliance], [5 Quick & Easy Chest Freezer Cleaning Tips], [121.54.39.142], [null], [4487], [null], [20170325], [6], [M], [2], [139]
+2017/03/27 03:17:20 - Output to FactArticleView.0 - 
+2017/03/27 03:17:20 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:20 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:20 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:00:08.407000000], [G00000RIIGC], [Learn AllergyAndAir], [10 Houseplants That Improve Indoor Air Quality], [47.9.132.155], [null], [230], [null], [20170325], [8], [G], [8], [616]
+2017/03/27 03:17:20 - Output to FactArticleView.0 - 
+2017/03/27 03:17:20 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:20 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:00:11.693000000], [K00000RIICG], [Learn Kegerator], [Kegerator Learning Center: Everything You Want To Know About Beer], [223.24.38.18], [null], [3822], [null], [20170325], [11], [K], [4], [6501]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Get PWA ArticleViews.0 - Finished reading query, closing connection.
+2017/03/27 03:17:21 - Dummy (do nothing).0 - Finished processing (I=0, O=0, R=49973, W=49973, U=0, E=0)
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:00:19.457000000], [K00000RIICG], [Learn Kegerator], [Keg Couplers: How they Work & Why You Need Them], [223.24.38.18], [null], [1999], [null], [20170325], [19], [K], [4], [1099]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - PWA Transactions - Connection to database closed!
+2017/03/27 03:17:21 - Get PWA ArticleViews.0 - Finished processing (I=49973, O=0, R=0, W=49973, U=0, E=0)
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:00:20.830000000], [M00000RIIOS], [Learn CompactAppliance], [5 Mistakes People Make When Using A Humidifier], [76.112.230.57], [null], [4648], [null], [20170325], [20], [M], [2], [423]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:00:26.303000000], [G00000RH5G5], [Learn AllergyAndAir], [Activated Carbon Filters: What They Are & How They Work], [49.205.5.244], [null], [535], [null], [20170325], [26], [G], [8], [1067]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:00:49.423000000], [K00000R1NF9], [Learn Kegerator], [Keg Sizes Compared :: Kegerator.com], [65.129.33.76], [null], [3734], [null], [20170325], [49], [K], [4], [337]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:00:52.607000000], [K00000RIICG], [Learn Kegerator], [Step-by-Step: Kegerator Assembly & Installation Guide], [223.24.38.18], [null], [3736], [null], [20170325], [52], [K], [4], [283]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:01.537000000], [K00000RIICT], [Learn Kegerator], [Centennial Hops: How to Grow & Brew This Popular Variety], [109.253.212.219], [null], [5356], [null], [20170325], [61], [K], [4], [7576]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:19.120000000], [M00000RIIP0], [Learn CompactAppliance], [Installing a Portable Air Conditioner in a Casement/Crank Window], [67.185.157.130], [null], [3480], [null], [20170325], [79], [M], [2], [1446]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:19.880000000], [K00000RIIP1], [Learn Kegerator], [Growlers 101: Why Every Beer Geek Should Own One], [104.13.211.78], [null], [3496], [null], [20170325], [79], [K], [4], [550]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:25.727000000], [K00000QRK1O], [Learn Kegerator], [Secondary Fermentation :: A Homebrewer’s Guide], [71.167.21.178], [null], [2212], [null], [20170325], [85], [K], [4], [1074]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:28.050000000], [W00000RIIP4], [Learn WineCoolerDirect], [How to Store Your Wine: The Dos & Don'ts of Wine Storage], [99.90.232.242], [null], [2286], [null], [20170325], [88], [W], [6], [1227]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:43.607000000], [M00000RIB47], [Learn CompactAppliance], [How to Choose the Best Ductless Air Conditioner], [99.120.4.103], [null], [6903], [null], [20170325], [103], [M], [2], [2351]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:45.613000000], [G00000RIIPD], [Learn AllergyAndAir], [How to Clean A Humidifier (And Why You Should Often)], [69.113.169.12], [null], [1402], [null], [20170325], [105], [G], [8], [1219]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:48.020000000], [G00000RIIPG], [Learn AllergyAndAir], [Activated Carbon Filters: What They Are & How They Work], [174.63.17.142], [null], [535], [null], [20170325], [108], [G], [8], [1067]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:52.660000000], [K00000RIIII], [Learn Kegerator], [Step-by-Step: Kegerator Assembly & Installation Guide], [73.70.171.24], [null], [3736], [null], [20170325], [112], [K], [4], [283]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:01:58.007000000], [K00000OIJHH], [Learn Kegerator], [How to Use a Hydrometer (In 4 Easy Steps) :: Kegerator.com], [50.170.4.129], [null], [3717], [null], [20170325], [118], [K], [4], [9754]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:02:20.753000000], [M00000RIIPO], [Learn CompactAppliance], [Wall Sconces: Breaking Down the Different Types & Styles], [108.234.137.214], [null], [6474], [null], [20170325], [140], [M], [2], [892]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - WARNING: Couldn't insert row into table: [2017-03-25 00:02:21.533000000], [M00000RIIPP], [Learn CompactAppliance], [Why You Should Have a Humidifier in Your Baby's Nursery], [174.218.128.43], [null], [4585], [null], [20170325], [141], [M], [2], [572]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:21 - Output to FactArticleView.0 - FINAL WARNING (no more then 20 displayed): Couldn't insert row into table: [2017-03-25 00:02:22.743000000], [K00000R1NF9], [Learn Kegerator], [18 Frequently Asked Questions About Kegerators], [65.129.33.76], [null], [3695], [null], [20170325], [142], [K], [4], [1335]
+2017/03/27 03:17:21 - Output to FactArticleView.0 - 
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Error inserting/updating row
+2017/03/27 03:17:21 - Output to FactArticleView.0 - Cannot insert duplicate key row in object 'dbo.FactArticleView' with unique index 'ArticleUniqueIndex'.
+2017/03/27 03:17:22 - Combination lookup/update.0 - SQL with return keys: INSERT INTO DimArticle( ArticleName) VALUES (? )
+2017/03/27 03:17:23 - Get DateKeys, TimeKeys, and SitePrefixes.0 - No end Script found!
+2017/03/27 03:17:23 - Get DateKeys, TimeKeys, and SitePrefixes.0 - Finished processing (I=0, O=0, R=49973, W=49973, U=0, E=0)
+2017/03/27 03:17:23 - Stream lookup.0 - Stopped processing with empty row after 49982 rows.
+2017/03/27 03:17:23 - Stream lookup.0 - Finished processing (I=0, O=0, R=49982, W=49973, U=0, E=0)
+2017/03/27 03:17:27 - Warehouse - Connection to database closed!
+2017/03/27 03:17:27 - Combination lookup/update.0 - Finished processing (I=1348, O=6, R=49973, W=49973, U=0, E=0)
+2017/03/27 03:19:33 - Warehouse - Connection to database closed!
+2017/03/27 03:19:33 - Output to FactArticleView.0 - Finished processing (I=0, O=49973, R=49973, W=49973, U=0, E=0)
+2017/03/27 03:19:33 - BackwardsArticleViewPopulateAlt - Starting entry [ExecPWA]
+2017/03/27 03:19:33 - BackwardsArticleViewPopulateAlt - exec(3, 0, ExecPWA.0)
+2017/03/27 03:19:33 - ExecPWA - Starting job entry
+2017/03/27 03:19:33 - ExecPWA - Found 0 previous result rows
+2017/03/27 03:19:33 - ExecPWA - Running on platform : Windows Server 2008 R2
+2017/03/27 03:19:33 - ExecPWA - Executing command : cmd.exe /C "C:\Spoon\PWA\Attribution\run.bat"
+2017/03/27 03:19:33 - ExecPWA - (stdout) 
+2017/03/27 03:19:33 - ExecPWA - (stdout) C:\Spoon\PWA\Attribution>ParallelAttributionRunner.exe
+2017/03/27 03:19:36 - ExecPWA - (stdout) pulling Visits
+2017/03/27 03:19:36 - ExecPWA - (stdout) Threads Started
+2017/03/27 03:19:36 - ExecPWA - (stdout) Main thread end
+2017/03/27 03:19:56 - ExecPWA - (stdout) .3/26/2017
+2017/03/27 03:19:56 - ExecPWA - (stdout) FOO
+2017/03/27 03:19:56 - ExecPWA - (stdout) FOO
+2017/03/27 03:19:56 - ExecPWA - (stdout) FOO
+2017/03/27 03:19:58 - ExecPWA - (stdout) .3/26/2017
+2017/03/27 03:20:15 - ExecPWA - (stdout) .-13788.27--13788.27-141520 Visits pulled
+2017/03/27 03:20:20 - ExecPWA - (stdout) .-13788.27-3/26/2017
+2017/03/27 03:20:20 - ExecPWA - (stdout) appliance
+2017/03/27 03:20:24 - ExecPWA - (stdout) -13788.27--13788.27-FOO
+2017/03/27 03:20:24 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:24 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:33 - ExecPWA - (stdout) .-15373.76--15373.76--15373.76--15373.76--15373.76-FOO
+2017/03/27 03:20:33 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:33 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:45 - ExecPWA - (stdout) .-13332.23--13332.23--13332.23--13332.23--13332.23-FOO
+2017/03/27 03:20:45 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:45 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:45 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:45 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:49 - ExecPWA - (stdout) .-1017.55--1017.55--1017.55--1017.55--1017.55-FOO
+2017/03/27 03:20:49 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:49 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:52 - ExecPWA - (stdout) -337.48--337.48--337.48--337.48--337.48-FOO
+2017/03/27 03:20:52 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:52 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:54 - ExecPWA - (stdout) -90.35--90.35--90.35--90.35--90.35-FOO
+2017/03/27 03:20:54 - ExecPWA - (stdout) FOO
+2017/03/27 03:20:54 - ExecPWA - (stdout) FOO
+2017/03/27 03:21:58 - ExecPWA - (stdout) -1301.05--1301.05--1301.05-.-1301.05--1301.05-......-50130.31-50130.30
+2017/03/27 03:21:58 - ExecPWA - (stdout) 50130.31
+2017/03/27 03:21:58 - ExecPWA - (stdout) 50130.31
+2017/03/27 03:26:39 - ExecPWA - (stdout) ..........-50130.31-.........-50130.31-.....-50130.31-....-65697.09-wcd
+2017/03/27 03:26:43 - ExecPWA - (stdout) -35215.59-35215.60
+2017/03/27 03:26:43 - ExecPWA - (stdout) 35215.59
+2017/03/27 03:26:43 - ExecPWA - (stdout) 35215.59
+2017/03/27 03:26:57 - ExecPWA - (stdout) .-35215.59--35215.59--35215.59-.-43644.73-kegerator
+2017/03/27 03:27:31 - ExecPWA - (stdout) ...-36929.6-36929.60
+2017/03/27 03:27:31 - ExecPWA - (stdout) 36929.6
+2017/03/27 03:27:31 - ExecPWA - (stdout) 36929.6
+2017/03/27 03:29:03 - ExecPWA - (stdout) ...-4247.49-.-36929.6-...-36929.6-.-36929.6-.-49620.11-allergy
+2017/03/27 03:29:05 - ExecPWA - (stdout) -7193.25-7193.25
+2017/03/27 03:29:05 - ExecPWA - (stdout) 7193.25
+2017/03/27 03:29:05 - ExecPWA - (stdout) 7193.25
+2017/03/27 03:29:14 - ExecPWA - (stdout) .-7193.25--7193.25--7193.25--7193.25-LD
+2017/03/27 03:29:15 - ExecPWA - (stdout) -16109.47-16109.47
+2017/03/27 03:29:15 - ExecPWA - (stdout) 16109.47
+2017/03/27 03:29:15 - ExecPWA - (stdout) 16109.47
+2017/03/27 03:29:18 - ExecPWA - (stdout) -16109.47-.-16109.47--16109.47--21331.24-imd
+2017/03/27 03:29:19 - ExecPWA - (stdout) -8492.94-8492.94
+2017/03/27 03:29:19 - ExecPWA - (stdout) 8492.94
+2017/03/27 03:29:19 - ExecPWA - (stdout) 8492.94
+2017/03/27 03:29:21 - ExecPWA - (stdout) -8492.94--8492.94--8492.94--8492.94-hws
+2017/03/27 03:29:21 - ExecPWA - (stdout) -6255.25-6255.25
+2017/03/27 03:29:21 - ExecPWA - (stdout) 6255.25
+2017/03/27 03:29:21 - ExecPWA - (stdout) 6255.25
+2017/03/27 03:29:22 - ExecPWA - (stdout) -6255.25--6255.25--6255.25--6399.41-es
+2017/03/27 03:29:22 - ExecPWA - (stdout) -3879.89-3879.89
+2017/03/27 03:29:22 - ExecPWA - (stdout) 3879.89
+2017/03/27 03:29:22 - ExecPWA - (stdout) 3879.89
+2017/03/27 03:53:18 - ExecPWA - (stdout) -3879.89--3879.89--3879.89--4518.89-.......-4247.49-..........-7755.14-...................-7755.14-...................................-4731.73-.....................-4731.73--2178.04-.........-2178.04-.......................-417.04-..................-417.04-..
+2017/03/27 03:53:18 - ExecPWA - Command cmd.exe /C "C:\Spoon\PWA\Attribution\run.bat" has finished
+2017/03/27 03:53:18 - BackwardsArticleViewPopulateAlt - Starting entry [PWA Article Attribution]
+2017/03/27 03:53:18 - BackwardsArticleViewPopulateAlt - exec(4, 0, PWA Article Attribution.0)
+2017/03/27 03:53:18 - PWA Article Attribution - Starting job entry
+2017/03/27 03:53:18 - PWA Article Attribution - Opening transformation: [C:\Spoon\DataWarehouseETLs\PWA_Attribution\PWA_FactArticleAttributionInsert.ktr]
+2017/03/27 03:53:18 - PWA Article Attribution - Loading transformation from XML file [C:\Spoon\DataWarehouseETLs\PWA_Attribution\PWA_FactArticleAttributionInsert.ktr]
+2017/03/27 03:54:44 - PWA Article Attribution - Starting transformation...(file=C:\Spoon\DataWarehouseETLs\PWA_Attribution\PWA_FactArticleAttributionInsert.ktr, name=PWA Article Attribution, repinfo=null)
+2017/03/27 03:54:44 - PWA Article Attribution - Transformation is pre-loaded.
+2017/03/27 03:54:44 - PWA Article Attribution - Dispatching started for transformation [PWA_FactArticleAttributionInsert]
+2017/03/27 03:54:44 - PWA Article Attribution - Nr of arguments detected:0 
+2017/03/27 03:54:44 - PWA Article Attribution - This is not a replay transformation
+2017/03/27 03:54:44 - PWA Article Attribution - I found 7 different steps to launch.
+2017/03/27 03:54:44 - PWA Article Attribution - Allocating rowsets...
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocating rowsets for step 0 --> GetSiteKey
+2017/03/27 03:54:44 - PWA Article Attribution -   prevcopies = 1, nextcopies=1
+2017/03/27 03:54:44 - PWA Article Attribution - Transformation allocated new rowset [GetSiteKey.0 - GetArticleKey.0]
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocated 1 rowsets for step 0 --> GetSiteKey  
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocating rowsets for step 1 --> GetArticleKey
+2017/03/27 03:54:44 - PWA Article Attribution -   prevcopies = 1, nextcopies=1
+2017/03/27 03:54:44 - PWA Article Attribution - Transformation allocated new rowset [GetArticleKey.0 - AttributionMethodKey.0]
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocated 2 rowsets for step 1 --> GetArticleKey  
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocating rowsets for step 2 --> ArticleAttributionImport
+2017/03/27 03:54:44 - PWA Article Attribution -   prevcopies = 1, nextcopies=1
+2017/03/27 03:54:44 - PWA Article Attribution - Transformation allocated new rowset [ArticleAttributionImport.0 - Stream lookup.0]
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocated 3 rowsets for step 2 --> ArticleAttributionImport  
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocating rowsets for step 3 --> Stream lookup
+2017/03/27 03:54:44 - PWA Article Attribution -   prevcopies = 1, nextcopies=1
+2017/03/27 03:54:44 - PWA Article Attribution - Transformation allocated new rowset [Stream lookup.0 - GetSiteKey.0]
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocated 4 rowsets for step 3 --> Stream lookup  
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocating rowsets for step 4 --> SiteMapping
+2017/03/27 03:54:44 - PWA Article Attribution -   prevcopies = 1, nextcopies=1
+2017/03/27 03:54:44 - PWA Article Attribution - Transformation allocated new rowset [SiteMapping.0 - Stream lookup.0]
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocated 5 rowsets for step 4 --> SiteMapping  
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocating rowsets for step 5 --> AttributionMethodKey
+2017/03/27 03:54:44 - PWA Article Attribution -   prevcopies = 1, nextcopies=1
+2017/03/27 03:54:44 - PWA Article Attribution - Transformation allocated new rowset [AttributionMethodKey.0 - Table output.0]
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocated 6 rowsets for step 5 --> AttributionMethodKey  
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocating rowsets for step 6 --> Table output
+2017/03/27 03:54:44 - PWA Article Attribution -  Allocated 6 rowsets for step 6 --> Table output  
+2017/03/27 03:54:44 - PWA Article Attribution - Allocating Steps & StepData...
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation is about to allocate step [GetSiteKey] of type [DBLookup]
+2017/03/27 03:54:44 - GetSiteKey.0 - distribution activated
+2017/03/27 03:54:44 - GetSiteKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:54:44 - GetSiteKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:54:44 - GetSiteKey.0 - Got previous step from [GetSiteKey] #0 --> Stream lookup
+2017/03/27 03:54:44 - GetSiteKey.0 - input rel is 1:1
+2017/03/27 03:54:44 - GetSiteKey.0 - Found input rowset [Stream lookup.0 - GetSiteKey.0]
+2017/03/27 03:54:44 - GetSiteKey.0 - output rel. is  1:1
+2017/03/27 03:54:44 - GetSiteKey.0 - Found output rowset [GetSiteKey.0 - GetArticleKey.0]
+2017/03/27 03:54:44 - GetSiteKey.0 - Finished dispatching
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation has allocated a new step: [GetSiteKey].0
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation is about to allocate step [GetArticleKey] of type [DBLookup]
+2017/03/27 03:54:44 - GetArticleKey.0 - distribution activated
+2017/03/27 03:54:44 - GetArticleKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:54:44 - GetArticleKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:54:44 - GetArticleKey.0 - Got previous step from [GetArticleKey] #0 --> GetSiteKey
+2017/03/27 03:54:44 - GetArticleKey.0 - input rel is 1:1
+2017/03/27 03:54:44 - GetArticleKey.0 - Found input rowset [GetSiteKey.0 - GetArticleKey.0]
+2017/03/27 03:54:44 - GetArticleKey.0 - output rel. is  1:1
+2017/03/27 03:54:44 - GetArticleKey.0 - Found output rowset [GetArticleKey.0 - AttributionMethodKey.0]
+2017/03/27 03:54:44 - GetArticleKey.0 - Finished dispatching
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation has allocated a new step: [GetArticleKey].0
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation is about to allocate step [ArticleAttributionImport] of type [TableInput]
+2017/03/27 03:54:44 - ArticleAttributionImport.0 - distribution activated
+2017/03/27 03:54:44 - ArticleAttributionImport.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:54:44 - ArticleAttributionImport.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:54:44 - ArticleAttributionImport.0 - output rel. is  1:1
+2017/03/27 03:54:44 - ArticleAttributionImport.0 - Found output rowset [ArticleAttributionImport.0 - Stream lookup.0]
+2017/03/27 03:54:44 - ArticleAttributionImport.0 - Finished dispatching
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation has allocated a new step: [ArticleAttributionImport].0
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation is about to allocate step [Stream lookup] of type [StreamLookup]
+2017/03/27 03:54:44 - Stream lookup.0 - distribution activated
+2017/03/27 03:54:44 - Stream lookup.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:54:44 - Stream lookup.0 - Step info: nrinput=2 nroutput=1
+2017/03/27 03:54:44 - Stream lookup.0 - Got previous step from [Stream lookup] #0 --> ArticleAttributionImport
+2017/03/27 03:54:44 - Stream lookup.0 - input rel is 1:1
+2017/03/27 03:54:44 - Stream lookup.0 - Found input rowset [ArticleAttributionImport.0 - Stream lookup.0]
+2017/03/27 03:54:44 - Stream lookup.0 - Got previous step from [Stream lookup] #1 --> SiteMapping
+2017/03/27 03:54:44 - Stream lookup.0 - input rel is 1:1
+2017/03/27 03:54:44 - Stream lookup.0 - Found input rowset [SiteMapping.0 - Stream lookup.0]
+2017/03/27 03:54:44 - Stream lookup.0 - output rel. is  1:1
+2017/03/27 03:54:44 - Stream lookup.0 - Found output rowset [Stream lookup.0 - GetSiteKey.0]
+2017/03/27 03:54:44 - Stream lookup.0 - Finished dispatching
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation has allocated a new step: [Stream lookup].0
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation is about to allocate step [SiteMapping] of type [DataGrid]
+2017/03/27 03:54:44 - SiteMapping.0 - distribution activated
+2017/03/27 03:54:44 - SiteMapping.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:54:44 - SiteMapping.0 - Step info: nrinput=0 nroutput=1
+2017/03/27 03:54:44 - SiteMapping.0 - output rel. is  1:1
+2017/03/27 03:54:44 - SiteMapping.0 - Found output rowset [SiteMapping.0 - Stream lookup.0]
+2017/03/27 03:54:44 - SiteMapping.0 - Finished dispatching
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation has allocated a new step: [SiteMapping].0
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation is about to allocate step [AttributionMethodKey] of type [CombinationLookup]
+2017/03/27 03:54:44 - AttributionMethodKey.0 - distribution activated
+2017/03/27 03:54:44 - AttributionMethodKey.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:54:44 - AttributionMethodKey.0 - Step info: nrinput=1 nroutput=1
+2017/03/27 03:54:44 - AttributionMethodKey.0 - Got previous step from [AttributionMethodKey] #0 --> GetArticleKey
+2017/03/27 03:54:44 - AttributionMethodKey.0 - input rel is 1:1
+2017/03/27 03:54:44 - AttributionMethodKey.0 - Found input rowset [GetArticleKey.0 - AttributionMethodKey.0]
+2017/03/27 03:54:44 - AttributionMethodKey.0 - output rel. is  1:1
+2017/03/27 03:54:44 - AttributionMethodKey.0 - Found output rowset [AttributionMethodKey.0 - Table output.0]
+2017/03/27 03:54:44 - AttributionMethodKey.0 - Finished dispatching
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation has allocated a new step: [AttributionMethodKey].0
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2017/03/27 03:54:44 - Table output.0 - distribution activated
+2017/03/27 03:54:44 - Table output.0 - Starting allocation of buffers & new threads...
+2017/03/27 03:54:44 - Table output.0 - Step info: nrinput=1 nroutput=0
+2017/03/27 03:54:44 - Table output.0 - Got previous step from [Table output] #0 --> AttributionMethodKey
+2017/03/27 03:54:44 - Table output.0 - input rel is 1:1
+2017/03/27 03:54:44 - Table output.0 - Found input rowset [AttributionMethodKey.0 - Table output.0]
+2017/03/27 03:54:44 - Table output.0 - Finished dispatching
+2017/03/27 03:54:44 - PWA Article Attribution -  Transformation has allocated a new step: [Table output].0
+2017/03/27 03:54:44 - PWA Article Attribution - This transformation can be replayed with replay date: 2017/03/27 03:54:44
+2017/03/27 03:54:44 - PWA Article Attribution - Initialising 7 steps...
+2017/03/27 03:54:44 - ArticleAttributionImport.0 - Running on slave server #0/1.
+2017/03/27 03:54:44 - SiteMapping.0 - Running on slave server #0/1.
+2017/03/27 03:54:44 - Table output.0 - Running on slave server #0/1.
+2017/03/27 03:54:44 - GetArticleKey.0 - Running on slave server #0/1.
+2017/03/27 03:54:44 - GetSiteKey.0 - Running on slave server #0/1.
+2017/03/27 03:54:44 - Stream lookup.0 - Running on slave server #0/1.
+2017/03/27 03:54:44 - AttributionMethodKey.0 - Running on slave server #0/1.
+2017/03/27 03:54:44 - Warehouse - New database connection defined
+2017/03/27 03:54:44 - PWA Transactions - New database connection defined
+2017/03/27 03:54:44 - Warehouse - New database connection defined
+2017/03/27 03:54:44 - Warehouse - New database connection defined
+2017/03/27 03:54:44 - Warehouse - New database connection defined
+2017/03/27 03:54:44 - Warehouse - Connected to database.
+2017/03/27 03:54:44 - Warehouse - Auto commit off
+2017/03/27 03:54:44 - GetSiteKey.0 - Connected to database...
+2017/03/27 03:54:44 - PWA Transactions - Connected to database.
+2017/03/27 03:54:45 - PWA Transactions - Auto commit off
+2017/03/27 03:54:45 - ArticleAttributionImport.0 - Connected to database...
+2017/03/27 03:54:47 - Warehouse - Connected to database.
+2017/03/27 03:54:47 - AttributionMethodKey.0 - Connected to database...
+2017/03/27 03:54:47 - Warehouse - Auto commit off
+2017/03/27 03:54:47 - Warehouse - Connected to database.
+2017/03/27 03:54:47 - Table output.0 - Connected to database [Warehouse] (commit=1000)
+2017/03/27 03:54:47 - Warehouse - Auto commit off
+2017/03/27 03:54:47 - Warehouse - Connected to database.
+2017/03/27 03:54:47 - Warehouse - Auto commit off
+2017/03/27 03:54:47 - GetArticleKey.0 - Connected to database...
+2017/03/27 03:54:47 - PWA Article Attribution - Step [GetSiteKey.0] initialized flawlessly.
+2017/03/27 03:54:47 - PWA Article Attribution - Step [GetArticleKey.0] initialized flawlessly.
+2017/03/27 03:54:47 - PWA Article Attribution - Step [ArticleAttributionImport.0] initialized flawlessly.
+2017/03/27 03:54:47 - PWA Article Attribution - Step [Stream lookup.0] initialized flawlessly.
+2017/03/27 03:54:47 - PWA Article Attribution - Step [SiteMapping.0] initialized flawlessly.
+2017/03/27 03:54:47 - PWA Article Attribution - Step [AttributionMethodKey.0] initialized flawlessly.
+2017/03/27 03:54:47 - PWA Article Attribution - Step [Table output.0] initialized flawlessly.
+2017/03/27 03:54:47 - GetSiteKey.0 - Starting to run...
+2017/03/27 03:54:47 - GetArticleKey.0 - Starting to run...
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - Starting to run...
+2017/03/27 03:54:47 - Stream lookup.0 - Starting to run...
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - SQL query : SELECT
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - convert(varchar(24),timeStamp,112) AS dateKey
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - ,attributionMethod
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - ,siteID
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - ,1 AS learn
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - ,article
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - ,attribution
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - FROM
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - ArticleAttributionBySite
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - WHERE
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - timeStamp >= '2017/03/26 00:00:00.000' AND
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - timeStamp < '2017/03/27 00:00:00.000'
+2017/03/27 03:54:47 - SiteMapping.0 - Starting to run...
+2017/03/27 03:54:47 - PWA Article Attribution - Transformation has allocated 7 threads and 6 rowsets.
+2017/03/27 03:54:47 - Stream lookup.0 - Reading from stream [SiteMapping]
+2017/03/27 03:54:47 - AttributionMethodKey.0 - Starting to run...
+2017/03/27 03:54:47 - Table output.0 - Starting to run...
+2017/03/27 03:54:47 - SiteMapping.0 - Finished processing (I=0, O=0, R=0, W=5, U=0, E=0)
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - Finished reading query, closing connection.
+2017/03/27 03:54:47 - PWA Transactions - Connection to database closed!
+2017/03/27 03:54:47 - ArticleAttributionImport.0 - Finished processing (I=306, O=0, R=0, W=306, U=0, E=0)
+2017/03/27 03:54:47 - Stream lookup.0 - Field [siteID] has nr [2]
+2017/03/27 03:54:47 - Warehouse - Setting preparedStatement to [SELECT ID AS SiteKey FROM DimSite WHERE "PREFIX" = ?  AND Learn = ? ]
+2017/03/27 03:54:47 - GetSiteKey.0 - Checking row: [20170326], [Heavy Front], [allergy], [1], [HOW HUMIDIFIERS CAN HELP WITH ASTHMA SYMPTOMS], [47.49], [G]
+2017/03/27 03:54:47 - Stream lookup.0 - Stopped processing with empty row after 311 rows.
+2017/03/27 03:54:47 - Stream lookup.0 - Finished processing (I=0, O=0, R=311, W=306, U=0, E=0)
+2017/03/27 03:54:48 - Warehouse - Setting preparedStatement to [SELECT ID AS ArticleKey FROM DimArticle WHERE ArticleName LIKE ? ]
+2017/03/27 03:54:48 - GetArticleKey.0 - Checking row: [20170326], [Heavy Front], [allergy], [1], [HOW HUMIDIFIERS CAN HELP WITH ASTHMA SYMPTOMS], [47.49], [G], [8]
+2017/03/27 03:54:48 - Warehouse - Connection to database closed!
+2017/03/27 03:54:48 - GetSiteKey.0 - Finished processing (I=34, O=0, R=306, W=102, U=0, E=0)
+2017/03/27 03:54:48 - Warehouse - Connection to database closed!
+2017/03/27 03:54:48 - GetArticleKey.0 - Finished processing (I=10491, O=0, R=102, W=102, U=0, E=0)
+2017/03/27 03:54:49 - Table output.0 - Prepared statement : INSERT INTO PWA_FactArticleAttribution (DateKey, SiteKey, ArticleKey, AttributionMethodKey, AttributionAmount) VALUES ( ?,  ?,  ?,  ?,  ?)
+2017/03/27 03:54:49 - Warehouse - Connection to database closed!
+2017/03/27 03:54:49 - AttributionMethodKey.0 - Finished processing (I=2, O=0, R=102, W=102, U=0, E=0)
+2017/03/27 03:54:49 - Warehouse - Connection to database closed!
+2017/03/27 03:54:49 - Table output.0 - Finished processing (I=0, O=102, R=102, W=102, U=0, E=0)
+2017/03/27 03:54:49 - BackwardsArticleViewPopulateAlt - Finished job entry [PWA Article Attribution] (result=[true])
+2017/03/27 03:54:49 - BackwardsArticleViewPopulateAlt - Finished job entry [ExecPWA] (result=[true])
+2017/03/27 03:54:49 - BackwardsArticleViewPopulateAlt - Finished job entry [Update ArticleVIews] (result=[true])
+2017/03/27 03:54:49 - BackwardsArticleViewPopulateAlt - Finished job entry [Get Start and End Dates] (result=[true])
+2017/03/27 03:54:49 - BackwardsArticleViewPopulateAlt - Job execution finished
+2017/03/27 03:54:49 - Kitchen - Finished!
+2017/03/27 03:54:49 - Kitchen - Start=2017/03/27 03:17:14.850, Stop=2017/03/27 03:54:49.721
+2017/03/27 03:54:49 - Kitchen - Processing ended after 37 minutes and 34 seconds (2254 seconds total).

@@ -1,0 +1,347 @@
+2021/12/01 17:39:08 - TGenerarDT_Pais - Transformation is pre-loaded.
+2021/12/01 17:39:08 - TGenerarDT_Pais - Dispatching started for transformation [TGenerarDT_Pais]
+2021/12/01 17:39:08 - TGenerarDT_Pais - Nr of arguments detected:0 
+2021/12/01 17:39:08 - TGenerarDT_Pais - This is not a replay transformation
+2021/12/01 17:39:08 - TGenerarDT_Pais - I found 7 different steps to launch.
+2021/12/01 17:39:08 - TGenerarDT_Pais - Allocating rowsets...
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocating rowsets for step 0 --> circuits.csv
+2021/12/01 17:39:08 - TGenerarDT_Pais -   prevcopies = 1, nextcopies=1
+2021/12/01 17:39:08 - TGenerarDT_Pais - Transformation allocated new rowset [circuits.csv.0 - seleccion de valores.0]
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocated 1 rowsets for step 0 --> circuits.csv  
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocating rowsets for step 1 --> seleccion de valores
+2021/12/01 17:39:08 - TGenerarDT_Pais -   prevcopies = 1, nextcopies=1
+2021/12/01 17:39:08 - TGenerarDT_Pais - Transformation allocated new rowset [seleccion de valores.0 - ordenar abc..0]
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocated 2 rowsets for step 1 --> seleccion de valores  
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocating rowsets for step 2 --> ordenar abc.
+2021/12/01 17:39:08 - TGenerarDT_Pais -   prevcopies = 1, nextcopies=1
+2021/12/01 17:39:08 - TGenerarDT_Pais - Transformation allocated new rowset [ordenar abc..0 - borrar duplicado.0]
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocated 3 rowsets for step 2 --> ordenar abc.  
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocating rowsets for step 3 --> borrar duplicado
+2021/12/01 17:39:08 - TGenerarDT_Pais -   prevcopies = 1, nextcopies=1
+2021/12/01 17:39:08 - TGenerarDT_Pais - Transformation allocated new rowset [borrar duplicado.0 - agregar ID.0]
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocated 4 rowsets for step 3 --> borrar duplicado  
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocating rowsets for step 4 --> agregar ID
+2021/12/01 17:39:08 - TGenerarDT_Pais -   prevcopies = 1, nextcopies=1
+2021/12/01 17:39:08 - TGenerarDT_Pais - Transformation allocated new rowset [agregar ID.0 - Table output.0]
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocated 5 rowsets for step 4 --> agregar ID  
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocating rowsets for step 5 --> Table output
+2021/12/01 17:39:08 - TGenerarDT_Pais -   prevcopies = 1, nextcopies=1
+2021/12/01 17:39:08 - TGenerarDT_Pais - Transformation allocated new rowset [Table output.0 - Escritura en log.0]
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocated 6 rowsets for step 5 --> Table output  
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocating rowsets for step 6 --> Escritura en log
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Allocated 6 rowsets for step 6 --> Escritura en log  
+2021/12/01 17:39:08 - TGenerarDT_Pais - Allocating Steps & StepData...
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation is about to allocate step [circuits.csv] of type [CsvInput]
+2021/12/01 17:39:08 - circuits.csv.0 - distribution activated
+2021/12/01 17:39:08 - circuits.csv.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:39:08 - circuits.csv.0 - Step info: nrinput=0 nroutput=1
+2021/12/01 17:39:08 - circuits.csv.0 - output rel. is  1:1
+2021/12/01 17:39:08 - circuits.csv.0 - Found output rowset [circuits.csv.0 - seleccion de valores.0]
+2021/12/01 17:39:08 - circuits.csv.0 - Finished dispatching
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation has allocated a new step: [circuits.csv].0
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation is about to allocate step [seleccion de valores] of type [SelectValues]
+2021/12/01 17:39:08 - seleccion de valores.0 - distribution activated
+2021/12/01 17:39:08 - seleccion de valores.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:39:08 - seleccion de valores.0 - Step info: nrinput=1 nroutput=1
+2021/12/01 17:39:08 - seleccion de valores.0 - Got previous step from [seleccion de valores] #0 --> circuits.csv
+2021/12/01 17:39:08 - seleccion de valores.0 - input rel is 1:1
+2021/12/01 17:39:08 - seleccion de valores.0 - Found input rowset [circuits.csv.0 - seleccion de valores.0]
+2021/12/01 17:39:08 - seleccion de valores.0 - output rel. is  1:1
+2021/12/01 17:39:08 - seleccion de valores.0 - Found output rowset [seleccion de valores.0 - ordenar abc..0]
+2021/12/01 17:39:08 - seleccion de valores.0 - Finished dispatching
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation has allocated a new step: [seleccion de valores].0
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation is about to allocate step [ordenar abc.] of type [SortRows]
+2021/12/01 17:39:08 - ordenar abc..0 - distribution activated
+2021/12/01 17:39:08 - ordenar abc..0 - Starting allocation of buffers & new threads...
+2021/12/01 17:39:08 - ordenar abc..0 - Step info: nrinput=1 nroutput=1
+2021/12/01 17:39:08 - ordenar abc..0 - Got previous step from [ordenar abc.] #0 --> seleccion de valores
+2021/12/01 17:39:08 - ordenar abc..0 - input rel is 1:1
+2021/12/01 17:39:08 - ordenar abc..0 - Found input rowset [seleccion de valores.0 - ordenar abc..0]
+2021/12/01 17:39:08 - ordenar abc..0 - output rel. is  1:1
+2021/12/01 17:39:08 - ordenar abc..0 - Found output rowset [ordenar abc..0 - borrar duplicado.0]
+2021/12/01 17:39:08 - ordenar abc..0 - Finished dispatching
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation has allocated a new step: [ordenar abc.].0
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation is about to allocate step [borrar duplicado] of type [Unique]
+2021/12/01 17:39:08 - borrar duplicado.0 - distribution activated
+2021/12/01 17:39:08 - borrar duplicado.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:39:08 - borrar duplicado.0 - Step info: nrinput=1 nroutput=1
+2021/12/01 17:39:08 - borrar duplicado.0 - Got previous step from [borrar duplicado] #0 --> ordenar abc.
+2021/12/01 17:39:08 - borrar duplicado.0 - input rel is 1:1
+2021/12/01 17:39:08 - borrar duplicado.0 - Found input rowset [ordenar abc..0 - borrar duplicado.0]
+2021/12/01 17:39:08 - borrar duplicado.0 - output rel. is  1:1
+2021/12/01 17:39:08 - borrar duplicado.0 - Found output rowset [borrar duplicado.0 - agregar ID.0]
+2021/12/01 17:39:08 - borrar duplicado.0 - Finished dispatching
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation has allocated a new step: [borrar duplicado].0
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation is about to allocate step [agregar ID] of type [Sequence]
+2021/12/01 17:39:08 - agregar ID.0 - distribution activated
+2021/12/01 17:39:08 - agregar ID.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:39:08 - agregar ID.0 - Step info: nrinput=1 nroutput=1
+2021/12/01 17:39:08 - agregar ID.0 - Got previous step from [agregar ID] #0 --> borrar duplicado
+2021/12/01 17:39:08 - agregar ID.0 - input rel is 1:1
+2021/12/01 17:39:08 - agregar ID.0 - Found input rowset [borrar duplicado.0 - agregar ID.0]
+2021/12/01 17:39:08 - agregar ID.0 - output rel. is  1:1
+2021/12/01 17:39:08 - agregar ID.0 - Found output rowset [agregar ID.0 - Table output.0]
+2021/12/01 17:39:08 - agregar ID.0 - Finished dispatching
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation has allocated a new step: [agregar ID].0
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation is about to allocate step [Table output] of type [TableOutput]
+2021/12/01 17:39:08 - Table output.0 - distribution activated
+2021/12/01 17:39:08 - Table output.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:39:08 - Table output.0 - Step info: nrinput=1 nroutput=1
+2021/12/01 17:39:08 - Table output.0 - Got previous step from [Table output] #0 --> agregar ID
+2021/12/01 17:39:08 - Table output.0 - input rel is 1:1
+2021/12/01 17:39:08 - Table output.0 - Found input rowset [agregar ID.0 - Table output.0]
+2021/12/01 17:39:08 - Table output.0 - output rel. is  1:1
+2021/12/01 17:39:08 - Table output.0 - Found output rowset [Table output.0 - Escritura en log.0]
+2021/12/01 17:39:08 - Table output.0 - Finished dispatching
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation has allocated a new step: [Table output].0
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation is about to allocate step [Escritura en log] of type [WriteToLog]
+2021/12/01 17:39:08 - Escritura en log.0 - distribution activated
+2021/12/01 17:39:08 - Escritura en log.0 - Starting allocation of buffers & new threads...
+2021/12/01 17:39:08 - Escritura en log.0 - Step info: nrinput=1 nroutput=0
+2021/12/01 17:39:08 - Escritura en log.0 - Got previous step from [Escritura en log] #0 --> Table output
+2021/12/01 17:39:08 - Escritura en log.0 - input rel is 1:1
+2021/12/01 17:39:08 - Escritura en log.0 - Found input rowset [Table output.0 - Escritura en log.0]
+2021/12/01 17:39:08 - Escritura en log.0 - Finished dispatching
+2021/12/01 17:39:08 - TGenerarDT_Pais -  Transformation has allocated a new step: [Escritura en log].0
+2021/12/01 17:39:08 - TGenerarDT_Pais - This transformation can be replayed with replay date: 2021/12/01 17:39:08
+2021/12/01 17:39:08 - TGenerarDT_Pais - Initialising 7 steps...
+2021/12/01 17:39:08 - ordenar abc..0 - Released server socket on port 0
+2021/12/01 17:39:08 - circuits.csv.0 - Released server socket on port 0
+2021/12/01 17:39:08 - seleccion de valores.0 - Released server socket on port 0
+2021/12/01 17:39:08 - Escritura en log.0 - Released server socket on port 0
+2021/12/01 17:39:08 - Table output.0 - Released server socket on port 0
+2021/12/01 17:39:08 - agregar ID.0 - Released server socket on port 0
+2021/12/01 17:39:08 - borrar duplicado.0 - Released server socket on port 0
+2021/12/01 17:39:08 - post - New database connection defined
+2021/12/01 17:39:09 - Table output.0 - Connected to database [post] (commit=1000)
+2021/12/01 17:39:09 - post - Auto commit off
+2021/12/01 17:39:09 - TGenerarDT_Pais - Step [circuits.csv.0] initialized flawlessly.
+2021/12/01 17:39:09 - TGenerarDT_Pais - Step [seleccion de valores.0] initialized flawlessly.
+2021/12/01 17:39:09 - TGenerarDT_Pais - Step [ordenar abc..0] initialized flawlessly.
+2021/12/01 17:39:09 - TGenerarDT_Pais - Step [borrar duplicado.0] initialized flawlessly.
+2021/12/01 17:39:09 - TGenerarDT_Pais - Step [agregar ID.0] initialized flawlessly.
+2021/12/01 17:39:09 - TGenerarDT_Pais - Step [Table output.0] initialized flawlessly.
+2021/12/01 17:39:09 - TGenerarDT_Pais - Step [Escritura en log.0] initialized flawlessly.
+2021/12/01 17:39:09 - ordenar abc..0 - Starting to run...
+2021/12/01 17:39:09 - borrar duplicado.0 - Starting to run...
+2021/12/01 17:39:09 - circuits.csv.0 - Starting to run...
+2021/12/01 17:39:09 - seleccion de valores.0 - Starting to run...
+2021/12/01 17:39:09 - agregar ID.0 - Starting to run...
+2021/12/01 17:39:09 - Escritura en log.0 - Starting to run...
+2021/12/01 17:39:09 - TGenerarDT_Pais - Transformation has allocated 7 threads and 6 rowsets.
+2021/12/01 17:39:09 - Table output.0 - Starting to run...
+2021/12/01 17:39:09 - circuits.csv.0 - Header row skipped in file 'M:\UCU\2021\Segundo Semestre\Inteligencia de Negocios\OblIgatorio BI\Data Source\circuits.csv'
+2021/12/01 17:39:09 - circuits.csv.0 - Finished processing (I=78, O=0, R=0, W=77, U=0, E=0)
+2021/12/01 17:39:09 - seleccion de valores.0 - Finished processing (I=0, O=0, R=77, W=77, U=0, E=0)
+2021/12/01 17:39:09 - ordenar abc..0 - The number of binary string to data type conversions done in this sort block is 0
+2021/12/01 17:39:09 - ordenar abc..0 - Finished processing (I=0, O=0, R=77, W=77, U=0, E=0)
+2021/12/01 17:39:09 - Table output.0 - Prepared statement : INSERT INTO "public".dt_pais (id_pais, sk_pais, pais) VALUES ( ?,  ?,  ?)
+2021/12/01 17:39:09 - borrar duplicado.0 - Finished processing (I=0, O=0, R=77, W=34, U=0, E=0)
+2021/12/01 17:39:09 - agregar ID.0 - Finished processing (I=0, O=0, R=34, W=34, U=0, E=0)
+2021/12/01 17:39:10 - post - Connection to database closed!
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 1------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Argentina
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 1
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Table output.0 - Finished processing (I=0, O=34, R=34, W=34, U=0, E=0)
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 2------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Australia
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 2
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 3------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Austria
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 3
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 4------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Azerbaijan
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 4
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 5------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Bahrain
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 5
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 6------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Belgium
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 6
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 7------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Brazil
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 7
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 8------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Canada
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 8
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 9------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = China
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 9
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 10------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = France
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 10
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 11------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Germany
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 11
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 12------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Hungary
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 12
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 13------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = India
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 13
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 14------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Italy
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 14
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 15------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Japan
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 15
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 16------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Korea
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 16
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 17------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Malaysia
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 17
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 18------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Mexico
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 18
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 19------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Monaco
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 19
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 20------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Morocco
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 20
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 21------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Netherlands
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 21
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 22------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Portugal
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 22
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 23------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Russia
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 23
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 24------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Saudi Arabia
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 24
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 25------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Singapore
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 25
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 26------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = South Africa
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 26
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 27------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Spain
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 27
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 28------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Sweden
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 28
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 29------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Switzerland
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 29
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 30------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Turkey
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 30
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 31------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = UAE
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 31
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 32------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = UK
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 32
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 33------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = USA
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 33
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ------------> Linenr 34------------------------------
+2021/12/01 17:39:10 - Escritura en log.0 - pais = Vietnam
+2021/12/01 17:39:10 - Escritura en log.0 - idPais = 34
+2021/12/01 17:39:10 - Escritura en log.0 - 
+2021/12/01 17:39:10 - Escritura en log.0 - ====================
+2021/12/01 17:39:10 - Escritura en log.0 - Finished processing (I=0, O=0, R=34, W=34, U=0, E=0)

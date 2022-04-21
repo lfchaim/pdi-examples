@@ -1,0 +1,124 @@
+WARNING: Using java from path
+DEBUG: _PENTAHO_JAVA_HOME=
+DEBUG: _PENTAHO_JAVA=java.exe
+2016/07/19 00:55:04 - Kitchen - Logging is at level : Detailed logging
+2016/07/19 00:55:04 - Kitchen - Start of run.
+2016/07/19 00:55:05 - ActivateProductsFromTable - Start of job execution
+2016/07/19 00:55:05 - ActivateProductsFromTable - exec(0, 0, START.0)
+2016/07/19 00:55:05 - START - Starting job entry
+2016/07/19 00:55:05 - ActivateProductsFromTable - Starting entry [Transformation]
+2016/07/19 00:55:05 - ActivateProductsFromTable - exec(1, 0, Transformation.0)
+2016/07/19 00:55:05 - Transformation - Starting job entry
+2016/07/19 00:55:05 - Transformation - Opening transformation: [file:///C:/Spoon/PIM/ActivateProductsFromTable.ktr]
+2016/07/19 00:55:05 - Transformation - Loading transformation from XML file [file:///C:/Spoon/PIM/ActivateProductsFromTable.ktr]
+2016/07/19 00:55:06 - Transformation - Starting transformation...(file=${Internal.Job.Filename.Directory}/ActivateProductsFromTable.ktr, name=Transformation, repinfo=null)
+2016/07/19 00:55:06 - ActivateProductsFromTable - Transformation is pre-loaded.
+2016/07/19 00:55:06 - ActivateProductsFromTable - Dispatching started for transformation [ActivateProductsFromTable]
+2016/07/19 00:55:06 - ActivateProductsFromTable - Nr of arguments detected:0 
+2016/07/19 00:55:06 - ActivateProductsFromTable - This is not a replay transformation
+2016/07/19 00:55:06 - ActivateProductsFromTable - I found 6 different steps to launch.
+2016/07/19 00:55:06 - ActivateProductsFromTable - Allocating rowsets...
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocating rowsets for step 0 --> Add constant for SP Input
+2016/07/19 00:55:06 - ActivateProductsFromTable -   prevcopies = 1, nextcopies=1
+2016/07/19 00:55:06 - ActivateProductsFromTable - Transformation allocated new rowset [Add constant for SP Input.0 - Get Pending SKUs.0]
+2016/07/19 00:55:06 - ActivateProductsFromTable -   prevcopies = 1, nextcopies=1
+2016/07/19 00:55:06 - ActivateProductsFromTable - Transformation allocated new rowset [Add constant for SP Input.0 - Call DB Procedure.0]
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocated 2 rowsets for step 0 --> Add constant for SP Input  
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocating rowsets for step 1 --> Get Pending SKUs
+2016/07/19 00:55:06 - ActivateProductsFromTable -   prevcopies = 1, nextcopies=1
+2016/07/19 00:55:06 - ActivateProductsFromTable - Transformation allocated new rowset [Get Pending SKUs.0 - Remove from PendingActivations.0]
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocated 3 rowsets for step 1 --> Get Pending SKUs  
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocating rowsets for step 2 --> Fetch SKU_IDs
+2016/07/19 00:55:06 - ActivateProductsFromTable -   prevcopies = 1, nextcopies=1
+2016/07/19 00:55:06 - ActivateProductsFromTable - Transformation allocated new rowset [Fetch SKU_IDs.0 - Add constant for SP Input.0]
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocated 4 rowsets for step 2 --> Fetch SKU_IDs  
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocating rowsets for step 3 --> Remove from PendingActivations
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocated 4 rowsets for step 3 --> Remove from PendingActivations  
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocating rowsets for step 4 --> Get 
+2016/07/19 00:55:06 - ActivateProductsFromTable -   prevcopies = 1, nextcopies=1
+2016/07/19 00:55:06 - ActivateProductsFromTable - Transformation allocated new rowset [Get .0 - Fetch SKU_IDs.0]
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocated 5 rowsets for step 4 --> Get   
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocating rowsets for step 5 --> Call DB Procedure
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Allocated 5 rowsets for step 5 --> Call DB Procedure  
+2016/07/19 00:55:06 - ActivateProductsFromTable - Allocating Steps & StepData...
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation is about to allocate step [Add constant for SP Input] of type [Constant]
+2016/07/19 00:55:06 - Add constant for SP Input.0 - distribution de-activated
+2016/07/19 00:55:06 - Add constant for SP Input.0 - Starting allocation of buffers & new threads...
+2016/07/19 00:55:06 - Add constant for SP Input.0 - Step info: nrinput=1 nroutput=2
+2016/07/19 00:55:06 - Add constant for SP Input.0 - Got previous step from [Add constant for SP Input] #0 --> Fetch SKU_IDs
+2016/07/19 00:55:06 - Add constant for SP Input.0 - input rel is 1:1
+2016/07/19 00:55:06 - Add constant for SP Input.0 - Found input rowset [Fetch SKU_IDs.0 - Add constant for SP Input.0]
+2016/07/19 00:55:06 - Add constant for SP Input.0 - output rel. is  1:1
+2016/07/19 00:55:06 - Add constant for SP Input.0 - Found output rowset [Add constant for SP Input.0 - Get Pending SKUs.0]
+2016/07/19 00:55:06 - Add constant for SP Input.0 - output rel. is  1:1
+2016/07/19 00:55:06 - Add constant for SP Input.0 - Found output rowset [Add constant for SP Input.0 - Call DB Procedure.0]
+2016/07/19 00:55:06 - Add constant for SP Input.0 - Finished dispatching
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation has allocated a new step: [Add constant for SP Input].0
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation is about to allocate step [Get Pending SKUs] of type [DBLookup]
+2016/07/19 00:55:06 - Get Pending SKUs.0 - distribution activated
+2016/07/19 00:55:06 - Get Pending SKUs.0 - Starting allocation of buffers & new threads...
+2016/07/19 00:55:06 - Get Pending SKUs.0 - Step info: nrinput=1 nroutput=1
+2016/07/19 00:55:06 - Get Pending SKUs.0 - Got previous step from [Get Pending SKUs] #0 --> Add constant for SP Input
+2016/07/19 00:55:06 - Get Pending SKUs.0 - input rel is 1:1
+2016/07/19 00:55:06 - Get Pending SKUs.0 - Found input rowset [Add constant for SP Input.0 - Get Pending SKUs.0]
+2016/07/19 00:55:06 - Get Pending SKUs.0 - output rel. is  1:1
+2016/07/19 00:55:06 - Get Pending SKUs.0 - Found output rowset [Get Pending SKUs.0 - Remove from PendingActivations.0]
+2016/07/19 00:55:06 - Get Pending SKUs.0 - Finished dispatching
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation has allocated a new step: [Get Pending SKUs].0
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation is about to allocate step [Fetch SKU_IDs] of type [DBLookup]
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - distribution activated
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - Starting allocation of buffers & new threads...
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - Step info: nrinput=1 nroutput=1
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - Got previous step from [Fetch SKU_IDs] #0 --> Get 
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - input rel is 1:1
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - Found input rowset [Get .0 - Fetch SKU_IDs.0]
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - output rel. is  1:1
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - Found output rowset [Fetch SKU_IDs.0 - Add constant for SP Input.0]
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - Finished dispatching
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation has allocated a new step: [Fetch SKU_IDs].0
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation is about to allocate step [Remove from PendingActivations] of type [Delete]
+2016/07/19 00:55:06 - Remove from PendingActivations.0 - distribution activated
+2016/07/19 00:55:06 - Remove from PendingActivations.0 - Starting allocation of buffers & new threads...
+2016/07/19 00:55:06 - Remove from PendingActivations.0 - Step info: nrinput=1 nroutput=0
+2016/07/19 00:55:06 - Remove from PendingActivations.0 - Got previous step from [Remove from PendingActivations] #0 --> Get Pending SKUs
+2016/07/19 00:55:06 - Remove from PendingActivations.0 - input rel is 1:1
+2016/07/19 00:55:06 - Remove from PendingActivations.0 - Found input rowset [Get Pending SKUs.0 - Remove from PendingActivations.0]
+2016/07/19 00:55:06 - Remove from PendingActivations.0 - Finished dispatching
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation has allocated a new step: [Remove from PendingActivations].0
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation is about to allocate step [Get ] of type [TableInput]
+2016/07/19 00:55:06 - Get .0 - distribution activated
+2016/07/19 00:55:06 - Get .0 - Starting allocation of buffers & new threads...
+2016/07/19 00:55:06 - Get .0 - Step info: nrinput=0 nroutput=1
+2016/07/19 00:55:06 - Get .0 - output rel. is  1:1
+2016/07/19 00:55:06 - Get .0 - Found output rowset [Get .0 - Fetch SKU_IDs.0]
+2016/07/19 00:55:06 - Get .0 - Finished dispatching
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation has allocated a new step: [Get ].0
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation is about to allocate step [Call DB Procedure] of type [DBProc]
+2016/07/19 00:55:06 - Call DB Procedure.0 - distribution activated
+2016/07/19 00:55:06 - Call DB Procedure.0 - Starting allocation of buffers & new threads...
+2016/07/19 00:55:06 - Call DB Procedure.0 - Step info: nrinput=1 nroutput=0
+2016/07/19 00:55:06 - Call DB Procedure.0 - Got previous step from [Call DB Procedure] #0 --> Add constant for SP Input
+2016/07/19 00:55:06 - Call DB Procedure.0 - input rel is 1:1
+2016/07/19 00:55:06 - Call DB Procedure.0 - Found input rowset [Add constant for SP Input.0 - Call DB Procedure.0]
+2016/07/19 00:55:06 - Call DB Procedure.0 - Finished dispatching
+2016/07/19 00:55:06 - ActivateProductsFromTable -  Transformation has allocated a new step: [Call DB Procedure].0
+2016/07/19 00:55:06 - ActivateProductsFromTable - This transformation can be replayed with replay date: 2016/07/19 00:55:06
+2016/07/19 00:55:06 - ActivateProductsFromTable - Initialising 6 steps...
+2016/07/19 00:55:06 - Add constant for SP Input.0 - Running on slave server #0/1.
+2016/07/19 00:55:06 - Get Pending SKUs.0 - Running on slave server #0/1.
+2016/07/19 00:55:06 - Fetch SKU_IDs.0 - Running on slave server #0/1.
+2016/07/19 00:55:06 - Remove from PendingActivations.0 - Running on slave server #0/1.
+2016/07/19 00:55:06 - Get .0 - Running on slave server #0/1.
+2016/07/19 00:55:06 - Call DB Procedure.0 - Running on slave server #0/1.
+2016/07/19 00:55:06 - DWH - New database connection defined
+2016/07/19 00:55:06 - DWH - New database connection defined
+2016/07/19 00:55:06 - Bolt - New database connection defined
+2016/07/19 00:55:06 - Bolt - New database connection defined
+2016/07/19 00:55:06 - DWH - New database connection defined
+2016/07/19 00:55:10 - ActivateProductsFromTable - Step [Add constant for SP Input.0] initialized flawlessly.
+2016/07/19 00:55:10 - Get .0 - Finished reading query, closing connection.
+2016/07/19 00:55:10 - ActivateProductsFromTable - Finished job entry [Transformation] (result=[false])
+2016/07/19 00:55:10 - ActivateProductsFromTable - Job execution finished
+2016/07/19 00:55:10 - Kitchen - Finished!
+2016/07/19 00:55:10 - Kitchen - Start=2016/07/19 00:55:04.642, Stop=2016/07/19 00:55:10.978
+2016/07/19 00:55:10 - Kitchen - Processing ended after 6 seconds.

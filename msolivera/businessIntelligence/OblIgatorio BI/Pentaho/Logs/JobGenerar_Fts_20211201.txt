@@ -1,0 +1,39 @@
+2021/12/01 17:44:49 - JobGenerar_Fts - Using run configuration [Pentaho local]
+2021/12/01 17:44:49 - JobGenerar_Fts - exec(3, 0, Start.0)
+2021/12/01 17:44:49 - Start - Starting job entry
+2021/12/01 17:44:49 - JobGenerar_Fts - Starting entry [TGenerarFT_Resultados]
+2021/12/01 17:44:49 - JobGenerar_Fts - exec(4, 0, TGenerarFT_Resultados.0)
+2021/12/01 17:44:49 - TGenerarFT_Resultados - Starting job entry
+2021/12/01 17:44:49 - TGenerarFT_Resultados - Opening transformation: [M:/UCU/2021/Segundo Semestre/Inteligencia de Negocios/OblIgatorio BI/Pentaho/TGenerarFT_Resultados.ktr]
+2021/12/01 17:44:49 - TGenerarFT_Resultados - Starting transformation...(file=M:/UCU/2021/Segundo Semestre/Inteligencia de Negocios/OblIgatorio BI/Pentaho/TGenerarFT_Resultados.ktr, name=TGenerarFT_Resultados, repinfo=null)
+2021/12/01 17:44:49 - TGenerarFT_Resultados - Using run configuration [Pentaho local]
+2021/12/01 17:44:49 - TGenerarFT_Resultados - Running transformation using the Kettle execution engine
+2021/12/01 17:45:31 - JobGenerar_Fts - Starting entry [TGenerarFT_Paradas_Tecnicas]
+2021/12/01 17:45:31 - JobGenerar_Fts - exec(5, 0, TGenerarFT_Paradas_Tecnicas.0)
+2021/12/01 17:45:31 - TGenerarFT_Paradas_Tecnicas - Starting job entry
+2021/12/01 17:45:31 - TGenerarFT_Paradas_Tecnicas - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarFT_Paradas_Tecnicas.ktr]
+2021/12/01 17:45:31 - TGenerarFT_Paradas_Tecnicas - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarFT_Paradas_Tecnicas.ktr, name=TGenerarFT_Paradas_Tecnicas, repinfo=null)
+2021/12/01 17:45:31 - TGenerarFT_Paradas_Tecnicas - Using run configuration [Pentaho local]
+2021/12/01 17:45:31 - TGenerarFT_Paradas_Tecnicas - Running transformation using the Kettle execution engine
+2021/12/01 17:45:46 - JobGenerar_Fts - Starting entry [TGenerarFT_Campeonatos_Pilotos]
+2021/12/01 17:45:46 - JobGenerar_Fts - exec(6, 0, TGenerarFT_Campeonatos_Pilotos.0)
+2021/12/01 17:45:46 - TGenerarFT_Campeonatos_Pilotos - Starting job entry
+2021/12/01 17:45:46 - TGenerarFT_Campeonatos_Pilotos - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarFT_Campeonatos_Pilotos.ktr]
+2021/12/01 17:45:46 - TGenerarFT_Campeonatos_Pilotos - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarFT_Campeonatos_Pilotos.ktr, name=TGenerarFT_Campeonatos_Pilotos, repinfo=null)
+2021/12/01 17:45:46 - TGenerarFT_Campeonatos_Pilotos - Using run configuration [Pentaho local]
+2021/12/01 17:45:46 - TGenerarFT_Campeonatos_Pilotos - Running transformation using the Kettle execution engine
+2021/12/01 17:46:33 - JobGenerar_Fts - Starting entry [TGenerarFT_Campeonatos_Constructores]
+2021/12/01 17:46:33 - JobGenerar_Fts - exec(7, 0, TGenerarFT_Campeonatos_Constructores.0)
+2021/12/01 17:46:33 - TGenerarFT_Campeonatos_Constructores - Starting job entry
+2021/12/01 17:46:33 - TGenerarFT_Campeonatos_Constructores - Opening transformation: [file:///M:/UCU/2021/Segundo%20Semestre/Inteligencia%20de%20Negocios/OblIgatorio%20BI/Pentaho/TGenerarFT_Campeonatos_Constructores.ktr]
+2021/12/01 17:46:33 - TGenerarFT_Campeonatos_Constructores - Starting transformation...(file=${Internal.Entry.Current.Directory}/TGenerarFT_Campeonatos_Constructores.ktr, name=TGenerarFT_Campeonatos_Constructores, repinfo=null)
+2021/12/01 17:46:33 - TGenerarFT_Campeonatos_Constructores - Using run configuration [Pentaho local]
+2021/12/01 17:46:33 - TGenerarFT_Campeonatos_Constructores - Running transformation using the Kettle execution engine
+2021/12/01 17:46:50 - JobGenerar_Fts - Starting entry [Success]
+2021/12/01 17:46:50 - JobGenerar_Fts - exec(8, 0, Success.0)
+2021/12/01 17:46:50 - Success - Starting job entry
+2021/12/01 17:46:50 - JobGenerar_Fts - Finished job entry [Success] (result=[true])
+2021/12/01 17:46:50 - JobGenerar_Fts - Finished job entry [TGenerarFT_Campeonatos_Constructores] (result=[true])
+2021/12/01 17:46:50 - JobGenerar_Fts - Finished job entry [TGenerarFT_Campeonatos_Pilotos] (result=[true])
+2021/12/01 17:46:50 - JobGenerar_Fts - Finished job entry [TGenerarFT_Paradas_Tecnicas] (result=[true])
+2021/12/01 17:46:50 - JobGenerar_Fts - Finished job entry [TGenerarFT_Resultados] (result=[true])

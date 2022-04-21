@@ -1,0 +1,43 @@
+pipeline {
+    agent {
+        node {
+            label "${params.NodeLabel}"
+        }
+    }
+    parameters {
+        string(
+            name: 'NodeLabel', 
+            defaultValue: "${KPT.NodeLabel}",
+            description: 'Node for run job!')
+        string(
+            name: 'ProjectPath_On_Unix', 
+            defaultValue: "${KPT.ProjectPath_On_Unix}", 
+            description: 'The Project directory!(WILL REPLACE BY kpt_project_deploy_jenkinsfile)')
+        string(
+            name: 'ProjectPath_On_Windows', 
+            defaultValue: "${KPT.ProjectPath_On_Windows}", 
+            description: 'The Project directory!(WILL REPLACE BY kpt_project_deploy_jenkinsfile)')
+    }
+    options {
+        disableConcurrentBuilds()
+    }
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    if (isUnix()) {
+                        sh """
+                        cd ${params.ProjectPath_On_Unix} 
+                        bash patch.PatchPDI.sh Basic <&-
+                        """ 
+                    } else {
+                        bat """
+                        cd /d ${params.ProjectPath_On_Windows}
+                        call patch.PatchPDI.bat Basic
+                        """
+                    }
+                }
+            }
+        }
+    }
+}

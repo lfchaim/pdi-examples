@@ -1,0 +1,1 @@
+c:\data-integration\kitchen.bat /file:"C:\spoon\Data Warehouse Reporting\Order Status Report\j_Order_Status_Report.kjb" /level:Detailed >Order_Status_Report.txt

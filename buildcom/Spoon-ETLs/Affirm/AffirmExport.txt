@@ -1,0 +1,1 @@
+C:\data-integration\pan.bat  /file:"C:\Spoon\Affirm\AffirmExport.ktr"
