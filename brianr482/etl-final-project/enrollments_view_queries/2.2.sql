@@ -1,0 +1,1 @@
+select * from enrollments_view  where SEDE_CODIGO='205604001014';

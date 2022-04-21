@@ -1,0 +1,1 @@
+select * from enrollments_view  where AÑO='2018';

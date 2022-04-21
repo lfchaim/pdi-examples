@@ -1,0 +1,1 @@
+select * from enrollments_view  where CARACTER='tecnico industrial';

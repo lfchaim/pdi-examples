@@ -1,0 +1,1 @@
+select * from enrollments_view  where NIVEL_DE_ENSEÑANZA='basica primaria';
